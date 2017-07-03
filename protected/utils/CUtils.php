@@ -584,6 +584,7 @@ class CUtils {
                 $_products[] = $products[$b];
             }
         }
+        $_products = array_unique($_products);
         $result['pid'] = !empty($_products)?implode('+',$_products):'--';
 
         //格式化型号数据
@@ -595,6 +596,7 @@ class CUtils {
                 $_models[] = $models[$d];
             }
         }
+        $_models = array_unique($_models);
         $result['mid'] = !empty($_models)?implode('+',$_models):'--';
 
         //格式化位置数据
@@ -608,6 +610,10 @@ class CUtils {
         }
         $types = array_unique($types);
         $result->extension = !empty($types)?implode('+',$types):'--';
+
+        $warrantytime = isset($result['warrantytime'])?$result['warrantytime']:'';
+        $_arr = !empty($warrantytime)?array_unique(explode(',',$warrantytime)):array();
+        $result['warrantytime'] = implode(',',$_arr);
 
         return $result;
     }

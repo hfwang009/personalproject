@@ -16,6 +16,7 @@ class WarrantyDetail extends CActiveRecord
 {
     public $ctime_start;
     public $ctime_end;
+    public $telephone;
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
@@ -46,7 +47,7 @@ class WarrantyDetail extends CActiveRecord
 			array('wid, pid, num, current_total, ctime', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, wid, pid, num, ctime, current_total,type', 'safe', 'on'=>'search'),
+			array('id, wid, pid, num, ctime, current_total,type,telephone', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -70,12 +71,13 @@ class WarrantyDetail extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'wid' => '质保序列号',
-			'pid' => '产品名称',
+			'wid' => '质保证书编号',
+			'pid' => '产品序列号',
 			'num' => '质保数量',
 			'current_total' => '质保时库存数量',
 			'type' => '安装位置',
 			'ctime' => '质保时间',
+			'telephone' => '手机号码',
 		);
 	}
 
@@ -122,13 +124,16 @@ class WarrantyDetail extends CActiveRecord
     }
 
     public function getCriteriaCondition($criteria,$condition,$search){
-        if(isset($condition['WarrantyDetail']) && (count(array_filter($condition['WarrantyDetail'])) > 0 ||$condition['Warranty']['status'] == '0')){
+        if(isset($condition['WarrantyDetail']) && (count(array_filter($condition['WarrantyDetail'])) > 0)){
             $search->attributes = $condition['WarrantyDetail'];
             if (!empty($condition['WarrantyDetail']['wid'])) {
                 $criteria->condition .= ' and warranty.series_number LIKE "%' . $condition['WarrantyDetail']['wid'] .'%" ';
             }
             if (!empty($condition['WarrantyDetail']['pid'])) {
                 $criteria->condition .= ' and t.pid = "' . $condition['WarrantyDetail']['pid'] .'" ';
+            }
+            if (!empty($condition['WarrantyDetail']['telephone'])) {
+                $criteria->condition .= ' and warranty.telephone = "' . $condition['WarrantyDetail']['telephone'] .'" ';
             }
             if (!empty($condition['WarrantyDetail']['ctime_start'])) {
                 $criteria->condition .= ' and t.ctime >= ' . strtotime($condition['WarrantyDetail']['ctime_start'] .' 00:00:00');

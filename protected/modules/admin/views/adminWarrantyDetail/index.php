@@ -26,7 +26,7 @@
                                     <a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->module->id.'/'.Yii::app()->controller->id . '/' . $this->getAction()->getId(), array_merge($condition,array('sortFiled'=>'id','sortValue'=>(isset($condition['sortFiled']) && $condition['sortFiled']=='id')?($condition['sortValue'] == "asc"?"desc":"asc"):"asc")));?>">ID<span class="glyphicon <?php echo $condition['sortFiled'] == 'id'?($condition['sortValue'] == "asc"?"glyphicon-chevron-up":"glyphicon-chevron-down"):'';?>"></span></a>
                                 </th>
                                 <th>
-                                    <a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->module->id.'/'.Yii::app()->controller->id . '/' . $this->getAction()->getId(), array_merge($condition,array('sortFiled'=>'wid','sortValue'=>(isset($condition['sortFiled']) && $condition['sortFiled']=='wid')?($condition['sortValue'] == "asc"?"desc":"asc"):"asc")));?>">质保号<span class="glyphicon <?php echo $condition['sortFiled'] == 'wid'?($condition['sortValue'] == "asc"?"glyphicon-chevron-up":"glyphicon-chevron-down"):'';?>"></span></a>
+                                    <a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->module->id.'/'.Yii::app()->controller->id . '/' . $this->getAction()->getId(), array_merge($condition,array('sortFiled'=>'wid','sortValue'=>(isset($condition['sortFiled']) && $condition['sortFiled']=='wid')?($condition['sortValue'] == "asc"?"desc":"asc"):"asc")));?>">质保证书编号<span class="glyphicon <?php echo $condition['sortFiled'] == 'wid'?($condition['sortValue'] == "asc"?"glyphicon-chevron-up":"glyphicon-chevron-down"):'';?>"></span></a>
                                 </th>
                                 <th>
                                     质保用户名
@@ -44,7 +44,7 @@
                                     质保申请时间
                                 </th>
                                 <th>
-                                    <a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->module->id.'/'.Yii::app()->controller->id . '/' . $this->getAction()->getId(), array_merge($condition,array('sortFiled'=>'pid','sortValue'=>(isset($condition['sortFiled']) && $condition['sortFiled']=='pid')?($condition['sortValue'] == "asc"?"desc":"asc"):"asc")));?>">质保产品<span class="glyphicon <?php echo $condition['sortFiled'] == 'pid'?($condition['sortValue'] == "asc"?"glyphicon-chevron-up":"glyphicon-chevron-down"):'';?>"></span></a>
+                                    <a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->module->id.'/'.Yii::app()->controller->id . '/' . $this->getAction()->getId(), array_merge($condition,array('sortFiled'=>'pid','sortValue'=>(isset($condition['sortFiled']) && $condition['sortFiled']=='pid')?($condition['sortValue'] == "asc"?"desc":"asc"):"asc")));?>">质保产品名称<span class="glyphicon <?php echo $condition['sortFiled'] == 'pid'?($condition['sortValue'] == "asc"?"glyphicon-chevron-up":"glyphicon-chevron-down"):'';?>"></span></a>
                                 </th>
                                 <th>
                                     质保产品序列号
@@ -134,6 +134,13 @@
                     <div class="col-sm-5 col-xs-8">
                         <?php echo $form->textField($search, 'wid', array("class"=>"form-control"));?>
                         <?php echo $form->error($search,'wid',array('class'=>'help-block'));?>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <?php echo $form->label($search,'telephone',array('class'=>'col-sm-2 col-xs-3 control-label'));?>
+                    <div class="col-sm-5 col-xs-8">
+                        <?php echo $form->textField($search, 'telephone', array("class"=>"form-control"));?>
+                        <?php echo $form->error($search,'telephone',array('class'=>'help-block'));?>
                     </div>
                 </div>
                 <div class="form-group">

@@ -70,7 +70,6 @@ class LoginController extends Controller {
             }else{
                 $model->addError('password','用户名或密码错误');
             }
-            print_r($model);
         }
         $this->render('index',array('model'=>$model));
     }

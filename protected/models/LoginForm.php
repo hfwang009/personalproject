@@ -46,7 +46,7 @@ class LoginForm extends CFormModel
     public function authenticate() {
         if(!$this->hasErrors()) {
             $this->_identity=new UserIdentity($this->username,$this->password);
-            if(!$this->_identity->authenticate()||$this->_indentity->errorCode!=0)
+            if(!$this->_identity->authenticate())
                 $this->addError('password','用户名或密码错误或账号冻结.');
         }
     }

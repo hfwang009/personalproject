@@ -1,0 +1,162 @@
+.gridster * {
+  margin:0;
+  padding:0;
+}
+.controls {
+    margin-bottom: 20px;
+}
+.maidan-box{
+  /*   width:1300px;
+    margin:0 auto;
+   overflow: hidden; */}
+/* gridster*/
+.gridster ul {
+    background-color: #EFEFEF;
+}
+.gridster li {
+    font-size: 1em;
+  /*  font-weight: bold;*/
+    text-align: center;
+    line-height: 100%;
+}
+.gridster li img{width:100%; height:100%; visibility:hidden;}
+.gridster li .imgtit {display:none}
+.gridster li:hover .imgtit {
+    display: block;
+    background: rgba(0,0,0,.8);
+    font-size: 20px;
+    line-height: normal;
+    cursor: move;
+		position:absolute; 
+		top:0;
+		width:100%;
+		right:0;
+		text-align:center;
+		width:30px;
+		height:30px;
+		
+ }
+.gridster {
+    margin:0px auto 0 auto;
+   /* opacity: .8;*/
+    -webkit-transition: opacity .6s;
+    -moz-transition: opacity .6s;
+    -o-transition: opacity .6s;
+    -ms-transition: opacity .6s;
+    transition: opacity .6s;
+}
+.gridster .gs-w {
+   /* background:#DDD;
+	border:1px dashed #356ea1;*/
+    cursor: pointer;
+}
+
+.gridster .player {
+    background: #BBB;
+}
+.gridster .preview-holder {
+    border: none!important;
+    background: red!important;
+}
+
+.gridster input.detail-name {
+    font-size: 18px;
+    color: #2f2e2e;
+    font-weight: bold;
+}
+.gridster .initial_input input, .initial_input textarea {
+    border: 0;
+    margin: 2px 0 0 0;
+    color: #333;
+    width: 90%;
+    padding: 2px 5px;
+    line-height: 21px;
+    font-size: 14px;
+    background: #fff;
+}
+.gridster .edit_input input {
+    color: #605e5e;
+    border: 1px solid #60c0dd;
+    width: 100%;
+}
+.gridster .edit_input textarea {
+    width: 98%;
+    padding: 2px 5px;
+    color: #333;
+    font-size: 14px;
+    border: 1px solid #60c0dd;
+    background: #fff;
+/*	resize: none;*/
+}
+.detail-inf{height:99%;     max-height:99%;overflow-y:auto;     text-align: left;}
+
+.detail-inf table td{white-space:nowrap; overflow:hidden; padding:1px 0;}
+.detail-inf table td input{width:740px; padding:0 0 0 5px; border:1px solid #ccc; line-height:28px; height:28px;}
+.detail-inf table td textarea{width:740px; padding:0 0 0 5px; border:1px solid #ccc; line-height:28px; height:55px; white-space:normal;}
+.detail-inf textarea{width:740px; padding:0 0 0 5px; border:1px solid #ccc; line-height:28px; height:50px; white-space:normal;}
+.detail-inf select{ border:1px solid #ccc; line-height:28px; height:28px;}
+.gongnbox{ overflow:hidden; display:table; width:100%; margin:2px 0;}
+.gongnbox div{ display:table-cell; vertical-align:top; }
+.gongnbox .w80{width:80px;  line-height:28px; }
+.initial_input .gongnbox .w80{width:80px;  line-height:28px; padding:0; }
+.initial_input .gongnbox { width:100%; }
+.initial_input .gongnbox div{/*padding:0 5px 0 0;*/}
+.initial_input table{margin:0;}
+.line-h26 {
+    line-height: 26px;
+    font-size: 14px;
+}
+.gridster .title{line-height:40px; font-size:16px; font-weight: bold; background: none;}
+.gridster .soft_fileinout{ display:block; opacity:0; position:absolute; width:100%; height:100%; top:0; cursor:pointer;}
+/*table style*/
+.gridster .table_nub table{margin:0 auto; width:100%; font-size:14px; line-height:21px;border-top:1px solid #ccc;border-left:1px solid #ccc; }
+.gridster .table_nub table th,.table_nub table td{border-right:1px solid #ccc;border-bottom:1px solid #ccc;padding:3px; white-space:nowrap}
+.gridster .table_nub th{ background:#f3f4f5;}
+.t-c td{text-align:center;}
+/*tble-head position*/
+.gridster .table_nub .table-head{background:#f3f4f5}
+.gridster .table_nub .table-body{width:100%; height:92%;     max-height:92%;overflow-y:auto; position:absolute; background:#fff;}
+.gridster .table_nub .table-head table, .table_nub .table-body table{width:100%; height:100%;}
+.gridster .table_nub .table-body table tr:nth-child(2n){background-color:#f2f2f2;}
+.gridster .table_nub .table-body table tr:hover{background-color:#e7e6e6;}
+/*tble-left position*/
+.gridster .table_nub .table-left{background:#f3f4f5; width:110px; position:absolute;height: 100%;}
+.gridster .table_nub .table-left table,.gridster .table_nub .table-right table{height: 100%; background:#fff}
+.gridster .table_nub .table-right{overflow-y:auto; padding:0 0 0 108px; height: 100%;}
+.gridster .table_nub .table-right table tr:nth-child(2n){background-color:#f2f2f2;}
+.gridster .table_nub .table-right table tr:hover{background-color:#e7e6e6;}
+
+.gridster .table_nub input[type="text"]{background:none;width:90%; border:none; text-align:center;height:24px;}
+.gridster .table_nub input[type="text"]:focus{border:1px solid #ccc;}
+.gridster .table_nub #tab input[type="text"]{background:none;width:90%; border:none; text-align:center;height:24px;}
+.gridster .table_nub #tab input[type="text"]:focus{border:1px solid #ccc;}
+/*button style*/
+.gridster .bj-bnt {     font-size: 14px;    line-height:40px;    text-align: center;	 width:100%;	 height:100%; padding:0;}
+
+.select_sty {    border: 1px solid #a6a6a6;    border-radius: 5px;    box-sizing: border-box;    height: 40px;    padding-left: 10px;    width: 100%;} 
+.select_div {    width: 100px;    display: inline;}
+
+
+.choose-wrap{width:960px;background:#f1f1f1; margin:35px auto; overflow:hidden; padding:20px }
+.choose-tit{color:#603008; font-weight:normal; margin:0 0 20px 0}
+.sHoverItem,.lxkf{ display:block;width: 290px; height: 240px;  margin:10px; float: left; /*border: 3px solid #ccc;*/text-align:center;}
+.sIntro{background-color:#5ec6d1; text-align: center;}
+.maidan-box .container{width: 1168px; height: 636px; border:solid 1px #ddd; margin: 20px auto; background:powderblue; }
+.sHoverItem img{}
+.sIntro h2{font-size:36px; text-align: center; color: #FFF;margin:80px 20px 20px 20px; font-weight: normal;}
+.sIntro p{font-size:14px; text-align: center; color: #FFF; margin:0px 10px; padding: 10px; color: #438199;}
+.sIntro a{ display:inline-block; font-size:16px; color: white; font-family: "Microsoft YaHei";  background-color:#1b5b62; border:none; border-radius: 5px; padding:8px 10px; cursor:pointer }
+.sIntro a:hover{background-color:#042f34;}
+
+.template-tit{width:1000px; background:url(../../images/gridster_images/title.jpg) no-repeat; text-align:center; color:#fff; height:67px; line-height:67px; margin:35px auto;     font-weight: normal;}
+.liucheng{width:950px; margin:20px auto; overflow:hidden; }
+.liucheng li{ float:left;  margin:0 5px;}
+.liucheng li span{display:block; border-radius:50%; width:75px; height:105px;line-height:21px; color:#fff; padding:10px 25px; }
+.liucheng li span i{ display:block; text-align:center; font-size:35px; margin:0  0 15px 0;  font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif}
+.bg1{background:#2ca59c;}
+.bg2{background:#856597;}
+.bg3{background:#3090c2;}
+.bg4{background:#89b73a;}
+.bg5{background:#ef5e61;}
+.jiyu{ clear:both; font-size:18px;  padding:30px; text-align:center; color:#7a7874;}
+.padd{padding:42px 0 0 0}

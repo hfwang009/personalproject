@@ -619,33 +619,47 @@ class CUtils {
     }
 
     public static function formatdata1($result){
-        $models = Models::model()->getModelData();
+        $products = Product::model()->getProductData();
+//        $models = Models::model()->getModelData();
         $ptype = Yii::app()->params['conf']['setting']['ptype'];
 
-        //格式化产品数据
         $_pids = !empty($result['pid'])?explode(',',$result['pid']):array();
         $_pids = array_unique($_pids);
         $_products = array();
         foreach($_pids as $a=>$b){
-            $bproduct = Product::model()->getProductBrand($b);
-            if(!empty($bproduct->brand)){
-                $_products[] = $bproduct->brand->name;
+            if(isset($products[$b])){
+                $_products[] = $products[$b];
             }
         }
         $_products = array_unique($_products);
-        $result['pid'] = !empty($_products)?implode('+',$_products):'--';
+        $result['mid'] = !empty($_products)?implode('+',$_products):'--';
 
-        //格式化型号数据
-        $_mids = !empty($result['mid'])?explode(',',$result['mid']):array();
-        $_mids = array_unique($_mids);
-        $_models = array();
-        foreach($_mids as $c=>$d){
-            if(isset($models[$d])){
-                $_models[] = $models[$d];
+
+
+        //格式化产品数据
+        $_pids = !empty($result['pid'])?explode(',',$result['pid']):array();
+        $_pids = array_unique($_pids);
+        $_products1 = array();
+        foreach($_pids as $a=>$b){
+            $bproduct = Product::model()->getProductBrand($b);
+            if(!empty($bproduct->brand)){
+                $_products1[] = $bproduct->brand->name;
             }
         }
-        $_models = array_unique($_models);
-        $result['mid'] = !empty($_models)?implode('+',$_models):'--';
+        $_products1 = array_unique($_products1);
+        $result['pid'] = !empty($_products1)?implode('+',$_products1):'--';
+
+        //格式化型号数据
+//        $_mids = !empty($result['mid'])?explode(',',$result['mid']):array();
+//        $_mids = array_unique($_mids);
+//        $_models = array();
+//        foreach($_mids as $c=>$d){
+//            if(isset($models[$d])){
+//                $_models[] = $models[$d];
+//            }
+//        }
+//        $_models = array_unique($_models);
+//        $result['mid'] = !empty($_models)?implode('+',$_models):'--';
 
         //格式化位置数据
         $tmp = $result->extension;

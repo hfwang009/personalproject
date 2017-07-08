@@ -121,9 +121,9 @@ class Admin extends CActiveRecord
             if(!empty($admin)){
                 $admin->attributes = $post["Admin"];
                 $admin->created = time();
-                $admin->province = $post['Admin']['province'];
-                $admin->city = $post['Admin']['city'];
-                $admin->area = $post['Admin']['area'];
+//                $admin->province = $post['Admin']['province'];
+//                $admin->city = $post['Admin']['city'];
+//                $admin->area = $post['Admin']['area'];
                 if($admin->validate()){
                     if($admin->save()){
                         return true;
@@ -139,9 +139,9 @@ class Admin extends CActiveRecord
             unset($post['Admin']['confirm_password']);
             $model->attributes = $post['Admin'];
             $model->created = time();
-            $model->province = $post['Admin']['province'];
-            $model->city = $post['Admin']['city'];
-            $model->area = $post['Admin']['area'];
+//            $model->province = $post['Admin']['province'];
+//            $model->city = $post['Admin']['city'];
+//            $model->area = $post['Admin']['area'];
             if($model->validate()){
                 if($model->save()){
                     return true;

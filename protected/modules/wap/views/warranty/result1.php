@@ -1,4 +1,4 @@
-<main id="room_page">
+<main id="room_page" style="width:350px;">
     <div class="container">
         <div class="row">
             <div class="col-md-4">
@@ -13,43 +13,38 @@
                                         <div class="container">
                                             <div class="row">
                                                 <div class="col-md-3 col-sm-6 widget">
-                                                    <h5 class="STYLE2">ICS智能安全窗材-质保证书</h5>
+                                                    <h5 class="STYLE2">ICS智能安全窗材-质保详细</h5>
                                                     <address>
                                                         <ul class="address_details">
-                                                            <table width="100%" border="1" bordercolor="#CCCCCC">
+                                                            <table width="300" border="1" bordercolor="#CCCCCC">
                                                                 <tr>
-                                                                    <td colspan="3"><span class="sub_title_xxs sub_title_xxs sub_title_xxs">尊敬的&nbsp;<?php echo $result['name']; ?>&nbsp;先生/女士：</br>感谢您选用品质一流的ICS智能安全窗材</span></td>
+                                                                    <td colspan="3"><span class="sub_title_xxs sub_title_xxs sub_title_xxs">尊敬的<?php echo $result['name']; ?>先生/女士，感谢你选用一流的ICS</span></td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td colspan="3"><span class="sub_title_xxs sub_title_xxs sub_title_xxs">电子质保证书编号：<?php echo $result['series_number']; ?></span></td>
+                                                                    <td colspan="3"><span class="sub_title_xxs sub_title_xxs sub_title_xxs">NO:<?php echo $result['series_number']; ?></span></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td width="21" rowspan="5"><p align="center" class="sub_title_xxs sub_title_xxs sub_title_xxs STYLE5">贴膜</p>
                                                                     </td>
-                                                                    <td height="27"><div align="center"><span class="sub_title_xxs sub_title_xxs sub_title_xxs STYLE5">品牌</span></div></td>
+                                                                    <td height="27"><div align="center"><span class="sub_title_xxs sub_title_xxs sub_title_xxs STYLE5">名称</span></div></td>
                                                                     <td><div align="center"><span class="sub_title_xxs sub_title_xxs sub_title_xxs STYLE5"><?php echo $result['pid'];?></span></div></td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td width="75"><p align="center" class="sub_title_xxs sub_title_xxs sub_title_xxs STYLE5">套餐名称</p></td>
+                                                                    <td width="75"><p align="center" class="sub_title_xxs sub_title_xxs sub_title_xxs STYLE5">型号</p></td>
                                                                     <td width="182"><div align="center"><span class="sub_title_xxs sub_title_xxs sub_title_xxs STYLE5"><?php echo $result['mid'];?>
                                                                             </span></div></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td><div align="center"><span class="sub_title_xxs sub_title_xxs sub_title_xxs STYLE5">施工部位</span></div></td>
-
-                                                                    <td><div align="center"><span class="sub_title_xxs sub_title_xxs sub_title_xxs STYLE5">质保年限</span></div></td>
+                                                                    <td><div align="center"><span class="sub_title_xxs sub_title_xxs sub_title_xxs STYLE5"><?php echo $result['extension'];?></span></div></td>
                                                                 </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <?php echo $result['extension'];?>
-                                                                    </td>
-                                                                    <td>
-                                                                        <?php echo $result['warrantytime'];?>
-                                                                    </td>
                                                                 <tr>
                                                                     <td><div align="center"><span class="sub_title_xxs sub_title_xxs sub_title_xxs STYLE5">施工日期</span></div></td>
                                                                     <td><div align="center"><span class="sub_title_xxs sub_title_xxs sub_title_xxs STYLE5"><?php echo date('Y-m-d',$result['construct_time']); ?></span></div></td>
                                                                 </tr>
+                                                                <tr>
+                                                                    <td><div align="center"><span class="sub_title_xxs sub_title_xxs sub_title_xxs STYLE5">质保年限</span></div></td>
+                                                                    <td><div align="center"><span class="sub_title_xxs sub_title_xxs sub_title_xxs STYLE5"><?php echo $result['warrantytime']; ?></span></div></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td rowspan="5"><p align="center" class="sub_title_xxs sub_title_xxs sub_title_xxs STYLE5">用户</p>
@@ -66,8 +61,8 @@
                                                                     <td><div align="center"><span class="sub_title_xxs sub_title_xxs sub_title_xxs STYLE5"><?php echo $result['address']; ?></span></div></td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td><div align="center"><span class="sub_title_xxs sub_title_xxs sub_title_xxs STYLE5">车型</span></div></td>
-                                                                    <td><div align="center"><span class="sub_title_xxs sub_title_xxs sub_title_xxs STYLE5"><?php echo $result['carmodel']; ?></span></div></td>
+                                                                    <td><div align="center"><span class="sub_title_xxs sub_title_xxs sub_title_xxs STYLE5">车牌号</span></div></td>
+                                                                    <td><div align="center"><span class="sub_title_xxs sub_title_xxs sub_title_xxs STYLE5"><?php echo $result['carlicence']; ?></span></div></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td><div align="center"><span class="sub_title_xxs sub_title_xxs sub_title_xxs STYLE5">车架号<br>（后六位）</span></div></td>
@@ -91,15 +86,15 @@
                                                                 </tr>
                                                                 <tr>
                                                                     <td colspan="3"><p>注意事项： <br>
-                                                                            本质保书给予您自安装之日起，在质保年限内，本公司承诺ICS智能安全窗材不开裂、不剥落、不起皱且不变形。 <br>
+                                                                            本质保书给予您自安装之日起，在质保年限内，本公司承诺本汽车隔热膜不开裂、不剥落、不起皱且不变形。 <br>
                                                                             为确保品质与效率，请您按照以下正确的保养方法注意保养： </p>
                                                                         <p>1. 安装后7日内，请勿将玻璃摇上或摇下； </p>
                                                                         <p>2. 安装后30天日，请勿用水清理玻璃； </p>
                                                                         <p>3. 请使用潮湿的毛巾海绵擦洗玻璃窗，然后使用柔软的布擦干，禁止使用刷子； </p>
                                                                         <p>4. 不要使用指甲或尖锐物将膜边缘拔开，以免污物进入； </p>
                                                                         <p>5. 禁止粘性标签直接粘至膜上。</p>
-                                                                        <div style="float:right;width:50%px; height:50%;margin:-65px 0 0 0">
-                                                                            <img src="http://i.99keguan.com/statics/admin/img/gongzhang.png" />
+                                                                        <p>&nbsp;</p>
+                                                                        <p>质保公章</p>
                                                                     </td>
                                                                 </tr>
                                                             </table>
@@ -157,6 +152,30 @@
                         <div class="help">
                             <?php echo $this->callus; ?>
                         </div>
+                    </aside>
+                    <aside class="widget">
+                        <h4>资讯</h4>
+                        <?php if(!empty($news)){ ?>
+                            <div class="latest_posts">
+                                <?php foreach($news as $_news){ ?>
+                                    <article class="latest_post">
+                                        <figure>
+                                            <a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->module->id.'/'.'news/detail',array('id'=>$_news['id'])); ?>" class="hover_effect h_link h_blue">
+                                                <img src="<?php echo !empty($_news['thumb'])?Yii::app()->baseUrl.$_news['thumb']:Yii::app()->baseUrl.'/statics/front/images/blog/thumb1.jpg'; ?>" height="60" width="120" alt="Image">
+                                            </a>
+                                        </figure>
+                                        <div class="details">
+                                            <h6><a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->module->id.'/'.'news/detail',array('id'=>$_news['id'])); ?>"><?php echo $_news['title'] ?></a></h6>
+                                            <span><i class="fa fa-calendar"></i><?php echo !empty($_news['ctime'])?date('d/m/Y',$_news['ctime']):''; ?></span>
+                                        </div>
+                                    </article>
+                                <?php } ?>
+                            </div>
+                        <?php }else{ ?>
+                            <div class="latest_posts">
+                                没有资讯
+                            </div>
+                        <?php } ?>
                     </aside>
                 </div>
 

@@ -21,7 +21,7 @@
                             ?>
                                 <div class="form-group">
                                     <div class="form_select">
-                                        <?php echo $form->textField($model,'carlicence',array('placeholder'=>'请输入手机号/车配号/发动机号/质保证书编号', 'class'=>'form-control'));?>
+                                        <?php echo $form->textField($model,'carlicence',array('placeholder'=>'请输入手机号/发动机号/质保证书编号', 'class'=>'form-control'));?>
                                     </div>
                                 </div>
 
@@ -88,7 +88,7 @@
     var js_submit_form = function(){
         var carlicence = $('#Warranty_carlicence').val();
         if(isEmpty(carlicence)){
-            show_tip_message('请填写手机号/车牌号/发动机编号！');
+            show_tip_message('请输入手机号/发动机号/质保证书编号！');
             return false;
         }
         $('#warranty_form').submit();

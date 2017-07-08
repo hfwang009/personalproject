@@ -61,7 +61,7 @@ return array(
 		),
 	'phone' => array
 		(
-		'signname' => 'ICS窗材',
+		'signname' => '可观',
 		'appkey' => 24515502,
 		'secretKey' => '632a8a9927f7f3e551a95b7074b64080'
 		),

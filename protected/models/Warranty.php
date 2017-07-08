@@ -24,6 +24,7 @@
  * @property integer $createtime
  * @property integer $is_send
  * @property string $extension
+ * @property string $carmodel
  */
 class Warranty extends CActiveRecord
 {
@@ -73,7 +74,7 @@ class Warranty extends CActiveRecord
 			array('telephone', 'length', 'max'=>11),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, series_number, mid, pid, name, telephone, address, carlicence, engineno, construct_time, warrantytime, storeid, ctime, status, create_user, createtime, refuse_reason, constructor, guide, is_send, extension', 'safe', 'on'=>'search'),
+			array('id, series_number, mid, pid, name, telephone, address, carlicence, engineno, construct_time, warrantytime, storeid, ctime, status, create_user, createtime, refuse_reason, constructor, guide, is_send, extension, carmodel', 'safe', 'on'=>'search'),
 		);
 	}
 	/**
@@ -105,6 +106,7 @@ class Warranty extends CActiveRecord
 			'name' => '质保用户姓名',
 			'telephone' => '质保用户电话',
 			'address' => '客户地址',
+			'carmodel' => '车型',
 			'carlicence' => '车牌号码',
 			'engineno' => '发动机编号',
 			'construct_time' => '施工时间',
@@ -143,6 +145,7 @@ class Warranty extends CActiveRecord
 		$criteria->compare('telephone',$this->telephone,true);
 		$criteria->compare('address',$this->address,true);
 		$criteria->compare('carlicence',$this->carlicence,true);
+		$criteria->compare('carmodel',$this->carmodel,true);
 		$criteria->compare('engineno',$this->engineno,true);
 		$criteria->compare('construct_time',$this->construct_time);
 		$criteria->compare('warrantytime',$this->warrantytime,true);
@@ -217,6 +220,7 @@ class Warranty extends CActiveRecord
         $warranty->status = $post['Warranty']['status'];
         $warranty->refuse_reason = $post['Warranty']['refuse_reason'];
         $warranty->constructor = $post['Warranty']['constructor'];
+        $warranty->carmodel = $post['Warranty']['carmodel'];
         $warranty->guide = $post['Warranty']['guide'];
         $warranty->pid = $post['Warranty']['pid'];
         $warranty->mid = $post['Warranty']['mid'];
@@ -272,6 +276,7 @@ class Warranty extends CActiveRecord
             $warranty->status = $post['Warranty']['status'];
             $warranty->refuse_reason = $post['Warranty']['refuse_reason'];
             $warranty->constructor = $post['Warranty']['constructor'];
+            $warranty->carmodel = $post['Warranty']['carmodel'];
             $warranty->guide = $post['Warranty']['guide'];
             $warranty->pid = $post['Warranty']['pid'];
             $warranty->mid = $post['Warranty']['mid'];
@@ -342,7 +347,8 @@ class Warranty extends CActiveRecord
             if($flag){
                 $criteria->condition .= ' AND t.telephone = "'.$param.'"';
             }else{
-                $criteria->condition .= ' AND (t.carlicence = "'.$param.'" OR t.engineno = "'.$param.'" OR t.series_number="'.$param.'")';
+                $criteria->condition .= ' AND ( t.engineno = "'.$param.'" OR t.series_number="'.$param.'")';
+//                $criteria->condition .= ' AND (t.carlicence = "'.$param.'" OR t.engineno = "'.$param.'" OR t.series_number="'.$param.'")';
             }
         }
         $criteria->condition .= ' AND t.status=1';
@@ -363,7 +369,7 @@ class Warranty extends CActiveRecord
         $criteria->condition .= ' AND t.status=1';
         $criteria->with = array('admin','store');
         $warranty = $this->find($criteria);
-        $warranty = CUtils::formatData($warranty);
+        $warranty = CUtils::formatData1($warranty);
         return $warranty;
     }
 
@@ -420,6 +426,7 @@ class Warranty extends CActiveRecord
         if(!empty($engineno)){
             $criteria->condition.=' AND engineno="'.$engineno.'"';
         }
+        $criteria->order = 'createtime desc';
         $warranty = $this->find($criteria);
         if(!empty($warranty)){
             $createtime = !empty($warranty['createtime'])?$warranty['createtime']:'';

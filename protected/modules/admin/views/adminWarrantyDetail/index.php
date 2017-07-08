@@ -47,6 +47,9 @@
                                     <a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->module->id.'/'.Yii::app()->controller->id . '/' . $this->getAction()->getId(), array_merge($condition,array('sortFiled'=>'pid','sortValue'=>(isset($condition['sortFiled']) && $condition['sortFiled']=='pid')?($condition['sortValue'] == "asc"?"desc":"asc"):"asc")));?>">质保产品名称<span class="glyphicon <?php echo $condition['sortFiled'] == 'pid'?($condition['sortValue'] == "asc"?"glyphicon-chevron-up":"glyphicon-chevron-down"):'';?>"></span></a>
                                 </th>
                                 <th>
+                                    质保产品型号
+                                </th>
+                                <th>
                                     质保产品序列号
                                 </th>
                                 <th>
@@ -82,6 +85,7 @@
                                         <td><?php echo !empty($_model->warranty)?$_model->warranty->engineno:'--';?></td>
                                         <td><?php echo !empty($_model->warranty)?date('Y-m-d',$_model->warranty->createtime):'--';?></td>
                                         <td><?php echo !empty($_model->product)?$_model->product->name:'--';?></td>
+                                        <td><?php echo !empty($_model->product)?$_model->product->model->name:'--';?></td>
                                         <td><?php echo !empty($_model->product)?$_model->product->series_number:'--';?></td>
                                         <td><?php echo !empty($_model->product)?$_model->product->total:'--';?></td>
                                         <td><?php echo !empty($_model->product)?$_model->current_total:'--';?></td>

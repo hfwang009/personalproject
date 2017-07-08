@@ -317,6 +317,17 @@
                         <tr>
                             <td>
                                 <div class="form-group">
+                                    <?php echo $form->label($model,'carmodel',array('class'=>'col-sm-2 col-xs-3 control-label'));?>
+                                    <div class="col-sm-6 col-xs-8">
+                                        <?php echo $form->textField($model, 'carmodel', array("class"=>"form-control"));?>
+                                        <?php echo $form->error($model,'carmodel',array('class'=>'help-block'));?>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="form-group">
                                     <?php echo $form->label($model,'carlicence',array('class'=>'col-sm-2 col-xs-3 control-label'));?>
                                     <div class="col-sm-6 col-xs-8">
                                         <?php echo $form->textField($model, 'carlicence', array("class"=>"form-control"));?>

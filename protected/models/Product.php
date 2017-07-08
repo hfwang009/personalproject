@@ -150,9 +150,9 @@ class Product extends CActiveRecord
             if(!empty($product)){
                 $product->attributes = $post["Product"];
                 $product->ctime = time();
-                $product->province = $post['Product']['province'];
-                $product->city = $post['Product']['city'];
-                $product->area = $post['Product']['area'];
+//                $product->province = $post['Product']['province'];
+//                $product->city = $post['Product']['city'];
+//                $product->area = $post['Product']['area'];
 //                $product->type = $post['Product']['type'];
                 $product->customer = $post['Product']['customer'];
                 $product->spec = $post['Product']['spec'];
@@ -171,9 +171,9 @@ class Product extends CActiveRecord
             $model->attributes = $post['Product'];
             $model->ctime = time();
             $model->current_num = $post['Product']['current_num'];
-            $model->province = $post['Product']['province'];
-            $model->city = $post['Product']['city'];
-            $model->area = $post['Product']['area'];
+//            $model->province = $post['Product']['province'];
+//            $model->city = $post['Product']['city'];
+//            $model->area = $post['Product']['area'];
 //            $model->type = $post['Product']['type'];
             $model->customer = $post['Product']['customer'];
             $model->spec = $post['Product']['spec'];
@@ -360,6 +360,15 @@ class Product extends CActiveRecord
             $sum,
             $name
         );
+    }
+
+    public function getProductBrand($id){
+        $criteria = new CDbCriteria();
+        $criteria->condition = 1;
+        $criteria->condition .= ' AND t.id = "'.$id.'"';
+        $criteria->with = array('brand');
+        $product = $this->find($criteria);
+        return $product;
     }
 
     public function getCriteriaCondition($criteria,$condition,$search){

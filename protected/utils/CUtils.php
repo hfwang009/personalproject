@@ -617,4 +617,61 @@ class CUtils {
 
         return $result;
     }
+
+    public static function formatdata1($result){
+        $models = Models::model()->getModelData();
+        $ptype = Yii::app()->params['conf']['setting']['ptype'];
+
+        //格式化产品数据
+        $_pids = !empty($result['pid'])?explode(',',$result['pid']):array();
+        $_pids = array_unique($_pids);
+        $_products = array();
+        foreach($_pids as $a=>$b){
+            $bproduct = Product::model()->getProductBrand($b);
+            if(!empty($bproduct->brand)){
+                $_products[] = $bproduct->brand->name;
+            }
+        }
+        $_products = array_unique($_products);
+        $result['pid'] = !empty($_products)?implode('+',$_products):'--';
+
+        //格式化型号数据
+        $_mids = !empty($result['mid'])?explode(',',$result['mid']):array();
+        $_mids = array_unique($_mids);
+        $_models = array();
+        foreach($_mids as $c=>$d){
+            if(isset($models[$d])){
+                $_models[] = $models[$d];
+            }
+        }
+        $_models = array_unique($_models);
+        $result['mid'] = !empty($_models)?implode('+',$_models):'--';
+
+        //格式化位置数据
+        $tmp = $result->extension;
+        $extensions = !empty($tmp)?unserialize(base64_decode($tmp)):array();
+        $string = '';
+        if(!empty($extensions)){
+            foreach($extensions as $extension){
+                $string .= '<div align="center"><span class="sub_title_xxs sub_title_xxs sub_title_xxs STYLE5">'.$ptype[$extension['type']].'</span></div>';
+            }
+        }else{
+            $string = '<div align="center"><span class="sub_title_xxs sub_title_xxs sub_title_xxs STYLE5"></span></div>';
+        }
+        $result->extension = $string;
+
+        $warrantytime = isset($result['warrantytime'])?$result['warrantytime']:'';
+        $_arr = !empty($warrantytime)?array_unique(explode(',',$warrantytime)):array();
+        $string1 = '';
+        if(!empty($_arr)){
+            foreach($_arr as $warranty){
+                $string1 .= '<div align="center"><span class="sub_title_xxs sub_title_xxs sub_title_xxs STYLE5">'.$warranty.'</span></div>';
+            }
+        }else{
+            $string1 = '<div align="center"><span class="sub_title_xxs sub_title_xxs sub_title_xxs STYLE5"></span></div>';
+        }
+        $result['warrantytime'] = $string1;
+
+        return $result;
+    }
 }

@@ -144,7 +144,7 @@ class WarrantyDetail extends CActiveRecord
                 $search->ctime_end = $condition['WarrantyDetail']['ctime_end'];
             }
         }
-        $criteria->with = array('warranty','product');
+        $criteria->with = array('warranty','product'=>array('with'=>'model'));
         if(empty($condition['sortFiled']) || empty($condition['sortValue'])){
             $condition['sortFiled'] = 'id';
             $condition['sortValue'] = 'desc';

@@ -18,10 +18,12 @@ class WarrantyController extends Controller{
             unset($_POST['Warranty']['provinceid']);
             unset($_POST['Warranty']['cityid']);
             unset($_POST['Warranty']['areaid']);
+            unset($_POST['Warranty']['authcode']);
             $_POST['Warranty']['name'] = $this->FilterXss(strval($_POST['Warranty']['name']));
             $_POST['Warranty']['telephone'] = $this->FilterXss(strval($_POST['Warranty']['telephone']));
             $_POST['Warranty']['address'] = $this->FilterXss(strval($_POST['Warranty']['address']));
-            $_POST['Warranty']['carlicence'] = $this->FilterXss($_POST['Warranty']['carlicence']);
+//            $_POST['Warranty']['carlicence'] = $this->FilterXss($_POST['Warranty']['carlicence']);
+            $_POST['Warranty']['carmodel'] = $this->FilterXss($_POST['Warranty']['carmodel']);
             $_POST['Warranty']['engineno'] = $this->FilterXss($_POST['Warranty']['engineno']);
             $_POST['Warranty']['construct_time'] = strtotime($_POST['Warranty']['construct_time']);
             $res = Warranty::model()->addWarranty($_POST);
@@ -140,9 +142,9 @@ class WarrantyController extends Controller{
         if(Yii::app()->request->isPostRequest){
             $name = Yii::app()->request->getParam('name','');
             $telephone = Yii::app()->request->getParam('telephone','');
-            $carlicence = Yii::app()->request->getParam('carlicence','');
+            $carmodel = Yii::app()->request->getParam('carmodel','');
             $engineno = Yii::app()->request->getParam('engineno','');
-            $flag = Warranty::model()->checkWarranty($name,$telephone,$carlicence,$engineno);
+            $flag = Warranty::model()->checkWarranty($name,$telephone,$carmodel,$engineno);
             if($flag){
                 $state = true;
             }else{

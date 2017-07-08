@@ -35,9 +35,14 @@
                                     <?php echo $form->textField($model,'address',array('placeholder'=>'请输入地址', 'class'=>'form-control'));?>
                                 </div>
                             </div>
+<!--                            <div class="form-group">-->
+<!--                                <div class="form_select">-->
+<!--                                    --><?php //echo $form->textField($model,'carlicence',array('placeholder'=>'请输入车牌号', 'class'=>'form-control'));?>
+<!--                                </div>-->
+<!--                            </div>-->
                             <div class="form-group">
                                 <div class="form_select">
-                                    <?php echo $form->textField($model,'carlicence',array('placeholder'=>'请输入车牌号', 'class'=>'form-control'));?>
+                                    <?php echo $form->textField($model,'carmodel',array('placeholder'=>'请输入车辆型号', 'class'=>'form-control'));?>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -317,9 +322,14 @@
             show_tip_message('请填写联系地址！');
             return false;
         }
-        var carlicence = $('#Warranty_carlicence').val();
-        if(isEmpty(carlicence)){
-            show_tip_message('请填写车牌号！');
+//        var carlicence = $('#Warranty_carlicence').val();
+//        if(isEmpty(carlicence)){
+//            show_tip_message('请填写车牌号！');
+//            return false;
+//        }
+        var carmodel = $('#Warranty_carmodel').val();
+        if(isEmpty(carmodel)){
+            show_tip_message('请填写车辆型号！');
             return false;
         }
         var authcode = $('#Warranty_authcode').val();
@@ -365,7 +375,7 @@
                         $.ajax({
                             type:'post',
                             url:'<?php echo $ajax_url; ?>',
-                            data:{ct:'warranty',ac:'checkWarranty',name:name,telephone:telephone,carlicence:carlicence,engineno:engineno},
+                            data:{ct:'warranty',ac:'checkWarranty',name:name,telephone:telephone,engineno:engineno,carmodel:carmodel},
                             dataType:'json',
                             success:function(re){
                                 if(re.state==true){

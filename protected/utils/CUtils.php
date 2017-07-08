@@ -628,13 +628,23 @@ class CUtils {
         $_products = array();
         foreach($_pids as $a=>$b){
             if(isset($products[$b])){
-                $_products[] = $products[$b];
+                $_products []= $products[$b];
             }
         }
         $_products = array_unique($_products);
-        $result['mid'] = !empty($_products)?implode('+',$_products):'--';
+        $result['mid'] =!empty($_products)?implode('+',$_products):'--';
 
-
+//        $_pids = !empty($result['pid'])?explode(',',$result['pid']):array();
+//        $_pids = array_unique($_pids);
+//        $_products = '';
+//        foreach($_pids as $a=>$b){
+//            if(isset($products[$b])){
+//                $tmp = '';
+//                $tmp = $a<count($_pids)-1?'style="border-bottom: solid  #a1b1c1 1px;border-collapse:collapse;"':'';
+//                $_products .= '<div align="center" '.$tmp.'><span class="sub_title_xxs sub_title_xxs sub_title_xxs STYLE5">'.$products[$b].'</span></div>';
+//            }
+//        }
+//        $result['mid'] = $_products;
 
         //格式化产品数据
         $_pids = !empty($result['pid'])?explode(',',$result['pid']):array();
@@ -666,8 +676,10 @@ class CUtils {
         $extensions = !empty($tmp)?unserialize(base64_decode($tmp)):array();
         $string = '';
         if(!empty($extensions)){
-            foreach($extensions as $extension){
-                $string .= '<div align="center"><span class="sub_title_xxs sub_title_xxs sub_title_xxs STYLE5">'.$ptype[$extension['type']].'</span></div>';
+            foreach($extensions as $k=>$extension){
+                $tmp = '';
+                $tmp = $k<count($extensions)-1?'style="border-bottom: solid  #a1b1c1 1px;border-collapse:collapse;"':'';
+                $string .= '<div align="center" '.$tmp.'><span class="sub_title_xxs sub_title_xxs sub_title_xxs STYLE5">'.$ptype[$extension['type']].'</span></div>';
             }
         }else{
             $string = '<div align="center"><span class="sub_title_xxs sub_title_xxs sub_title_xxs STYLE5"></span></div>';
@@ -678,8 +690,10 @@ class CUtils {
         $_arr = !empty($warrantytime)?explode(',',$warrantytime):array();
         $string1 = '';
         if(!empty($_arr)){
-            foreach($_arr as $warranty){
-                $string1 .= '<div align="center"><span class="sub_title_xxs sub_title_xxs sub_title_xxs STYLE5">'.$warranty.'</span></div>';
+            foreach($_arr as $k=>$warranty){
+                $tmp = '';
+                $tmp = $k<count($_arr)-1?'style="border-bottom: solid  #a1b1c1 1px;border-collapse:collapse;"':'';
+                $string1 .= '<div align="center" '.$tmp.'><span class="sub_title_xxs sub_title_xxs sub_title_xxs STYLE5">'.$warranty.'</span></div>';
             }
         }else{
             $string1 = '<div align="center"><span class="sub_title_xxs sub_title_xxs sub_title_xxs STYLE5"></span></div>';

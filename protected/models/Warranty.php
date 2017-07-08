@@ -68,7 +68,7 @@ class Warranty extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array(' name, telephone, address, carlicence, engineno, construct_time', 'required', 'message'=>'{attribute}必须填写！'),
+			array(' name, telephone, address, engineno, construct_time', 'required', 'message'=>'{attribute}必须填写！'),
 			array('is_send, storeid, ctime', 'numerical', 'integerOnly'=>true),
 			array('series_number, name, address, carlicence, engineno, warrantytime', 'length', 'max'=>500),
 			array('telephone', 'length', 'max'=>11),
@@ -171,6 +171,7 @@ class Warranty extends CActiveRecord
             if(!empty($warranty)){
                 $warranty->attributes = $post["Warranty"];
                 $warranty->telephone = $post['Warranty']['telephone'];
+                $warranty->carmodel = $post['Warranty']['carmodel'];
                 $warranty->create_user = $post['Warranty']['create_user'];
                 $warranty->ctime = time();
                 $warranty->series_number = date('YmdHis',time());
@@ -186,6 +187,8 @@ class Warranty extends CActiveRecord
             $model = new Warranty();
             $model->attributes = $post['Warranty'];
             $model->telephone = $post['Warranty']['telephone'];
+            $model->carmodel = $post['Warranty']['carmodel'];
+            $model->carlicence = !empty($post['Warranty']['carlicence'])?$post['Warranty']['carlicence']:'';
             $model->createtime = time();
             $model->status = 0;
             $model->mid = 0;
@@ -353,6 +356,7 @@ class Warranty extends CActiveRecord
         }
         $criteria->condition .= ' AND t.status=1';
         $criteria->with = array('admin','store');
+        $criteria->order = 't.ctime desc';
         $warrantys = $this->findAll($criteria);
         if(!empty($warrantys)){
             foreach($warrantys as &$warranty){
@@ -414,7 +418,7 @@ class Warranty extends CActiveRecord
         );
     }
 
-    public function checkWarranty($name,$telephone,$carlicence,$engineno){
+    public function checkWarranty($name,$telephone,$carmodel,$engineno,$carlicence=null){
         $criteria = new CDbCriteria();
         $criteria->condition=1;
         if(!empty($name)){
@@ -425,6 +429,9 @@ class Warranty extends CActiveRecord
         }
         if(!empty($carlicence)){
             $criteria->condition.=' AND carlicence="'.$carlicence.'"';
+        }
+        if(!empty($carmodel)){
+            $criteria->condition.=' AND carmodel="'.$carmodel.'"';
         }
         if(!empty($engineno)){
             $criteria->condition.=' AND engineno="'.$engineno.'"';

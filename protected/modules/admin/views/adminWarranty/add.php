@@ -686,9 +686,14 @@
             show_tip_message('没有输入用户电话号码！');
             return false;
         }
-        var carlicence = $('#Warranty_carlicence').val();
-        if(isEmpty(carlicence)){
-            show_tip_message('没有输入车牌号！');
+//        var carlicence = $('#Warranty_carlicence').val();
+//        if(isEmpty(carlicence)){
+//            show_tip_message('没有输入车牌号！');
+//            return false;
+//        }
+        var carmodel = $('#Warranty_carmodel').val();
+        if(isEmpty(carmodel)){
+            show_tip_message('没有输入车辆型号！');
             return false;
         }
         var engineno = $('#Warranty_engineno').val();

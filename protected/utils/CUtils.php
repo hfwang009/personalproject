@@ -661,7 +661,7 @@ class CUtils {
         $result->extension = $string;
 
         $warrantytime = isset($result['warrantytime'])?$result['warrantytime']:'';
-        $_arr = !empty($warrantytime)?array_unique(explode(',',$warrantytime)):array();
+        $_arr = !empty($warrantytime)?explode(',',$warrantytime):array();
         $string1 = '';
         if(!empty($_arr)){
             foreach($_arr as $warranty){

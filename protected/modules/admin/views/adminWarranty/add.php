@@ -488,6 +488,13 @@
                     </div>
                 </div>
                 <div class="form-group">
+                    <?php echo $form->label($search,'carmodel',array('class'=>'col-sm-2 col-xs-3 control-label'));?>
+                    <div class="col-sm-5 col-xs-8">
+                        <?php echo $form->textField($search, 'carmodel', array("class"=>"form-control"));?>
+                        <?php echo $form->error($search,'carmodel',array('class'=>'help-block'));?>
+                    </div>
+                </div>
+                <div class="form-group">
                     <?php echo $form->label($search,'carlicence',array('class'=>'col-sm-2 col-xs-3 control-label'));?>
                     <div class="col-sm-5 col-xs-8">
                         <?php echo $form->textField($search, 'carlicence', array("class"=>"form-control"));?>

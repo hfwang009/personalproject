@@ -76,3 +76,667 @@ in D:\new\carproject\protected\views\layouts\front.php (38)
 in D:\new\carproject\protected\controllers\IndexController.php (10)
 2017/07/08 10:10:41 [trace] [system.CModule] Loading "assetManager" application component
 in D:\new\carproject\protected\controllers\IndexController.php (10)
+2017/07/08 11:19:45 [trace] [system.CModule] Loading "log" application component
+in D:\new\carproject\index.php (12)
+2017/07/08 11:19:45 [trace] [system.CModule] Loading "request" application component
+in D:\new\carproject\index.php (12)
+2017/07/08 11:19:45 [trace] [system.CModule] Loading "urlManager" application component
+in D:\new\carproject\index.php (16)
+2017/07/08 11:19:45 [trace] [system.base.CModule] Loading "admin" module
+in D:\new\carproject\index.php (16)
+2017/07/08 11:19:45 [trace] [system.CModule] Loading "db" application component
+in D:\new\carproject\protected\models\News.php (24)
+in D:\new\carproject\protected\components\Controller.php (69)
+in D:\new\carproject\index.php (16)
+2017/07/08 11:19:45 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\new\carproject\protected\models\News.php (24)
+in D:\new\carproject\protected\components\Controller.php (69)
+in D:\new\carproject\index.php (16)
+2017/07/08 11:19:45 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `car_news`
+in D:\new\carproject\protected\models\News.php (24)
+in D:\new\carproject\protected\components\Controller.php (69)
+in D:\new\carproject\index.php (16)
+2017/07/08 11:19:45 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `car_news`
+in D:\new\carproject\protected\models\News.php (24)
+in D:\new\carproject\protected\components\Controller.php (69)
+in D:\new\carproject\index.php (16)
+2017/07/08 11:19:45 [trace] [system.CModule] Loading "user" application component
+in D:\new\carproject\protected\modules\admin\components\CAdminController.php (13)
+in D:\new\carproject\index.php (16)
+2017/07/08 11:19:45 [trace] [system.CModule] Loading "session" application component
+in D:\new\carproject\protected\modules\admin\components\CAdminController.php (13)
+in D:\new\carproject\index.php (16)
+2017/07/08 11:19:45 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `car_warranty`
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (6)
+in D:\new\carproject\index.php (16)
+2017/07/08 11:19:45 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `car_warranty`
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (6)
+in D:\new\carproject\index.php (16)
+2017/07/08 11:19:45 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `car_models`
+in D:\new\carproject\protected\models\Models.php (21)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (21)
+in D:\new\carproject\index.php (16)
+2017/07/08 11:19:45 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `car_models`
+in D:\new\carproject\protected\models\Models.php (21)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (21)
+in D:\new\carproject\index.php (16)
+2017/07/08 11:19:45 [trace] [system.db.ar.CActiveRecord] Models.findAll()
+in D:\new\carproject\protected\models\Models.php (119)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (21)
+in D:\new\carproject\index.php (16)
+2017/07/08 11:19:45 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `car_models` `t`
+in D:\new\carproject\protected\models\Models.php (119)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (21)
+in D:\new\carproject\index.php (16)
+2017/07/08 11:19:45 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `car_product`
+in D:\new\carproject\protected\models\Product.php (39)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (22)
+in D:\new\carproject\index.php (16)
+2017/07/08 11:19:45 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `car_product`
+in D:\new\carproject\protected\models\Product.php (39)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (22)
+in D:\new\carproject\index.php (16)
+2017/07/08 11:19:45 [trace] [system.db.ar.CActiveRecord] Product.findAll()
+in D:\new\carproject\protected\models\Product.php (220)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (22)
+in D:\new\carproject\index.php (16)
+2017/07/08 11:19:45 [trace] [system.db.CDbCommand] Querying SQL: SELECT `t`.`id` AS `t0_c0`, `t`.`mid` AS `t0_c1`, `t`.`name` AS `t0_c2`, `t`.`series_number` AS `t0_c3`, `t`.`total` AS `t0_c4`, `t`.`current_num` AS `t0_c5`, `t`.`bid` AS `t0_c6`, `t`.`intro` AS `t0_c7`, `t`.`customer` AS `t0_c8`, `t`.`spec` AS `t0_c9`, `t`.`company` AS `t0_c10`, `t`.`province` AS `t0_c11`, `t`.`city` AS `t0_c12`, `t`.`area` AS `t0_c13`, `t`.`type` AS `t0_c14`, `t`.`create_user` AS `t0_c15`, `t`.`ctime` AS `t0_c16`, `t`.`udpatetime` AS `t0_c17`, `t`.`remarks` AS `t0_c18`, `model`.`id` AS `t1_c0`, `model`.`name` AS `t1_c1` FROM `car_product` `t`  LEFT OUTER JOIN `car_models` `model` ON (`t`.`mid`=`model`.`id`) 
+in D:\new\carproject\protected\models\Product.php (220)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (22)
+in D:\new\carproject\index.php (16)
+2017/07/08 11:19:45 [trace] [system.db.ar.CActiveRecord] Warranty.count()
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (23)
+in D:\new\carproject\index.php (16)
+2017/07/08 11:19:45 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `car_store`
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (23)
+in D:\new\carproject\index.php (16)
+2017/07/08 11:19:45 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `car_store`
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (23)
+in D:\new\carproject\index.php (16)
+2017/07/08 11:19:45 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `car_admin`
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (23)
+in D:\new\carproject\index.php (16)
+2017/07/08 11:19:45 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `car_admin`
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (23)
+in D:\new\carproject\index.php (16)
+2017/07/08 11:19:45 [trace] [system.db.ar.CActiveRecord] Warranty.count() eagerly
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (23)
+in D:\new\carproject\index.php (16)
+2017/07/08 11:19:45 [trace] [system.db.CDbCommand] Querying SQL: SELECT COUNT(DISTINCT `t`.`id`) FROM `car_warranty` `t`  LEFT OUTER JOIN `car_store` `store` ON (`t`.`storeid`=`store`.`id`)  LEFT OUTER JOIN `car_admin` `admin` ON (`t`.`create_user`=`admin`.`id`)  WHERE (1)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (23)
+in D:\new\carproject\index.php (16)
+2017/07/08 11:19:45 [trace] [system.db.ar.CActiveRecord] Warranty.findAll()
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (23)
+in D:\new\carproject\index.php (16)
+2017/07/08 11:19:45 [trace] [system.db.CDbCommand] Querying SQL: SELECT `t`.`id` AS `t0_c0`, `t`.`series_number` AS `t0_c1`, `t`.`mid` AS `t0_c2`, `t`.`pid` AS `t0_c3`, `t`.`storeid` AS `t0_c4`, `t`.`name` AS `t0_c5`, `t`.`telephone` AS `t0_c6`, `t`.`address` AS `t0_c7`, `t`.`carmodel` AS `t0_c8`, `t`.`carlicence` AS `t0_c9`, `t`.`engineno` AS `t0_c10`, `t`.`construct_time` AS `t0_c11`, `t`.`warrantytime` AS `t0_c12`, `t`.`status` AS `t0_c13`, `t`.`create_user` AS `t0_c14`, `t`.`ctime` AS `t0_c15`, `t`.`createtime` AS `t0_c16`, `t`.`refuse_reason` AS `t0_c17`, `t`.`constructor` AS `t0_c18`, `t`.`guide` AS `t0_c19`, `t`.`extension` AS `t0_c20`, `t`.`is_send` AS `t0_c21`, `store`.`id` AS `t1_c0`, `store`.`name` AS `t1_c1`, `store`.`type` AS `t1_c2`, `store`.`provinceid` AS `t1_c3`, `store`.`cityid` AS `t1_c4`, `store`.`areaid` AS `t1_c5`, `store`.`address` AS `t1_c6`, `store`.`telephone` AS `t1_c7`, `store`.`lat` AS `t1_c8`, `store`.`lng` AS `t1_c9`, `admin`.`id` AS `t2_c0`, `admin`.`username` AS `t2_c1`, `admin`.`password` AS `t2_c2`, `admin`.`status` AS `t2_c3`, `admin`.`role_id` AS `t2_c4`, `admin`.`province` AS `t2_c5`, `admin`.`city` AS `t2_c6`, `admin`.`area` AS `t2_c7`, `admin`.`created` AS `t2_c8` FROM `car_warranty` `t`  LEFT OUTER JOIN `car_store` `store` ON (`t`.`storeid`=`store`.`id`)  LEFT OUTER JOIN `car_admin` `admin` ON (`t`.`create_user`=`admin`.`id`)  WHERE (1) ORDER BY t.id desc LIMIT 20
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (23)
+in D:\new\carproject\index.php (16)
+2017/07/08 11:19:45 [trace] [system.CModule] Loading "widgetFactory" application component
+in D:\new\carproject\protected\modules\admin\views\adminWarranty\index.php (146)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (33)
+in D:\new\carproject\index.php (16)
+2017/07/08 11:19:45 [trace] [system.CModule] Loading "clientScript" application component
+in D:\new\carproject\protected\modules\admin\views\adminWarranty\index.php (220)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (33)
+in D:\new\carproject\index.php (16)
+2017/07/08 11:19:45 [trace] [system.CModule] Loading "assetManager" application component
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (33)
+in D:\new\carproject\index.php (16)
+2017/07/08 11:24:12 [trace] [system.CModule] Loading "log" application component
+in D:\new\carproject\index.php (12)
+2017/07/08 11:24:12 [trace] [system.CModule] Loading "request" application component
+in D:\new\carproject\index.php (12)
+2017/07/08 11:24:12 [trace] [system.CModule] Loading "urlManager" application component
+in D:\new\carproject\index.php (16)
+2017/07/08 11:24:12 [trace] [system.base.CModule] Loading "wap" module
+in D:\new\carproject\index.php (16)
+2017/07/08 11:24:12 [trace] [system.CModule] Loading "db" application component
+in D:\new\carproject\protected\models\News.php (24)
+in D:\new\carproject\protected\components\Controller.php (69)
+in D:\new\carproject\index.php (16)
+2017/07/08 11:24:12 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\new\carproject\protected\models\News.php (24)
+in D:\new\carproject\protected\components\Controller.php (69)
+in D:\new\carproject\index.php (16)
+2017/07/08 11:24:12 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `car_news`
+in D:\new\carproject\protected\models\News.php (24)
+in D:\new\carproject\protected\components\Controller.php (69)
+in D:\new\carproject\index.php (16)
+2017/07/08 11:24:12 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `car_news`
+in D:\new\carproject\protected\models\News.php (24)
+in D:\new\carproject\protected\components\Controller.php (69)
+in D:\new\carproject\index.php (16)
+2017/07/08 11:24:12 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `car_warranty`
+in D:\new\carproject\protected\models\Warranty.php (52)
+in D:\new\carproject\protected\modules\wap\controllers\WarrantyController.php (62)
+in D:\new\carproject\index.php (16)
+2017/07/08 11:24:12 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `car_warranty`
+in D:\new\carproject\protected\models\Warranty.php (52)
+in D:\new\carproject\protected\modules\wap\controllers\WarrantyController.php (62)
+in D:\new\carproject\index.php (16)
+2017/07/08 11:24:12 [trace] [system.db.ar.CActiveRecord] Warranty.findAll()
+in D:\new\carproject\protected\models\Warranty.php (356)
+in D:\new\carproject\protected\modules\wap\controllers\WarrantyController.php (62)
+in D:\new\carproject\index.php (16)
+2017/07/08 11:24:12 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `car_admin`
+in D:\new\carproject\protected\models\Warranty.php (356)
+in D:\new\carproject\protected\modules\wap\controllers\WarrantyController.php (62)
+in D:\new\carproject\index.php (16)
+2017/07/08 11:24:12 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `car_admin`
+in D:\new\carproject\protected\models\Warranty.php (356)
+in D:\new\carproject\protected\modules\wap\controllers\WarrantyController.php (62)
+in D:\new\carproject\index.php (16)
+2017/07/08 11:24:12 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `car_store`
+in D:\new\carproject\protected\models\Warranty.php (356)
+in D:\new\carproject\protected\modules\wap\controllers\WarrantyController.php (62)
+in D:\new\carproject\index.php (16)
+2017/07/08 11:24:12 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `car_store`
+in D:\new\carproject\protected\models\Warranty.php (356)
+in D:\new\carproject\protected\modules\wap\controllers\WarrantyController.php (62)
+in D:\new\carproject\index.php (16)
+2017/07/08 11:24:12 [trace] [system.db.CDbCommand] Querying SQL: SELECT `t`.`id` AS `t0_c0`, `t`.`series_number` AS `t0_c1`, `t`.`mid` AS `t0_c2`, `t`.`pid` AS `t0_c3`, `t`.`storeid` AS `t0_c4`, `t`.`name` AS `t0_c5`, `t`.`telephone` AS `t0_c6`, `t`.`address` AS `t0_c7`, `t`.`carmodel` AS `t0_c8`, `t`.`carlicence` AS `t0_c9`, `t`.`engineno` AS `t0_c10`, `t`.`construct_time` AS `t0_c11`, `t`.`warrantytime` AS `t0_c12`, `t`.`status` AS `t0_c13`, `t`.`create_user` AS `t0_c14`, `t`.`ctime` AS `t0_c15`, `t`.`createtime` AS `t0_c16`, `t`.`refuse_reason` AS `t0_c17`, `t`.`constructor` AS `t0_c18`, `t`.`guide` AS `t0_c19`, `t`.`extension` AS `t0_c20`, `t`.`is_send` AS `t0_c21`, `admin`.`id` AS `t1_c0`, `admin`.`username` AS `t1_c1`, `admin`.`password` AS `t1_c2`, `admin`.`status` AS `t1_c3`, `admin`.`role_id` AS `t1_c4`, `admin`.`province` AS `t1_c5`, `admin`.`city` AS `t1_c6`, `admin`.`area` AS `t1_c7`, `admin`.`created` AS `t1_c8`, `store`.`id` AS `t2_c0`, `store`.`name` AS `t2_c1`, `store`.`type` AS `t2_c2`, `store`.`provinceid` AS `t2_c3`, `store`.`cityid` AS `t2_c4`, `store`.`areaid` AS `t2_c5`, `store`.`address` AS `t2_c6`, `store`.`telephone` AS `t2_c7`, `store`.`lat` AS `t2_c8`, `store`.`lng` AS `t2_c9` FROM `car_warranty` `t`  LEFT OUTER JOIN `car_admin` `admin` ON (`t`.`create_user`=`admin`.`id`)  LEFT OUTER JOIN `car_store` `store` ON (`t`.`storeid`=`store`.`id`)  WHERE (1 AND t.telephone = "13992891749" AND t.status=1)
+in D:\new\carproject\protected\models\Warranty.php (356)
+in D:\new\carproject\protected\modules\wap\controllers\WarrantyController.php (62)
+in D:\new\carproject\index.php (16)
+2017/07/08 11:24:12 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `car_product`
+in D:\new\carproject\protected\models\Product.php (39)
+in D:\new\carproject\protected\utils\CUtils.php (574)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:12 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `car_product`
+in D:\new\carproject\protected\models\Product.php (39)
+in D:\new\carproject\protected\utils\CUtils.php (574)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:12 [trace] [system.db.ar.CActiveRecord] Product.findAll()
+in D:\new\carproject\protected\models\Product.php (194)
+in D:\new\carproject\protected\utils\CUtils.php (574)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:12 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `car_product` `t`
+in D:\new\carproject\protected\models\Product.php (194)
+in D:\new\carproject\protected\utils\CUtils.php (574)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `car_models`
+in D:\new\carproject\protected\models\Models.php (21)
+in D:\new\carproject\protected\utils\CUtils.php (575)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `car_models`
+in D:\new\carproject\protected\models\Models.php (21)
+in D:\new\carproject\protected\utils\CUtils.php (575)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.ar.CActiveRecord] Models.findAll()
+in D:\new\carproject\protected\models\Models.php (119)
+in D:\new\carproject\protected\utils\CUtils.php (575)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `car_models` `t`
+in D:\new\carproject\protected\models\Models.php (119)
+in D:\new\carproject\protected\utils\CUtils.php (575)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.ar.CActiveRecord] Product.findAll()
+in D:\new\carproject\protected\models\Product.php (194)
+in D:\new\carproject\protected\utils\CUtils.php (574)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `car_product` `t`
+in D:\new\carproject\protected\models\Product.php (194)
+in D:\new\carproject\protected\utils\CUtils.php (574)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.ar.CActiveRecord] Models.findAll()
+in D:\new\carproject\protected\models\Models.php (119)
+in D:\new\carproject\protected\utils\CUtils.php (575)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `car_models` `t`
+in D:\new\carproject\protected\models\Models.php (119)
+in D:\new\carproject\protected\utils\CUtils.php (575)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.ar.CActiveRecord] Product.findAll()
+in D:\new\carproject\protected\models\Product.php (194)
+in D:\new\carproject\protected\utils\CUtils.php (574)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `car_product` `t`
+in D:\new\carproject\protected\models\Product.php (194)
+in D:\new\carproject\protected\utils\CUtils.php (574)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.ar.CActiveRecord] Models.findAll()
+in D:\new\carproject\protected\models\Models.php (119)
+in D:\new\carproject\protected\utils\CUtils.php (575)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `car_models` `t`
+in D:\new\carproject\protected\models\Models.php (119)
+in D:\new\carproject\protected\utils\CUtils.php (575)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.ar.CActiveRecord] Product.findAll()
+in D:\new\carproject\protected\models\Product.php (194)
+in D:\new\carproject\protected\utils\CUtils.php (574)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `car_product` `t`
+in D:\new\carproject\protected\models\Product.php (194)
+in D:\new\carproject\protected\utils\CUtils.php (574)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.ar.CActiveRecord] Models.findAll()
+in D:\new\carproject\protected\models\Models.php (119)
+in D:\new\carproject\protected\utils\CUtils.php (575)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `car_models` `t`
+in D:\new\carproject\protected\models\Models.php (119)
+in D:\new\carproject\protected\utils\CUtils.php (575)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.ar.CActiveRecord] Product.findAll()
+in D:\new\carproject\protected\models\Product.php (194)
+in D:\new\carproject\protected\utils\CUtils.php (574)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `car_product` `t`
+in D:\new\carproject\protected\models\Product.php (194)
+in D:\new\carproject\protected\utils\CUtils.php (574)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.ar.CActiveRecord] Models.findAll()
+in D:\new\carproject\protected\models\Models.php (119)
+in D:\new\carproject\protected\utils\CUtils.php (575)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `car_models` `t`
+in D:\new\carproject\protected\models\Models.php (119)
+in D:\new\carproject\protected\utils\CUtils.php (575)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.ar.CActiveRecord] Product.findAll()
+in D:\new\carproject\protected\models\Product.php (194)
+in D:\new\carproject\protected\utils\CUtils.php (574)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `car_product` `t`
+in D:\new\carproject\protected\models\Product.php (194)
+in D:\new\carproject\protected\utils\CUtils.php (574)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.ar.CActiveRecord] Models.findAll()
+in D:\new\carproject\protected\models\Models.php (119)
+in D:\new\carproject\protected\utils\CUtils.php (575)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `car_models` `t`
+in D:\new\carproject\protected\models\Models.php (119)
+in D:\new\carproject\protected\utils\CUtils.php (575)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.ar.CActiveRecord] Product.findAll()
+in D:\new\carproject\protected\models\Product.php (194)
+in D:\new\carproject\protected\utils\CUtils.php (574)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `car_product` `t`
+in D:\new\carproject\protected\models\Product.php (194)
+in D:\new\carproject\protected\utils\CUtils.php (574)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.ar.CActiveRecord] Models.findAll()
+in D:\new\carproject\protected\models\Models.php (119)
+in D:\new\carproject\protected\utils\CUtils.php (575)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `car_models` `t`
+in D:\new\carproject\protected\models\Models.php (119)
+in D:\new\carproject\protected\utils\CUtils.php (575)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.ar.CActiveRecord] Product.findAll()
+in D:\new\carproject\protected\models\Product.php (194)
+in D:\new\carproject\protected\utils\CUtils.php (574)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `car_product` `t`
+in D:\new\carproject\protected\models\Product.php (194)
+in D:\new\carproject\protected\utils\CUtils.php (574)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.ar.CActiveRecord] Models.findAll()
+in D:\new\carproject\protected\models\Models.php (119)
+in D:\new\carproject\protected\utils\CUtils.php (575)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `car_models` `t`
+in D:\new\carproject\protected\models\Models.php (119)
+in D:\new\carproject\protected\utils\CUtils.php (575)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.ar.CActiveRecord] Product.findAll()
+in D:\new\carproject\protected\models\Product.php (194)
+in D:\new\carproject\protected\utils\CUtils.php (574)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `car_product` `t`
+in D:\new\carproject\protected\models\Product.php (194)
+in D:\new\carproject\protected\utils\CUtils.php (574)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.ar.CActiveRecord] Models.findAll()
+in D:\new\carproject\protected\models\Models.php (119)
+in D:\new\carproject\protected\utils\CUtils.php (575)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `car_models` `t`
+in D:\new\carproject\protected\models\Models.php (119)
+in D:\new\carproject\protected\utils\CUtils.php (575)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.ar.CActiveRecord] Product.findAll()
+in D:\new\carproject\protected\models\Product.php (194)
+in D:\new\carproject\protected\utils\CUtils.php (574)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `car_product` `t`
+in D:\new\carproject\protected\models\Product.php (194)
+in D:\new\carproject\protected\utils\CUtils.php (574)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.ar.CActiveRecord] Models.findAll()
+in D:\new\carproject\protected\models\Models.php (119)
+in D:\new\carproject\protected\utils\CUtils.php (575)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `car_models` `t`
+in D:\new\carproject\protected\models\Models.php (119)
+in D:\new\carproject\protected\utils\CUtils.php (575)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.ar.CActiveRecord] Product.findAll()
+in D:\new\carproject\protected\models\Product.php (194)
+in D:\new\carproject\protected\utils\CUtils.php (574)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `car_product` `t`
+in D:\new\carproject\protected\models\Product.php (194)
+in D:\new\carproject\protected\utils\CUtils.php (574)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.ar.CActiveRecord] Models.findAll()
+in D:\new\carproject\protected\models\Models.php (119)
+in D:\new\carproject\protected\utils\CUtils.php (575)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `car_models` `t`
+in D:\new\carproject\protected\models\Models.php (119)
+in D:\new\carproject\protected\utils\CUtils.php (575)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.ar.CActiveRecord] Product.findAll()
+in D:\new\carproject\protected\models\Product.php (194)
+in D:\new\carproject\protected\utils\CUtils.php (574)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `car_product` `t`
+in D:\new\carproject\protected\models\Product.php (194)
+in D:\new\carproject\protected\utils\CUtils.php (574)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.ar.CActiveRecord] Models.findAll()
+in D:\new\carproject\protected\models\Models.php (119)
+in D:\new\carproject\protected\utils\CUtils.php (575)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `car_models` `t`
+in D:\new\carproject\protected\models\Models.php (119)
+in D:\new\carproject\protected\utils\CUtils.php (575)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.ar.CActiveRecord] Product.findAll()
+in D:\new\carproject\protected\models\Product.php (194)
+in D:\new\carproject\protected\utils\CUtils.php (574)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `car_product` `t`
+in D:\new\carproject\protected\models\Product.php (194)
+in D:\new\carproject\protected\utils\CUtils.php (574)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.ar.CActiveRecord] Models.findAll()
+in D:\new\carproject\protected\models\Models.php (119)
+in D:\new\carproject\protected\utils\CUtils.php (575)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `car_models` `t`
+in D:\new\carproject\protected\models\Models.php (119)
+in D:\new\carproject\protected\utils\CUtils.php (575)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.ar.CActiveRecord] Product.findAll()
+in D:\new\carproject\protected\models\Product.php (194)
+in D:\new\carproject\protected\utils\CUtils.php (574)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `car_product` `t`
+in D:\new\carproject\protected\models\Product.php (194)
+in D:\new\carproject\protected\utils\CUtils.php (574)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.ar.CActiveRecord] Models.findAll()
+in D:\new\carproject\protected\models\Models.php (119)
+in D:\new\carproject\protected\utils\CUtils.php (575)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `car_models` `t`
+in D:\new\carproject\protected\models\Models.php (119)
+in D:\new\carproject\protected\utils\CUtils.php (575)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.ar.CActiveRecord] Product.findAll()
+in D:\new\carproject\protected\models\Product.php (194)
+in D:\new\carproject\protected\utils\CUtils.php (574)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `car_product` `t`
+in D:\new\carproject\protected\models\Product.php (194)
+in D:\new\carproject\protected\utils\CUtils.php (574)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.ar.CActiveRecord] Models.findAll()
+in D:\new\carproject\protected\models\Models.php (119)
+in D:\new\carproject\protected\utils\CUtils.php (575)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `car_models` `t`
+in D:\new\carproject\protected\models\Models.php (119)
+in D:\new\carproject\protected\utils\CUtils.php (575)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.ar.CActiveRecord] Product.findAll()
+in D:\new\carproject\protected\models\Product.php (194)
+in D:\new\carproject\protected\utils\CUtils.php (574)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `car_product` `t`
+in D:\new\carproject\protected\models\Product.php (194)
+in D:\new\carproject\protected\utils\CUtils.php (574)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.ar.CActiveRecord] Models.findAll()
+in D:\new\carproject\protected\models\Models.php (119)
+in D:\new\carproject\protected\utils\CUtils.php (575)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `car_models` `t`
+in D:\new\carproject\protected\models\Models.php (119)
+in D:\new\carproject\protected\utils\CUtils.php (575)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.ar.CActiveRecord] Product.findAll()
+in D:\new\carproject\protected\models\Product.php (194)
+in D:\new\carproject\protected\utils\CUtils.php (574)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `car_product` `t`
+in D:\new\carproject\protected\models\Product.php (194)
+in D:\new\carproject\protected\utils\CUtils.php (574)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.ar.CActiveRecord] Models.findAll()
+in D:\new\carproject\protected\models\Models.php (119)
+in D:\new\carproject\protected\utils\CUtils.php (575)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `car_models` `t`
+in D:\new\carproject\protected\models\Models.php (119)
+in D:\new\carproject\protected\utils\CUtils.php (575)
+in D:\new\carproject\protected\models\Warranty.php (359)
+2017/07/08 11:24:13 [trace] [system.CModule] Loading "clientScript" application component
+in D:\new\carproject\protected\modules\wap\views\layouts\front.php (38)
+in D:\new\carproject\protected\modules\wap\controllers\WarrantyController.php (75)
+in D:\new\carproject\index.php (16)
+2017/07/08 11:24:13 [trace] [system.CModule] Loading "assetManager" application component
+in D:\new\carproject\protected\modules\wap\controllers\WarrantyController.php (75)
+in D:\new\carproject\index.php (16)
+2017/07/08 11:24:13 [trace] [system.CModule] Loading "log" application component
+in D:\new\carproject\index.php (12)
+2017/07/08 11:24:13 [trace] [system.CModule] Loading "request" application component
+in D:\new\carproject\index.php (12)
+2017/07/08 11:24:13 [trace] [system.CModule] Loading "urlManager" application component
+in D:\new\carproject\index.php (16)
+2017/07/08 11:24:13 [trace] [system.CModule] Loading "coreMessages" application component
+in D:\new\carproject\index.php (16)
+2017/07/08 11:24:13 [trace] [system.CModule] Loading "errorHandler" application component
+2017/07/08 11:24:13 [trace] [system.CModule] Loading "db" application component
+in D:\new\carproject\protected\models\News.php (24)
+in D:\new\carproject\protected\components\Controller.php (69)
+2017/07/08 11:24:13 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\new\carproject\protected\models\News.php (24)
+in D:\new\carproject\protected\components\Controller.php (69)
+2017/07/08 11:24:13 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `car_news`
+in D:\new\carproject\protected\models\News.php (24)
+in D:\new\carproject\protected\components\Controller.php (69)
+2017/07/08 11:24:13 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `car_news`
+in D:\new\carproject\protected\models\News.php (24)
+in D:\new\carproject\protected\components\Controller.php (69)
+2017/07/08 11:24:13 [trace] [system.CModule] Loading "clientScript" application component
+in D:\new\carproject\protected\views\layouts\front.php (38)
+in D:\new\carproject\protected\controllers\IndexController.php (10)
+2017/07/08 11:24:13 [trace] [system.CModule] Loading "assetManager" application component
+in D:\new\carproject\protected\controllers\IndexController.php (10)
+2017/07/08 11:24:13 [trace] [system.CModule] Loading "log" application component
+in D:\new\carproject\index.php (12)
+2017/07/08 11:24:13 [trace] [system.CModule] Loading "request" application component
+in D:\new\carproject\index.php (12)
+2017/07/08 11:24:13 [trace] [system.CModule] Loading "urlManager" application component
+in D:\new\carproject\index.php (16)
+2017/07/08 11:24:13 [trace] [system.CModule] Loading "coreMessages" application component
+in D:\new\carproject\index.php (16)
+2017/07/08 11:24:13 [trace] [system.CModule] Loading "errorHandler" application component
+2017/07/08 11:24:13 [trace] [system.CModule] Loading "db" application component
+in D:\new\carproject\protected\models\News.php (24)
+in D:\new\carproject\protected\components\Controller.php (69)
+2017/07/08 11:24:13 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\new\carproject\protected\models\News.php (24)
+in D:\new\carproject\protected\components\Controller.php (69)
+2017/07/08 11:24:13 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `car_news`
+in D:\new\carproject\protected\models\News.php (24)
+in D:\new\carproject\protected\components\Controller.php (69)
+2017/07/08 11:24:13 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `car_news`
+in D:\new\carproject\protected\models\News.php (24)
+in D:\new\carproject\protected\components\Controller.php (69)
+2017/07/08 11:24:13 [trace] [system.CModule] Loading "clientScript" application component
+in D:\new\carproject\protected\views\layouts\front.php (38)
+in D:\new\carproject\protected\controllers\IndexController.php (10)
+2017/07/08 11:24:13 [trace] [system.CModule] Loading "assetManager" application component
+in D:\new\carproject\protected\controllers\IndexController.php (10)
+2017/07/08 11:24:14 [trace] [system.CModule] Loading "log" application component
+in D:\new\carproject\index.php (12)
+2017/07/08 11:24:14 [trace] [system.CModule] Loading "request" application component
+in D:\new\carproject\index.php (12)
+2017/07/08 11:24:14 [trace] [system.CModule] Loading "urlManager" application component
+in D:\new\carproject\index.php (16)
+2017/07/08 11:24:14 [trace] [system.CModule] Loading "coreMessages" application component
+in D:\new\carproject\index.php (16)
+2017/07/08 11:24:14 [trace] [system.CModule] Loading "errorHandler" application component
+2017/07/08 11:24:14 [trace] [system.CModule] Loading "db" application component
+in D:\new\carproject\protected\models\News.php (24)
+in D:\new\carproject\protected\components\Controller.php (69)
+2017/07/08 11:24:14 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\new\carproject\protected\models\News.php (24)
+in D:\new\carproject\protected\components\Controller.php (69)
+2017/07/08 11:24:14 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `car_news`
+in D:\new\carproject\protected\models\News.php (24)
+in D:\new\carproject\protected\components\Controller.php (69)
+2017/07/08 11:24:14 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `car_news`
+in D:\new\carproject\protected\models\News.php (24)
+in D:\new\carproject\protected\components\Controller.php (69)
+2017/07/08 11:24:14 [trace] [system.CModule] Loading "clientScript" application component
+in D:\new\carproject\protected\views\layouts\front.php (38)
+in D:\new\carproject\protected\controllers\IndexController.php (10)
+2017/07/08 11:24:14 [trace] [system.CModule] Loading "assetManager" application component
+in D:\new\carproject\protected\controllers\IndexController.php (10)
+2017/07/08 11:24:16 [trace] [system.CModule] Loading "log" application component
+in D:\new\carproject\index.php (12)
+2017/07/08 11:24:16 [trace] [system.CModule] Loading "request" application component
+in D:\new\carproject\index.php (12)
+2017/07/08 11:24:16 [trace] [system.CModule] Loading "urlManager" application component
+in D:\new\carproject\index.php (16)
+2017/07/08 11:24:16 [trace] [system.base.CModule] Loading "wap" module
+in D:\new\carproject\index.php (16)
+2017/07/08 11:24:16 [trace] [system.CModule] Loading "db" application component
+in D:\new\carproject\protected\models\News.php (24)
+in D:\new\carproject\protected\components\Controller.php (69)
+in D:\new\carproject\index.php (16)
+2017/07/08 11:24:16 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\new\carproject\protected\models\News.php (24)
+in D:\new\carproject\protected\components\Controller.php (69)
+in D:\new\carproject\index.php (16)
+2017/07/08 11:24:16 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `car_news`
+in D:\new\carproject\protected\models\News.php (24)
+in D:\new\carproject\protected\components\Controller.php (69)
+in D:\new\carproject\index.php (16)
+2017/07/08 11:24:16 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `car_news`
+in D:\new\carproject\protected\models\News.php (24)
+in D:\new\carproject\protected\components\Controller.php (69)
+in D:\new\carproject\index.php (16)
+2017/07/08 11:24:16 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `car_warranty`
+in D:\new\carproject\protected\models\Warranty.php (52)
+in D:\new\carproject\protected\modules\wap\controllers\WarrantyController.php (83)
+in D:\new\carproject\index.php (16)
+2017/07/08 11:24:16 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `car_warranty`
+in D:\new\carproject\protected\models\Warranty.php (52)
+in D:\new\carproject\protected\modules\wap\controllers\WarrantyController.php (83)
+in D:\new\carproject\index.php (16)
+2017/07/08 11:24:16 [trace] [system.db.ar.CActiveRecord] Warranty.find()
+in D:\new\carproject\protected\models\Warranty.php (371)
+in D:\new\carproject\protected\modules\wap\controllers\WarrantyController.php (83)
+in D:\new\carproject\index.php (16)
+2017/07/08 11:24:16 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `car_admin`
+in D:\new\carproject\protected\models\Warranty.php (371)
+in D:\new\carproject\protected\modules\wap\controllers\WarrantyController.php (83)
+in D:\new\carproject\index.php (16)
+2017/07/08 11:24:16 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `car_admin`
+in D:\new\carproject\protected\models\Warranty.php (371)
+in D:\new\carproject\protected\modules\wap\controllers\WarrantyController.php (83)
+in D:\new\carproject\index.php (16)
+2017/07/08 11:24:16 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `car_store`
+in D:\new\carproject\protected\models\Warranty.php (371)
+in D:\new\carproject\protected\modules\wap\controllers\WarrantyController.php (83)
+in D:\new\carproject\index.php (16)
+2017/07/08 11:24:16 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `car_store`
+in D:\new\carproject\protected\models\Warranty.php (371)
+in D:\new\carproject\protected\modules\wap\controllers\WarrantyController.php (83)
+in D:\new\carproject\index.php (16)
+2017/07/08 11:24:16 [trace] [system.db.CDbCommand] Querying SQL: SELECT `t`.`id` AS `t0_c0`, `t`.`series_number` AS `t0_c1`, `t`.`mid` AS `t0_c2`, `t`.`pid` AS `t0_c3`, `t`.`storeid` AS `t0_c4`, `t`.`name` AS `t0_c5`, `t`.`telephone` AS `t0_c6`, `t`.`address` AS `t0_c7`, `t`.`carmodel` AS `t0_c8`, `t`.`carlicence` AS `t0_c9`, `t`.`engineno` AS `t0_c10`, `t`.`construct_time` AS `t0_c11`, `t`.`warrantytime` AS `t0_c12`, `t`.`status` AS `t0_c13`, `t`.`create_user` AS `t0_c14`, `t`.`ctime` AS `t0_c15`, `t`.`createtime` AS `t0_c16`, `t`.`refuse_reason` AS `t0_c17`, `t`.`constructor` AS `t0_c18`, `t`.`guide` AS `t0_c19`, `t`.`extension` AS `t0_c20`, `t`.`is_send` AS `t0_c21`, `admin`.`id` AS `t1_c0`, `admin`.`username` AS `t1_c1`, `admin`.`password` AS `t1_c2`, `admin`.`status` AS `t1_c3`, `admin`.`role_id` AS `t1_c4`, `admin`.`province` AS `t1_c5`, `admin`.`city` AS `t1_c6`, `admin`.`area` AS `t1_c7`, `admin`.`created` AS `t1_c8`, `store`.`id` AS `t2_c0`, `store`.`name` AS `t2_c1`, `store`.`type` AS `t2_c2`, `store`.`provinceid` AS `t2_c3`, `store`.`cityid` AS `t2_c4`, `store`.`areaid` AS `t2_c5`, `store`.`address` AS `t2_c6`, `store`.`telephone` AS `t2_c7`, `store`.`lat` AS `t2_c8`, `store`.`lng` AS `t2_c9` FROM `car_warranty` `t`  LEFT OUTER JOIN `car_admin` `admin` ON (`t`.`create_user`=`admin`.`id`)  LEFT OUTER JOIN `car_store` `store` ON (`t`.`storeid`=`store`.`id`)  WHERE (1 AND t.id = "43" AND t.status=1)
+in D:\new\carproject\protected\models\Warranty.php (371)
+in D:\new\carproject\protected\modules\wap\controllers\WarrantyController.php (83)
+in D:\new\carproject\index.php (16)
+2017/07/08 11:24:16 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `car_product`
+in D:\new\carproject\protected\models\Product.php (39)
+in D:\new\carproject\protected\utils\CUtils.php (622)
+in D:\new\carproject\protected\models\Warranty.php (372)
+2017/07/08 11:24:16 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `car_product`
+in D:\new\carproject\protected\models\Product.php (39)
+in D:\new\carproject\protected\utils\CUtils.php (622)
+in D:\new\carproject\protected\models\Warranty.php (372)
+2017/07/08 11:24:16 [trace] [system.db.ar.CActiveRecord] Product.findAll()
+in D:\new\carproject\protected\models\Product.php (194)
+in D:\new\carproject\protected\utils\CUtils.php (622)
+in D:\new\carproject\protected\models\Warranty.php (372)
+2017/07/08 11:24:16 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `car_product` `t`
+in D:\new\carproject\protected\models\Product.php (194)
+in D:\new\carproject\protected\utils\CUtils.php (622)
+in D:\new\carproject\protected\models\Warranty.php (372)
+2017/07/08 11:24:16 [trace] [system.db.ar.CActiveRecord] Product.find()
+in D:\new\carproject\protected\models\Product.php (370)
+in D:\new\carproject\protected\utils\CUtils.php (644)
+in D:\new\carproject\protected\models\Warranty.php (372)
+2017/07/08 11:24:16 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `car_brand`
+in D:\new\carproject\protected\models\Product.php (370)
+in D:\new\carproject\protected\utils\CUtils.php (644)
+in D:\new\carproject\protected\models\Warranty.php (372)
+2017/07/08 11:24:16 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `car_brand`
+in D:\new\carproject\protected\models\Product.php (370)
+in D:\new\carproject\protected\utils\CUtils.php (644)
+in D:\new\carproject\protected\models\Warranty.php (372)
+2017/07/08 11:24:16 [trace] [system.db.CDbCommand] Querying SQL: SELECT `t`.`id` AS `t0_c0`, `t`.`mid` AS `t0_c1`, `t`.`name` AS `t0_c2`, `t`.`series_number` AS `t0_c3`, `t`.`total` AS `t0_c4`, `t`.`current_num` AS `t0_c5`, `t`.`bid` AS `t0_c6`, `t`.`intro` AS `t0_c7`, `t`.`customer` AS `t0_c8`, `t`.`spec` AS `t0_c9`, `t`.`company` AS `t0_c10`, `t`.`province` AS `t0_c11`, `t`.`city` AS `t0_c12`, `t`.`area` AS `t0_c13`, `t`.`type` AS `t0_c14`, `t`.`create_user` AS `t0_c15`, `t`.`ctime` AS `t0_c16`, `t`.`udpatetime` AS `t0_c17`, `t`.`remarks` AS `t0_c18`, `brand`.`id` AS `t1_c0`, `brand`.`name` AS `t1_c1`, `brand`.`intro` AS `t1_c2` FROM `car_product` `t`  LEFT OUTER JOIN `car_brand` `brand` ON (`t`.`bid`=`brand`.`id`)  WHERE (1 AND t.id = "16")
+in D:\new\carproject\protected\models\Product.php (370)
+in D:\new\carproject\protected\utils\CUtils.php (644)
+in D:\new\carproject\protected\models\Warranty.php (372)
+2017/07/08 11:24:16 [trace] [system.db.ar.CActiveRecord] Product.find()
+in D:\new\carproject\protected\models\Product.php (370)
+in D:\new\carproject\protected\utils\CUtils.php (644)
+in D:\new\carproject\protected\models\Warranty.php (372)
+2017/07/08 11:24:16 [trace] [system.db.CDbCommand] Querying SQL: SELECT `t`.`id` AS `t0_c0`, `t`.`mid` AS `t0_c1`, `t`.`name` AS `t0_c2`, `t`.`series_number` AS `t0_c3`, `t`.`total` AS `t0_c4`, `t`.`current_num` AS `t0_c5`, `t`.`bid` AS `t0_c6`, `t`.`intro` AS `t0_c7`, `t`.`customer` AS `t0_c8`, `t`.`spec` AS `t0_c9`, `t`.`company` AS `t0_c10`, `t`.`province` AS `t0_c11`, `t`.`city` AS `t0_c12`, `t`.`area` AS `t0_c13`, `t`.`type` AS `t0_c14`, `t`.`create_user` AS `t0_c15`, `t`.`ctime` AS `t0_c16`, `t`.`udpatetime` AS `t0_c17`, `t`.`remarks` AS `t0_c18`, `brand`.`id` AS `t1_c0`, `brand`.`name` AS `t1_c1`, `brand`.`intro` AS `t1_c2` FROM `car_product` `t`  LEFT OUTER JOIN `car_brand` `brand` ON (`t`.`bid`=`brand`.`id`)  WHERE (1 AND t.id = "12")
+in D:\new\carproject\protected\models\Product.php (370)
+in D:\new\carproject\protected\utils\CUtils.php (644)
+in D:\new\carproject\protected\models\Warranty.php (372)
+2017/07/08 11:24:16 [trace] [system.CModule] Loading "clientScript" application component
+in D:\new\carproject\protected\modules\wap\views\layouts\front.php (38)
+in D:\new\carproject\protected\modules\wap\controllers\WarrantyController.php (88)
+in D:\new\carproject\index.php (16)
+2017/07/08 11:24:16 [trace] [system.CModule] Loading "assetManager" application component
+in D:\new\carproject\protected\modules\wap\controllers\WarrantyController.php (88)
+in D:\new\carproject\index.php (16)
+2017/07/08 11:24:16 [trace] [system.CModule] Loading "log" application component
+in D:\new\carproject\index.php (12)
+2017/07/08 11:24:16 [trace] [system.CModule] Loading "request" application component
+in D:\new\carproject\index.php (12)
+2017/07/08 11:24:16 [trace] [system.CModule] Loading "urlManager" application component
+in D:\new\carproject\index.php (16)
+2017/07/08 11:24:16 [trace] [system.CModule] Loading "coreMessages" application component
+in D:\new\carproject\index.php (16)
+2017/07/08 11:24:16 [trace] [system.CModule] Loading "errorHandler" application component
+2017/07/08 11:24:16 [trace] [system.CModule] Loading "db" application component
+in D:\new\carproject\protected\models\News.php (24)
+in D:\new\carproject\protected\components\Controller.php (69)
+2017/07/08 11:24:16 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\new\carproject\protected\models\News.php (24)
+in D:\new\carproject\protected\components\Controller.php (69)
+2017/07/08 11:24:16 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `car_news`
+in D:\new\carproject\protected\models\News.php (24)
+in D:\new\carproject\protected\components\Controller.php (69)
+2017/07/08 11:24:16 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `car_news`
+in D:\new\carproject\protected\models\News.php (24)
+in D:\new\carproject\protected\components\Controller.php (69)
+2017/07/08 11:24:16 [trace] [system.CModule] Loading "clientScript" application component
+in D:\new\carproject\protected\views\layouts\front.php (38)
+in D:\new\carproject\protected\controllers\IndexController.php (10)
+2017/07/08 11:24:16 [trace] [system.CModule] Loading "assetManager" application component
+in D:\new\carproject\protected\controllers\IndexController.php (10)

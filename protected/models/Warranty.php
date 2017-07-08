@@ -379,6 +379,9 @@ class Warranty extends CActiveRecord
             if (!empty($condition['Warranty']['telephone'])) {
                 $criteria->condition .= ' and t.telephone like "%' . $condition['Warranty']['telephone'] .'%" ';
             }
+            if (!empty($condition['Warranty']['carmodel'])) {
+                $criteria->condition .= ' and t.carmodel like "%' . $condition['Warranty']['carmodel'] .'%" ';
+            }
             if (!empty($condition['Warranty']['carlicence'])) {
                 $criteria->condition .= ' and t.carlicence like "%' . $condition['Warranty']['carlicence'] .'%" ';
             }

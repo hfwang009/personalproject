@@ -12138,3 +12138,39 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/statics/front/js/bootstrap-select.js.map
 ---
+2017/07/08 11:24:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/fonts/fontawesome-webfont.woff2".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/f...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/fonts/fontawesome-webfont.woff2?v=4.7.0
+HTTP_REFERER=http://www.carproject.com/statics/front/fonts/font-awesome.min.css
+---
+2017/07/08 11:24:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/images/favicon.png".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/i...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/images/favicon.png
+HTTP_REFERER=http://www.carproject.com/wap/warranty/search.html
+---
+2017/07/08 11:24:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/images/favicon.png".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/i...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/images/favicon.png
+HTTP_REFERER=http://www.carproject.com/wap/warranty/search.html
+---
+2017/07/08 11:24:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/fonts/fontawesome-webfont.woff2".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/f...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/fonts/fontawesome-webfont.woff2?v=4.7.0
+HTTP_REFERER=http://www.carproject.com/statics/front/fonts/font-awesome.min.css
+---

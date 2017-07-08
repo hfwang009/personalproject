@@ -35,6 +35,9 @@
                                     质保用户电话
                                 </th>
                                 <th>
+                                    质保用户车型
+                                </th>
+                                <th>
                                     质保用户车牌
                                 </th>
                                 <th>
@@ -78,17 +81,18 @@
                                             <input type="checkbox" value="<?php echo $_model['id'];?>" name="warranty_id[]">
                                         </td>
                                         <td><?php echo $_model['id'];?></td>
-                                        <td><?php echo !empty($_model->warranty)?$_model->warranty->series_number:'--';?></td>
-                                        <td><?php echo !empty($_model->warranty)?$_model->warranty->name:'--';?></td>
-                                        <td><?php echo !empty($_model->warranty)?$_model->warranty->telephone:'--';?></td>
-                                        <td><?php echo !empty($_model->warranty)?$_model->warranty->carlicence:'--';?></td>
-                                        <td><?php echo !empty($_model->warranty)?$_model->warranty->engineno:'--';?></td>
-                                        <td><?php echo !empty($_model->warranty)?date('Y-m-d',$_model->warranty->createtime):'--';?></td>
-                                        <td><?php echo !empty($_model->product)?$_model->product->name:'--';?></td>
-                                        <td><?php echo !empty($_model->product)?$_model->product->model->name:'--';?></td>
-                                        <td><?php echo !empty($_model->product)?$_model->product->series_number:'--';?></td>
-                                        <td><?php echo !empty($_model->product)?$_model->product->total:'--';?></td>
-                                        <td><?php echo !empty($_model->product)?$_model->current_total:'--';?></td>
+                                        <td><?php echo !empty($_model->warranty->series_number)?$_model->warranty->series_number:'--';?></td>
+                                        <td><?php echo !empty($_model->warranty->name)?$_model->warranty->name:'--';?></td>
+                                        <td><?php echo !empty($_model->warranty->telephone)?$_model->warranty->telephone:'--';?></td>
+                                        <td><?php echo !empty($_model->warranty->carmodel)?$_model->warranty->carmodel:'--';?></td>
+                                        <td><?php echo !empty($_model->warranty->carlicence)?$_model->warranty->carlicence:'--';?></td>
+                                        <td><?php echo !empty($_model->warranty->engineno)?$_model->warranty->engineno:'--';?></td>
+                                        <td><?php echo !empty($_model->warranty->createtime)?date('Y-m-d',$_model->warranty->createtime):'--';?></td>
+                                        <td><?php echo !empty($_model->product->name)?$_model->product->name:'--';?></td>
+                                        <td><?php echo !empty($_model->product->model->name)?$_model->product->model->name:'--';?></td>
+                                        <td><?php echo !empty($_model->product->series_number)?$_model->product->series_number:'--';?></td>
+                                        <td><?php echo !empty($_model->product->total)?$_model->product->total:'--';?></td>
+                                        <td><?php echo !empty($_model->current_total)?$_model->current_total:'--';?></td>
                                         <td><?php echo $_model['num'];?></td>
                                         <td><?php echo !empty($_model['ctime'])?date('Y-m-d',$_model['ctime']):'--';?></td>
                                     </tr>

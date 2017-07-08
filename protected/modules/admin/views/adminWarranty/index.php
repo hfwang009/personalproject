@@ -48,6 +48,9 @@
                                     <a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->module->id.'/'.Yii::app()->controller->id . '/' . $this->getAction()->getId(), array_merge($condition,array('sortFiled'=>'telephone','sortValue'=>(isset($condition['sortFiled']) && $condition['sortFiled']=='telephone')?($condition['sortValue'] == "asc"?"desc":"asc"):"asc")));?>">联系电话<span class="glyphicon <?php echo $condition['sortFiled'] == 'telephone'?($condition['sortValue'] == "asc"?"glyphicon-chevron-up":"glyphicon-chevron-down"):'';?>"></span></a>
                                 </th>
                                 <th>
+                                    <a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->module->id.'/'.Yii::app()->controller->id . '/' . $this->getAction()->getId(), array_merge($condition,array('sortFiled'=>'carmodel','sortValue'=>(isset($condition['sortFiled']) && $condition['sortFiled']=='carmodel')?($condition['sortValue'] == "asc"?"desc":"asc"):"asc")));?>">车型<span class="glyphicon <?php echo $condition['sortFiled'] == 'carmodel'?($condition['sortValue'] == "asc"?"glyphicon-chevron-up":"glyphicon-chevron-down"):'';?>"></span></a>
+                                </th>
+                                <th>
                                     <a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->module->id.'/'.Yii::app()->controller->id . '/' . $this->getAction()->getId(), array_merge($condition,array('sortFiled'=>'carlicence','sortValue'=>(isset($condition['sortFiled']) && $condition['sortFiled']=='carlicence')?($condition['sortValue'] == "asc"?"desc":"asc"):"asc")));?>">车牌号码<span class="glyphicon <?php echo $condition['sortFiled'] == 'carlicence'?($condition['sortValue'] == "asc"?"glyphicon-chevron-up":"glyphicon-chevron-down"):'';?>"></span></a>
                                 </th>
                                 <th>
@@ -101,8 +104,9 @@
                                         <td><?php echo $_model['pid'];?></td>
                                         <td><?php echo !empty($_model->store)?$_model->store->name:'--';?></td>
                                         <td><?php echo $_model['telephone'];?></td>
-                                        <td><?php echo $_model['carlicence'];?></td>
-                                        <td><?php echo $_model['engineno'];?></td>
+                                        <td><?php echo !empty($_model['carmodel'])?$_model['carmodel']:'--';?></td>
+                                        <td><?php echo !empty($_model['carlicence'])?$_model['carlicence']:'--';?></td>
+                                        <td><?php echo !empty($_model['engineno'])?$_model['engineno']:'--';?></td>
                                         <td><?php echo !empty($_model['constructor'])?$_model['constructor']:'--';?></td>
                                         <td><?php echo !empty($_model['guide'])?$_model['guide']:'--';?></td>
                                         <td><?php echo !empty($_model['construct_time'])?date('Y-m-d',$_model['construct_time']):'--';?></td>
@@ -168,6 +172,13 @@
                     <div class="col-sm-5 col-xs-8">
                         <?php echo $form->textField($search, 'telephone', array("class"=>"form-control"));?>
                         <?php echo $form->error($search,'telephone',array('class'=>'help-block'));?>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <?php echo $form->label($search,'carmodel',array('class'=>'col-sm-2 col-xs-3 control-label'));?>
+                    <div class="col-sm-5 col-xs-8">
+                        <?php echo $form->textField($search, 'carmodel', array("class"=>"form-control"));?>
+                        <?php echo $form->error($search,'carmodel',array('class'=>'help-block'));?>
                     </div>
                 </div>
                 <div class="form-group">

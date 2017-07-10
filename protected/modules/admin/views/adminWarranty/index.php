@@ -261,6 +261,7 @@
                         area: ['500px', '600px'], //宽高
                         content: re.html,
                         shadeClose: true,
+                        scrollbar: false
                     });
                 }
             });

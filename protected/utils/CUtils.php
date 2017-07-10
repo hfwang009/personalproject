@@ -623,28 +623,28 @@ class CUtils {
 //        $models = Models::model()->getModelData();
         $ptype = Yii::app()->params['conf']['setting']['ptype'];
 
-        $_pids = !empty($result['pid'])?explode(',',$result['pid']):array();
-        $_pids = array_unique($_pids);
-        $_products = array();
-        foreach($_pids as $a=>$b){
-            if(isset($products[$b])){
-                $_products []= $products[$b];
-            }
-        }
-        $_products = array_unique($_products);
-        $result['mid'] =!empty($_products)?implode('+',$_products):'--';
-
 //        $_pids = !empty($result['pid'])?explode(',',$result['pid']):array();
 //        $_pids = array_unique($_pids);
-//        $_products = '';
+//        $_products = array();
 //        foreach($_pids as $a=>$b){
 //            if(isset($products[$b])){
-//                $tmp = '';
-//                $tmp = $a<count($_pids)-1?'style="border-bottom: solid  #a1b1c1 1px;border-collapse:collapse;"':'';
-//                $_products .= '<div align="center" '.$tmp.'><span class="sub_title_xxs sub_title_xxs sub_title_xxs STYLE5">'.$products[$b].'</span></div>';
+//                $_products []= $products[$b];
 //            }
 //        }
-//        $result['mid'] = $_products;
+//        $_products = array_unique($_products);
+//        $result['mid'] =!empty($_products)?implode('+',$_products):'--';
+
+        $_pids = !empty($result['pid'])?explode(',',$result['pid']):array();
+//        $_pids = array_unique($_pids);
+        $_products = '';
+        foreach($_pids as $a=>$b){
+            if(isset($products[$b])){
+                $tmp = '';
+                $tmp = $a<count($_pids)-1?'style="border-bottom: solid  #a1b1c1 1px;border-collapse:collapse;"':'';
+                $_products .= '<div align="center" '.$tmp.'><span class="sub_title_xxs sub_title_xxs sub_title_xxs STYLE5">'.$products[$b].'</span></div>';
+            }
+        }
+        $result['mid'] = $_products;
 
         //格式化产品数据
         $_pids = !empty($result['pid'])?explode(',',$result['pid']):array();

@@ -29,7 +29,12 @@ class CAdminController extends Controller {
 //            var_dump(!(isset($privilieges[$controller])&&in_array($action,$privilieges[$controller])));
 //            var_dump($controller.'/'.$action!='adminsettingpanel/error'&&$controller.'/'.$action!=$controller.'/setting');exit;
             if(!isset($privilieges[0])&&!(isset($privilieges[$controller])&&in_array($action,$privilieges[$controller]))&&($controller.'/'.$action!='adminsettingpanel/error'&&$controller.'/'.$action!=$controller.'/setting')){
-                $this->redirect(Yii::app()->createUrl(Yii::app()->controller->module->id.'/'.'adminSettingPanel/error'));
+                if(Yii::app()->request->isAjaxRequest){
+                    echo CJSON::encode(CUtils::retCode(false, 3, '您没有操作权限！！'));
+                    Yii::app ()->end ();
+                }else{
+                    $this->redirect(Yii::app()->createUrl(Yii::app()->controller->module->id.'/'.'adminSettingPanel/error'));
+                }
             }
         }
 		return true;

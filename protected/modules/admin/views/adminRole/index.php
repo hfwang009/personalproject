@@ -58,7 +58,7 @@
                                     ?>
                                     <tr>
                                         <td>
-                                            <input type="checkbox" value="<?php echo $_model['id'];?>" name="product_id[]">
+                                            <input type="checkbox" value="<?php echo $_model['id'];?>" name="role_id[]">
                                         </td>
                                         <td><?php echo $_model['id'];?></td>
                                         <td><?php echo $_model['name'];?></td>

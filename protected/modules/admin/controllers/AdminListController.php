@@ -102,6 +102,26 @@ class AdminListController extends CAdminController{
         );
     }
 
+    public function actionDelete(){
+        $state = false;
+        $code = 0;
+        $message= '管理员删除错误';
+        if(Yii::app ()->request->isPostRequest){
+            $id = !empty($_POST['id'])?$_POST['id']:array();
+            if(empty($id) || $id === array()){
+                echo CJSON::encode ( CUtils::retCode ( $state, $code, '参数错误' ) );
+                Yii::app ()->end ();
+            }
+            if(Admin::model()->deleteAll('id in (' . implode(',', $id) . ')')){
+                $state = true;
+                $code = 3;
+                $message = '管理员删除成功';
+            }
+        }
+        echo CJSON::encode(CUtils::retCode($state, $code, $message));
+        Yii::app ()->end ();
+    }
+
     //ajax 设置
     public function actionSetting(){
         $ct = Yii::app ()->request->getParam ( 'ct', '-1' );

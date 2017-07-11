@@ -76,6 +76,7 @@
                 </div>
                 <div class="mod-table-foot">
                     <div class="col-sm-4 col-xs-12">
+                        <a class="btn btn-danger" href="javascript:;" onclick="AWS.ajax_post($('#admin_form'));">删除</a>
                     </div>
                     <div class="col-xs-12 col-sm-8">
                         <?php

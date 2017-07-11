@@ -63,4 +63,29 @@ class AdminRoleController extends CAdminController {
                 "array"=>$array,
             ));
     }
+
+    public function actionDelete(){
+        $state = false;
+        $code = 0;
+        $message= '角色删除错误';
+        if(Yii::app ()->request->isPostRequest){
+            $id = !empty($_POST['role_id'])?$_POST['role_id']:array();
+            if(empty($id) || $id === array()){
+                echo CJSON::encode ( CUtils::retCode ( $state, $code, '参数错误' ) );
+                Yii::app ()->end ();
+            }
+            $admins = Admin::model()->findAll('role_id in ('.implode(',',$id).')');
+            if(!empty($admins)){
+                $message = '选中角色中有相应的管理员账号，请先删除相应的管理员账号再尝试删除角色';
+            }else{
+                if(Role::model()->deleteAll('id in (' . implode(',', $id) . ')')){
+                    $state = true;
+                    $code = 3;
+                    $message = '角色删除成功';
+                }
+            }
+        }
+        echo CJSON::encode(CUtils::retCode($state, $code, $message));
+        Yii::app ()->end ();
+    }
 }

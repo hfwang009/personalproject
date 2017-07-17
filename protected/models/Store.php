@@ -63,6 +63,7 @@ class Store extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
             'warranty'=>array(self::HAS_ONE,'Warranty','id'),
+            'product'=>array(self::HAS_ONE,'Product','id'),
 		);
 	}
 
@@ -193,5 +194,39 @@ class Store extends CActiveRecord
             $condition,
             $search
         );
+    }
+
+    public function getRelaStores($id,$tag=false,$flag = false){
+        $html = '';
+        if(empty($id)||empty($tag)){
+            $model = $this->findAll();
+        }else{
+            $model = $this->findAll($tag.' = ' . intval($id));
+        }
+        $stores = '';
+        if($flag){
+            $stores = "<option value=''>-- 请选择  --</option>";
+        }
+        if(!empty($model)){
+            foreach ($model as $_data){
+                $stores .= CHtml::tag('option', array('value'=>$_data['id']),CHtml::encode($_data['name']),true);
+            }
+        }
+        $html = $stores;
+        return $html;
+    }
+
+    public function getRelaStores1($id,$tag=false){
+        $data = array();
+        if(empty($id)||empty($tag)){
+            $model = $this->findAll();
+        }else{
+            $model = $this->findAll($tag.' = ' . intval($id));
+        }
+        if(!empty($model)){
+            $stores = CHtml::listData($model,'id','name');
+        }
+        $data = !empty($stores)?$stores:$data;
+        return $data;
     }
 }

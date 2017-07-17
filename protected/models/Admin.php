@@ -64,6 +64,7 @@ class Admin extends CActiveRecord
 		return array(
             'product'=>array(self::HAS_ONE,'Product','id'),
             'warranty'=>array(self::HAS_ONE,'Warranty','id'),
+            'adminlog'=>array(self::HAS_ONE,'AdminLog','id'),
 		);
 	}
 

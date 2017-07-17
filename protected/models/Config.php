@@ -103,7 +103,26 @@ class Config extends CActiveRecord
 				$rData[$val['var']] = unserialize($val['datavalue']);
 			}
 		}
-	
+//        print_r($rData);exit;
+        if(!empty($rData)){
+            foreach($rData as $key=>&$val){
+                if($key==='setting'){
+                    $tmp = $rData['setting'];
+                    $controllers = $tmp['controllers'];
+                    $tmp1 = array();
+                    foreach($controllers as $a=>$b){
+                        $tmp1[$b['econtrol']] = $b['ccontrol'];
+                    }
+                    $rData['setting']['controller'] = $tmp1;
+                    $actions = $tmp['actions'];
+                    $tmp2 = array();
+                    foreach($actions as $c=>$d){
+                        $tmp2[$d['eaction']] = $d['caction'];
+                    }
+                    $rData['setting']['action'] = $tmp2;
+                }
+            }
+        }
 		return $rData;
 	}
 }

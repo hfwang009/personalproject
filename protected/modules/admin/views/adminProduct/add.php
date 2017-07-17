@@ -119,18 +119,19 @@
                                         <?php echo $form->dropDownList($model,'province',$provinces,
                                             array(
                                                 'empty'=>'-- 请选择  --',
-                                                'ajax' => array(
-                                                    'type' => 'POST',
-                                                    'url' => Yii::app()->createUrl(Yii::app()->controller->module->id.'/'.'adminStore/setting'),
-                                                    'dataType' => 'json',
-                                                    'data' => array('ct'=>'provice','ac'=>'getcity','parent' => 'js:this.value'),
-                                                    'success' => 'function(re) {
-                                                if(re.state){
-                                                    $("#Product_city").html(re.html.citys);
-                                                    $("#Product_area").html(re.html.areas);
-                                                }
-                                             }',
-                                                ),
+//                                                'ajax' => array(
+//                                                    'type' => 'POST',
+//                                                    'url' => $ajax_url,
+//                                                    'dataType' => 'json',
+//                                                    'data' => array('ct'=>'product','ac'=>'getcity','parent' => 'js:this.value'),
+//                                                    'success' => 'function(re) {
+//                                                if(re.state){
+//                                                    $("#Product_city").html(re.html.citys);
+//                                                    $("#Product_area").html(re.html.areas);
+//                                                    $("#Product_storeid").html(re.html.stores);
+//                                                }
+//                                             }',
+//                                                ),
                                                 'class'=>'form-control'));?>
                                         <?php echo $form->error($model,'province',array('class'=>'help-block'));?>
                                     </div>
@@ -145,18 +146,19 @@
                                         <?php echo $form->dropDownList($model,'city',$citys,
                                             array(
                                                 'empty'=>'-- 请选择  --',
-                                                'ajax' => array(
-                                                    'type' => 'POST',
-                                                    'url' => Yii::app()->createUrl(Yii::app()->controller->module->id.'/'.'adminStore/setting'),
-                                                    'dataType' => 'json',
-                                                    'data' => array('ct'=>'provice','ac'=>'getarea','parent' => 'js:this.value'),
-                                                    'success' => 'function(re) {
-                                                if(re.state){
-                                                    $("#Product_area").html(re.html.areas);
-                                                }
-                                             }',
-                                                ),
-                                                'class'=>'form-control'));?>
+//                                                'ajax' => array(
+//                                                    'type' => 'POST',
+//                                                    'url' => $ajax_url,
+//                                                    'dataType' => 'json',
+//                                                    'data' => array('ct'=>'product','ac'=>'getarea','parent' => 'js:this.value'),
+//                                                    'success' => 'function(re) {
+//                                                if(re.state){
+//                                                    $("#Product_area").html(re.html.areas);
+//                                                }
+//                                             }',
+//                                                ),
+                                                'class'=>'form-control'
+                                                ));?>
                                         <?php echo $form->error($model,'city',array('class'=>'help-block'));?>
                                     </div>
                                 </div>
@@ -167,8 +169,35 @@
                                 <div class="form-group">
                                     <?php echo $form->label($model,'area',array('class'=>'col-sm-2 col-xs-3 control-label'));?>
                                     <div class="col-sm-6 col-xs-8">
-                                        <?php echo $form->dropDownList($model,'area',$areas,array('empty'=>'-- 请选择  --','class'=>'form-control'));?>
+                                        <?php echo $form->dropDownList($model,'area',$areas,
+                                            array(
+                                                'empty'=>'-- 请选择  --',
+                                                'class'=>'form-control',
+//                                                'ajax'=>array(
+//                                                    'type'=>'POST',
+//                                                    'url'=>$ajax_url,
+//                                                    'dataType'=>'json',
+//                                                    'data'=>array('ct'=>'product','ac'=>'getstore','parent'=>'js:this.value'),
+//                                                    'success'=>'function(re){
+//                                                if(re.state){
+//                                                    $("#Product_storeid").html(re.html.stores);
+//                                                }
+//                                             }'
+//                                                )
+                                            )
+                                        );?>
                                         <?php echo $form->error($model,'area',array('class'=>'help-block'));?>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="form-group">
+                                    <?php echo $form->label($model,'storeid',array('class'=>'col-sm-2 col-xs-3 control-label'));?>
+                                    <div class="col-sm-6 col-xs-8">
+                                        <?php echo $form->dropDownList($model, 'storeid',$stores, array("class"=>"form-control",'empty'=>'-- 请选择  --'));?>
+                                        <?php echo $form->error($model,'storeid',array('class'=>'help-block'));?>
                                     </div>
                                 </div>
                             </td>
@@ -297,13 +326,34 @@
                         <?php echo $form->error($search,'bid',array('class'=>'help-block'));?>
                     </div>
                 </div>
-<!--                <div class="form-group">-->
-<!--                    --><?php //echo $form->label($search,'type',array('class'=>'col-sm-2 col-xs-3 control-label'));?>
-<!--                    <div class="col-sm-5 col-xs-8">-->
-<!--                        --><?php //echo $form->dropDownList($search,'type',$ptype,array('empty'=>'-- 请选择  --','class'=>'form-control'));?>
-<!--                        --><?php //echo $form->error($search,'type',array('class'=>'help-block'));?>
-<!--                    </div>-->
-<!--                </div>-->
+                <div class="form-group">
+                    <?php echo $form->label($search,'province1',array('class'=>'col-sm-2 col-xs-3 control-label'));?>
+                    <div class="col-sm-5 col-xs-8">
+                        <?php echo $form->dropDownList($search,'province1',$provinces,array('empty'=>'-- 请选择  --','class'=>'form-control'));?>
+                        <?php echo $form->error($search,'province1',array('class'=>'help-block'));?>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <?php echo $form->label($search,'city1',array('class'=>'col-sm-2 col-xs-3 control-label'));?>
+                    <div class="col-sm-5 col-xs-8">
+                        <?php echo $form->dropDownList($search,'city1',$citys,array('empty'=>'-- 请选择  --','class'=>'form-control'));?>
+                        <?php echo $form->error($search,'city1',array('class'=>'help-block'));?>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <?php echo $form->label($search,'area1',array('class'=>'col-sm-2 col-xs-3 control-label'));?>
+                    <div class="col-sm-5 col-xs-8">
+                        <?php echo $form->dropDownList($search,'area1',$areas,array('empty'=>'-- 请选择  --','class'=>'form-control'));?>
+                        <?php echo $form->error($search,'area1',array('class'=>'help-block'));?>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <?php echo $form->label($search,'storeid1',array('class'=>'col-sm-2 col-xs-3 control-label'));?>
+                    <div class="col-sm-5 col-xs-8">
+                        <?php echo $form->dropDownList($search,'storeid1',$stores,array('empty'=>'-- 请选择  --','class'=>'form-control'));?>
+                        <?php echo $form->error($search,'storeid1',array('class'=>'help-block'));?>
+                    </div>
+                </div>
                 <div class="form-group">
                     <?php echo $form->label($search,'ctime',array('class'=>'col-sm-2 col-xs-3 control-label'));?>
                     <div class="col-sm-5 col-xs-8">
@@ -340,7 +390,130 @@
             js_set_current(this);
         });
 
+        $('body').on('change','select[name="Product[province]"]',function(){
+            js_province_store(this);
+        });
+        $('body').on('change','select[name="Product[city]"]',function(){
+            js_city_store(this);
+        });
+        $('body').on('change','select[name="Product[area]"]',function(){
+            js_area_store(this);
+        });
+
+        $('body').on('change','select[name="Product[province1]"]',function(){
+            _js_province_store(this);
+        });
+        $('body').on('change','select[name="Product[city1]"]',function(){
+            _js_city_store(this);
+        });
+        $('body').on('change','select[name="Product[area1]"]',function(){
+            _js_area_store(this);
+        });
     });
+
+    var js_province_store = function(eve){
+        var parent = $(eve).val();
+        $.ajax({
+            url:'<?php echo $ajax_url ?>',
+            type:'POST',
+            dataType:'json',
+            data:{ct:'product',ac:'getcity',parent:parent},
+            success:function(re){
+                if(re.state){
+                    $("#Product_city").html(re.html.citys);
+                    $("#Product_area").html(re.html.areas);
+                    $("#Product_storeid").html(re.html.stores);
+                }
+            }
+        });
+    }
+
+    var js_city_store = function(eve){
+        var parent = $(eve).val();
+        var _parent = $('#Product_province').val();
+        $.ajax({
+            url:'<?php echo $ajax_url ?>',
+            type:'POST',
+            dataType:'json',
+            data:{ct:'product',ac:'getarea',parent:parent,_parent:_parent},
+            success:function(re){
+                if(re.state){
+                    $("#Product_area").html(re.html.areas);
+                    $("#Product_storeid").html(re.html.stores);
+                }
+            }
+        });
+    }
+
+    var js_area_store = function(eve){
+        var parent = $(eve).val();
+        var _parent = $('#Product_city').val();
+        var __parent = $('#Product_province').val();
+        $.ajax({
+            url:'<?php echo $ajax_url ?>',
+            type:'POST',
+            dataType:'json',
+            data:{ct:'product',ac:'getstore',parent:parent,_parent:_parent,__parent:__parent},
+            success:function(re){
+                if(re.state){
+                    $("#Product_storeid").html(re.html.stores);
+                }
+            }
+        });
+    }
+
+    var _js_province_store = function(eve){
+        var parent = $(eve).val();
+        $.ajax({
+            url:'<?php echo $ajax_url ?>',
+            type:'POST',
+            dataType:'json',
+            data:{ct:'product',ac:'getcity',parent:parent},
+            success:function(re){
+                if(re.state){
+                    $("#Product_city1").html(re.html.citys);
+                    $("#Product_area1").html(re.html.areas);
+                    $("#Product_storeid1").html(re.html.stores);
+                }
+            }
+        });
+    }
+
+    var _js_city_store = function(eve){
+        var parent = $(eve).val();
+        var _parent = $('#Product_province').val();
+        $.ajax({
+            url:'<?php echo $ajax_url ?>',
+            type:'POST',
+            dataType:'json',
+            data:{ct:'product',ac:'getarea',parent:parent,_parent:_parent},
+            success:function(re){
+                if(re.state){
+                    $("#Product_area1").html(re.html.areas);
+                    $("#Product_storeid1").html(re.html.stores);
+                }
+            }
+        });
+    }
+
+    var _js_area_store = function(eve){
+        var parent = $(eve).val();
+        var _parent = $('#Product_city').val();
+        var __parent = $('#Product_province').val();
+        $.ajax({
+            url:'<?php echo $ajax_url ?>',
+            type:'POST',
+            dataType:'json',
+            data:{ct:'product',ac:'getstore',parent:parent,_parent:_parent,__parent:__parent},
+            success:function(re){
+                if(re.state){
+                    $("#Product_storeid1").html(re.html.stores);
+                }
+            }
+        });
+    }
+
+
 //    var js_check_price = function(eve){
 //        var s = $(eve).val();
 //        if(isEmpty(s)){

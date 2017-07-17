@@ -154,6 +154,8 @@ var AWS =
 	            	AWS.loading('hide');
 
 	                alert(_t('发生错误, 返回的信息:') + ' ' + error.responseText);
+                    //layer.msg(error.responseText);
+                    //layer.alert(error.responseText);
 	            }
 	        }
 	    });

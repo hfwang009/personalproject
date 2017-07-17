@@ -76,7 +76,7 @@ class AdminWarrantyController extends CAdminController{
             $_POST['Warranty']['construct_time'] = strtotime($_POST['Warranty']['construct_time']);
             $_POST['Warranty']['refuse_reason'] = CUtils::formatTxtarea($_POST['Warranty']['refuse_reason']);
             $_POST['Warranty']['create_user'] = Yii::app()->user->id;
-            $_POST['Warranty']['is_send'] = $_POST['Warranty']['status']==1?0:$model['status'];
+//            $_POST['Warranty']['is_send'] = $_POST['Warranty']['status']==1?0:$model['status'];
             $res = Warranty::model()->updateWarranty($_POST,$id);
 //            var_dump($res);exit;
             if(!empty($res)){

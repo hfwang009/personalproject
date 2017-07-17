@@ -2,34 +2,144 @@
 return array(
 	'setting' => array
 		(
-		'size' => array
+		'controllers' => array
 			(
-			1 => 1,
-			2 => 2,
-			3 => 3,
-			4 => 4,
-			5 => 5,
-			6 => 6
+			1 => array
+				(
+				'econtrol' => 'adminarticle',
+				'ccontrol' => '文章'
+				),
+			2 => array
+				(
+				'econtrol' => 'adminbrand',
+				'ccontrol' => '品牌'
+				),
+			3 => array
+				(
+				'econtrol' => 'adminlist',
+				'ccontrol' => '管理员'
+				),
+			4 => array
+				(
+				'econtrol' => 'adminmodel',
+				'ccontrol' => '模型'
+				),
+			5 => array
+				(
+				'econtrol' => 'adminnews',
+				'ccontrol' => '新闻'
+				),
+			6 => array
+				(
+				'econtrol' => 'adminpackage',
+				'ccontrol' => '套餐'
+				),
+			7 => array
+				(
+				'econtrol' => 'adminprivilieges',
+				'ccontrol' => '权限'
+				),
+			8 => array
+				(
+				'econtrol' => 'adminrole',
+				'ccontrol' => '角色'
+				),
+			9 => array
+				(
+				'econtrol' => 'adminsettingpanel',
+				'ccontrol' => '网站设置'
+				),
+			10 => array
+				(
+				'econtrol' => 'adminstore',
+				'ccontrol' => '门店'
+				),
+			11 => array
+				(
+				'econtrol' => 'admintools',
+				'ccontrol' => '系统工具'
+				),
+			12 => array
+				(
+				'econtrol' => 'adminwarranty',
+				'ccontrol' => '质保'
+				),
+			13 => array
+				(
+				'econtrol' => 'adminwarrantydetail',
+				'ccontrol' => '质保详情'
+				),
+			14 => array
+				(
+				'econtrol' => 'login',
+				'ccontrol' => '登录'
+				),
+
 			),
-		'level' => array
+		'actions' => array
 			(
-			1 => '一级难度',
-			2 => '二级难度',
-			3 => '三级难度',
-			4 => '四级难度'
-			),
-		'type' => array
-			(
-			1 => '加盟店',
-			2 => '零售店',
-			3 => '批发店',
-			4 => '小店',
-			5 => '大店'
+			1 => array
+				(
+				'eaction' => 'index',
+				'caction' => '列表'
+				),
+			2 => array
+				(
+				'eaction' => 'add',
+				'caction' => '添加'
+				),
+			3 => array
+				(
+				'eaction' => 'update',
+				'caction' => '修改'
+				),
+			4 => array
+				(
+				'eaction' => 'delete',
+				'caction' => '删除'
+				),
+			5 => array
+				(
+				'eaction' => 'setting',
+				'caction' => '设置'
+				),
+			6 => array
+				(
+				'eaction' => 'set',
+				'caction' => '设置'
+				),
+
 			),
 		'ptype' => array
 			(
 			1 => '车身',
 			2 => '前挡'
+			),
+		'controller' => array
+			(
+			'adminarticle' => '文章',
+			'adminbrand' => '品牌',
+			'adminlist' => '管理员',
+			'adminmodel' => '模型',
+			'adminnews' => '新闻',
+			'adminpackage' => '套餐',
+			'adminprivilieges' => '权限',
+			'adminrole' => '角色',
+			'adminsettingpanel' => '网站设置',
+			'adminstore' => '门店',
+			'admintools' => '系统工具',
+			'adminwarranty' => '质保',
+			'adminwarrantydetail' => '质保详情',
+			'login' => '登录'
+			),
+		'action' => array
+			(
+			'index' => '列表',
+			'add' => '添加',
+			'update' => '修改',
+			'delete' => '删除',
+			'setting' => '设置',
+			'set' => '设置'
 			),
 
 		),

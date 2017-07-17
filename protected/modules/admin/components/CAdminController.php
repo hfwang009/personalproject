@@ -35,6 +35,8 @@ class CAdminController extends Controller {
                 }else{
                     $this->redirect(Yii::app()->createUrl(Yii::app()->controller->module->id.'/'.'adminSettingPanel/error'));
                 }
+            }else{
+                CUtils::addAdminLog($controller,$action,$_REQUEST,Yii::app()->user->id);
             }
         }
 		return true;

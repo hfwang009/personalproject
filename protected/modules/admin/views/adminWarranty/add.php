@@ -48,6 +48,18 @@
                                     <div class="col-sm-6 col-xs-8">
                                         <?php echo $form->textField($model, 'series_number', array("class"=>"form-control","readonly"=>true));?>
                                         <?php echo $form->error($model,'series_number',array('class'=>'help-block'));?>
+                                        <input type="hidden" name="_storeid" id="_storeid" value="<?php echo !empty($model)?$model->storeid:''; ?>">
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="form-group">
+                                    <?php echo $form->label($model,'pack_name',array('class'=>'col-sm-2 col-xs-3 control-label'));?>
+                                    <div class="col-sm-6 col-xs-8">
+                                        <?php echo $form->textField($model, 'pack_name', array("class"=>"form-control"));?>
+                                        <?php echo $form->error($model,'pack_name',array('class'=>'help-block'));?>
                                     </div>
                                 </div>
                             </td>
@@ -573,6 +585,8 @@
             show_tip_message('请输入产品序列号');
             return false;
         }
+        var ids = $('#_storeid').val();
+        var arr = isEmpty(ids)?[]:ids.split(',');
         $.ajax({
             type:'post',
             url:'<?php echo $ajax_url;?>',
@@ -590,6 +604,10 @@
                     $('#product_'+id+'_brand').val(msg.brand);
                     $('#product_'+id+'_name').val(msg.product.name);
                     $('#product_'+id+'_current_num').val(msg.product.current_num);
+                    var _storeid = msg.product.storeid;
+                    arr.push(_storeid);
+                    var ids = create_new_arr(arr);
+                    $('#_storeid').val(ids);
                     $('#product_'+id+'_type').val('');
                     $('#product_'+id+'_num').val('');
                     $('#product_'+id+'_warrantytime').val('');
@@ -610,9 +628,21 @@
         });
     }
 
+    function create_new_arr(arr){
+        var new_arr = [];
+        for(var i=0;i<arr.length;i++) {
+            var items=arr[i];
+        //判断元素是否存在于new_arr中，如果不存在则插入到new_arr的最后
+        if($.inArray(items,new_arr)==-1) {
+            new_arr.push(items);
+            }
+        }
+        var string = new_arr.join(',');
+        return string;
+    }
+
     var js_add_product = function(){
         var container = $('#productlist');
-        console.log();
         if(container.length > 0){
             var chlid = container.children();
             var chlidnode = chlid.length;
@@ -709,6 +739,11 @@
         var storeid = $('#Warranty_storeid').val();
         if(isEmpty(storeid)){
             show_tip_message('没有选择门店！');
+            return false;
+        }
+        var _storeid = $('#_storeid').val();
+        if(storeid!=_storeid){
+            show_tip_message('产品与门店不匹配，请重新选择产品序列号！');
             return false;
         }
         $('.product_num').each(function(i,item){

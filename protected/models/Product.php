@@ -24,11 +24,16 @@
  * @property integer $udpatetime
  * @property integer $company
  * @property integer $remarks
+ * @property integer $storeid
  */
 class Product extends CActiveRecord
 {
     public $ctime_start;
     public $ctime_end;
+    public $province1;
+    public $city1;
+    public $area1;
+    public $storeid1;
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
@@ -55,12 +60,12 @@ class Product extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('mid, name,series_number,total,bid,create_user,ctime', 'required', 'message'=>'{attribute}必须填写！'),
+			array('mid, name,series_number,total,bid,create_user,ctime,storeid', 'required', 'message'=>'{attribute}必须填写！'),
 			array('mid, total, bid,ctime,udpatetime', 'numerical', 'message'=>'{attribute}请填写数字！'),
 			array('name, intro', 'length', 'max'=>20000000),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, mid, name, series_number, total, current_num, bid, province, city, area, intro, create_user, ctime, type, customer, spec, udpatetime, company, remarks', 'safe', 'on'=>'search'),
+			array('id, mid, name, series_number, total, current_num, bid, province, city, area, intro, create_user, ctime, type, customer, spec, udpatetime, company, remarks,storeid', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -74,6 +79,7 @@ class Product extends CActiveRecord
 		return array(
             'model'=>array(self::BELONGS_TO,'Models','mid'),
             'brand'=>array(self::BELONGS_TO,'Brand','bid'),
+            'store'=>array(self::BELONGS_TO,'Store','storeid'),
             'admin'=>array(self::BELONGS_TO,'Admin','create_user'),
 //            'warranty'=>array(self::HAS_ONE,'Warranty','id'),
             'detail'=>array(self::HAS_ONE,'WarrantyDetail','id'),
@@ -105,6 +111,11 @@ class Product extends CActiveRecord
 			'udpatetime' => '出库时间',
 			'company' => '单位',
 			'remarks' => '备注',
+			'storeid' => '门店名称',
+			'province1' => '所属省份',
+			'city1' => '所属城市',
+			'area1' => '所属区县',
+			'storeid1' => '门店名称',
 		);
 	}
 
@@ -138,6 +149,7 @@ class Product extends CActiveRecord
 		$criteria->compare('udpatetime',$this->udpatetime,true);
 		$criteria->compare('company',$this->company,true);
 		$criteria->compare('remarks',$this->remarks,true);
+		$criteria->compare('storeid',$this->remarks,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -150,9 +162,9 @@ class Product extends CActiveRecord
             if(!empty($product)){
                 $product->attributes = $post["Product"];
                 $product->ctime = time();
-//                $product->province = $post['Product']['province'];
-//                $product->city = $post['Product']['city'];
-//                $product->area = $post['Product']['area'];
+                $product->province = $post['Product']['province'];
+                $product->city = $post['Product']['city'];
+                $product->area = $post['Product']['area'];
 //                $product->type = $post['Product']['type'];
                 $product->customer = $post['Product']['customer'];
                 $product->spec = $post['Product']['spec'];
@@ -171,9 +183,9 @@ class Product extends CActiveRecord
             $model->attributes = $post['Product'];
             $model->ctime = time();
             $model->current_num = $post['Product']['current_num'];
-//            $model->province = $post['Product']['province'];
-//            $model->city = $post['Product']['city'];
-//            $model->area = $post['Product']['area'];
+            $model->province = $post['Product']['province'];
+            $model->city = $post['Product']['city'];
+            $model->area = $post['Product']['area'];
 //            $model->type = $post['Product']['type'];
             $model->customer = $post['Product']['customer'];
             $model->spec = $post['Product']['spec'];
@@ -374,6 +386,19 @@ class Product extends CActiveRecord
     public function getCriteriaCondition($criteria,$condition,$search){
         if(isset($condition['Product']) && (count(array_filter($condition['Product'])) > 0 )){
             $search->attributes = $condition['Product'];
+            if (!empty($condition['Product']['province1'])&&empty($condition['Product']['storeid1'])) {
+                $criteria->condition .= ' and t.province = "' . $condition['Product']['province1'] .'" ';
+            }
+            if (!empty($condition['Product']['city1'])&&empty($condition['Product']['storeid1'])) {
+                $criteria->condition .= ' and t.city = "' . $condition['Product']['city1'] .'" ';
+            }
+            if (!empty($condition['Product']['area1'])&&empty($condition['Product']['storeid1'])) {
+                $criteria->condition .= ' and t.area = "' . $condition['Product']['area1'] .'" ';
+            }
+            if (!empty($condition['Product']['storeid1'])) {
+                $criteria->condition .= ' and t.storeid = "' . $condition['Product']['storeid1'] .'" ';
+            }
+
             if (!empty($condition['Product']['name'])) {
                 $criteria->condition .= ' and t.name like "%' . $condition['Product']['name'] .'%" ';
             }
@@ -398,7 +423,7 @@ class Product extends CActiveRecord
                 $search->ctime_end = $condition['Product']['ctime_end'];
             }
         }
-        $criteria->with = array('brand');
+        $criteria->with = array('brand','store');
         if(empty($condition['sortFiled']) || empty($condition['sortValue'])){
             $condition['sortFiled'] = 'id';
             $condition['sortValue'] = 'desc';

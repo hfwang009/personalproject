@@ -1,3 +1,18 @@
+<style>
+    .g-side3{position:static;float: left;}
+    .clsfx{*zoom:1;}
+    .clsfx:after{content:"";display:block;clear:both;}
+    .show_demo_left{float:left;}
+    .show_demo_left .listabs{width:220px;height:42px;background-color:#e6e6e6;font:normal 22px/42px "Microsoft Yahei","微软雅黑";color:#637085;text-align:left;text-indent:15px;}
+    .g-box3 .g-main3{padding-left:0;}
+    .helpPage .cntBox{padding:0;float:right;width:854px;}
+    .sd-ul{border-top: 1px solid #e4e4e4;}
+    .sd-ul .showli{height:48px;line-height:48px;box-sizing:border-box;border-bottom: 1px solid #e4e4e4;padding:3px 0;}
+    .like{display: block;color: #232629;text-align: left;text-indent: 6px;font-size: 14px;line-height:42px;height:100%;width:220px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+    .like:hover,.showli.active .like{color:#ff8200;background-color:#f1f3f6;}
+    .flashplayer{font-size: 24px;line-height: 45px;text-align: center;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;padding: 0 12px;margin-bottom: 12px;}
+    .video-js{background-color:#f2f1ed;padding: 10px 0;box-sizing: content-box;}
+</style>
 <main id="room_page">
     <div class="container">
         <div class="row">

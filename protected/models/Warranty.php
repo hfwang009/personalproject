@@ -25,6 +25,7 @@
  * @property integer $is_send
  * @property string $extension
  * @property string $carmodel
+ * @property string $pack_name
  */
 class Warranty extends CActiveRecord
 {
@@ -42,6 +43,8 @@ class Warranty extends CActiveRecord
     public $cityid;
     public $areaid;
     public $num;
+
+    public $_storeid;
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
@@ -68,13 +71,13 @@ class Warranty extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array(' name, telephone, address, engineno, construct_time', 'required', 'message'=>'{attribute}必须填写！'),
+			array(' name, telephone, address, engineno, construct_time,pack_name', 'required', 'message'=>'{attribute}必须填写！'),
 			array('is_send, storeid, ctime', 'numerical', 'integerOnly'=>true),
 			array('series_number, name, address, carlicence, engineno, warrantytime', 'length', 'max'=>500),
 			array('telephone', 'length', 'max'=>11),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, series_number, mid, pid, name, telephone, address, carlicence, engineno, construct_time, warrantytime, storeid, ctime, status, create_user, createtime, refuse_reason, constructor, guide, is_send, extension, carmodel', 'safe', 'on'=>'search'),
+			array('id, series_number, mid, pid, name, telephone, address, carlicence, engineno, construct_time, warrantytime, storeid, ctime, status, create_user, createtime, refuse_reason, constructor, guide, is_send, extension, carmodel,pack_name', 'safe', 'on'=>'search'),
 		);
 	}
 	/**
@@ -123,6 +126,7 @@ class Warranty extends CActiveRecord
             'constructor'=>'施工人员',
             'guide'=>'导购',
             'num'=>'质保数量',
+            'pack_name'=>'套餐名称',
 		);
 	}
 

@@ -32,6 +32,9 @@
                                     <a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->module->id.'/'.Yii::app()->controller->id . '/' . $this->getAction()->getId(), array_merge($condition,array('sortFiled'=>'customer','sortValue'=>(isset($condition['sortFiled']) && $condition['sortFiled']=='customer')?($condition['sortValue'] == "asc"?"desc":"asc"):"asc")));?>">客户<span class="glyphicon <?php echo $condition['sortFiled'] == 'customer'?($condition['sortValue'] == "asc"?"glyphicon-chevron-up":"glyphicon-chevron-down"):'';?>"></span></a>
                                 </th>
                                 <th>
+                                    <a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->module->id.'/'.Yii::app()->controller->id . '/' . $this->getAction()->getId(), array_merge($condition,array('sortFiled'=>'storeid','sortValue'=>(isset($condition['sortFiled']) && $condition['sortFiled']=='storeid')?($condition['sortValue'] == "asc"?"desc":"asc"):"asc")));?>">门店<span class="glyphicon <?php echo $condition['sortFiled'] == 'storeid'?($condition['sortValue'] == "asc"?"glyphicon-chevron-up":"glyphicon-chevron-down"):'';?>"></span></a>
+                                </th>
+                                <th>
                                     <a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->module->id.'/'.Yii::app()->controller->id . '/' . $this->getAction()->getId(), array_merge($condition,array('sortFiled'=>'name','sortValue'=>(isset($condition['sortFiled']) && $condition['sortFiled']=='name')?($condition['sortValue'] == "asc"?"desc":"asc"):"asc")));?>">产品名称<span class="glyphicon <?php echo $condition['sortFiled'] == 'name'?($condition['sortValue'] == "asc"?"glyphicon-chevron-up":"glyphicon-chevron-down"):'';?>"></span></a>
                                 </th>
                                 <th>
@@ -80,6 +83,7 @@
                                         </td>
                                         <td><?php echo $_model['id'];?></td>
                                         <td><?php echo !empty($_model['customer'])?$_model['customer']:'--';?></td>
+                                        <td><?php echo !empty($_model->store)?$_model->store->name:'--';?></td>
                                         <td><?php echo $_model['name'];?></td>
                                         <td><?php echo !empty($_model['mid'])?$models_data[$_model['mid']]:'--';?></td>
                                         <td><?php echo $_model['series_number'];?></td>
@@ -165,13 +169,34 @@
                         <?php echo $form->error($search,'bid',array('class'=>'help-block'));?>
                     </div>
                 </div>
-<!--                <div class="form-group">-->
-<!--                    --><?php //echo $form->label($search,'type',array('class'=>'col-sm-2 col-xs-3 control-label'));?>
-<!--                    <div class="col-sm-5 col-xs-8">-->
-<!--                        --><?php //echo $form->dropDownList($search,'type',$ptype,array('empty'=>'-- 请选择  --','class'=>'form-control'));?>
-<!--                        --><?php //echo $form->error($search,'type',array('class'=>'help-block'));?>
-<!--                    </div>-->
-<!--                </div>-->
+                <div class="form-group">
+                    <?php echo $form->label($search,'province1',array('class'=>'col-sm-2 col-xs-3 control-label'));?>
+                    <div class="col-sm-5 col-xs-8">
+                        <?php echo $form->dropDownList($search,'province1',$provinces,array('empty'=>'-- 请选择  --','class'=>'form-control'));?>
+                        <?php echo $form->error($search,'province1',array('class'=>'help-block'));?>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <?php echo $form->label($search,'city1',array('class'=>'col-sm-2 col-xs-3 control-label'));?>
+                    <div class="col-sm-5 col-xs-8">
+                        <?php echo $form->dropDownList($search,'city1',$citys,array('empty'=>'-- 请选择  --','class'=>'form-control'));?>
+                        <?php echo $form->error($search,'city1',array('class'=>'help-block'));?>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <?php echo $form->label($search,'area1',array('class'=>'col-sm-2 col-xs-3 control-label'));?>
+                    <div class="col-sm-5 col-xs-8">
+                        <?php echo $form->dropDownList($search,'area1',$areas,array('empty'=>'-- 请选择  --','class'=>'form-control'));?>
+                        <?php echo $form->error($search,'area1',array('class'=>'help-block'));?>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <?php echo $form->label($search,'storeid1',array('class'=>'col-sm-2 col-xs-3 control-label'));?>
+                    <div class="col-sm-5 col-xs-8">
+                        <?php echo $form->dropDownList($search,'storeid1',$stores,array('empty'=>'-- 请选择  --','class'=>'form-control'));?>
+                        <?php echo $form->error($search,'storeid1',array('class'=>'help-block'));?>
+                    </div>
+                </div>
                 <div class="form-group">
                     <?php echo $form->label($search,'ctime',array('class'=>'col-sm-2 col-xs-3 control-label'));?>
                     <div class="col-sm-5 col-xs-8">
@@ -236,6 +261,15 @@
                 }
             });
         });
+        $('body').on('change','select[name="Product[province1]"]',function(){
+            _js_province_store(this);
+        });
+        $('body').on('change','select[name="Product[city1]"]',function(){
+            _js_city_store(this);
+        });
+        $('body').on('change','select[name="Product[area1]"]',function(){
+            _js_area_store(this);
+        });
     });
     var add_remark  =function(){
         var id = $('#product_ids').val();
@@ -257,5 +291,56 @@
             }
         });
         return false;
+    }
+
+    var _js_province_store = function(eve){
+        var parent = $(eve).val();
+        $.ajax({
+            url:'<?php echo $ajax_url ?>',
+            type:'POST',
+            dataType:'json',
+            data:{ct:'product',ac:'getcity',parent:parent},
+            success:function(re){
+                if(re.state){
+                    $("#Product_city1").html(re.html.citys);
+                    $("#Product_area1").html(re.html.areas);
+                    $("#Product_storeid1").html(re.html.stores);
+                }
+            }
+        });
+    }
+
+    var _js_city_store = function(eve){
+        var parent = $(eve).val();
+        var _parent = $('#Product_province').val();
+        $.ajax({
+            url:'<?php echo $ajax_url ?>',
+            type:'POST',
+            dataType:'json',
+            data:{ct:'product',ac:'getarea',parent:parent,_parent:_parent},
+            success:function(re){
+                if(re.state){
+                    $("#Product_area1").html(re.html.areas);
+                    $("#Product_storeid1").html(re.html.stores);
+                }
+            }
+        });
+    }
+
+    var _js_area_store = function(eve){
+        var parent = $(eve).val();
+        var _parent = $('#Product_city').val();
+        var __parent = $('#Product_province').val();
+        $.ajax({
+            url:'<?php echo $ajax_url ?>',
+            type:'POST',
+            dataType:'json',
+            data:{ct:'product',ac:'getstore',parent:parent,_parent:_parent,__parent:__parent},
+            success:function(re){
+                if(re.state){
+                    $("#Product_storeid1").html(re.html.stores);
+                }
+            }
+        });
     }
 </script>

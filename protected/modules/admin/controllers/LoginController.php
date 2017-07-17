@@ -66,6 +66,9 @@ class LoginController extends Controller {
             $model->attributes=$_POST['LoginForm'];
             // validate user input and redirect to the previous page if valid
             if($model->validate() && $model->login()) {
+                $controller = strtolower(Yii::app()->controller->id);
+                $action = strtolower($this->getAction()->getId());
+                CUtils::addAdminLog($controller,$action,null,Yii::app()->user->id);
                 $this->redirect(Yii::app()->createUrl(Yii::app()->controller->module->id . '/' . 'AdminSettingPanel/index'));
             }else{
                 $model->addError('password','用户名或密码错误');

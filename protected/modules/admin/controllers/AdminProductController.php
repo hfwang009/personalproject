@@ -21,6 +21,10 @@ class AdminProductController extends CAdminController{
         $brand_arr = Brand::model()->getBrandData();
         $ptype = Yii::app()->params['conf']['setting']['ptype'];
         $level = Yii::app()->params['conf']['setting']['level'];
+        $provinces = Region::model()->getRegions();
+        $citys = array();
+        $areas = array();
+        $stores = Store::model()->getRelaStores1(null);
         $this->render("index",array(
             "search"=>$search,
             "condition"=>$condition,
@@ -30,6 +34,10 @@ class AdminProductController extends CAdminController{
             "level"=>$level,
             "pager"=>$model->getPagination(),
             "ajax_url"=>$ajax_url,
+            'provinces'=>$provinces,
+            'citys'=>$citys,
+            'areas'=>$areas,
+            'stores'=>$stores,
             "model"=>$model->getData()
         ));
     }
@@ -43,7 +51,7 @@ class AdminProductController extends CAdminController{
             $model = Product::model()->findByPk($id);
         }
         if(isset($_POST['Product'])){
-            var_dump($id);
+//            print_r($_POST['Product']);exit;
             $_POST['Product']['name'] = $this->FilterXss($_POST['Product']['name']);
             $_POST['Product']['create_user'] = Yii::app()->user->id;
             $res = Product::model()->addProduct($_POST);
@@ -59,12 +67,23 @@ class AdminProductController extends CAdminController{
             $provinces = Region::model()->getRegions();
             $citys = array();
             $areas = array();
+            $stores = Store::model()->getRelaStores1(null);
         }else{
             $provinces = Region::model()->getRegions();
             $pid = !empty($model->province)?$model->province:'';
             $cid = !empty($model->city)?$model->city:'';
+            $aid = !empty($model->area)?$model->area:'';
             $citys = !empty($pid)?Region::model()->getRegions($pid):array();
             $areas = !empty($cid)?Region::model()->getRegions($cid):array();
+            if(!empty($aid)){
+                $stores = Store::model()->getRelaStores1($aid,'areaid');
+            }elseif(empty($aid)&&!empty($cid)){
+                $stores = Store::model()->getRelaStores1($cid,'cityid');
+            }elseif(empty($aid)&&empty($cid)&&!empty($pid)){
+                $stores = Store::model()->getRelaStores1($pid,'provinceid');
+            }else{
+                $stores = Store::model()->getRelaStores1(null);
+            }
         }
         $this->render("add",
             array(
@@ -76,6 +95,7 @@ class AdminProductController extends CAdminController{
                 'provinces'=>$provinces,
                 'citys'=>$citys,
                 'areas'=>$areas,
+                'stores'=>$stores,
                 "ajax_url"=>$ajax_url,
             ));
     }
@@ -122,6 +142,12 @@ class AdminProductController extends CAdminController{
             $this->__remarkShow();
         }elseif($ct == "product" && $ac == "addRemark"){
             $this->__addRemark();
+        }elseif($ct == 'product' && $ac == 'getcity'){
+            $this->__getcity();
+        }elseif($ct == 'product' && $ac == 'getarea'){
+            $this->__getarea();
+        }elseif($ct == 'product' && $ac == 'getstore'){
+            $this->__getstore();
         }else{
             echo CJSON::encode(CUtils::retCode(false, 0, '参数错误'));
             Yii::app ()->end ();
@@ -223,6 +249,60 @@ class AdminProductController extends CAdminController{
             }
         }
         echo CJSON::encode(CUtils::retCode($state, $code, $message, $href));
+        Yii::app ()->end ();
+    }
+
+    private function __getcity(){
+        $id = Yii::app()->request->getParam('parent', null);
+        if(empty($id)){
+            $data = array(
+                'citys'=>"<option value=''>-- 请选择  --</option>",
+                'areas'=>"<option value=''>-- 请选择  --</option>",
+                'stores'=>Store::model()->getRelaStores($id,'provinceid',true),
+            );
+            echo CJSON::encode ( CUtils::retMessage ( true, 0,'', $data ) );
+            Yii::app ()->end ();
+        }
+        $data = Region::model()->getRelaCitys($id,true);
+        $data['stores'] = Store::model()->getRelaStores($id,'provinceid',true);
+        echo CJSON::encode ( CUtils::retMessage ( true, 0, '', $data ) );
+        Yii::app ()->end ();
+    }
+
+    private function __getarea(){
+        $id = Yii::app()->request->getParam('parent', null);
+        $_id = Yii::app()->request->getParam('_parent', null);
+        if(empty($id)){
+            $data = array(
+                'citys'=>"<option value=''>-- 请选择  --</option>",
+                'areas'=>"<option value=''>-- 请选择  --</option>",
+                'stores'=>!empty($_id)?Store::model()->getRelaStores($_id,'provinceid',true):Store::model()->getRelaStores(null),
+            );
+            echo CJSON::encode ( CUtils::retMessage ( true, 0,'', $data ) );
+            Yii::app ()->end ();
+        }
+        $data = Region::model()->getRelaAreas($id,true);
+        $data['stores'] = Store::model()->getRelaStores($id,'cityid',true);
+        echo CJSON::encode ( CUtils::retMessage ( true, 0, '', $data ) );
+        Yii::app ()->end ();
+    }
+
+    private function __getStore(){
+        $id = Yii::app()->request->getParam('parent', null);
+        $_id = Yii::app()->request->getParam('_parent', null);
+        $__id = Yii::app()->request->getParam('__parent', null);
+        if(empty($id)){
+            $data = array(
+                'citys'=>"<option value=''>-- 请选择  --</option>",
+                'areas'=>"<option value=''>-- 请选择  --</option>",
+                'stores'=>!empty($_id)?Store::model()->getRelaStores($_id,'cityid',true):(!empty($__id)?Store::model()->getRelaStores($__id,'provinceid',true):Store::model()->getRelaStores(null)),
+            );
+            echo CJSON::encode ( CUtils::retMessage ( true, 0,'', $data ) );
+            Yii::app ()->end ();
+        }
+//        $data = Region::model()->getRelaAreas($id,true);
+        $data['stores'] = Store::model()->getRelaStores($id,'areaid',true);
+        echo CJSON::encode ( CUtils::retMessage ( true, 0, '', $data ) );
         Yii::app ()->end ();
     }
 }

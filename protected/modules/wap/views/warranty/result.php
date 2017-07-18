@@ -27,10 +27,14 @@
                                                                     <td width="21" rowspan="4"><div align="center"><span class="sub_title_xxs sub_title_xxs sub_title_xxs STYLE5">贴膜</span></div>  </td>
                                                                     <td height="27"><div align="center"><span class="sub_title_xxs sub_title_xxs sub_title_xxs STYLE5">品牌</span></div></td>
                                                                     <td colspan="2"><div align="center"><span class="sub_title_xxs sub_title_xxs sub_title_xxs STYLE5"><?php echo $result['pid'];?></span></div></td>
-                                                                </tr>
 
+                                                                </tr>
                                                                 <tr>
-                                                                    <td width="75"><div align="center"><span class="sub_title_xxs sub_title_xxs sub_title_xxs STYLE5">套餐名称</span></div></td>
+                                                                    <td height="27"><div align="center"><span class="sub_title_xxs sub_title_xxs sub_title_xxs STYLE5">套餐名称</span></div></td>
+                                                                    <td colspan="2"><div align="center"><span class="sub_title_xxs sub_title_xxs sub_title_xxs STYLE5"><?php echo $result['pack_name'];?>1111</span></div></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td width="75"><div align="center"><span class="sub_title_xxs sub_title_xxs sub_title_xxs STYLE5">产品名称</span></div></td>
                                                                     <td width="11"><div align="center"><span class="sub_title_xxs sub_title_xxs sub_title_xxs STYLE5">施工部位</span></div></td>
 
                                                                     <td width="12"><div align="center"><span class="sub_title_xxs sub_title_xxs sub_title_xxs STYLE5">质保年限</span></div></td>
@@ -38,13 +42,12 @@
                                                                 <tr>
                                                                     <td width="75"><div align="center"><span class="sub_title_xxs sub_title_xxs sub_title_xxs STYLE5"><?php echo $result['mid'];?></span></div></td>
                                                                     <td>
-                                                                        <?php echo $result['extension'];?>                                                                    </td>
-
+                                                                        <?php echo $result['extension'];?></td>
                                                                     <td><?php echo $result['warrantytime'];?></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td><div align="center"><span class="sub_title_xxs sub_title_xxs sub_title_xxs STYLE5">施工日期</span></div></td>
-                                                                    <td colspan="2"><div align="center"><span class="sub_title_xxs sub_title_xxs sub_title_xxs STYLE5"><?php echo date('Y-m-d',$result['construct_time']); ?></span></div></td>
+                                                                    <td colspan="27"><div align="center"><span class="sub_title_xxs sub_title_xxs sub_title_xxs STYLE5"><?php echo date('Y-m-d',$result['construct_time']); ?></span></div></td>
                                                                 </tr>
 
                                                                 <tr>

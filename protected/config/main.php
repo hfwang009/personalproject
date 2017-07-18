@@ -83,6 +83,9 @@ return array(
         'sms' => array (
             'class' => 'application.extensions.msg_sdk.mns-autoloader'
         ),
+        'sms' => array (
+            'class' => 'application.extensions.aliyunMsg.mns-autoloader'
+        ),
 
 		// uncomment the following to enable URLs in path-format
 

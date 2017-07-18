@@ -97,6 +97,7 @@
                                                             <input type="text" class="form-control product_product" name="product[<?php echo $key;?>][series_number]" id="product_<?php echo $key;?>_series_number" onblur="js_get_model(this)" ng-id="<?php echo $key;?>" value="<?php echo $val['series_number'] ?>">
                                                             <input type="hidden" class="form-control" name="product[<?php echo $key;?>][pid]" id="product_<?php echo $key;?>_pid" value="<?php echo $val['pid'] ?>" >
                                                             <input type="hidden" class="form-control" name="product[<?php echo $key;?>][mid]" id="product_<?php echo $key;?>_mid" value="<?php echo $val['mid'] ?>" >
+                                                            <input type="hidden" class="form-control" name="product[<?php echo $key;?>][sid]" id="product_<?php echo $key;?>_sid" value="<?php echo !empty($val['sid'])?$val['sid']:'' ?>" ng-tip="storeid" >
                                                         </div>
                                                     </div>
                                                 </td>
@@ -197,6 +198,7 @@
                                                         <input type="text" class="form-control product_product" name="product[0][series_number]" id="product_0_series_number" onblur="js_get_model(this)" ng-id="0">
                                                         <input type="hidden" class="form-control" name="product[0][pid]" id="product_0_pid" >
                                                         <input type="hidden" class="form-control" name="product[0][mid]" id="product_0_mid" >
+                                                        <input type="hidden" class="form-control" name="product[0][sid]" id="product_0_sid" >
                                                     </div>
                                                 </div>
                                             </td>
@@ -585,8 +587,8 @@
             show_tip_message('请输入产品序列号');
             return false;
         }
-        var ids = $('#_storeid').val();
-        var arr = isEmpty(ids)?[]:ids.split(',');
+//        var ids = $('#_storeid').val();
+//        var arr = isEmpty(ids)?[]:ids.split(',');
         $.ajax({
             type:'post',
             url:'<?php echo $ajax_url;?>',
@@ -600,13 +602,15 @@
                     $('#product_'+id+'_num').attr('ng-pid',msg.product.id);
                     $('#product_'+id+'_pid').val(msg.product.id);
                     $('#product_'+id+'_mid').val(msg.product.mid);
+                    $('#product_'+id+'_sid').val(msg.product.storeid);
                     $('#product_'+id+'_model').val(msg.model);
                     $('#product_'+id+'_brand').val(msg.brand);
                     $('#product_'+id+'_name').val(msg.product.name);
                     $('#product_'+id+'_current_num').val(msg.product.current_num);
-                    var _storeid = msg.product.storeid;
-                    arr.push(_storeid);
-                    var ids = create_new_arr(arr);
+//                    var _storeid = msg.product.storeid;
+//                    arr.push(_storeid);
+                    var ids = create_new_arr();
+                    $('#_storeid').val(ids);
                     $('#_storeid').val(ids);
                     $('#product_'+id+'_type').val('');
                     $('#product_'+id+'_num').val('');
@@ -615,6 +619,7 @@
                     $('#product_'+id+'_num').attr('ng-pid','');
                     $('#product_'+id+'_pid').val('');
                     $('#product_'+id+'_mid').val('');
+                    $('#product_'+id+'_sid').val('');
                     $('#product_'+id+'_model').val('');
                     $('#product_'+id+'_brand').val('');
                     $('#product_'+id+'_name').val('');
@@ -630,13 +635,12 @@
 
     function create_new_arr(arr){
         var new_arr = [];
-        for(var i=0;i<arr.length;i++) {
-            var items=arr[i];
-        //判断元素是否存在于new_arr中，如果不存在则插入到new_arr的最后
-        if($.inArray(items,new_arr)==-1) {
-            new_arr.push(items);
+        $('input[ng-tip="storeid"]').each(function(i,item){
+            //判断元素是否存在于new_arr中，如果不存在则插入到new_arr的最后
+            if($.inArray($(item).val(),new_arr)==-1&&!isEmpty($(item).val())) {
+                new_arr.push($(item).val());
             }
-        }
+        });
         var string = new_arr.join(',');
         return string;
     }
@@ -709,6 +713,11 @@
         var name = $('#Warranty_name').val();
         if(isEmpty(name)){
             show_tip_message('没有输入用户名！');
+            return false;
+        }
+        var pack_name = $('#Warranty_pack_name').val();
+        if(isEmpty(pack_name)){
+            show_tip_message('没有输入套餐名称！');
             return false;
         }
         var telephone = $('#Warranty_telephone').val();

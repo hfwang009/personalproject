@@ -791,11 +791,12 @@ class Controller extends CController
         if($flag){
             $time = $setting['time']/60;
             $data = array('numb' => strval($verify));
-            $result = CUtils::sendSms($phone, $data, $setting['code']);
-            if($result->result->err_code==0&&$result->result->success==true){
+            $result = CUtils::sendMsg($phone, $data, $setting['code']);
+            if($result->Code=='OK'){
                 //记录发送的短信，记录发送短信的相关状态后台可以补发（需要新增字段来判断是否发送短信）
-//                $msgid = $result->request_id;
-//                $_model = $result->result->model;
+//            $msgid = $rs->RequestId;
+//            $bizid = $rs->BizId;
+//            $message = $rs->Message;
                 $message['status'] = true;
                 $message['msg'] = '验证码发送成功';
             }

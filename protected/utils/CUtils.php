@@ -520,34 +520,6 @@ class CUtils {
     }
 
     /**
-     * 发送手机短信
-     */
-    public static function sendSms($phone, $data, $type){
-        $config = Yii::app()->params['conf']['phone'];
-        require_once(Yii::app()->basePath.DIRECTORY_SEPARATOR.'extensions'.DIRECTORY_SEPARATOR.'Dayu'.DIRECTORY_SEPARATOR.'top'.DIRECTORY_SEPARATOR.'TopClient.php');
-        require_once(Yii::app()->basePath.DIRECTORY_SEPARATOR.'extensions'.DIRECTORY_SEPARATOR.'Dayu'.DIRECTORY_SEPARATOR.'top'.DIRECTORY_SEPARATOR.'ResultSet.php');
-        require_once(Yii::app()->basePath.DIRECTORY_SEPARATOR.'extensions'.DIRECTORY_SEPARATOR.'Dayu'.DIRECTORY_SEPARATOR.'top'.DIRECTORY_SEPARATOR.'RequestCheckUtil.php');
-        require_once(Yii::app()->basePath.DIRECTORY_SEPARATOR.'extensions'.DIRECTORY_SEPARATOR.'Dayu'.DIRECTORY_SEPARATOR.'top'.DIRECTORY_SEPARATOR.'TopLogger.php');
-        require_once(Yii::app()->basePath.DIRECTORY_SEPARATOR.'extensions'.DIRECTORY_SEPARATOR.'Dayu'.DIRECTORY_SEPARATOR.'top'.DIRECTORY_SEPARATOR.'request'.DIRECTORY_SEPARATOR.'AlibabaAliqinFcSmsNumSendRequest.php');
-        $c = new \TopClient;
-//        print_r($config);
-//        print_r($phone);
-//        print_r(json_encode($data));
-//        print_r($type);
-//        exit;
-        $c->appkey = strval($config['appkey']);
-        $c->secretKey = $config['secretKey'];
-        $req = new \AlibabaAliqinFcSmsNumSendRequest;
-        $req->setExtend('ICS');
-        $req->setSmsType("normal");
-        $req->setSmsParam(json_encode($data));
-        $req->setSmsFreeSignName($config['signname']);
-        $req->setRecNum($phone);
-        $req->setSmsTemplateCode($type);
-        return $c->execute($req);
-    }
-
-    /**
      * 手机验证验证码
      */
     public static function validVerify($uname, $verify, $type){
@@ -706,7 +678,7 @@ class CUtils {
     public static function addAdminLog($controller,$action,$request,$adminid){
         $control_arr = Yii::app()->params['conf']['setting']['controller'];
         $act_arr = Yii::app()->params['conf']['setting']['action'];
-        if($action=='setting'){
+        if($action=='setting'||$action=='index'||empty($request)){
             return true;
         }
         $logmodel = new AdminLog();
@@ -739,5 +711,93 @@ class CUtils {
             }
         }
         return ($ip ? $ip : $_SERVER['REMOTE_ADDR']);
+    }
+
+    public static function addMsgLog(){
+
+    }
+
+    public static function sendMsg($phone, $data, $type){
+        $config = Yii::app()->params['conf']['phone'];
+//        require_once(Yii::app()->basePath.DIRECTORY_SEPARATOR.'extensions'.DIRECTORY_SEPARATOR.'aliyunMsg'.DIRECTORY_SEPARATOR.'aliyun-php-sdk-core'.DIRECTORY_SEPARATOR.'Regions'.DIRECTORY_SEPARATOR.'ProductDomain.php');
+//        require_once(Yii::app()->basePath.DIRECTORY_SEPARATOR.'extensions'.DIRECTORY_SEPARATOR.'aliyunMsg'.DIRECTORY_SEPARATOR.'aliyun-php-sdk-core'.DIRECTORY_SEPARATOR.'Regions'.DIRECTORY_SEPARATOR.'Endpoint.php');
+//        require_once(Yii::app()->basePath.DIRECTORY_SEPARATOR.'extensions'.DIRECTORY_SEPARATOR.'aliyunMsg'.DIRECTORY_SEPARATOR.'aliyun-php-sdk-core'.DIRECTORY_SEPARATOR.'Regions'.DIRECTORY_SEPARATOR.'EndpointProvider.php');
+//        require_once(Yii::app()->basePath.DIRECTORY_SEPARATOR.'extensions'.DIRECTORY_SEPARATOR.'aliyunMsg'.DIRECTORY_SEPARATOR.'aliyun-php-sdk-core'.DIRECTORY_SEPARATOR.'Profile'.DIRECTORY_SEPARATOR.'IClientProfile.php');
+//        require_once(Yii::app()->basePath.DIRECTORY_SEPARATOR.'extensions'.DIRECTORY_SEPARATOR.'aliyunMsg'.DIRECTORY_SEPARATOR.'aliyun-php-sdk-core'.DIRECTORY_SEPARATOR.'Profile'.DIRECTORY_SEPARATOR.'DefaultProfile.php');
+//        require_once(Yii::app()->basePath.DIRECTORY_SEPARATOR.'extensions'.DIRECTORY_SEPARATOR.'aliyunMsg'.DIRECTORY_SEPARATOR.'aliyun-php-sdk-core'.DIRECTORY_SEPARATOR.'IAcsClient.php');
+//        require_once(Yii::app()->basePath.DIRECTORY_SEPARATOR.'extensions'.DIRECTORY_SEPARATOR.'aliyunMsg'.DIRECTORY_SEPARATOR.'aliyun-php-sdk-core'.DIRECTORY_SEPARATOR.'DefaultAcsClient.php');
+//        require_once(Yii::app()->basePath.DIRECTORY_SEPARATOR.'extensions'.DIRECTORY_SEPARATOR.'aliyunMsg'.DIRECTORY_SEPARATOR.'aliyun-php-sdk-core'.DIRECTORY_SEPARATOR.'AcsRequest.php');
+//        require_once(Yii::app()->basePath.DIRECTORY_SEPARATOR.'extensions'.DIRECTORY_SEPARATOR.'aliyunMsg'.DIRECTORY_SEPARATOR.'aliyun-php-sdk-core'.DIRECTORY_SEPARATOR.'RpcAcsRequest.php');
+//        require_once(Yii::app()->basePath.DIRECTORY_SEPARATOR.'extensions'.DIRECTORY_SEPARATOR.'aliyunMsg'.DIRECTORY_SEPARATOR.'aliyun-php-sdk-core'.DIRECTORY_SEPARATOR.'Exception'.DIRECTORY_SEPARATOR.'ClientException.php');
+//        require_once(Yii::app()->basePath.DIRECTORY_SEPARATOR.'extensions'.DIRECTORY_SEPARATOR.'aliyunMsg'.DIRECTORY_SEPARATOR.'aliyun-php-sdk-core'.DIRECTORY_SEPARATOR.'Autoloader'.DIRECTORY_SEPARATOR.'Autoloader.php');
+//        require_once(Yii::app()->basePath.DIRECTORY_SEPARATOR.'extensions'.DIRECTORY_SEPARATOR.'aliyunMsg'.DIRECTORY_SEPARATOR.'aliyun-php-sdk-core'.DIRECTORY_SEPARATOR.'Auth'.DIRECTORY_SEPARATOR.'Credential.php');
+//        require_once(Yii::app()->basePath.DIRECTORY_SEPARATOR.'extensions'.DIRECTORY_SEPARATOR.'aliyunMsg'.DIRECTORY_SEPARATOR.'aliyun-php-sdk-core'.DIRECTORY_SEPARATOR.'Auth'.DIRECTORY_SEPARATOR.'ISigner.php');
+//        require_once(Yii::app()->basePath.DIRECTORY_SEPARATOR.'extensions'.DIRECTORY_SEPARATOR.'aliyunMsg'.DIRECTORY_SEPARATOR.'aliyun-php-sdk-core'.DIRECTORY_SEPARATOR.'Auth'.DIRECTORY_SEPARATOR.'ShaHmac1Signer.php');
+//        require_once(Yii::app()->basePath.DIRECTORY_SEPARATOR.'extensions'.DIRECTORY_SEPARATOR.'aliyunMsg'.DIRECTORY_SEPARATOR.'aliyun-php-sdk-core'.DIRECTORY_SEPARATOR.'Http'.DIRECTORY_SEPARATOR.'HttpResponse.php');
+//        require_once(Yii::app()->basePath.DIRECTORY_SEPARATOR.'extensions'.DIRECTORY_SEPARATOR.'aliyunMsg'.DIRECTORY_SEPARATOR.'aliyun-php-sdk-core'.DIRECTORY_SEPARATOR.'Http'.DIRECTORY_SEPARATOR.'HttpHelper.php');
+//        require_once(Yii::app()->basePath.DIRECTORY_SEPARATOR.'extensions'.DIRECTORY_SEPARATOR.'aliyunMsg'.DIRECTORY_SEPARATOR.'aliyun-php-sdk-core'.DIRECTORY_SEPARATOR.'Regions'.DIRECTORY_SEPARATOR.'EndpointProvider.php');
+
+        require_once(Yii::app()->basePath.DIRECTORY_SEPARATOR.'extensions'.DIRECTORY_SEPARATOR.'aliyunMsg'.DIRECTORY_SEPARATOR.'aliyun-php-sdk-core'.DIRECTORY_SEPARATOR.'Config.php');
+        require_once(Yii::app()->basePath.DIRECTORY_SEPARATOR.'extensions'.DIRECTORY_SEPARATOR.'aliyunMsg'.DIRECTORY_SEPARATOR.'aliyun-php-sdk-core'.DIRECTORY_SEPARATOR.'Regions'.DIRECTORY_SEPARATOR.'EndpointConfig.php');
+        require_once(Yii::app()->basePath.DIRECTORY_SEPARATOR.'extensions'.DIRECTORY_SEPARATOR.'aliyunMsg'.DIRECTORY_SEPARATOR.'Dysmsapi'.DIRECTORY_SEPARATOR.'Request'.DIRECTORY_SEPARATOR.'V20170525'.DIRECTORY_SEPARATOR.'SendSmsRequest.php');
+
+        $accessKeyId = strval($config['appkey']);
+        $accessKeySecret = $config['secretKey'];
+        //短信API产品名
+        $product = "Dysmsapi";
+        //短信API产品域名
+        $domain = "dysmsapi.aliyuncs.com";
+        //暂时不支持多Region
+        $region = "cn-hangzhou";
+
+        //初始化访问的acsCleint
+        $profile = DefaultProfile::getProfile($region, $accessKeyId, $accessKeySecret);
+        DefaultProfile::addEndpoint("cn-hangzhou", "cn-hangzhou", $product, $domain);
+        $acsClient= new DefaultAcsClient($profile);
+
+        $request = new Dysmsapi\Request\V20170525\SendSmsRequest;
+        //必填-短信接收号码
+        $request->setPhoneNumbers($phone);
+        //必填-短信签名
+        $request->setSignName($config['signname']);
+        //必填-短信模板Code
+        $request->setTemplateCode($type);
+        //选填-假如模板中存在变量需要替换则为必填(JSON格式)
+        $request->setTemplateParam(json_encode($data));
+        //选填-发送短信流水号
+//        $request->setOutId("1234");
+
+        //发起访问请求
+        $acsResponse = $acsClient->getAcsResponse($request);
+        return $acsResponse;
+    }
+
+    /**
+     * 发送手机短信（阿里大于短信服务，已废弃）
+     */
+    public static function sendSms($phone, $data, $type){
+        $config = Yii::app()->params['conf']['phone'];
+        $config['appkey'] = '24515502';
+        $config['secretKey'] = '632a8a9927f7f3e551a95b7074b64080';
+        $config['signname'] = '可观';
+//        require_once(Yii::app()->basePath.DIRECTORY_SEPARATOR.'extensions'.DIRECTORY_SEPARATOR.'Dayu'.DIRECTORY_SEPARATOR.'TopSdk.php');
+        require_once(Yii::app()->basePath.DIRECTORY_SEPARATOR.'extensions'.DIRECTORY_SEPARATOR.'Dayu'.DIRECTORY_SEPARATOR.'top'.DIRECTORY_SEPARATOR.'TopClient.php');
+        require_once(Yii::app()->basePath.DIRECTORY_SEPARATOR.'extensions'.DIRECTORY_SEPARATOR.'Dayu'.DIRECTORY_SEPARATOR.'top'.DIRECTORY_SEPARATOR.'ResultSet.php');
+        require_once(Yii::app()->basePath.DIRECTORY_SEPARATOR.'extensions'.DIRECTORY_SEPARATOR.'Dayu'.DIRECTORY_SEPARATOR.'top'.DIRECTORY_SEPARATOR.'RequestCheckUtil.php');
+        require_once(Yii::app()->basePath.DIRECTORY_SEPARATOR.'extensions'.DIRECTORY_SEPARATOR.'Dayu'.DIRECTORY_SEPARATOR.'top'.DIRECTORY_SEPARATOR.'TopLogger.php');
+        require_once(Yii::app()->basePath.DIRECTORY_SEPARATOR.'extensions'.DIRECTORY_SEPARATOR.'Dayu'.DIRECTORY_SEPARATOR.'top'.DIRECTORY_SEPARATOR.'request'.DIRECTORY_SEPARATOR.'AlibabaAliqinFcSmsNumSendRequest.php');
+        $c = new \TopClient;
+        $c->appkey = strval($config['appkey']);
+        $c->secretKey = $config['secretKey'];
+        $req = new \AlibabaAliqinFcSmsNumSendRequest;
+        $req->setExtend('ICS');
+        $req->setSmsType("normal");
+        $req->setSmsParam(json_encode($data));
+        $req->setSmsFreeSignName($config['signname']);
+        $req->setRecNum($phone);
+        $req->setSmsTemplateCode($type);
+        $res = $c->execute($req);
+//        print_r($res);exit;
+        return $res;
     }
 }

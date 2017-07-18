@@ -562,3 +562,1361 @@ REQUEST_URI=/admin/adminSettingPanel/index.html
 in D:\new\carproject\protected\models\Config.php (120)
 in D:\new\carproject\protected\modules\admin\controllers\AdminSettingPanelController.php (28)
 in D:\new\carproject\index.php (16)
+2017/07/18 08:41:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/admin/img/inst_logo.png".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/admin/i...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/admin/img/inst_logo.png
+HTTP_REFERER=http://www.carproject.com/admin/login/index.html?backUrl=aHR0cDovL3d3dy5jYXJwcm9qZWN0LmNvbS9hZG1pbi9hZG1pblN0b3JlL2FkZA==
+---
+2017/07/18 08:41:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/images/baijia.ico".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/i...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/images/baijia.ico
+HTTP_REFERER=http://www.carproject.com/admin/login/index.html?backUrl=aHR0cDovL3d3dy5jYXJwcm9qZWN0LmNvbS9hZG1pbi9hZG1pblN0b3JlL2FkZA==
+---
+2017/07/18 09:13:22 [error] [php] Undefined index: level (D:\new\carproject\protected\modules\admin\controllers\AdminProductController.php:23)
+Stack trace:
+#0 D:\new\framework\web\CController.php(286): AdminProductController->runAction()
+#1 D:\new\framework\web\CController.php(265): AdminProductController->runActionWithFilters()
+#2 D:\new\framework\web\CWebApplication.php(282): AdminProductController->run()
+#3 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 D:\new\carproject\index.php(16): CWebApplication->run()
+REQUEST_URI=/admin/adminProduct/index.html
+in D:\new\carproject\protected\modules\admin\controllers\AdminProductController.php (23)
+in D:\new\carproject\index.php (16)
+2017/07/18 09:19:52 [warning] [application] Failed to set unsafe attribute "carmodel" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (224)
+in D:\new\carproject\protected\models\Warranty.php (216)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/18 09:19:52 [warning] [application] Failed to set unsafe attribute "constructor" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (224)
+in D:\new\carproject\protected\models\Warranty.php (216)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/18 09:19:52 [warning] [application] Failed to set unsafe attribute "guide" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (224)
+in D:\new\carproject\protected\models\Warranty.php (216)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/18 09:19:52 [warning] [application] Failed to set unsafe attribute "status" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (224)
+in D:\new\carproject\protected\models\Warranty.php (216)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/18 09:19:52 [warning] [application] Failed to set unsafe attribute "refuse_reason" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (224)
+in D:\new\carproject\protected\models\Warranty.php (216)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/18 09:19:52 [warning] [application] Failed to set unsafe attribute "mid" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (224)
+in D:\new\carproject\protected\models\Warranty.php (216)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/18 09:19:52 [warning] [application] Failed to set unsafe attribute "pid" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (224)
+in D:\new\carproject\protected\models\Warranty.php (216)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/18 09:19:52 [warning] [application] Failed to set unsafe attribute "extension" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (224)
+in D:\new\carproject\protected\models\Warranty.php (216)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/18 09:19:52 [warning] [application] Failed to set unsafe attribute "create_user" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (224)
+in D:\new\carproject\protected\models\Warranty.php (216)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/18 09:19:52 [error] [php] Undefined index: is_send (D:\new\carproject\protected\models\Warranty.php:235)
+Stack trace:
+#0 D:\new\framework\web\actions\CInlineAction.php(49): AdminWarrantyController->actionAdd()
+#1 D:\new\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 D:\new\framework\web\CController.php(286): AdminWarrantyController->runAction()
+#3 D:\new\framework\web\CController.php(265): AdminWarrantyController->runActionWithFilters()
+#4 D:\new\framework\web\CWebApplication.php(282): AdminWarrantyController->run()
+#5 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 D:\new\carproject\index.php(16): CWebApplication->run()
+REQUEST_URI=/admin/adminWarranty/add.html
+in D:\new\carproject\protected\models\Warranty.php (235)
+in D:\new\carproject\protected\models\Warranty.php (216)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/18 09:20:50 [warning] [application] Failed to set unsafe attribute "carmodel" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (224)
+in D:\new\carproject\protected\models\Warranty.php (216)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/18 09:20:50 [warning] [application] Failed to set unsafe attribute "constructor" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (224)
+in D:\new\carproject\protected\models\Warranty.php (216)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/18 09:20:50 [warning] [application] Failed to set unsafe attribute "guide" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (224)
+in D:\new\carproject\protected\models\Warranty.php (216)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/18 09:20:50 [warning] [application] Failed to set unsafe attribute "status" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (224)
+in D:\new\carproject\protected\models\Warranty.php (216)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/18 09:20:50 [warning] [application] Failed to set unsafe attribute "refuse_reason" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (224)
+in D:\new\carproject\protected\models\Warranty.php (216)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/18 09:20:50 [warning] [application] Failed to set unsafe attribute "mid" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (224)
+in D:\new\carproject\protected\models\Warranty.php (216)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/18 09:20:50 [warning] [application] Failed to set unsafe attribute "pid" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (224)
+in D:\new\carproject\protected\models\Warranty.php (216)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/18 09:20:50 [warning] [application] Failed to set unsafe attribute "extension" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (224)
+in D:\new\carproject\protected\models\Warranty.php (216)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/18 09:20:50 [warning] [application] Failed to set unsafe attribute "create_user" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (224)
+in D:\new\carproject\protected\models\Warranty.php (216)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/18 15:44:57 [error] [php] Undefined index: type (D:\new\carproject\protected\modules\admin\controllers\AdminStoreController.php:63)
+Stack trace:
+#0 D:\new\framework\web\CController.php(286): AdminStoreController->runAction()
+#1 D:\new\framework\web\CController.php(265): AdminStoreController->runActionWithFilters()
+#2 D:\new\framework\web\CWebApplication.php(282): AdminStoreController->run()
+#3 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 D:\new\carproject\index.php(16): CWebApplication->run()
+REQUEST_URI=/admin/adminStore/add
+in D:\new\carproject\protected\modules\admin\controllers\AdminStoreController.php (63)
+in D:\new\carproject\index.php (16)
+2017/07/18 15:45:18 [error] [php] Undefined index: type (D:\new\carproject\protected\modules\admin\controllers\AdminStoreController.php:63)
+Stack trace:
+#0 D:\new\framework\web\CController.php(286): AdminStoreController->runAction()
+#1 D:\new\framework\web\CController.php(265): AdminStoreController->runActionWithFilters()
+#2 D:\new\framework\web\CWebApplication.php(282): AdminStoreController->run()
+#3 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 D:\new\carproject\index.php(16): CWebApplication->run()
+REQUEST_URI=/admin/adminStore/add
+in D:\new\carproject\protected\modules\admin\controllers\AdminStoreController.php (63)
+in D:\new\carproject\index.php (16)
+2017/07/18 15:45:21 [error] [php] Undefined index: type (D:\new\carproject\protected\modules\admin\controllers\AdminStoreController.php:63)
+Stack trace:
+#0 D:\new\framework\web\CController.php(286): AdminStoreController->runAction()
+#1 D:\new\framework\web\CController.php(265): AdminStoreController->runActionWithFilters()
+#2 D:\new\framework\web\CWebApplication.php(282): AdminStoreController->run()
+#3 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 D:\new\carproject\index.php(16): CWebApplication->run()
+REQUEST_URI=/admin/adminStore/add
+in D:\new\carproject\protected\modules\admin\controllers\AdminStoreController.php (63)
+in D:\new\carproject\index.php (16)
+2017/07/18 15:45:40 [error] [php] Undefined variable: type (D:\new\carproject\protected\modules\admin\views\adminStore\add.php:51)
+Stack trace:
+#0 D:\new\framework\web\CController.php(869): AdminStoreController->renderFile()
+#1 D:\new\framework\web\CController.php(782): AdminStoreController->renderPartial()
+#2 D:\new\carproject\protected\modules\admin\controllers\AdminStoreController.php(73): AdminStoreController->render()
+#3 D:\new\framework\web\actions\CInlineAction.php(49): AdminStoreController->actionAdd()
+#4 D:\new\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\new\framework\web\CController.php(286): AdminStoreController->runAction()
+#6 D:\new\framework\web\CController.php(265): AdminStoreController->runActionWithFilters()
+#7 D:\new\framework\web\CWebApplication.php(282): AdminStoreController->run()
+#8 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\new\carproject\index.php(16): CWebApplication->run()
+REQUEST_URI=/admin/adminStore/add
+in D:\new\carproject\protected\modules\admin\views\adminStore\add.php (51)
+in D:\new\carproject\protected\modules\admin\controllers\AdminStoreController.php (73)
+in D:\new\carproject\index.php (16)
+2017/07/18 16:12:53 [error] [php] include(IClientProfile.php): failed to open stream: No such file or directory (D:\new\framework\YiiBase.php:432)
+Stack trace:
+#0 D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Profile\DefaultProfile.php(21): spl_autoload_call()
+#1 D:\new\carproject\protected\utils\CUtils.php(750): require_once()
+#2 D:\new\carproject\protected\modules\admin\components\CAdminController.php(42): sendMsg()
+#3 D:\new\framework\web\CController.php(306): AdminWarrantyController->beforeAction()
+#4 D:\new\framework\web\CController.php(286): AdminWarrantyController->runAction()
+#5 D:\new\framework\web\CController.php(265): AdminWarrantyController->runActionWithFilters()
+#6 D:\new\framework\web\CWebApplication.php(282): AdminWarrantyController->run()
+#7 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 D:\new\carproject\index.php(16): CWebApplication->run()
+REQUEST_URI=/admin/adminWarranty/add.html
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Profile\DefaultProfile.php (21)
+in D:\new\carproject\protected\utils\CUtils.php (750)
+in D:\new\carproject\protected\modules\admin\components\CAdminController.php (42)
+2017/07/18 16:13:46 [error] [php] include(IClientProfile.php): failed to open stream: No such file or directory (D:\new\framework\YiiBase.php:432)
+Stack trace:
+#0 D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Profile\DefaultProfile.php(21): spl_autoload_call()
+#1 D:\new\carproject\protected\utils\CUtils.php(750): require_once()
+#2 D:\new\carproject\protected\modules\admin\components\CAdminController.php(42): sendMsg()
+#3 D:\new\framework\web\CController.php(306): AdminWarrantyController->beforeAction()
+#4 D:\new\framework\web\CController.php(286): AdminWarrantyController->runAction()
+#5 D:\new\framework\web\CController.php(265): AdminWarrantyController->runActionWithFilters()
+#6 D:\new\framework\web\CWebApplication.php(282): AdminWarrantyController->run()
+#7 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 D:\new\carproject\index.php(16): CWebApplication->run()
+REQUEST_URI=/admin/adminWarranty/add.html
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Profile\DefaultProfile.php (21)
+in D:\new\carproject\protected\utils\CUtils.php (750)
+in D:\new\carproject\protected\modules\admin\components\CAdminController.php (42)
+2017/07/18 16:13:56 [error] [php] include(IClientProfile.php): failed to open stream: No such file or directory (D:\new\framework\YiiBase.php:432)
+Stack trace:
+#0 D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Profile\DefaultProfile.php(21): spl_autoload_call()
+#1 D:\new\carproject\protected\utils\CUtils.php(750): require_once()
+#2 D:\new\carproject\protected\modules\admin\components\CAdminController.php(42): sendMsg()
+#3 D:\new\framework\web\CController.php(306): AdminWarrantyController->beforeAction()
+#4 D:\new\framework\web\CController.php(286): AdminWarrantyController->runAction()
+#5 D:\new\framework\web\CController.php(265): AdminWarrantyController->runActionWithFilters()
+#6 D:\new\framework\web\CWebApplication.php(282): AdminWarrantyController->run()
+#7 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 D:\new\carproject\index.php(16): CWebApplication->run()
+REQUEST_URI=/admin/adminWarranty/add.html
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Profile\DefaultProfile.php (21)
+in D:\new\carproject\protected\utils\CUtils.php (750)
+in D:\new\carproject\protected\modules\admin\components\CAdminController.php (42)
+2017/07/18 16:14:27 [error] [php] include(IAcsClient.php): failed to open stream: No such file or directory (D:\new\framework\YiiBase.php:432)
+Stack trace:
+#0 D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\DefaultAcsClient.php(21): spl_autoload_call()
+#1 D:\new\carproject\protected\utils\CUtils.php(752): require_once()
+#2 D:\new\carproject\protected\modules\admin\components\CAdminController.php(42): sendMsg()
+#3 D:\new\framework\web\CController.php(306): AdminWarrantyController->beforeAction()
+#4 D:\new\framework\web\CController.php(286): AdminWarrantyController->runAction()
+#5 D:\new\framework\web\CController.php(265): AdminWarrantyController->runActionWithFilters()
+#6 D:\new\framework\web\CWebApplication.php(282): AdminWarrantyController->run()
+#7 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 D:\new\carproject\index.php(16): CWebApplication->run()
+REQUEST_URI=/admin/adminWarranty/add.html
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\DefaultAcsClient.php (21)
+in D:\new\carproject\protected\utils\CUtils.php (752)
+in D:\new\carproject\protected\modules\admin\components\CAdminController.php (42)
+2017/07/18 16:15:03 [error] [php] include(RpcAcsRequest.php): failed to open stream: No such file or directory (D:\new\framework\YiiBase.php:432)
+Stack trace:
+#0 D:\new\carproject\protected\extensions\aliyunMsg\Dysmsapi\Request\V20170525\SendSmsRequest.php(23): spl_autoload_call()
+#1 D:\new\carproject\protected\utils\CUtils.php(754): require_once()
+#2 D:\new\carproject\protected\modules\admin\components\CAdminController.php(42): sendMsg()
+#3 D:\new\framework\web\CController.php(306): AdminWarrantyController->beforeAction()
+#4 D:\new\framework\web\CController.php(286): AdminWarrantyController->runAction()
+#5 D:\new\framework\web\CController.php(265): AdminWarrantyController->runActionWithFilters()
+#6 D:\new\framework\web\CWebApplication.php(282): AdminWarrantyController->run()
+#7 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 D:\new\carproject\index.php(16): CWebApplication->run()
+REQUEST_URI=/admin/adminWarranty/add.html
+in D:\new\carproject\protected\extensions\aliyunMsg\Dysmsapi\Request\V20170525\SendSmsRequest.php (23)
+in D:\new\carproject\protected\utils\CUtils.php (754)
+in D:\new\carproject\protected\modules\admin\components\CAdminController.php (42)
+2017/07/18 16:15:56 [error] [php] include(AcsRequest.php): failed to open stream: No such file or directory (D:\new\framework\YiiBase.php:432)
+Stack trace:
+#0 D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\RpcAcsRequest.php(21): spl_autoload_call()
+#1 D:\new\carproject\protected\utils\CUtils.php(754): require_once()
+#2 D:\new\carproject\protected\modules\admin\components\CAdminController.php(42): sendMsg()
+#3 D:\new\framework\web\CController.php(306): AdminWarrantyController->beforeAction()
+#4 D:\new\framework\web\CController.php(286): AdminWarrantyController->runAction()
+#5 D:\new\framework\web\CController.php(265): AdminWarrantyController->runActionWithFilters()
+#6 D:\new\framework\web\CWebApplication.php(282): AdminWarrantyController->run()
+#7 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 D:\new\carproject\index.php(16): CWebApplication->run()
+REQUEST_URI=/admin/adminWarranty/add.html
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\RpcAcsRequest.php (21)
+in D:\new\carproject\protected\utils\CUtils.php (754)
+in D:\new\carproject\protected\modules\admin\components\CAdminController.php (42)
+2017/07/18 16:16:19 [error] [php] include(AcsRequest.php): failed to open stream: No such file or directory (D:\new\framework\YiiBase.php:432)
+Stack trace:
+#0 D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\RpcAcsRequest.php(21): spl_autoload_call()
+#1 D:\new\carproject\protected\utils\CUtils.php(754): require_once()
+#2 D:\new\carproject\protected\modules\admin\components\CAdminController.php(42): sendMsg()
+#3 D:\new\framework\web\CController.php(306): AdminWarrantyController->beforeAction()
+#4 D:\new\framework\web\CController.php(286): AdminWarrantyController->runAction()
+#5 D:\new\framework\web\CController.php(265): AdminWarrantyController->runActionWithFilters()
+#6 D:\new\framework\web\CWebApplication.php(282): AdminWarrantyController->run()
+#7 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 D:\new\carproject\index.php(16): CWebApplication->run()
+REQUEST_URI=/admin/adminWarranty/add.html
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\RpcAcsRequest.php (21)
+in D:\new\carproject\protected\utils\CUtils.php (754)
+in D:\new\carproject\protected\modules\admin\components\CAdminController.php (42)
+2017/07/18 16:16:42 [error] [php] include(Credential.php): failed to open stream: No such file or directory (D:\new\framework\YiiBase.php:432)
+Stack trace:
+#0 D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Profile\DefaultProfile.php(39): spl_autoload_call()
+#1 D:\new\carproject\protected\utils\CUtils.php(770): getProfile()
+#2 D:\new\carproject\protected\modules\admin\components\CAdminController.php(42): sendMsg()
+#3 D:\new\framework\web\CController.php(306): AdminWarrantyController->beforeAction()
+#4 D:\new\framework\web\CController.php(286): AdminWarrantyController->runAction()
+#5 D:\new\framework\web\CController.php(265): AdminWarrantyController->runActionWithFilters()
+#6 D:\new\framework\web\CWebApplication.php(282): AdminWarrantyController->run()
+#7 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 D:\new\carproject\index.php(16): CWebApplication->run()
+REQUEST_URI=/admin/adminWarranty/add.html
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Profile\DefaultProfile.php (39)
+in D:\new\carproject\protected\utils\CUtils.php (770)
+in D:\new\carproject\protected\modules\admin\components\CAdminController.php (42)
+2017/07/18 16:17:48 [error] [php] include(EndpointProvider.php): failed to open stream: No such file or directory (D:\new\framework\YiiBase.php:432)
+Stack trace:
+#0 D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Profile\DefaultProfile.php(76): spl_autoload_call()
+#1 D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Profile\DefaultProfile.php(85): getEndpoints()
+#2 D:\new\carproject\protected\utils\CUtils.php(772): addEndpoint()
+#3 D:\new\carproject\protected\modules\admin\components\CAdminController.php(42): sendMsg()
+#4 D:\new\framework\web\CController.php(306): AdminWarrantyController->beforeAction()
+#5 D:\new\framework\web\CController.php(286): AdminWarrantyController->runAction()
+#6 D:\new\framework\web\CController.php(265): AdminWarrantyController->runActionWithFilters()
+#7 D:\new\framework\web\CWebApplication.php(282): AdminWarrantyController->run()
+#8 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\new\carproject\index.php(16): CWebApplication->run()
+REQUEST_URI=/admin/adminWarranty/add.html
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Profile\DefaultProfile.php (76)
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Profile\DefaultProfile.php (85)
+in D:\new\carproject\protected\utils\CUtils.php (772)
+2017/07/18 16:18:30 [error] [php] Invalid argument supplied for foreach() (D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Profile\DefaultProfile.php:100)
+Stack trace:
+#0 D:\new\carproject\protected\modules\admin\components\CAdminController.php(42): sendMsg()
+#1 D:\new\framework\web\CController.php(306): AdminWarrantyController->beforeAction()
+#2 D:\new\framework\web\CController.php(286): AdminWarrantyController->runAction()
+#3 D:\new\framework\web\CController.php(265): AdminWarrantyController->runActionWithFilters()
+#4 D:\new\framework\web\CWebApplication.php(282): AdminWarrantyController->run()
+#5 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 D:\new\carproject\index.php(16): CWebApplication->run()
+REQUEST_URI=/admin/adminWarranty/add.html
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Profile\DefaultProfile.php (100)
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Profile\DefaultProfile.php (87)
+in D:\new\carproject\protected\utils\CUtils.php (773)
+2017/07/18 16:31:28 [error] [php] include(ShaHmac1Signer.php): failed to open stream: No such file or directory (D:\new\framework\YiiBase.php:432)
+Stack trace:
+#0 D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Profile\DefaultProfile.php(48): spl_autoload_call()
+#1 D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\DefaultAcsClient.php(51): DefaultProfile->getSigner()
+#2 D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\DefaultAcsClient.php(33): DefaultAcsClient->doActionImpl()
+#3 D:\new\carproject\protected\utils\CUtils.php(790): DefaultAcsClient->getAcsResponse()
+#4 D:\new\carproject\protected\modules\admin\components\CAdminController.php(42): sendMsg()
+#5 D:\new\framework\web\CController.php(306): AdminWarrantyController->beforeAction()
+#6 D:\new\framework\web\CController.php(286): AdminWarrantyController->runAction()
+#7 D:\new\framework\web\CController.php(265): AdminWarrantyController->runActionWithFilters()
+#8 D:\new\framework\web\CWebApplication.php(282): AdminWarrantyController->run()
+#9 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 D:\new\carproject\index.php(16): CWebApplication->run()
+REQUEST_URI=/admin/adminWarranty/add.html
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Profile\DefaultProfile.php (48)
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\DefaultAcsClient.php (51)
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\DefaultAcsClient.php (33)
+2017/07/18 16:31:59 [error] [php] include(ISigner.php): failed to open stream: No such file or directory (D:\new\framework\YiiBase.php:432)
+Stack trace:
+#0 D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Auth\ShaHmac1Signer.php(21): spl_autoload_call()
+#1 D:\new\carproject\protected\utils\CUtils.php(757): require_once()
+#2 D:\new\carproject\protected\modules\admin\components\CAdminController.php(42): sendMsg()
+#3 D:\new\framework\web\CController.php(306): AdminWarrantyController->beforeAction()
+#4 D:\new\framework\web\CController.php(286): AdminWarrantyController->runAction()
+#5 D:\new\framework\web\CController.php(265): AdminWarrantyController->runActionWithFilters()
+#6 D:\new\framework\web\CWebApplication.php(282): AdminWarrantyController->run()
+#7 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 D:\new\carproject\index.php(16): CWebApplication->run()
+REQUEST_URI=/admin/adminWarranty/add.html
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Auth\ShaHmac1Signer.php (21)
+in D:\new\carproject\protected\utils\CUtils.php (757)
+in D:\new\carproject\protected\modules\admin\components\CAdminController.php (42)
+2017/07/18 16:32:25 [error] [php] include(ISigner.php): failed to open stream: No such file or directory (D:\new\framework\YiiBase.php:432)
+Stack trace:
+#0 D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Auth\ShaHmac1Signer.php(21): spl_autoload_call()
+#1 D:\new\carproject\protected\utils\CUtils.php(757): require_once()
+#2 D:\new\carproject\protected\modules\admin\components\CAdminController.php(42): sendMsg()
+#3 D:\new\framework\web\CController.php(306): AdminWarrantyController->beforeAction()
+#4 D:\new\framework\web\CController.php(286): AdminWarrantyController->runAction()
+#5 D:\new\framework\web\CController.php(265): AdminWarrantyController->runActionWithFilters()
+#6 D:\new\framework\web\CWebApplication.php(282): AdminWarrantyController->run()
+#7 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 D:\new\carproject\index.php(16): CWebApplication->run()
+REQUEST_URI=/admin/adminWarranty/add.html
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Auth\ShaHmac1Signer.php (21)
+in D:\new\carproject\protected\utils\CUtils.php (757)
+in D:\new\carproject\protected\modules\admin\components\CAdminController.php (42)
+2017/07/18 16:32:54 [error] [php] include(ClientException.php): failed to open stream: No such file or directory (D:\new\framework\YiiBase.php:432)
+Stack trace:
+#0 D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\DefaultAcsClient.php(61): spl_autoload_call()
+#1 D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\DefaultAcsClient.php(33): DefaultAcsClient->doActionImpl()
+#2 D:\new\carproject\protected\utils\CUtils.php(792): DefaultAcsClient->getAcsResponse()
+#3 D:\new\carproject\protected\modules\admin\components\CAdminController.php(42): sendMsg()
+#4 D:\new\framework\web\CController.php(306): AdminWarrantyController->beforeAction()
+#5 D:\new\framework\web\CController.php(286): AdminWarrantyController->runAction()
+#6 D:\new\framework\web\CController.php(265): AdminWarrantyController->runActionWithFilters()
+#7 D:\new\framework\web\CWebApplication.php(282): AdminWarrantyController->run()
+#8 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\new\carproject\index.php(16): CWebApplication->run()
+REQUEST_URI=/admin/adminWarranty/add.html
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\DefaultAcsClient.php (61)
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\DefaultAcsClient.php (33)
+in D:\new\carproject\protected\utils\CUtils.php (792)
+2017/07/18 16:33:32 [error] [exception.ClientException] exception 'ClientException' with message 'Can not find endpoint to access.' in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\DefaultAcsClient.php:61
+Stack trace:
+#0 D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\DefaultAcsClient.php(33): DefaultAcsClient->doActionImpl(Object(Dysmsapi\Request\V20170525\SendSmsRequest), NULL, NULL, true, 3)
+#1 D:\new\carproject\protected\utils\CUtils.php(793): DefaultAcsClient->getAcsResponse(Object(Dysmsapi\Request\V20170525\SendSmsRequest))
+#2 D:\new\carproject\protected\modules\admin\components\CAdminController.php(42): CUtils::sendMsg()
+#3 D:\new\framework\web\CController.php(306): CAdminController->beforeAction(Object(CInlineAction))
+#4 D:\new\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\new\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\new\framework\web\CWebApplication.php(282): CController->run('add')
+#7 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/adminWarr...')
+#8 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 D:\new\carproject\index.php(16): CApplication->run()
+#10 {main}
+REQUEST_URI=/admin/adminWarranty/add.html
+HTTP_REFERER=http://www.carproject.com/admin/adminWarranty/add.html
+---
+2017/07/18 16:40:36 [error] [php] include(ProductDomain.php): failed to open stream: No such file or directory (D:\new\framework\YiiBase.php:432)
+Stack trace:
+#0 D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Regions\EndpointConfig.php(58): spl_autoload_call()
+#1 D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Config.php(21): include_once()
+#2 D:\new\carproject\protected\utils\CUtils.php(752): require_once()
+#3 D:\new\carproject\protected\modules\admin\components\CAdminController.php(42): sendMsg()
+#4 D:\new\framework\web\CController.php(306): AdminWarrantyController->beforeAction()
+#5 D:\new\framework\web\CController.php(286): AdminWarrantyController->runAction()
+#6 D:\new\framework\web\CController.php(265): AdminWarrantyController->runActionWithFilters()
+#7 D:\new\framework\web\CWebApplication.php(282): AdminWarrantyController->run()
+#8 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\new\carproject\index.php(16): CWebApplication->run()
+REQUEST_URI=/admin/adminWarranty/add.html
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Regions\EndpointConfig.php (58)
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Config.php (21)
+in D:\new\carproject\protected\utils\CUtils.php (752)
+2017/07/18 16:41:04 [error] [php] include(ProductDomain.php): failed to open stream: No such file or directory (D:\new\framework\YiiBase.php:432)
+Stack trace:
+#0 D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Regions\EndpointConfig.php(58): spl_autoload_call()
+#1 D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Config.php(21): include_once()
+#2 D:\new\carproject\protected\utils\CUtils.php(752): require_once()
+#3 D:\new\carproject\protected\modules\admin\components\CAdminController.php(42): sendMsg()
+#4 D:\new\framework\web\CController.php(306): AdminWarrantyController->beforeAction()
+#5 D:\new\framework\web\CController.php(286): AdminWarrantyController->runAction()
+#6 D:\new\framework\web\CController.php(265): AdminWarrantyController->runActionWithFilters()
+#7 D:\new\framework\web\CWebApplication.php(282): AdminWarrantyController->run()
+#8 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\new\carproject\index.php(16): CWebApplication->run()
+REQUEST_URI=/admin/adminWarranty/add.html
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Regions\EndpointConfig.php (58)
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Config.php (21)
+in D:\new\carproject\protected\utils\CUtils.php (752)
+2017/07/18 16:41:50 [error] [php] include(ProductDomain.php): failed to open stream: No such file or directory (D:\new\framework\YiiBase.php:432)
+Stack trace:
+#0 D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Regions\EndpointConfig.php(58): spl_autoload_call()
+#1 D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Config.php(21): include_once()
+#2 D:\new\carproject\protected\utils\CUtils.php(752): require_once()
+#3 D:\new\carproject\protected\modules\admin\components\CAdminController.php(42): sendMsg()
+#4 D:\new\framework\web\CController.php(306): AdminWarrantyController->beforeAction()
+#5 D:\new\framework\web\CController.php(286): AdminWarrantyController->runAction()
+#6 D:\new\framework\web\CController.php(265): AdminWarrantyController->runActionWithFilters()
+#7 D:\new\framework\web\CWebApplication.php(282): AdminWarrantyController->run()
+#8 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\new\carproject\index.php(16): CWebApplication->run()
+REQUEST_URI=/admin/adminWarranty/add.html
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Regions\EndpointConfig.php (58)
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Config.php (21)
+in D:\new\carproject\protected\utils\CUtils.php (752)
+2017/07/18 16:42:30 [error] [php] include(ProductDomain.php): failed to open stream: No such file or directory (D:\new\framework\YiiBase.php:432)
+Stack trace:
+#0 D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Regions\EndpointConfig.php(58): spl_autoload_call()
+#1 D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Config.php(21): include_once()
+#2 D:\new\carproject\protected\utils\CUtils.php(752): require_once()
+#3 D:\new\carproject\protected\modules\admin\components\CAdminController.php(42): sendMsg()
+#4 D:\new\framework\web\CController.php(306): AdminWarrantyController->beforeAction()
+#5 D:\new\framework\web\CController.php(286): AdminWarrantyController->runAction()
+#6 D:\new\framework\web\CController.php(265): AdminWarrantyController->runActionWithFilters()
+#7 D:\new\framework\web\CWebApplication.php(282): AdminWarrantyController->run()
+#8 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\new\carproject\index.php(16): CWebApplication->run()
+REQUEST_URI=/admin/adminWarranty/add.html
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Regions\EndpointConfig.php (58)
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Config.php (21)
+in D:\new\carproject\protected\utils\CUtils.php (752)
+2017/07/18 16:42:43 [error] [php] include(ProductDomain.php): failed to open stream: No such file or directory (D:\new\framework\YiiBase.php:432)
+Stack trace:
+#0 D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Regions\EndpointConfig.php(58): spl_autoload_call()
+#1 D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Config.php(21): include_once()
+#2 D:\new\carproject\protected\utils\CUtils.php(752): require_once()
+#3 D:\new\carproject\protected\modules\admin\components\CAdminController.php(42): sendMsg()
+#4 D:\new\framework\web\CController.php(306): AdminWarrantyController->beforeAction()
+#5 D:\new\framework\web\CController.php(286): AdminWarrantyController->runAction()
+#6 D:\new\framework\web\CController.php(265): AdminWarrantyController->runActionWithFilters()
+#7 D:\new\framework\web\CWebApplication.php(282): AdminWarrantyController->run()
+#8 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\new\carproject\index.php(16): CWebApplication->run()
+REQUEST_URI=/admin/adminWarranty/add.html
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Regions\EndpointConfig.php (58)
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Config.php (21)
+in D:\new\carproject\protected\utils\CUtils.php (752)
+2017/07/18 16:45:20 [error] [php] include(ProductDomain.php): failed to open stream: No such file or directory (D:\new\framework\YiiBase.php:432)
+Stack trace:
+#0 D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Regions\EndpointConfig.php(58): spl_autoload_call()
+#1 D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Config.php(21): include_once()
+#2 D:\new\carproject\protected\utils\CUtils.php(752): require_once()
+#3 D:\new\carproject\protected\modules\admin\components\CAdminController.php(42): sendMsg()
+#4 D:\new\framework\web\CController.php(306): AdminWarrantyController->beforeAction()
+#5 D:\new\framework\web\CController.php(286): AdminWarrantyController->runAction()
+#6 D:\new\framework\web\CController.php(265): AdminWarrantyController->runActionWithFilters()
+#7 D:\new\framework\web\CWebApplication.php(282): AdminWarrantyController->run()
+#8 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\new\carproject\index.php(16): CWebApplication->run()
+REQUEST_URI=/admin/adminWarranty/add.html
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Regions\EndpointConfig.php (58)
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Config.php (21)
+in D:\new\carproject\protected\utils\CUtils.php (752)
+2017/07/18 16:47:29 [error] [php] include(ProductDomain.php): failed to open stream: No such file or directory (D:\new\framework\YiiBase.php:432)
+Stack trace:
+#0 D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Regions\EndpointConfig.php(58): spl_autoload_call()
+#1 D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Config.php(21): include_once()
+#2 D:\new\carproject\protected\utils\CUtils.php(752): require_once()
+#3 D:\new\carproject\protected\modules\admin\components\CAdminController.php(42): sendMsg()
+#4 D:\new\framework\web\CController.php(306): AdminWarrantyController->beforeAction()
+#5 D:\new\framework\web\CController.php(286): AdminWarrantyController->runAction()
+#6 D:\new\framework\web\CController.php(265): AdminWarrantyController->runActionWithFilters()
+#7 D:\new\framework\web\CWebApplication.php(282): AdminWarrantyController->run()
+#8 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\new\carproject\index.php(16): CWebApplication->run()
+REQUEST_URI=/admin/adminWarranty/add.html
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Regions\EndpointConfig.php (58)
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Config.php (21)
+in D:\new\carproject\protected\utils\CUtils.php (752)
+2017/07/18 16:48:29 [error] [php] include(ProductDomain.php): failed to open stream: No such file or directory (D:\new\framework\YiiBase.php:432)
+Stack trace:
+#0 D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Regions\EndpointConfig.php(58): spl_autoload_call()
+#1 D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Config.php(21): include_once()
+#2 D:\new\carproject\protected\utils\CUtils.php(752): require_once()
+#3 D:\new\carproject\protected\modules\admin\components\CAdminController.php(42): sendMsg()
+#4 D:\new\framework\web\CController.php(306): AdminWarrantyController->beforeAction()
+#5 D:\new\framework\web\CController.php(286): AdminWarrantyController->runAction()
+#6 D:\new\framework\web\CController.php(265): AdminWarrantyController->runActionWithFilters()
+#7 D:\new\framework\web\CWebApplication.php(282): AdminWarrantyController->run()
+#8 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\new\carproject\index.php(16): CWebApplication->run()
+REQUEST_URI=/admin/adminWarranty/add.html
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Regions\EndpointConfig.php (58)
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Config.php (21)
+in D:\new\carproject\protected\utils\CUtils.php (752)
+2017/07/18 16:51:28 [error] [php] include(DefaultProfile.php): failed to open stream: No such file or directory (D:\new\framework\YiiBase.php:432)
+Stack trace:
+#0 D:\new\carproject\protected\utils\CUtils.php(780): spl_autoload_call()
+#1 D:\new\carproject\protected\modules\admin\components\CAdminController.php(42): sendMsg()
+#2 D:\new\framework\web\CController.php(306): AdminWarrantyController->beforeAction()
+#3 D:\new\framework\web\CController.php(286): AdminWarrantyController->runAction()
+#4 D:\new\framework\web\CController.php(265): AdminWarrantyController->runActionWithFilters()
+#5 D:\new\framework\web\CWebApplication.php(282): AdminWarrantyController->run()
+#6 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 D:\new\carproject\index.php(16): CWebApplication->run()
+REQUEST_URI=/admin/adminWarranty/add.html
+in D:\new\carproject\protected\utils\CUtils.php (780)
+in D:\new\carproject\protected\modules\admin\components\CAdminController.php (42)
+in D:\new\carproject\index.php (16)
+2017/07/18 16:51:59 [error] [php] include(ProductDomain.php): failed to open stream: No such file or directory (D:\new\framework\YiiBase.php:432)
+Stack trace:
+#0 D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Regions\EndpointConfig.php(58): spl_autoload_call()
+#1 D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Config.php(21): include_once()
+#2 D:\new\carproject\protected\utils\CUtils.php(752): require_once()
+#3 D:\new\carproject\protected\modules\admin\components\CAdminController.php(42): sendMsg()
+#4 D:\new\framework\web\CController.php(306): AdminWarrantyController->beforeAction()
+#5 D:\new\framework\web\CController.php(286): AdminWarrantyController->runAction()
+#6 D:\new\framework\web\CController.php(265): AdminWarrantyController->runActionWithFilters()
+#7 D:\new\framework\web\CWebApplication.php(282): AdminWarrantyController->run()
+#8 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\new\carproject\index.php(16): CWebApplication->run()
+REQUEST_URI=/admin/adminWarranty/add.html
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Regions\EndpointConfig.php (58)
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Config.php (21)
+in D:\new\carproject\protected\utils\CUtils.php (752)
+2017/07/18 16:52:31 [error] [php] include(ProductDomain.php): failed to open stream: No such file or directory (D:\new\framework\YiiBase.php:432)
+Stack trace:
+#0 D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Regions\EndpointConfig.php(58): spl_autoload_call()
+#1 D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Config.php(21): include_once()
+#2 D:\new\carproject\protected\utils\CUtils.php(752): require_once()
+#3 D:\new\carproject\protected\modules\admin\components\CAdminController.php(42): sendMsg()
+#4 D:\new\framework\web\CController.php(306): AdminWarrantyController->beforeAction()
+#5 D:\new\framework\web\CController.php(286): AdminWarrantyController->runAction()
+#6 D:\new\framework\web\CController.php(265): AdminWarrantyController->runActionWithFilters()
+#7 D:\new\framework\web\CWebApplication.php(282): AdminWarrantyController->run()
+#8 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\new\carproject\index.php(16): CWebApplication->run()
+REQUEST_URI=/admin/adminWarranty/add.html
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Regions\EndpointConfig.php (58)
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Config.php (21)
+in D:\new\carproject\protected\utils\CUtils.php (752)
+2017/07/18 16:54:06 [error] [php] include(Endpoint.php): failed to open stream: No such file or directory (D:\new\framework\YiiBase.php:432)
+Stack trace:
+#0 D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Regions\EndpointConfig.php(62): spl_autoload_call()
+#1 D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Config.php(21): include_once()
+#2 D:\new\carproject\protected\utils\CUtils.php(754): require_once()
+#3 D:\new\carproject\protected\modules\admin\components\CAdminController.php(42): sendMsg()
+#4 D:\new\framework\web\CController.php(306): AdminWarrantyController->beforeAction()
+#5 D:\new\framework\web\CController.php(286): AdminWarrantyController->runAction()
+#6 D:\new\framework\web\CController.php(265): AdminWarrantyController->runActionWithFilters()
+#7 D:\new\framework\web\CWebApplication.php(282): AdminWarrantyController->run()
+#8 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\new\carproject\index.php(16): CWebApplication->run()
+REQUEST_URI=/admin/adminWarranty/add.html
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Regions\EndpointConfig.php (62)
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Config.php (21)
+in D:\new\carproject\protected\utils\CUtils.php (754)
+2017/07/18 16:54:35 [error] [php] include(EndpointProvider.php): failed to open stream: No such file or directory (D:\new\framework\YiiBase.php:432)
+Stack trace:
+#0 D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Regions\EndpointConfig.php(66): spl_autoload_call()
+#1 D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Config.php(21): include_once()
+#2 D:\new\carproject\protected\utils\CUtils.php(755): require_once()
+#3 D:\new\carproject\protected\modules\admin\components\CAdminController.php(42): sendMsg()
+#4 D:\new\framework\web\CController.php(306): AdminWarrantyController->beforeAction()
+#5 D:\new\framework\web\CController.php(286): AdminWarrantyController->runAction()
+#6 D:\new\framework\web\CController.php(265): AdminWarrantyController->runActionWithFilters()
+#7 D:\new\framework\web\CWebApplication.php(282): AdminWarrantyController->run()
+#8 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\new\carproject\index.php(16): CWebApplication->run()
+REQUEST_URI=/admin/adminWarranty/add.html
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Regions\EndpointConfig.php (66)
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Config.php (21)
+in D:\new\carproject\protected\utils\CUtils.php (755)
+2017/07/18 09:03:43 [error] [php] include(HttpHelper.php): failed to open stream: No such file or directory (D:\new\framework\YiiBase.php:432)
+Stack trace:
+#0 D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\DefaultAcsClient.php(70): spl_autoload_call()
+#1 D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\DefaultAcsClient.php(33): DefaultAcsClient->doActionImpl()
+#2 D:\new\carproject\protected\utils\CUtils.php(801): DefaultAcsClient->getAcsResponse()
+#3 D:\new\carproject\protected\modules\admin\components\CAdminController.php(42): sendMsg()
+#4 D:\new\framework\web\CController.php(306): AdminWarrantyController->beforeAction()
+#5 D:\new\framework\web\CController.php(286): AdminWarrantyController->runAction()
+#6 D:\new\framework\web\CController.php(265): AdminWarrantyController->runActionWithFilters()
+#7 D:\new\framework\web\CWebApplication.php(282): AdminWarrantyController->run()
+#8 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\new\carproject\index.php(16): CWebApplication->run()
+REQUEST_URI=/admin/adminWarranty/add.html
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\DefaultAcsClient.php (70)
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\DefaultAcsClient.php (33)
+in D:\new\carproject\protected\utils\CUtils.php (801)
+2017/07/18 09:04:44 [error] [php] include(HttpResponse.php): failed to open stream: No such file or directory (D:\new\framework\YiiBase.php:432)
+Stack trace:
+#0 D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Http\HttpHelper.php(56): spl_autoload_call()
+#1 D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\DefaultAcsClient.php(70): curl()
+#2 D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\DefaultAcsClient.php(33): DefaultAcsClient->doActionImpl()
+#3 D:\new\carproject\protected\utils\CUtils.php(802): DefaultAcsClient->getAcsResponse()
+#4 D:\new\carproject\protected\modules\admin\components\CAdminController.php(42): sendMsg()
+#5 D:\new\framework\web\CController.php(306): AdminWarrantyController->beforeAction()
+#6 D:\new\framework\web\CController.php(286): AdminWarrantyController->runAction()
+#7 D:\new\framework\web\CController.php(265): AdminWarrantyController->runActionWithFilters()
+#8 D:\new\framework\web\CWebApplication.php(282): AdminWarrantyController->run()
+#9 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 D:\new\carproject\index.php(16): CWebApplication->run()
+REQUEST_URI=/admin/adminWarranty/add.html
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Http\HttpHelper.php (56)
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\DefaultAcsClient.php (70)
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\DefaultAcsClient.php (33)
+2017/07/18 17:09:50 [error] [php] Invalid argument supplied for foreach() (D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Profile\DefaultProfile.php:100)
+Stack trace:
+#0 D:\new\carproject\protected\modules\admin\components\CAdminController.php(42): sendMsg()
+#1 D:\new\framework\web\CController.php(306): AdminWarrantyController->beforeAction()
+#2 D:\new\framework\web\CController.php(286): AdminWarrantyController->runAction()
+#3 D:\new\framework\web\CController.php(265): AdminWarrantyController->runActionWithFilters()
+#4 D:\new\framework\web\CWebApplication.php(282): AdminWarrantyController->run()
+#5 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 D:\new\carproject\index.php(17): CWebApplication->run()
+REQUEST_URI=/admin/adminWarranty/add.html
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Profile\DefaultProfile.php (100)
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Profile\DefaultProfile.php (87)
+in D:\new\carproject\protected\utils\CUtils.php (787)
+2017/07/18 17:10:28 [error] [php] Invalid argument supplied for foreach() (D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Profile\DefaultProfile.php:100)
+Stack trace:
+#0 D:\new\carproject\protected\modules\admin\components\CAdminController.php(42): sendMsg()
+#1 D:\new\framework\web\CController.php(306): AdminWarrantyController->beforeAction()
+#2 D:\new\framework\web\CController.php(286): AdminWarrantyController->runAction()
+#3 D:\new\framework\web\CController.php(265): AdminWarrantyController->runActionWithFilters()
+#4 D:\new\framework\web\CWebApplication.php(282): AdminWarrantyController->run()
+#5 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 D:\new\carproject\index.php(17): CWebApplication->run()
+REQUEST_URI=/admin/adminWarranty/add.html
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Profile\DefaultProfile.php (100)
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Profile\DefaultProfile.php (87)
+in D:\new\carproject\protected\utils\CUtils.php (787)
+2017/07/18 17:10:54 [error] [php] Invalid argument supplied for foreach() (D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Profile\DefaultProfile.php:100)
+Stack trace:
+#0 D:\new\carproject\protected\modules\admin\components\CAdminController.php(42): sendMsg()
+#1 D:\new\framework\web\CController.php(306): AdminWarrantyController->beforeAction()
+#2 D:\new\framework\web\CController.php(286): AdminWarrantyController->runAction()
+#3 D:\new\framework\web\CController.php(265): AdminWarrantyController->runActionWithFilters()
+#4 D:\new\framework\web\CWebApplication.php(282): AdminWarrantyController->run()
+#5 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 D:\new\carproject\index.php(17): CWebApplication->run()
+REQUEST_URI=/admin/adminWarranty/add.html
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Profile\DefaultProfile.php (100)
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Profile\DefaultProfile.php (87)
+in D:\new\carproject\protected\utils\CUtils.php (787)
+2017/07/18 17:11:09 [error] [php] Invalid argument supplied for foreach() (D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Profile\DefaultProfile.php:100)
+Stack trace:
+#0 D:\new\carproject\protected\modules\admin\components\CAdminController.php(42): sendMsg()
+#1 D:\new\framework\web\CController.php(306): AdminWarrantyController->beforeAction()
+#2 D:\new\framework\web\CController.php(286): AdminWarrantyController->runAction()
+#3 D:\new\framework\web\CController.php(265): AdminWarrantyController->runActionWithFilters()
+#4 D:\new\framework\web\CWebApplication.php(282): AdminWarrantyController->run()
+#5 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 D:\new\carproject\index.php(17): CWebApplication->run()
+REQUEST_URI=/admin/adminWarranty/add.html
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Profile\DefaultProfile.php (100)
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Profile\DefaultProfile.php (87)
+in D:\new\carproject\protected\utils\CUtils.php (787)
+2017/07/18 09:12:06 [error] [php] Use of undefined constant ENABLE_HTTP_PROXY - assumed 'ENABLE_HTTP_PROXY' (D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Http\HttpHelper.php:29)
+Stack trace:
+#0 D:\new\carproject\protected\utils\CUtils.php(803): DefaultAcsClient->getAcsResponse()
+#1 D:\new\carproject\protected\modules\admin\components\CAdminController.php(42): sendMsg()
+#2 D:\new\framework\web\CController.php(306): AdminWarrantyController->beforeAction()
+#3 D:\new\framework\web\CController.php(286): AdminWarrantyController->runAction()
+#4 D:\new\framework\web\CController.php(265): AdminWarrantyController->runActionWithFilters()
+#5 D:\new\framework\web\CWebApplication.php(282): AdminWarrantyController->run()
+#6 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 D:\new\carproject\index.php(17): CWebApplication->run()
+REQUEST_URI=/admin/adminWarranty/add.html
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Http\HttpHelper.php (29)
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\DefaultAcsClient.php (70)
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\DefaultAcsClient.php (33)
+2017/07/18 09:13:00 [error] [php] Use of undefined constant ENABLE_HTTP_PROXY - assumed 'ENABLE_HTTP_PROXY' (D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Http\HttpHelper.php:29)
+Stack trace:
+#0 D:\new\carproject\protected\utils\CUtils.php(803): DefaultAcsClient->getAcsResponse()
+#1 D:\new\carproject\protected\modules\admin\components\CAdminController.php(42): sendMsg()
+#2 D:\new\framework\web\CController.php(306): AdminWarrantyController->beforeAction()
+#3 D:\new\framework\web\CController.php(286): AdminWarrantyController->runAction()
+#4 D:\new\framework\web\CController.php(265): AdminWarrantyController->runActionWithFilters()
+#5 D:\new\framework\web\CWebApplication.php(282): AdminWarrantyController->run()
+#6 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 D:\new\carproject\index.php(17): CWebApplication->run()
+REQUEST_URI=/admin/adminWarranty/add.html
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Http\HttpHelper.php (29)
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\DefaultAcsClient.php (70)
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\DefaultAcsClient.php (33)
+2017/07/18 09:22:31 [warning] [application] Failed to set unsafe attribute "carmodel" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (224)
+in D:\new\carproject\protected\models\Warranty.php (216)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/18 09:22:31 [warning] [application] Failed to set unsafe attribute "constructor" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (224)
+in D:\new\carproject\protected\models\Warranty.php (216)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/18 09:22:31 [warning] [application] Failed to set unsafe attribute "guide" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (224)
+in D:\new\carproject\protected\models\Warranty.php (216)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/18 09:22:31 [warning] [application] Failed to set unsafe attribute "status" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (224)
+in D:\new\carproject\protected\models\Warranty.php (216)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/18 09:22:31 [warning] [application] Failed to set unsafe attribute "refuse_reason" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (224)
+in D:\new\carproject\protected\models\Warranty.php (216)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/18 09:22:31 [warning] [application] Failed to set unsafe attribute "mid" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (224)
+in D:\new\carproject\protected\models\Warranty.php (216)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/18 09:22:31 [warning] [application] Failed to set unsafe attribute "pid" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (224)
+in D:\new\carproject\protected\models\Warranty.php (216)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/18 09:22:31 [warning] [application] Failed to set unsafe attribute "extension" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (224)
+in D:\new\carproject\protected\models\Warranty.php (216)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/18 09:22:31 [warning] [application] Failed to set unsafe attribute "create_user" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (224)
+in D:\new\carproject\protected\models\Warranty.php (216)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/18 09:22:32 [error] [exception.ServerException] exception 'ServerException' with message 'InvalidAccessKeyId.NotFound Specified access key is not found. HTTP Status: 404 RequestID: 50D87079-6008-41F8-94A1-C833559E2EFF' in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\DefaultAcsClient.php:115
+Stack trace:
+#0 D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\DefaultAcsClient.php(37): DefaultAcsClient->buildApiException(Object(stdClass), 404)
+#1 D:\new\carproject\protected\utils\CUtils.php(798): DefaultAcsClient->getAcsResponse(Object(Dysmsapi\Request\V20170525\SendSmsRequest))
+#2 D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php(374): CUtils::sendMsg('13992891749', Array, 'SMS_73500002')
+#3 D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php(84): AdminWarrantyController->__sendMessage(Array, Object(Warranty))
+#4 D:\new\framework\web\actions\CInlineAction.php(49): AdminWarrantyController->actionAdd()
+#5 D:\new\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 D:\new\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 D:\new\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 D:\new\framework\web\CWebApplication.php(282): CController->run('add')
+#9 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/adminWarr...')
+#10 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 D:\new\carproject\index.php(17): CApplication->run()
+#12 {main}
+REQUEST_URI=/admin/adminWarranty/add.html
+HTTP_REFERER=http://www.carproject.com/admin/adminWarranty/add.html
+---
+2017/07/18 09:22:33 [warning] [application] Failed to set unsafe attribute "carmodel" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (224)
+in D:\new\carproject\protected\models\Warranty.php (216)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/18 09:22:33 [warning] [application] Failed to set unsafe attribute "constructor" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (224)
+in D:\new\carproject\protected\models\Warranty.php (216)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/18 09:22:33 [warning] [application] Failed to set unsafe attribute "guide" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (224)
+in D:\new\carproject\protected\models\Warranty.php (216)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/18 09:22:33 [warning] [application] Failed to set unsafe attribute "status" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (224)
+in D:\new\carproject\protected\models\Warranty.php (216)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/18 09:22:33 [warning] [application] Failed to set unsafe attribute "refuse_reason" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (224)
+in D:\new\carproject\protected\models\Warranty.php (216)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/18 09:22:33 [warning] [application] Failed to set unsafe attribute "mid" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (224)
+in D:\new\carproject\protected\models\Warranty.php (216)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/18 09:22:33 [warning] [application] Failed to set unsafe attribute "pid" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (224)
+in D:\new\carproject\protected\models\Warranty.php (216)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/18 09:22:33 [warning] [application] Failed to set unsafe attribute "extension" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (224)
+in D:\new\carproject\protected\models\Warranty.php (216)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/18 09:22:33 [warning] [application] Failed to set unsafe attribute "create_user" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (224)
+in D:\new\carproject\protected\models\Warranty.php (216)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/18 09:22:34 [error] [exception.ServerException] exception 'ServerException' with message 'InvalidAccessKeyId.NotFound Specified access key is not found. HTTP Status: 404 RequestID: E278282E-9255-41BD-8C14-7BCFFBB3FFBC' in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\DefaultAcsClient.php:115
+Stack trace:
+#0 D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\DefaultAcsClient.php(37): DefaultAcsClient->buildApiException(Object(stdClass), 404)
+#1 D:\new\carproject\protected\utils\CUtils.php(798): DefaultAcsClient->getAcsResponse(Object(Dysmsapi\Request\V20170525\SendSmsRequest))
+#2 D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php(374): CUtils::sendMsg('13992891749', Array, 'SMS_73500002')
+#3 D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php(84): AdminWarrantyController->__sendMessage(Array, Object(Warranty))
+#4 D:\new\framework\web\actions\CInlineAction.php(49): AdminWarrantyController->actionAdd()
+#5 D:\new\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 D:\new\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 D:\new\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 D:\new\framework\web\CWebApplication.php(282): CController->run('add')
+#9 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/adminWarr...')
+#10 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 D:\new\carproject\index.php(17): CApplication->run()
+#12 {main}
+REQUEST_URI=/admin/adminWarranty/add.html
+HTTP_REFERER=http://www.carproject.com/admin/adminWarranty/add.html
+---
+2017/07/18 09:25:37 [warning] [application] Failed to set unsafe attribute "carmodel" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (224)
+in D:\new\carproject\protected\models\Warranty.php (216)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/18 09:25:37 [warning] [application] Failed to set unsafe attribute "constructor" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (224)
+in D:\new\carproject\protected\models\Warranty.php (216)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/18 09:25:37 [warning] [application] Failed to set unsafe attribute "guide" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (224)
+in D:\new\carproject\protected\models\Warranty.php (216)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/18 09:25:37 [warning] [application] Failed to set unsafe attribute "status" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (224)
+in D:\new\carproject\protected\models\Warranty.php (216)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/18 09:25:37 [warning] [application] Failed to set unsafe attribute "refuse_reason" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (224)
+in D:\new\carproject\protected\models\Warranty.php (216)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/18 09:25:37 [warning] [application] Failed to set unsafe attribute "mid" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (224)
+in D:\new\carproject\protected\models\Warranty.php (216)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/18 09:25:37 [warning] [application] Failed to set unsafe attribute "pid" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (224)
+in D:\new\carproject\protected\models\Warranty.php (216)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/18 09:25:37 [warning] [application] Failed to set unsafe attribute "extension" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (224)
+in D:\new\carproject\protected\models\Warranty.php (216)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/18 09:25:37 [warning] [application] Failed to set unsafe attribute "create_user" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (224)
+in D:\new\carproject\protected\models\Warranty.php (216)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/18 18:00:13 [error] [exception.LogicException] exception 'LogicException' with message 'Function 'Autoloader::_autoload' not found (class 'Autoloader' does not have a method '_autoload')' in D:\new\carproject\protected\extensions\Dayu\_Autoloader.php:54
+Stack trace:
+#0 D:\new\carproject\protected\extensions\Dayu\_Autoloader.php(54): spl_autoload_register('Autoloader::_au...')
+#1 D:\new\carproject\protected\extensions\Dayu\TopSdk.php(40): require('D:\\new\\carproje...')
+#2 D:\new\carproject\protected\utils\CUtils.php(783): require_once('D:\\new\\carproje...')
+#3 D:\new\carproject\protected\modules\admin\components\CAdminController.php(40): CUtils::sendSms('13992891749', Array, 'SMS_73500002')
+#4 D:\new\framework\web\CController.php(306): CAdminController->beforeAction(Object(CInlineAction))
+#5 D:\new\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 D:\new\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\new\framework\web\CWebApplication.php(282): CController->run('add')
+#8 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/adminWarr...')
+#9 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\new\carproject\index.php(17): CApplication->run()
+#11 {main}
+REQUEST_URI=/admin/adminWarranty/add.html
+---
+2017/07/18 18:00:25 [error] [php] include(TopClient.php): failed to open stream: No such file or directory (D:\new\framework\YiiBase.php:432)
+Stack trace:
+#0 D:\new\carproject\protected\utils\CUtils.php(789): spl_autoload_call()
+#1 D:\new\carproject\protected\modules\admin\components\CAdminController.php(40): sendSms()
+#2 D:\new\framework\web\CController.php(306): AdminWarrantyController->beforeAction()
+#3 D:\new\framework\web\CController.php(286): AdminWarrantyController->runAction()
+#4 D:\new\framework\web\CController.php(265): AdminWarrantyController->runActionWithFilters()
+#5 D:\new\framework\web\CWebApplication.php(282): AdminWarrantyController->run()
+#6 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 D:\new\carproject\index.php(17): CWebApplication->run()
+REQUEST_URI=/admin/adminWarranty/add.html
+in D:\new\carproject\protected\utils\CUtils.php (789)
+in D:\new\carproject\protected\modules\admin\components\CAdminController.php (40)
+in D:\new\carproject\index.php (17)
+2017/07/18 18:05:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/fonts/fontawesome-webfont.woff2".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/f...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/fonts/fontawesome-webfont.woff2?v=4.7.0
+HTTP_REFERER=http://www.carproject.com/statics/front/fonts/font-awesome.min.css
+---
+2017/07/18 18:05:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/images/favicon.png".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/i...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/images/favicon.png
+HTTP_REFERER=http://www.carproject.com/wap/warranty/add.html
+---
+2017/07/18 18:06:12 [warning] [application] Failed to set unsafe attribute "carmodel" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (192)
+in D:\new\carproject\protected\modules\wap\controllers\WarrantyController.php (29)
+in D:\new\carproject\index.php (18)
+2017/07/18 18:06:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/fonts/fontawesome-webfont.woff2".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/f...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/fonts/fontawesome-webfont.woff2?v=4.7.0
+HTTP_REFERER=http://www.carproject.com/statics/front/fonts/font-awesome.min.css
+---
+2017/07/18 18:08:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/js/bootstrap-select.js.map".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/j...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/js/bootstrap-select.js.map
+---
+2017/07/18 18:08:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/css/bootstrap.min.css.map".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/c...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/css/bootstrap.min.css.map
+---
+2017/07/18 18:09:08 [warning] [application] Failed to set unsafe attribute "carmodel" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (192)
+in D:\new\carproject\protected\modules\wap\controllers\WarrantyController.php (29)
+in D:\new\carproject\index.php (18)
+2017/07/18 18:10:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/css/bootstrap.min.css.map".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/c...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/css/bootstrap.min.css.map
+---
+2017/07/18 18:10:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/js/bootstrap-select.js.map".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/j...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/js/bootstrap-select.js.map
+---
+2017/07/18 18:10:08 [warning] [application] Failed to set unsafe attribute "carmodel" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (192)
+in D:\new\carproject\protected\modules\wap\controllers\WarrantyController.php (29)
+in D:\new\carproject\index.php (18)
+2017/07/18 18:10:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/css/bootstrap.min.css.map".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/c...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/css/bootstrap.min.css.map
+---
+2017/07/18 18:10:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/fonts/fontawesome-webfont.woff2".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/f...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/fonts/fontawesome-webfont.woff2?v=4.7.0
+HTTP_REFERER=http://www.carproject.com/statics/front/fonts/font-awesome.min.css
+---
+2017/07/18 18:10:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/js/bootstrap-select.js.map".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/j...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/js/bootstrap-select.js.map
+---
+2017/07/18 18:10:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/fonts/fontawesome-webfont.woff2".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/f...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/fonts/fontawesome-webfont.woff2?v=4.7.0
+HTTP_REFERER=http://www.carproject.com/statics/front/fonts/font-awesome.min.css
+---
+2017/07/18 18:10:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/css/bootstrap.min.css.map".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/c...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/css/bootstrap.min.css.map
+---
+2017/07/18 18:10:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/js/bootstrap-select.js.map".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/j...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/js/bootstrap-select.js.map
+---
+2017/07/18 18:13:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/css/bootstrap.min.css.map".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/c...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/css/bootstrap.min.css.map
+---
+2017/07/18 18:13:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/fonts/fontawesome-webfont.woff2".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/f...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/fonts/fontawesome-webfont.woff2?v=4.7.0
+HTTP_REFERER=http://www.carproject.com/statics/front/fonts/font-awesome.min.css
+---
+2017/07/18 18:13:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/js/bootstrap-select.js.map".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/j...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/js/bootstrap-select.js.map
+---
+2017/07/18 18:13:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/css/bootstrap.min.css.map".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/c...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/css/bootstrap.min.css.map
+---
+2017/07/18 18:13:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/fonts/fontawesome-webfont.woff2".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/f...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/fonts/fontawesome-webfont.woff2?v=4.7.0
+HTTP_REFERER=http://www.carproject.com/statics/front/fonts/font-awesome.min.css
+---
+2017/07/18 18:13:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/js/bootstrap-select.js.map".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/j...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/js/bootstrap-select.js.map
+---
+2017/07/18 18:13:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/fonts/fontawesome-webfont.woff2".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/f...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/fonts/fontawesome-webfont.woff2?v=4.7.0
+HTTP_REFERER=http://www.carproject.com/statics/front/fonts/font-awesome.min.css
+---
+2017/07/18 18:13:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/css/bootstrap.min.css.map".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/c...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/css/bootstrap.min.css.map
+---
+2017/07/18 18:13:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/js/bootstrap-select.js.map".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/j...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/js/bootstrap-select.js.map
+---
+2017/07/18 18:14:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/fonts/fontawesome-webfont.woff2".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/f...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/fonts/fontawesome-webfont.woff2?v=4.7.0
+HTTP_REFERER=http://www.carproject.com/statics/front/fonts/font-awesome.min.css
+---
+2017/07/18 18:14:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/css/bootstrap.min.css.map".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/c...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/css/bootstrap.min.css.map
+---
+2017/07/18 18:14:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/js/bootstrap-select.js.map".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/j...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/js/bootstrap-select.js.map
+---
+2017/07/18 18:14:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/css/bootstrap.min.css.map".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/c...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/css/bootstrap.min.css.map
+---
+2017/07/18 18:14:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/fonts/fontawesome-webfont.woff2".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/f...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/fonts/fontawesome-webfont.woff2?v=4.7.0
+HTTP_REFERER=http://www.carproject.com/statics/front/fonts/font-awesome.min.css
+---
+2017/07/18 18:14:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/js/bootstrap-select.js.map".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/j...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/js/bootstrap-select.js.map
+---
+2017/07/18 18:15:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/css/bootstrap.min.css.map".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/c...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/css/bootstrap.min.css.map
+---
+2017/07/18 18:15:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/fonts/fontawesome-webfont.woff2".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/f...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/fonts/fontawesome-webfont.woff2?v=4.7.0
+HTTP_REFERER=http://www.carproject.com/statics/front/fonts/font-awesome.min.css
+---
+2017/07/18 18:15:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/js/bootstrap-select.js.map".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/j...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/js/bootstrap-select.js.map
+---
+2017/07/18 18:15:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/fonts/fontawesome-webfont.woff2".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/f...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/fonts/fontawesome-webfont.woff2?v=4.7.0
+HTTP_REFERER=http://www.carproject.com/statics/front/fonts/font-awesome.min.css
+---
+2017/07/18 18:15:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/css/bootstrap.min.css.map".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/c...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/css/bootstrap.min.css.map
+---
+2017/07/18 18:15:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/js/bootstrap-select.js.map".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/j...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/js/bootstrap-select.js.map
+---
+2017/07/18 18:16:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/css/bootstrap.min.css.map".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/c...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/css/bootstrap.min.css.map
+---
+2017/07/18 18:16:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/fonts/fontawesome-webfont.woff2".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/f...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/fonts/fontawesome-webfont.woff2?v=4.7.0
+HTTP_REFERER=http://www.carproject.com/statics/front/fonts/font-awesome.min.css
+---
+2017/07/18 18:16:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/js/bootstrap-select.js.map".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/j...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/js/bootstrap-select.js.map
+---
+2017/07/18 18:17:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/css/bootstrap.min.css.map".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/c...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/css/bootstrap.min.css.map
+---
+2017/07/18 18:17:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/fonts/fontawesome-webfont.woff2".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/f...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/fonts/fontawesome-webfont.woff2?v=4.7.0
+HTTP_REFERER=http://www.carproject.com/statics/front/fonts/font-awesome.min.css
+---
+2017/07/18 18:17:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/js/bootstrap-select.js.map".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/j...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/js/bootstrap-select.js.map
+---
+2017/07/18 18:18:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/fonts/fontawesome-webfont.woff2".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/f...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/fonts/fontawesome-webfont.woff2?v=4.7.0
+HTTP_REFERER=http://www.carproject.com/statics/front/fonts/font-awesome.min.css
+---
+2017/07/18 18:18:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/css/bootstrap.min.css.map".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/c...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/css/bootstrap.min.css.map
+---
+2017/07/18 18:18:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/js/bootstrap-select.js.map".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/j...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/js/bootstrap-select.js.map
+---
+2017/07/18 18:20:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/css/bootstrap.min.css.map".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/c...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/css/bootstrap.min.css.map
+---
+2017/07/18 18:20:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/fonts/fontawesome-webfont.woff2".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/f...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/fonts/fontawesome-webfont.woff2?v=4.7.0
+HTTP_REFERER=http://www.carproject.com/statics/front/fonts/font-awesome.min.css
+---
+2017/07/18 18:20:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/js/bootstrap-select.js.map".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/j...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/js/bootstrap-select.js.map
+---
+2017/07/18 10:26:35 [warning] [application] Failed to set unsafe attribute "pack_name" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (280)
+in D:\new\carproject\protected\models\Warranty.php (214)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/18 10:26:35 [warning] [application] Failed to set unsafe attribute "carmodel" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (280)
+in D:\new\carproject\protected\models\Warranty.php (214)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/18 10:26:35 [warning] [application] Failed to set unsafe attribute "constructor" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (280)
+in D:\new\carproject\protected\models\Warranty.php (214)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/18 10:26:35 [warning] [application] Failed to set unsafe attribute "guide" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (280)
+in D:\new\carproject\protected\models\Warranty.php (214)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/18 10:26:35 [warning] [application] Failed to set unsafe attribute "status" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (280)
+in D:\new\carproject\protected\models\Warranty.php (214)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/18 10:26:35 [warning] [application] Failed to set unsafe attribute "refuse_reason" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (280)
+in D:\new\carproject\protected\models\Warranty.php (214)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/18 10:26:35 [warning] [application] Failed to set unsafe attribute "mid" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (280)
+in D:\new\carproject\protected\models\Warranty.php (214)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/18 10:26:35 [warning] [application] Failed to set unsafe attribute "pid" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (280)
+in D:\new\carproject\protected\models\Warranty.php (214)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/18 10:26:35 [warning] [application] Failed to set unsafe attribute "extension" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (280)
+in D:\new\carproject\protected\models\Warranty.php (214)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/18 10:26:35 [warning] [application] Failed to set unsafe attribute "create_user" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (280)
+in D:\new\carproject\protected\models\Warranty.php (214)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)

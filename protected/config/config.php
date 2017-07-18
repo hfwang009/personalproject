@@ -171,27 +171,27 @@ return array(
 		),
 	'phone' => array
 		(
-		'signname' => '可观',
-		'appkey' => 24515502,
-		'secretKey' => '632a8a9927f7f3e551a95b7074b64080'
+		'signname' => '傲邦名车服务',
+		'appkey' => 'LTAIarXdLsgiKww4',
+		'secretKey' => '7Zt9crGZjNzEHPCnoLC7jhb0QjcWxJ'
 		),
 	'phone1' => array
 		(
 		'success' => array
 			(
-			'code' => 'SMS_73500002',
+			'code' => 'SMS_77615074',
 			'count' => '',
 			'time' => ''
 			),
 		'fail' => array
 			(
-			'code' => 'SMS_72975068',
+			'code' => 'SMS_77490077',
 			'count' => '',
 			'time' => ''
 			),
 		'auth' => array
 			(
-			'code' => 'SMS_74650016',
+			'code' => 'SMS_77475079',
 			'count' => 3,
 			'time' => 600
 			),

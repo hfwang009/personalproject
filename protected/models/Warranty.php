@@ -71,7 +71,7 @@ class Warranty extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array(' name, telephone, address, engineno, construct_time,pack_name', 'required', 'message'=>'{attribute}必须填写！'),
+			array(' name, telephone, address, engineno, construct_time', 'required', 'message'=>'{attribute}必须填写！'),
 			array('is_send, storeid, ctime', 'numerical', 'integerOnly'=>true),
 			array('series_number, name, address, carlicence, engineno, warrantytime', 'length', 'max'=>500),
 			array('telephone', 'length', 'max'=>11),

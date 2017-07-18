@@ -21,13 +21,13 @@ class AdminStoreController extends CAdminController{
         );
         $ajax_url = $this->createUrl('setting');
         $areas= Region::model()->getData();
-        $type = Yii::app()->params['conf']['setting']['type'];
+//        $type = Yii::app()->params['conf']['setting']['type'];
         $this->render("index",array(
             "search"=>$search,
             "condition"=>$condition,
             "areas"=>$areas,
             "_areas"=>$_areas,
-            "type"=>$type,
+//            "type"=>$type,
             "pager"=>$model->getPagination(),
             "ajax_url"=>$ajax_url,
             "provinces"=>$provinces,
@@ -60,12 +60,12 @@ class AdminStoreController extends CAdminController{
         }
         $ajax_url = $this->createUrl('setting');
 
-        $type = Yii::app()->params['conf']['setting']['type'];
+//        $type = Yii::app()->params['conf']['setting']['type'];
         $this->render("add",
             array(
                 "model"=>$model,
                 "search"=>$search,
-                "type"=>$type,
+//                "type"=>$type,
                 "provinces"=>$provinces,
                 "citys"=>$citys,
                 "areas"=>$areas,

@@ -76,7 +76,7 @@ class AdminWarrantyController extends CAdminController{
             $_POST['Warranty']['construct_time'] = strtotime($_POST['Warranty']['construct_time']);
             $_POST['Warranty']['refuse_reason'] = CUtils::formatTxtarea($_POST['Warranty']['refuse_reason']);
             $_POST['Warranty']['create_user'] = Yii::app()->user->id;
-//            $_POST['Warranty']['is_send'] = $_POST['Warranty']['status']==1?0:$model['status'];
+            $_POST['Warranty']['is_send'] = $_POST['Warranty']['status']==1?0:$model['status'];
             $res = Warranty::model()->updateWarranty($_POST,$id);
 //            var_dump($res);exit;
             if(!empty($res)){
@@ -366,15 +366,17 @@ class AdminWarrantyController extends CAdminController{
             $smsData = array(
                 'phone' => $post['Warranty']['telephone'],
                 'param' => array('name' => $post['Warranty']['name']),
-                'type' => $config['fail']['code']
+                'type' => $config['fail']['code'],
+                'error'=>1
             );
                 break;
         }
-        $rs = CUtils::sendSms($smsData['phone'], $smsData['param'], $smsData['type']);
-        if($rs->result->err_code==0&&$rs->result->success==true){
+        $rs = CUtils::sendMsg($smsData['phone'], $smsData['param'], $smsData['type']);
+        if($rs->Code=='OK'){
             //记录发送的短信，记录发送短信的相关状态后台可以补发（需要新增字段来判断是否发送短信）
-            $msgid = $rs->request_id;
-            $_model = $rs->result->model;
+//            $msgid = $rs->RequestId;
+//            $bizid = $rs->BizId;
+//            $message = $rs->Message;
             if($post['Warranty']['status']==1){
                 $warranty->is_send = 1;
                 $warranty->save();

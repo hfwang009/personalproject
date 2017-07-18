@@ -20,7 +20,7 @@ class AdminProductController extends CAdminController{
         $models_data= Models::model()->getModelData();
         $brand_arr = Brand::model()->getBrandData();
         $ptype = Yii::app()->params['conf']['setting']['ptype'];
-        $level = Yii::app()->params['conf']['setting']['level'];
+//        $level = Yii::app()->params['conf']['setting']['level'];
         $provinces = Region::model()->getRegions();
         $citys = array();
         $areas = array();
@@ -31,7 +31,7 @@ class AdminProductController extends CAdminController{
             "models_data"=>$models_data,
             "ptype"=>$ptype,
             "brand_arr"=>$brand_arr,
-            "level"=>$level,
+//            "level"=>$level,
             "pager"=>$model->getPagination(),
             "ajax_url"=>$ajax_url,
             'provinces'=>$provinces,

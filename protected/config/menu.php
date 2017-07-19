@@ -35,6 +35,7 @@ return array(
                     array('subject' => '产品列表', 'link' => 'admin/adminProduct/index', 'controller'=>'adminProduct'),
 					array('subject' => '质保列表', 'link' => 'admin/adminWarranty/index', 'controller'=>'adminWarranty'),
 					array('subject' => '质保出入明细列表', 'link' => 'admin/adminWarrantyDetail/index', 'controller'=>'adminWarrantyDetail'),
+					array('subject' => '质保操作记录列表', 'link' => 'admin/adminWarrantyAction/index', 'controller'=>'adminWarrantyAction'),
 				),
 		),
         5 => array(
@@ -62,6 +63,7 @@ return array(
 			'icon' => 'icon-reply',
 			'submenu' => array(
 					array('subject' => '缓存清理工具', 'link' => 'admin/adminTools/index', 'controller'=>'adminTools'),
+					array('subject' => '短信发送统计', 'link' => 'admin/adminSmsMsg/index', 'controller'=>'adminSmsMsg'),
 			),
 		)
 	)

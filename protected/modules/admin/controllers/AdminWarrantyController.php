@@ -81,8 +81,9 @@ class AdminWarrantyController extends CAdminController{
 //            var_dump($res);exit;
             if(!empty($res)){
                 $warranty = Warranty::model()->findByPk($res);
-                $rs = $this->__sendMessage($_POST,$warranty);
-                if($rs){
+                $type = $_POST['Warranty']['status'] == 1?'success':'fail';
+                $rs = CUtils::sendSnsMsg($_POST,$type,$warranty);
+                if($rs['status']){
                     $this->redirect(Yii::app()->createUrl(Yii::app()->controller->module->id.'/'.Yii::app()->controller->id.'/index'));
                 }
             }
@@ -340,49 +341,5 @@ class AdminWarrantyController extends CAdminController{
             $flag,
             $_flag
         );
-    }
-
-    private function __sendMessage($post,$warranty=false){
-        if(!in_array($post['Warranty']['status'],array(0,1,2))){
-            return false;
-        }
-        if($post['Warranty']['status']==1&&empty($warranty)){
-            return false;
-        }
-        if(!empty($warranty)&&$warranty['is_send']==1){
-            return true;
-        }
-        $config = Yii::app()->params['conf']['phone1'];
-        switch($post['Warranty']['status']){
-            case 1:
-                $smsData = array(
-                    'phone' => $post['Warranty']['telephone'],
-                    'param' => array('name' => $post['Warranty']['name'],'number'=>$warranty['series_number']),
-                    'type' => $config['success']['code']
-                );
-                break;
-            case 2:
-            case 0:
-            $smsData = array(
-                'phone' => $post['Warranty']['telephone'],
-                'param' => array('name' => $post['Warranty']['name']),
-                'type' => $config['fail']['code'],
-                'error'=>1
-            );
-                break;
-        }
-        $rs = CUtils::sendMsg($smsData['phone'], $smsData['param'], $smsData['type']);
-        if($rs->Code=='OK'){
-            //记录发送的短信，记录发送短信的相关状态后台可以补发（需要新增字段来判断是否发送短信）
-//            $msgid = $rs->RequestId;
-//            $bizid = $rs->BizId;
-//            $message = $rs->Message;
-            if($post['Warranty']['status']==1){
-                $warranty->is_send = 1;
-                $warranty->save();
-            }
-            return true;
-        }
-        return false;
     }
 }

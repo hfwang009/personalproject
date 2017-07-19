@@ -186,7 +186,8 @@ class WarrantyController extends Controller{
             }elseif(!$this->judgePhone($telephone)){
                 $message = '手机号码不合法！';
             }else{
-                $message_arr = $this->sendPhoneCode($telephone);
+                $post['Warranty']['phone'] = $telephone;
+                $message_arr = CUtils::sendSnsMsg($post);
                 $state=$message_arr['status'];
                 $message=$message_arr['msg'];
             }
@@ -199,48 +200,30 @@ class WarrantyController extends Controller{
 
     public function actionTest(){
         //当前ip地址
-        $currentIP = $this->__getIp();
-        $currentIP = '1.85.223.140';
+        $currentIP = CUtils::getIp();
+//        $currentIP = '220.181.16.102';
+//        $currentIP = '218.28.191.50';
+//        $currentIP = '1.85.223.140';
         //通过当前ip获取信息
-        $getLocation = $this->__getLocation($currentIP);
+        $getLocation = CUtils::getLocation($currentIP);
+        var_dump($getLocation);
         $res = json_decode($getLocation,true);
-        if($res){
-            $country = $res['country'];
-            $province = $res['province'];
-            $city = $res['city'];
-            $py = new PinYin();
-            $pcountry = $py->getAllPY($country);
-            $pprovince = $py->getAllPY($province);
-            $pcity = $py->getAllPY($city);
-            print_r($pcountry);
-            print_r($pcity);
-            print_r($pprovince);
-        }
+        print_r($res);
+        list($pcountry,$pcity,$pprovince) = CUtils::getPyName($res);
+        print_r($pcountry);
+        print_r($pcity);
+        print_r($pprovince);
+    }
 
-    }
-    //获取当前ip
-    private function __getIp(){
-        $onlineip='';
-        if(getenv('HTTP_CLIENT_IP')&&strcasecmp(getenv('HTTP_CLIENT_IP'),'unknown')){
-            $onlineip=getenv('HTTP_CLIENT_IP');
-        } elseif(getenv('HTTP_X_FORWARDED_FOR')&&strcasecmp(getenv('HTTP_X_FORWARDED_FOR'),'unknown')){
-            $onlineip=getenv('HTTP_X_FORWARDED_FOR');
-        } elseif(getenv('REMOTE_ADDR')&&strcasecmp(getenv('REMOTE_ADDR'),'unknown')){
-            $onlineip=getenv('REMOTE_ADDR');
-        } elseif(isset($_SERVER['REMOTE_ADDR'])&&$_SERVER['REMOTE_ADDR']&&strcasecmp($_SERVER['REMOTE_ADDR'],'unknown')){
-            $onlineip=$_SERVER['REMOTE_ADDR'];
-        }
-        return $onlineip;
-    }
-    //获取城市信息api
-    private function __getLocation($ip){
-        $curl = curl_init();
-        curl_setopt($curl, CURLOPT_URL, "http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=json&ip=".$ip);
-        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($curl, CURLOPT_CONNECTTIMEOUT, 30);
-        $str = curl_exec($curl);
-        curl_close($curl);
-        return $str;
+
+    public function actionTest1(){
+        $ip = CUtils::getUserIp();
+//        $ip1 = CUtils::getUserIp1();
+//        $ip = '220.181.16.102';
+//        $ip = '218.28.191.50';
+//        $ip = '1.85.223.140';
+        list($country,$area) = CUtils::getAddressData($ip);
+        var_dump($country,$area);
     }
 
 

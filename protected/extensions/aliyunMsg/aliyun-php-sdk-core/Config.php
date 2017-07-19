@@ -17,9 +17,10 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-include_once Yii::app()->basePath.DIRECTORY_SEPARATOR.'extensions'.DIRECTORY_SEPARATOR.'aliyunMsg'.DIRECTORY_SEPARATOR.'aliyun-php-sdk-core'.DIRECTORY_SEPARATOR.'Autoloader'.DIRECTORY_SEPARATOR.'Autoloader.php';
-include_once Yii::app()->basePath.DIRECTORY_SEPARATOR.'extensions'.DIRECTORY_SEPARATOR.'aliyunMsg'.DIRECTORY_SEPARATOR.'aliyun-php-sdk-core'.DIRECTORY_SEPARATOR.'Regions'.DIRECTORY_SEPARATOR.'EndpointConfig.php';
-//include_once 'Regions/EndpointConfig.php';
+//include_once Yii::app()->basePath.DIRECTORY_SEPARATOR.'extensions'.DIRECTORY_SEPARATOR.'aliyunMsg'.DIRECTORY_SEPARATOR.'aliyun-php-sdk-core'.DIRECTORY_SEPARATOR.'Autoloader'.DIRECTORY_SEPARATOR.'Autoloader.php';
+//include_once Yii::app()->basePath.DIRECTORY_SEPARATOR.'extensions'.DIRECTORY_SEPARATOR.'aliyunMsg'.DIRECTORY_SEPARATOR.'aliyun-php-sdk-core'.DIRECTORY_SEPARATOR.'Regions'.DIRECTORY_SEPARATOR.'EndpointConfig.php';
+include_once 'Autoloader/Autoloader.php';
+include_once 'Regions/EndpointConfig.php';
 
 //config sdk auto load path.
 Autoloader::addAutoloadPath("aliyun-php-sdk-ecs");

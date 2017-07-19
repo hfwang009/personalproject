@@ -92,6 +92,7 @@ class Warranty extends CActiveRecord
 //            'product'=>array(self::BELONGS_TO,'Product','pid'),
             'store'=>array(self::BELONGS_TO,'Store','storeid'),
             'admin'=>array(self::BELONGS_TO,'Admin','create_user'),
+            'warrantyaction'=>array(self::BELONGS_TO,'WarrantyAction','id'),
             'detail'=>array(self::HAS_ONE,'WarrantyDetail','id'),
 		);
 	}
@@ -228,6 +229,7 @@ class Warranty extends CActiveRecord
         $warranty->refuse_reason = $post['Warranty']['refuse_reason'];
         $warranty->constructor = $post['Warranty']['constructor'];
         $warranty->carmodel = $post['Warranty']['carmodel'];
+        $warranty->pack_name = $post['Warranty']['pack_name'];
         $warranty->guide = $post['Warranty']['guide'];
         $warranty->pid = $post['Warranty']['pid'];
         $warranty->mid = $post['Warranty']['mid'];
@@ -284,6 +286,7 @@ class Warranty extends CActiveRecord
             $warranty->refuse_reason = $post['Warranty']['refuse_reason'];
             $warranty->constructor = $post['Warranty']['constructor'];
             $warranty->carmodel = $post['Warranty']['carmodel'];
+            $warranty->pack_name = $post['Warranty']['pack_name'];
             $warranty->guide = $post['Warranty']['guide'];
             $warranty->pid = $post['Warranty']['pid'];
             $warranty->mid = $post['Warranty']['mid'];
@@ -345,6 +348,11 @@ class Warranty extends CActiveRecord
         return CHtml::listData($models,'id','name');
     }
 
+    public function getWarrantyData1(){
+        $models = $this->findAll('status=1');
+        return CHtml::listData($models,'id','series_number');
+    }
+
     public function getWarrantyByParams($param){
         $criteria = new CDbCriteria();
         $criteria->condition = '1';
@@ -370,14 +378,16 @@ class Warranty extends CActiveRecord
         return $warrantys;
     }
 
-    public function getWarrantyDataByPk($id){
+    public function getWarrantyDataByPk($id,$flag=true){
         $criteria = new CDbCriteria();
         $criteria->condition = '1';
         $criteria->condition .= ' AND t.id = "'.$id.'"';
         $criteria->condition .= ' AND t.status=1';
         $criteria->with = array('admin','store');
         $warranty = $this->find($criteria);
-        $warranty = CUtils::formatData1($warranty);
+        if($flag){
+            $warranty = CUtils::formatData1($warranty);
+        }
         return $warranty;
     }
 

@@ -62,7 +62,7 @@
                                         <td class="nowrap">
                                             <?php if(Yii::app()->user->id==1){ ?>
                                                 <a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->module->id.'/'.Yii::app()->controller->id . '/add',array('id'=>$_model['pid']));?>" class="icon icon-edit md-tip" title="编辑"></a>
-                                                <a href="javascript:;" class="icon icon-delete md-tip" title="删除" ng-model="<?php echo $_model['pid'];?>" ng-click="js_delete()"></a>
+<!--                                                <a href="javascript:;" class="icon icon-delete md-tip" title="删除" ng-model="--><?php //echo $_model['pid'];?><!--" ng-click="js_delete()"></a>-->
                                             <?php } ?>
                                         </td>
                                     </tr>

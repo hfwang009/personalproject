@@ -72,13 +72,13 @@ class AdminListController extends CAdminController{
         if(isset($id)){
             $model = Admin::model()->findByPk(intval($id));
         }else{
-            throw new CHttpException('404','参数若无');
+            throw new CHttpException('404','参数错误');
         }
         $condition = $_GET;
 //        print_R($_POST);exit;
         if(isset($_POST["Admin"])){
             //如果密码没有修改
-            if(empty($_POST["Admin"]['password']) || empty($_POST["Admin"]['newpassword']) || empty($_POST["Admin"]['confirm_password'])){
+            if(empty($_POST["Admin"]['newpassword']) || empty($_POST["Admin"]['confirm_password'])){
                 $this->redirect(Yii::app()->createUrl(Yii::app()->controller->module->id.'/'.Yii::app()->controller->id.'/update',array('id'=>$condition['id'])));
             }else{
                 if($_POST["Admin"]['newpassword']!==$_POST["Admin"]['confirm_password']){

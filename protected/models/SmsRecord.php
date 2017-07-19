@@ -5,17 +5,26 @@
  *
  * The followings are the available columns in table '{{sms_record}}':
  * @property integer $id
- * @property integer $type
+ * @property string $type
  * @property string $phone
  * @property string $request_id
  * @property integer $status
- * @property string $model
- * @property string $err_code
- * @property string $msg
+ * @property string $bizid
+ * @property string $code
+ * @property string $message
+ * @property string $sms_code
  * @property string $ext
+ * @property integer $ctime
+ * @property integer $sendtime
  */
 class SmsRecord extends CActiveRecord
 {
+    public $sendtime_start;
+    public $sendtime_end;
+    public $ctime_start;
+    public $ctime_end;
+    public $type_arr = array('auth'=>'验证码','success'=>'质保成功','fail'=>'质保失败');
+    public $status_arr = array(1=>'成功',2=>'失败');
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
@@ -42,13 +51,13 @@ class SmsRecord extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('type, status', 'numerical', 'integerOnly'=>true),
+			array('status', 'numerical', 'integerOnly'=>true),
 			array('phone', 'length', 'max'=>13),
-			array('request_id, model, err_code, msg', 'length', 'max'=>100),
+			array('request_id, bizid, code, message, sms_code', 'length', 'max'=>100),
 			array('ext', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, type, phone, request_id, status, model, err_code, msg, ext', 'safe', 'on'=>'search'),
+			array('id, type, phone, request_id, status, bizid, code, message, sms_code, ext, ctime, sendtime', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -70,14 +79,17 @@ class SmsRecord extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'type' => 'Type',
-			'phone' => 'Phone',
-			'request_id' => 'Request',
-			'status' => 'Status',
-			'model' => 'Model',
-			'err_code' => 'Err Code',
-			'msg' => 'Msg',
-			'ext' => 'Ext',
+			'type' => '短信类型',
+			'phone' => '电话号码',
+			'request_id' => '短信请求id',
+			'status' => '发送状态',
+			'bizid' => 'Bizid',
+			'code' => '返回值',
+			'message' => '返回信息',
+			'sms_code' => '短信模板编码',
+			'ext' => '具体信息',
+			'ctime' => '调用接口时间',
+			'sendtime' => '发送信息',
 		);
 	}
 
@@ -97,13 +109,60 @@ class SmsRecord extends CActiveRecord
 		$criteria->compare('phone',$this->phone,true);
 		$criteria->compare('request_id',$this->request_id,true);
 		$criteria->compare('status',$this->status);
-		$criteria->compare('model',$this->model,true);
-		$criteria->compare('err_code',$this->err_code,true);
-		$criteria->compare('msg',$this->msg,true);
+		$criteria->compare('bizid',$this->bizid,true);
+		$criteria->compare('code',$this->code,true);
+		$criteria->compare('message',$this->message,true);
+		$criteria->compare('sms_code',$this->sms_code,true);
 		$criteria->compare('ext',$this->ext,true);
+		$criteria->compare('ctime',$this->ctime,true);
+		$criteria->compare('sendtime',$this->sendtime,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
 	}
+
+    public function getCriteriaCondition($criteria,$condition,$search){
+        if(isset($condition['SmsRecord']) && (count(array_filter($condition['SmsRecord'])) > 0 )){
+            $search->attributes = $condition['SmsRecord'];
+            if (!empty($condition['SmsRecord']['type'])) {
+                $criteria->condition .= ' and t.type = "' . $condition['SmsRecord']['type'] .'" ';
+            }
+            if (!empty($condition['SmsRecord']['status'])) {
+                $criteria->condition .= ' and t.status = "' . $condition['SmsRecord']['status'] .'" ';
+            }
+            if (!empty($condition['SmsRecord']['sms_code'])) {
+                $criteria->condition .= ' and t.sms_code like "%' . $condition['SmsRecord']['sms_code'] .'%" ';
+            }
+            if (!empty($condition['SmsRecord']['phone'])) {
+                $criteria->condition .= ' and t.phone like "%' . $condition['SmsRecord']['phone'] .'%" ';
+            }
+            if (!empty($condition['SmsRecord']['ctime_start'])) {
+                $criteria->condition .= ' and t.ctime >= ' . strtotime($condition['SmsRecord']['ctime_start'] .' 00:00:00');
+                $search->ctime_start = $condition['SmsRecord']['ctime_start'];
+            }
+            if (!empty($condition['SmsRecord']['ctime_end'])) {
+                $criteria->condition .= ' and t.ctime <= ' . strtotime($condition['SmsRecord']['ctime_end'] .' 23:59:59');
+                $search->ctime_end = $condition['SmsRecord']['ctime_end'];
+            }
+            if (!empty($condition['SmsRecord']['sendtime_start'])) {
+                $criteria->condition .= ' and t.sendtime >= ' . strtotime($condition['SmsRecord']['sendtime_start'] .' 00:00:00');
+                $search->ctime_start = $condition['SmsRecord']['sendtime_start'];
+            }
+            if (!empty($condition['SmsRecord']['sendtime_end'])) {
+                $criteria->condition .= ' and t.sendtime <= ' . strtotime($condition['SmsRecord']['sendtime_end'] .' 23:59:59');
+                $search->ctime_end = $condition['SmsRecord']['sendtime_end'];
+            }
+        }
+        if(empty($condition['sortFiled']) || empty($condition['sortValue'])){
+            $condition['sortFiled'] = 'id';
+            $condition['sortValue'] = 'desc';
+        }
+        $criteria->order = "t." . $condition['sortFiled'] . " " . $condition['sortValue'];
+        return array(
+            $criteria,
+            $condition,
+            $search
+        );
+    }
 }

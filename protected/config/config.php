@@ -74,6 +74,16 @@ return array(
 				'econtrol' => 'login',
 				'ccontrol' => '登录'
 				),
+			15 => array
+				(
+				'econtrol' => 'adminwarrantyaction',
+				'ccontrol' => '质保操作'
+				),
+			16 => array
+				(
+				'econtrol' => 'adminuser',
+				'ccontrol' => '用户'
+				),
 
 			),
 		'actions' => array
@@ -108,6 +118,11 @@ return array(
 				'eaction' => 'set',
 				'caction' => '设置'
 				),
+			7 => array
+				(
+				'eaction' => 'updatepass',
+				'caction' => '修改密码'
+				),
 
 			),
 		'ptype' => array
@@ -130,7 +145,9 @@ return array(
 			'admintools' => '系统工具',
 			'adminwarranty' => '质保',
 			'adminwarrantydetail' => '质保详情',
-			'login' => '登录'
+			'login' => '登录',
+			'adminwarrantyaction' => '质保操作',
+			'adminuser' => '用户'
 			),
 		'action' => array
 			(
@@ -139,7 +156,8 @@ return array(
 			'update' => '修改',
 			'delete' => '删除',
 			'setting' => '设置',
-			'set' => '设置'
+			'set' => '设置',
+			'updatepass' => '修改密码'
 			),
 
 		),

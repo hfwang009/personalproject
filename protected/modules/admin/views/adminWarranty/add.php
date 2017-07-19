@@ -198,7 +198,7 @@
                                                         <input type="text" class="form-control product_product" name="product[0][series_number]" id="product_0_series_number" onblur="js_get_model(this)" ng-id="0">
                                                         <input type="hidden" class="form-control" name="product[0][pid]" id="product_0_pid" >
                                                         <input type="hidden" class="form-control" name="product[0][mid]" id="product_0_mid" >
-                                                        <input type="hidden" class="form-control" name="product[0][sid]" id="product_0_sid" >
+                                                        <input type="hidden" class="form-control" name="product[0][sid]" id="product_0_sid" ng-tip="storeid">
                                                     </div>
                                                 </div>
                                             </td>
@@ -610,7 +610,7 @@
 //                    var _storeid = msg.product.storeid;
 //                    arr.push(_storeid);
                     var ids = create_new_arr();
-                    $('#_storeid').val(ids);
+                    console.log(ids);
                     $('#_storeid').val(ids);
                     $('#product_'+id+'_type').val('');
                     $('#product_'+id+'_num').val('');
@@ -633,9 +633,10 @@
         });
     }
 
-    function create_new_arr(arr){
+    function create_new_arr(){
         var new_arr = [];
         $('input[ng-tip="storeid"]').each(function(i,item){
+            console.log($(item).val());
             //判断元素是否存在于new_arr中，如果不存在则插入到new_arr的最后
             if($.inArray($(item).val(),new_arr)==-1&&!isEmpty($(item).val())) {
                 new_arr.push($(item).val());
@@ -751,6 +752,8 @@
             return false;
         }
         var _storeid = $('#_storeid').val();
+        console.log(_storeid);
+        console.log(storeid);
         if(storeid!=_storeid){
             show_tip_message('产品与门店不匹配，请重新选择产品序列号！');
             return false;

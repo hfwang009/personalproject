@@ -59,7 +59,7 @@
                                             <a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->module->id.'/'.Yii::app()->controller->id . '/update',array('id'=>$_model['id']));?>" class="icon icon-draft md-tip" title="修改密码"></a>
                                             <?php if($_model['id']!=1){ ?>
                                                 <a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->module->id.'/'.Yii::app()->controller->id . '/add',array('id'=>$_model['id']));?>" class="icon icon-edit md-tip" title="编辑管理员"></a>
-                                                <a href="javascript:;" ng-click="js_delete()" ng-id="<?php echo $_model['id'] ?>" class="icon icon-delete md-tip" title="删除管理员"></a>
+                                                <!--<a href="javascript:;" ng-click="js_delete()" ng-id="<?php echo $_model['id'] ?>" class="icon icon-delete md-tip" title="删除管理员"></a>-->
                                             <?php } ?>
 
                                         </td>

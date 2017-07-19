@@ -542,6 +542,9 @@ class CUtils {
         return $message;
     }
 
+    /**
+     * 格式化用户质保详情数据（已废弃）
+     */
     public static function formatdata($result){
         $products = Product::model()->getProductData();
         $models = Models::model()->getModelData();
@@ -590,6 +593,9 @@ class CUtils {
         return $result;
     }
 
+    /**
+     * 格式化用户质保详情数据（目前使用中）
+     */
     public static function formatdata1($result){
         $products = Product::model()->getProductData();
 //        $models = Models::model()->getModelData();
@@ -675,6 +681,9 @@ class CUtils {
         return $result;
     }
 
+    /*
+     * 添加后台管理员的操作日志，列表和setting操作没有统计进去
+     * */
     public static function addAdminLog($controller,$action,$request,$adminid){
         $control_arr = Yii::app()->params['conf']['setting']['controller'];
         $act_arr = Yii::app()->params['conf']['setting']['action'];
@@ -695,30 +704,14 @@ class CUtils {
         return true;
     }
 
-    public static function getUserIp(){
-        $ip=false;
-        if(!empty($_SERVER["HTTP_CLIENT_IP"])){
-            $ip = $_SERVER["HTTP_CLIENT_IP"];
-        }
-        if (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
-            $ips = explode (", ", $_SERVER['HTTP_X_FORWARDED_FOR']);
-            if ($ip) { array_unshift($ips, $ip); $ip = FALSE; }
-            for ($i = 0; $i < count($ips); $i++) {
-                if (!eregi ("^(10│172.16│192.168).", $ips[$i])) {
-                    $ip = $ips[$i];
-                    break;
-                }
-            }
-        }
-        return ($ip ? $ip : $_SERVER['REMOTE_ADDR']);
-    }
-
-    public static function addMsgLog(){
-
-    }
+    /*
+     * 发送手机短信（阿里云短信服务。阿里内部与阿里大于竞争的另一短信接口，目前再试用当中）
+     * */
 
     public static function sendMsg($phone, $data, $type){
         $config = Yii::app()->params['conf']['phone'];
+//        require_once(dirname(__FILE__).'/protected/extensions/aliyunMsg/aliyun-php-sdk-core/Autoloader/Autoloader.php');
+//        require_once(Yii::app()->basePath.DIRECTORY_SEPARATOR.'extensions'.DIRECTORY_SEPARATOR.'aliyunMsg'.DIRECTORY_SEPARATOR.'aliyun-php-sdk-core'.DIRECTORY_SEPARATOR.'Autoloader'.DIRECTORY_SEPARATOR.'Autoloader.php');
 //        require_once(Yii::app()->basePath.DIRECTORY_SEPARATOR.'extensions'.DIRECTORY_SEPARATOR.'aliyunMsg'.DIRECTORY_SEPARATOR.'aliyun-php-sdk-core'.DIRECTORY_SEPARATOR.'Regions'.DIRECTORY_SEPARATOR.'ProductDomain.php');
 //        require_once(Yii::app()->basePath.DIRECTORY_SEPARATOR.'extensions'.DIRECTORY_SEPARATOR.'aliyunMsg'.DIRECTORY_SEPARATOR.'aliyun-php-sdk-core'.DIRECTORY_SEPARATOR.'Regions'.DIRECTORY_SEPARATOR.'Endpoint.php');
 //        require_once(Yii::app()->basePath.DIRECTORY_SEPARATOR.'extensions'.DIRECTORY_SEPARATOR.'aliyunMsg'.DIRECTORY_SEPARATOR.'aliyun-php-sdk-core'.DIRECTORY_SEPARATOR.'Regions'.DIRECTORY_SEPARATOR.'EndpointProvider.php');
@@ -773,19 +766,19 @@ class CUtils {
     }
 
     /**
-     * 发送手机短信（阿里大于短信服务，已废弃）
+     * 发送手机短信（阿里大于短信服务，已废弃。未来可能会被重新使用）
      */
     public static function sendSms($phone, $data, $type){
         $config = Yii::app()->params['conf']['phone'];
         $config['appkey'] = '24515502';
         $config['secretKey'] = '632a8a9927f7f3e551a95b7074b64080';
         $config['signname'] = '可观';
-//        require_once(Yii::app()->basePath.DIRECTORY_SEPARATOR.'extensions'.DIRECTORY_SEPARATOR.'Dayu'.DIRECTORY_SEPARATOR.'TopSdk.php');
-        require_once(Yii::app()->basePath.DIRECTORY_SEPARATOR.'extensions'.DIRECTORY_SEPARATOR.'Dayu'.DIRECTORY_SEPARATOR.'top'.DIRECTORY_SEPARATOR.'TopClient.php');
-        require_once(Yii::app()->basePath.DIRECTORY_SEPARATOR.'extensions'.DIRECTORY_SEPARATOR.'Dayu'.DIRECTORY_SEPARATOR.'top'.DIRECTORY_SEPARATOR.'ResultSet.php');
-        require_once(Yii::app()->basePath.DIRECTORY_SEPARATOR.'extensions'.DIRECTORY_SEPARATOR.'Dayu'.DIRECTORY_SEPARATOR.'top'.DIRECTORY_SEPARATOR.'RequestCheckUtil.php');
-        require_once(Yii::app()->basePath.DIRECTORY_SEPARATOR.'extensions'.DIRECTORY_SEPARATOR.'Dayu'.DIRECTORY_SEPARATOR.'top'.DIRECTORY_SEPARATOR.'TopLogger.php');
-        require_once(Yii::app()->basePath.DIRECTORY_SEPARATOR.'extensions'.DIRECTORY_SEPARATOR.'Dayu'.DIRECTORY_SEPARATOR.'top'.DIRECTORY_SEPARATOR.'request'.DIRECTORY_SEPARATOR.'AlibabaAliqinFcSmsNumSendRequest.php');
+        require_once(Yii::app()->basePath.DIRECTORY_SEPARATOR.'extensions'.DIRECTORY_SEPARATOR.'Dayu'.DIRECTORY_SEPARATOR.'TopSdk.php');
+//        require_once(Yii::app()->basePath.DIRECTORY_SEPARATOR.'extensions'.DIRECTORY_SEPARATOR.'Dayu'.DIRECTORY_SEPARATOR.'top'.DIRECTORY_SEPARATOR.'TopClient.php');
+//        require_once(Yii::app()->basePath.DIRECTORY_SEPARATOR.'extensions'.DIRECTORY_SEPARATOR.'Dayu'.DIRECTORY_SEPARATOR.'top'.DIRECTORY_SEPARATOR.'ResultSet.php');
+//        require_once(Yii::app()->basePath.DIRECTORY_SEPARATOR.'extensions'.DIRECTORY_SEPARATOR.'Dayu'.DIRECTORY_SEPARATOR.'top'.DIRECTORY_SEPARATOR.'RequestCheckUtil.php');
+//        require_once(Yii::app()->basePath.DIRECTORY_SEPARATOR.'extensions'.DIRECTORY_SEPARATOR.'Dayu'.DIRECTORY_SEPARATOR.'top'.DIRECTORY_SEPARATOR.'TopLogger.php');
+//        require_once(Yii::app()->basePath.DIRECTORY_SEPARATOR.'extensions'.DIRECTORY_SEPARATOR.'Dayu'.DIRECTORY_SEPARATOR.'top'.DIRECTORY_SEPARATOR.'request'.DIRECTORY_SEPARATOR.'AlibabaAliqinFcSmsNumSendRequest.php');
         $c = new \TopClient;
         $c->appkey = strval($config['appkey']);
         $c->secretKey = $config['secretKey'];
@@ -799,5 +792,381 @@ class CUtils {
         $res = $c->execute($req);
 //        print_r($res);exit;
         return $res;
+    }
+
+    /*
+     * 发送手机短信的统一入口
+     * @params: post  array   格式必须是这种二维数组$post['warranty'][]，是发送的短信的参数
+     * @params: type  string  发送短信的类型，必须与站点设置中类型一一对应
+     * @params: warranty  array  发送短信的相关数据数组
+     * */
+    public static function sendSnsMsg($post,$type='auth',$warranty=false){
+        $message = array('status'=>false,'msg'=>'');
+        switch($type){
+            //发送质保成功/失败后的通知短信
+            case 'success':
+            case 'fail':
+                $message = CUtils::sendMessage($post,$warranty,$type);
+                break;
+            //发送前台用户提交质保的验证吗信息
+            case 'auth':
+                $message = CUtils::sendPhoneCode($post['Warranty']['phone']);
+                break;
+        }
+        return $message;
+    }
+
+    //发送质保成功/失败后的通知短信
+    public static function sendMessage($post,$warranty=false,$type=false){
+        $message = array('status'=>false,'msg'=>'发送质保通知失败！');
+        if(!in_array($post['Warranty']['status'],array(0,1,2))){
+            return false;
+        }
+        if($post['Warranty']['status']==1&&empty($warranty)){
+            return false;
+        }
+        if(!empty($warranty)&&$warranty['is_send']==1){
+            return true;
+        }
+        $config = Yii::app()->params['conf']['phone1'];
+        $setting = $config[$type];
+        switch($post['Warranty']['status']){
+            case 1:
+                $smsData = array(
+                    'phone' => $post['Warranty']['telephone'],
+                    'param' => array('name' => $post['Warranty']['name'],'number'=>$warranty['series_number']),
+                    'type' => $config['success']['code']
+                );
+                break;
+            case 2:
+            case 0:
+                $smsData = array(
+                    'phone' => $post['Warranty']['telephone'],
+                    'param' => array('name' => $post['Warranty']['name']),
+                    'type' => $config['fail']['code']
+                );
+                break;
+        }
+        $rs = CUtils::sendMsg($smsData['phone'], $smsData['param'], $smsData['type']);
+        if($rs->Code=='OK'){
+            //记录发送的短信，记录发送短信的相关状态后台可以补发（需要新增字段来判断是否发送短信）
+//            $msgid = $rs->RequestId;
+//            $bizid = $rs->BizId;
+//            $_message = $rs->Message;
+            $message['status'] = true;
+            $message['msg'] = '发送质保通知成功！';
+            if($post['Warranty']['status']==1){
+                $warranty->is_send = 1;
+                $warranty->save();
+            }
+        }
+        CUtils::addMsgLog($type,$post['Warranty']['telephone'],$setting['code'],$rs);
+        return $message;
+    }
+
+    //发送前台用户提交质保的验证吗信息
+    public static function sendPhoneCode($phone,$type='auth'){
+        $message = array('status'=>false,'msg'=>'验证码发送失败');
+        $flag = false;
+        $config = Yii::app()->params['conf']['phone1'];
+        $setting = $config[$type];
+        $res = AuthCodeRecord::model()->find('auth_number="'.$phone.'" AND auth_type="phone" AND auth_cate="'.$setting['code'].'"');
+        $verify = rand(10000000, 99999999);
+        if(!empty($res)){
+            if(date('Ymd') == date('Ymd',$res['ctime'])){
+                if($res['auth_count'] < $setting['count']){
+                    //发送添加
+                    $res->auth_content = $verify;
+                    $res->auth_count = $res['auth_count']+1;
+                    $res->ctime = time();
+                    if($res->save()){
+                        $flag = true;
+                    }
+                }else{
+                    //提示错误
+                    $message['msg'] = '同一个手机号每天最多只能发送' . $setting['count'] . '次验证码。';
+                }
+            }elseif(date('Ymd') > date('Ymd',$res['ctime'])){
+                //发送清零
+                $res->auth_content = $verify;
+                $res->auth_count = 1;
+                $res->ctime = time();
+                if($res->save()){
+                    $flag = true;
+                }
+            }
+        }else{
+            //发送添加
+            $model = new AuthCodeRecord();
+            $model->auth_number = $phone;
+            $model->auth_type = 'phone';
+            $model->auth_cate = $setting['code'];
+            $model->auth_content = $verify;
+            $model->auth_count = 1;
+            $model->ctime = time();
+            if($model->save()){
+                $flag = true;
+            }
+        }
+        if($flag){
+            $time = $setting['time']/60;
+            $data = array('numb' => strval($verify));
+            $result = CUtils::sendMsg($phone, $data, $setting['code']);
+            if($result->Code=='OK'){
+                //记录发送的短信，记录发送短信的相关状态后台可以补发（需要新增字段来判断是否发送短信）
+//            $msgid = $result->RequestId;
+//            $bizid = $result->BizId;
+//            $message = $result->Message;
+
+                $message['status'] = true;
+                $message['msg'] = '验证码发送成功';
+            }
+
+            CUtils::addMsgLog($type,$phone,$setting['code'],$result);
+        }
+        return $message;
+    }
+
+    /*
+     * 为所有的发送短信操作添加日志记录
+     * */
+    public static function addMsgLog($type,$phone,$code,$result){
+        $record['type'] = $type;
+        $record['phone'] = $phone;
+        $record['sms_code'] = $code;
+        $record['request_id'] = $result->RequestId;
+        $record['status'] = $result->Code=='OK'?1:2;
+        $record['ctime'] = time();
+        $record['sendtime'] = $result->Code=='OK'?time():null;
+        $record['bizid'] = $result->BizId;
+        $record['code'] = $result->Code;
+        $record['message'] = $result->Message;
+        $record['ext'] = base64_encode(serialize(CUtils::object_to_array($result)));
+        $model = new SmsRecord();
+        $model->attributes = $record;
+        $model->type = $record['type'];
+        $model->ctime = $record['ctime'];
+        $model->sendtime = $record['sendtime'];
+        if($model->validate()){
+            if($model->save()){
+                return true;
+            }
+        }else{
+            $model->getErrors();
+        }
+        return true;
+    }
+
+
+    /*
+     * 获取当前访问ip方法1
+     * */
+    public static function getUserIp(){
+        $ip=false;
+        if(!empty($_SERVER["HTTP_CLIENT_IP"])){
+            $ip = $_SERVER["HTTP_CLIENT_IP"];
+        }
+        if (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+            $ips = explode (", ", $_SERVER['HTTP_X_FORWARDED_FOR']);
+            if ($ip) { array_unshift($ips, $ip); $ip = FALSE; }
+            for ($i = 0; $i < count($ips); $i++) {
+                if (!eregi ("^(10│172.16│192.168).", $ips[$i])) {
+                    $ip = $ips[$i];
+                    break;
+                }
+            }
+        }
+        return ($ip ? $ip : $_SERVER['REMOTE_ADDR']);
+    }
+
+    /*
+     * 获取当前访问ip方法2
+     * 获取客户端ip地址
+     * 注意:如果你想要把ip记录到服务器上,请在写库时先检查一下ip的数据是否安全
+     * */
+    public static function getUserIp1(){
+        if (getenv('HTTP_CLIENT_IP')) {
+            $ip = getenv('HTTP_CLIENT_IP');
+        }
+        elseif (getenv('HTTP_X_FORWARDED_FOR')) { //获取客户端用代理服务器访问时的真实ip 地址
+            $ip = getenv('HTTP_X_FORWARDED_FOR');
+        }
+        elseif (getenv('HTTP_X_FORWARDED')) {
+            $ip = getenv('HTTP_X_FORWARDED');
+        }
+        elseif (getenv('HTTP_FORWARDED_FOR')) {
+            $ip = getenv('HTTP_FORWARDED_FOR');
+        }
+        elseif (getenv('HTTP_FORWARDED')) {
+            $ip = getenv('HTTP_FORWARDED');
+        }
+        else {
+            $ip = $_SERVER['REMOTE_ADDR'];
+        }
+        return $ip;
+    }
+
+
+    /*
+     * 获取当前访问ip方法3
+     * */
+    public static function getIp(){
+        $onlineip='';
+        if(getenv('HTTP_CLIENT_IP')&&strcasecmp(getenv('HTTP_CLIENT_IP'),'unknown')){
+            $onlineip=getenv('HTTP_CLIENT_IP');
+        } elseif(getenv('HTTP_X_FORWARDED_FOR')&&strcasecmp(getenv('HTTP_X_FORWARDED_FOR'),'unknown')){
+            $onlineip=getenv('HTTP_X_FORWARDED_FOR');
+        } elseif(getenv('REMOTE_ADDR')&&strcasecmp(getenv('REMOTE_ADDR'),'unknown')){
+            $onlineip=getenv('REMOTE_ADDR');
+        } elseif(isset($_SERVER['REMOTE_ADDR'])&&$_SERVER['REMOTE_ADDR']&&strcasecmp($_SERVER['REMOTE_ADDR'],'unknown')){
+            $onlineip=$_SERVER['REMOTE_ADDR'];
+        }
+        return $onlineip;
+    }
+
+    /*
+    * 将汉字转换为拼音
+    * */
+    public static function getPyName($res){
+        $pcountry = '';
+        $pcity = '';
+        $pprovince = '';
+        if($res){
+            $country = $res['country'];
+            $province = $res['province'];
+            $city = $res['city'];
+            $py = new PinYin();
+            $pcountry = $py->getAllPY($country);
+            $pprovince = $py->getAllPY($province);
+            $pcity = $py->getAllPY($city);
+        }
+        return array(
+            $pcountry,
+            $pcity,
+            $pprovince
+        );
+    }
+
+    /*
+     * 获取城市信息api
+     * 通过用户的访问ip查询用户地区信息的首选方法（在新浪网ip查用户地区信息接口正常的时候使用）
+     * */
+    public static function getLocation($ip){
+        $curl = curl_init();
+        curl_setopt($curl, CURLOPT_URL, "http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=json&ip=".$ip);
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($curl, CURLOPT_CONNECTTIMEOUT, 30);
+        $str = curl_exec($curl);
+        curl_close($curl);
+        if($str==-2){
+            $res = CUtils::getAddressData($ip);
+            $tmp['country'] = '';
+            $tmp['province'] = $res[0];
+            $tmp['city'] = $res[1];
+            $str = json_encode($tmp);
+        }
+        return $str;
+    }
+
+    /*
+    * 通过用户的访问ip查询用户地区信息的备选方法（在新浪网ip查用户地区信息接口异常的时候使用）
+    * */
+    public static function getAddressData($ip){
+        Yii::import('application.extensions.getIp.IpLocation');
+        $ip_data = new IpLocation('qqwry.dat');
+        $address = $ip_data->getlocation($ip);
+        if(!empty($address['country'])||!empty($address['area'])){
+            $country = !empty($address['country'])?iconv("gbk","utf-8",$address['country']):'';
+            $area = !empty($address['area'])?iconv("gbk","utf-8",$address['area']):'';
+        }else{
+            $res = CUtils::getLocation($ip);
+            $country = !empty($res['country'])?$res['country']:'';
+            $city = !empty($res['country'])?$res['province']:'';
+            $area = !empty($res['country'])?$res['city']:'';
+        }
+
+        return array(
+            $country,
+            $area
+        );
+    }
+
+    /*
+     * 测试mongodb
+     * */
+    public static function TestMongoDb(){
+//        phpinfo();exit;
+        $uri = "mongodb://192.168.0.100:27017";
+        $client = new MongoDb\Driver\Manager($uri);
+//        $client = new MongoClient($uri);
+//        print_r($client);
+//        $query = new MongoCode()
+//        $client = new MongoClient($uri);
+        $client = new Mongo($uri);
+        print_r($client);
+
+        $db = $client->test;
+        print_r($db);
+        $collection = $db->person;
+        print_r($collection);
+
+        $count = $collection->count();
+
+        $collections = $collection->find()->snapshot();
+
+        print_r($count);
+        print_r($collections);
+        foreach($collections as $k=>$v){
+            echo $k;
+            var_dump($v);
+        }
+        exit;
+    }
+
+    /*
+     * 测试阿里大于的短信接口
+     * */
+    public static function TestSmsMsg(){
+        CUtils::sendSms('13992891749',array('name'=>'张小辉','number'=>'1234567890'),'SMS_73500002');exit;
+    }
+
+
+    /**
+     * 数组 转 对象
+     *
+     * @param array $arr 数组
+     * @return object
+     */
+    public static function array_to_object($arr) {
+        if (gettype($arr) != 'array') {
+            return;
+        }
+        foreach ($arr as $k => $v) {
+            if (gettype($v) == 'array' || getType($v) == 'object') {
+                $arr[$k] = (object)CUtils::array_to_object($v);
+            }
+        }
+
+        return (object)$arr;
+    }
+
+    /**
+     * 对象 转 数组
+     *
+     * @param object $obj 对象
+     * @return array
+     */
+    public static function object_to_array($obj) {
+        $obj = (array)$obj;
+        foreach ($obj as $k => $v) {
+            if (gettype($v) == 'resource') {
+                return;
+            }
+            if (gettype($v) == 'object' || gettype($v) == 'array') {
+                $obj[$k] = (array)CUtils::object_to_array($v);
+            }
+        }
+
+        return $obj;
     }
 }

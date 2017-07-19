@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2017-07-18 19:11:54
+Date: 2017-07-19 19:09:33
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -35,7 +35,7 @@ CREATE TABLE `car_admin` (
 -- ----------------------------
 -- Records of car_admin
 -- ----------------------------
-INSERT INTO `car_admin` VALUES ('1', 'admin', 'e10adc3949ba59abbe56e057f20f883e', '2', '1', null, null, null, '1495159581');
+INSERT INTO `car_admin` VALUES ('1', 'admin', 'c33367701511b4f6020ec61ded352059', '2', '1', null, null, null, '1500462478');
 INSERT INTO `car_admin` VALUES ('2', 'admin1', 'e10adc3949ba59abbe56e057f20f883e', '2', '5', '43', '69', '71', '1497496213');
 INSERT INTO `car_admin` VALUES ('3', 'admin2', 'e10adc3949ba59abbe56e057f20f883e', '1', '5', null, null, null, '1498638538');
 
@@ -53,7 +53,7 @@ CREATE TABLE `car_admin_log` (
   `admin_id` int(13) DEFAULT NULL COMMENT '操作管理员id',
   `ctime` int(13) DEFAULT NULL COMMENT '操作时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=83 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=123 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of car_admin_log
@@ -140,6 +140,46 @@ INSERT INTO `car_admin_log` VALUES ('79', 'adminwarranty', 'add', '质保', '编
 INSERT INTO `car_admin_log` VALUES ('80', 'adminwarranty', 'add', '质保', '编辑', '127.0.0.1', '1', '1500375679');
 INSERT INTO `car_admin_log` VALUES ('81', 'adminwarranty', 'add', '质保', '编辑', '127.0.0.1', '1', '1500375785');
 INSERT INTO `car_admin_log` VALUES ('82', 'adminwarranty', 'add', '质保', '编辑', '127.0.0.1', '1', '1500375864');
+INSERT INTO `car_admin_log` VALUES ('83', 'adminwarranty', 'add', '质保', '添加', '127.0.0.1', '1', '1500434516');
+INSERT INTO `car_admin_log` VALUES ('84', 'adminwarranty', 'add', '质保', '编辑', '127.0.0.1', '1', '1500434577');
+INSERT INTO `car_admin_log` VALUES ('85', 'adminwarranty', 'add', '质保', '编辑', '127.0.0.1', '1', '1500434586');
+INSERT INTO `car_admin_log` VALUES ('86', 'adminwarranty', 'add', '质保', '编辑', '127.0.0.1', '1', '1500434595');
+INSERT INTO `car_admin_log` VALUES ('87', 'adminwarranty', 'add', '质保', '编辑', '127.0.0.1', '1', '1500434643');
+INSERT INTO `car_admin_log` VALUES ('88', 'adminwarranty', 'add', '质保', '编辑', '127.0.0.1', '1', '1500434649');
+INSERT INTO `car_admin_log` VALUES ('89', 'adminwarranty', 'add', '质保', '编辑', '127.0.0.1', '1', '1500434655');
+INSERT INTO `car_admin_log` VALUES ('90', 'adminsettingpanel', 'set', '网站设置', '设置', '127.0.0.1', '1', '1500459300');
+INSERT INTO `car_admin_log` VALUES ('91', 'adminwarrantyaction', 'add', '质保操作', '添加', '127.0.0.1', '1', '1500459332');
+INSERT INTO `car_admin_log` VALUES ('92', 'adminwarrantyaction', 'add', '质保操作', '添加', '127.0.0.1', '1', '1500459367');
+INSERT INTO `car_admin_log` VALUES ('93', 'adminwarrantyaction', 'add', '质保操作', '添加', '127.0.0.1', '1', '1500459372');
+INSERT INTO `car_admin_log` VALUES ('94', 'adminwarrantyaction', 'add', '质保操作', '添加', '127.0.0.1', '1', '1500459710');
+INSERT INTO `car_admin_log` VALUES ('95', 'adminwarrantyaction', 'add', '质保操作', '编辑', '127.0.0.1', '1', '1500459716');
+INSERT INTO `car_admin_log` VALUES ('96', 'adminwarrantyaction', 'add', '质保操作', '编辑', '127.0.0.1', '1', '1500459736');
+INSERT INTO `car_admin_log` VALUES ('97', 'adminwarrantyaction', 'add', '质保操作', '编辑', '127.0.0.1', '1', '1500459789');
+INSERT INTO `car_admin_log` VALUES ('98', 'adminwarrantyaction', 'add', '质保操作', '编辑', '127.0.0.1', '1', '1500459869');
+INSERT INTO `car_admin_log` VALUES ('99', 'adminwarrantyaction', 'add', '质保操作', '编辑', '127.0.0.1', '1', '1500460245');
+INSERT INTO `car_admin_log` VALUES ('100', 'adminwarrantyaction', 'add', '质保操作', '添加', '127.0.0.1', '1', '1500460361');
+INSERT INTO `car_admin_log` VALUES ('101', 'adminwarrantyaction', 'delete', '质保操作', '删除', '127.0.0.1', '1', '1500460366');
+INSERT INTO `car_admin_log` VALUES ('102', 'adminlist', 'update', '管理员', '修改', '127.0.0.1', '1', '1500461255');
+INSERT INTO `car_admin_log` VALUES ('103', 'adminlist', 'update', '管理员', '修改', '127.0.0.1', '1', '1500461391');
+INSERT INTO `car_admin_log` VALUES ('104', 'adminlist', 'update', '管理员', '修改', '127.0.0.1', '1', '1500461440');
+INSERT INTO `car_admin_log` VALUES ('105', 'adminlist', 'update', '管理员', '修改', '127.0.0.1', '1', '1500461443');
+INSERT INTO `car_admin_log` VALUES ('106', 'adminlist', 'update', '管理员', '修改', '127.0.0.1', '1', '1500461450');
+INSERT INTO `car_admin_log` VALUES ('107', 'adminlist', 'update', '管理员', '修改', '127.0.0.1', '1', '1500461473');
+INSERT INTO `car_admin_log` VALUES ('108', 'adminlist', 'update', '管理员', '修改', '127.0.0.1', '1', '1500461482');
+INSERT INTO `car_admin_log` VALUES ('109', 'adminsettingpanel', 'set', '网站设置', '设置', '127.0.0.1', '1', '1500462035');
+INSERT INTO `car_admin_log` VALUES ('110', 'adminuser', 'updatepass', '用户', '修改密码', '127.0.0.1', '1', '1500462048');
+INSERT INTO `car_admin_log` VALUES ('111', 'adminuser', 'updatepass', '用户', '修改密码', '127.0.0.1', '1', '1500462108');
+INSERT INTO `car_admin_log` VALUES ('112', 'adminuser', 'updatepass', '用户', '修改密码', '127.0.0.1', '1', '1500462180');
+INSERT INTO `car_admin_log` VALUES ('113', 'adminuser', 'updatepass', '用户', '修改密码', '127.0.0.1', '1', '1500462191');
+INSERT INTO `car_admin_log` VALUES ('114', 'adminuser', 'updatepass', '用户', '修改密码', '127.0.0.1', '1', '1500462211');
+INSERT INTO `car_admin_log` VALUES ('115', 'adminuser', 'updatepass', '用户', '修改密码', '127.0.0.1', '1', '1500462311');
+INSERT INTO `car_admin_log` VALUES ('116', 'adminuser', 'updatepass', '用户', '修改密码', '127.0.0.1', '1', '1500462323');
+INSERT INTO `car_admin_log` VALUES ('117', 'adminuser', 'updatepass', '用户', '修改密码', '127.0.0.1', '1', '1500462345');
+INSERT INTO `car_admin_log` VALUES ('118', 'adminuser', 'updatepass', '用户', '修改密码', '127.0.0.1', '1', '1500462355');
+INSERT INTO `car_admin_log` VALUES ('119', 'adminuser', 'updatepass', '用户', '修改密码', '127.0.0.1', '1', '1500462450');
+INSERT INTO `car_admin_log` VALUES ('120', 'adminuser', 'updatepass', '用户', '修改密码', '127.0.0.1', '1', '1500462457');
+INSERT INTO `car_admin_log` VALUES ('121', 'adminuser', 'updatepass', '用户', '修改密码', '127.0.0.1', '1', '1500462470');
+INSERT INTO `car_admin_log` VALUES ('122', 'adminuser', 'updatepass', '用户', '修改密码', '127.0.0.1', '1', '1500462478');
 
 -- ----------------------------
 -- Table structure for car_admin_privilieges
@@ -269,7 +309,7 @@ CREATE TABLE `car_auth_code_record` (
 -- Records of car_auth_code_record
 -- ----------------------------
 INSERT INTO `car_auth_code_record` VALUES ('1', '13992891749', 'phone', 'SMS_74650016', '60534362', '2', '1499497910');
-INSERT INTO `car_auth_code_record` VALUES ('2', '13992891749', 'phone', 'SMS_77475079', '53651428', '1', '1500372344');
+INSERT INTO `car_auth_code_record` VALUES ('2', '13992891749', 'phone', 'SMS_77475079', '37397155', '2', '1500445292');
 
 -- ----------------------------
 -- Table structure for car_brand
@@ -304,7 +344,7 @@ CREATE TABLE `car_config` (
 -- ----------------------------
 -- Records of car_config
 -- ----------------------------
-INSERT INTO `car_config` VALUES ('setting', 'a:3:{s:11:\"controllers\";a:14:{i:1;a:2:{s:8:\"econtrol\";s:12:\"adminarticle\";s:8:\"ccontrol\";s:6:\"文章\";}i:2;a:2:{s:8:\"econtrol\";s:10:\"adminbrand\";s:8:\"ccontrol\";s:6:\"品牌\";}i:3;a:2:{s:8:\"econtrol\";s:9:\"adminlist\";s:8:\"ccontrol\";s:9:\"管理员\";}i:4;a:2:{s:8:\"econtrol\";s:10:\"adminmodel\";s:8:\"ccontrol\";s:6:\"模型\";}i:5;a:2:{s:8:\"econtrol\";s:9:\"adminnews\";s:8:\"ccontrol\";s:6:\"新闻\";}i:6;a:2:{s:8:\"econtrol\";s:12:\"adminpackage\";s:8:\"ccontrol\";s:6:\"套餐\";}i:7;a:2:{s:8:\"econtrol\";s:16:\"adminprivilieges\";s:8:\"ccontrol\";s:6:\"权限\";}i:8;a:2:{s:8:\"econtrol\";s:9:\"adminrole\";s:8:\"ccontrol\";s:6:\"角色\";}i:9;a:2:{s:8:\"econtrol\";s:17:\"adminsettingpanel\";s:8:\"ccontrol\";s:12:\"网站设置\";}i:10;a:2:{s:8:\"econtrol\";s:10:\"adminstore\";s:8:\"ccontrol\";s:6:\"门店\";}i:11;a:2:{s:8:\"econtrol\";s:10:\"admintools\";s:8:\"ccontrol\";s:12:\"系统工具\";}i:12;a:2:{s:8:\"econtrol\";s:13:\"adminwarranty\";s:8:\"ccontrol\";s:6:\"质保\";}i:13;a:2:{s:8:\"econtrol\";s:19:\"adminwarrantydetail\";s:8:\"ccontrol\";s:12:\"质保详情\";}i:14;a:2:{s:8:\"econtrol\";s:5:\"login\";s:8:\"ccontrol\";s:6:\"登录\";}}s:7:\"actions\";a:6:{i:1;a:2:{s:7:\"eaction\";s:5:\"index\";s:7:\"caction\";s:6:\"列表\";}i:2;a:2:{s:7:\"eaction\";s:3:\"add\";s:7:\"caction\";s:6:\"添加\";}i:3;a:2:{s:7:\"eaction\";s:6:\"update\";s:7:\"caction\";s:6:\"修改\";}i:4;a:2:{s:7:\"eaction\";s:6:\"delete\";s:7:\"caction\";s:6:\"删除\";}i:5;a:2:{s:7:\"eaction\";s:7:\"setting\";s:7:\"caction\";s:6:\"设置\";}i:6;a:2:{s:7:\"eaction\";s:3:\"set\";s:7:\"caction\";s:6:\"设置\";}}s:5:\"ptype\";a:2:{i:1;s:6:\"车身\";i:2;s:6:\"前挡\";}}');
+INSERT INTO `car_config` VALUES ('setting', 'a:3:{s:11:\"controllers\";a:16:{i:1;a:2:{s:8:\"econtrol\";s:12:\"adminarticle\";s:8:\"ccontrol\";s:6:\"文章\";}i:2;a:2:{s:8:\"econtrol\";s:10:\"adminbrand\";s:8:\"ccontrol\";s:6:\"品牌\";}i:3;a:2:{s:8:\"econtrol\";s:9:\"adminlist\";s:8:\"ccontrol\";s:9:\"管理员\";}i:4;a:2:{s:8:\"econtrol\";s:10:\"adminmodel\";s:8:\"ccontrol\";s:6:\"模型\";}i:5;a:2:{s:8:\"econtrol\";s:9:\"adminnews\";s:8:\"ccontrol\";s:6:\"新闻\";}i:6;a:2:{s:8:\"econtrol\";s:12:\"adminpackage\";s:8:\"ccontrol\";s:6:\"套餐\";}i:7;a:2:{s:8:\"econtrol\";s:16:\"adminprivilieges\";s:8:\"ccontrol\";s:6:\"权限\";}i:8;a:2:{s:8:\"econtrol\";s:9:\"adminrole\";s:8:\"ccontrol\";s:6:\"角色\";}i:9;a:2:{s:8:\"econtrol\";s:17:\"adminsettingpanel\";s:8:\"ccontrol\";s:12:\"网站设置\";}i:10;a:2:{s:8:\"econtrol\";s:10:\"adminstore\";s:8:\"ccontrol\";s:6:\"门店\";}i:11;a:2:{s:8:\"econtrol\";s:10:\"admintools\";s:8:\"ccontrol\";s:12:\"系统工具\";}i:12;a:2:{s:8:\"econtrol\";s:13:\"adminwarranty\";s:8:\"ccontrol\";s:6:\"质保\";}i:13;a:2:{s:8:\"econtrol\";s:19:\"adminwarrantydetail\";s:8:\"ccontrol\";s:12:\"质保详情\";}i:14;a:2:{s:8:\"econtrol\";s:5:\"login\";s:8:\"ccontrol\";s:6:\"登录\";}i:15;a:2:{s:8:\"econtrol\";s:19:\"adminwarrantyaction\";s:8:\"ccontrol\";s:12:\"质保操作\";}i:16;a:2:{s:8:\"econtrol\";s:9:\"adminuser\";s:8:\"ccontrol\";s:6:\"用户\";}}s:7:\"actions\";a:7:{i:1;a:2:{s:7:\"eaction\";s:5:\"index\";s:7:\"caction\";s:6:\"列表\";}i:2;a:2:{s:7:\"eaction\";s:3:\"add\";s:7:\"caction\";s:6:\"添加\";}i:3;a:2:{s:7:\"eaction\";s:6:\"update\";s:7:\"caction\";s:6:\"修改\";}i:4;a:2:{s:7:\"eaction\";s:6:\"delete\";s:7:\"caction\";s:6:\"删除\";}i:5;a:2:{s:7:\"eaction\";s:7:\"setting\";s:7:\"caction\";s:6:\"设置\";}i:6;a:2:{s:7:\"eaction\";s:3:\"set\";s:7:\"caction\";s:6:\"设置\";}i:7;a:2:{s:7:\"eaction\";s:10:\"updatepass\";s:7:\"caction\";s:12:\"修改密码\";}}s:5:\"ptype\";a:2:{i:1;s:6:\"车身\";i:2;s:6:\"前挡\";}}');
 INSERT INTO `car_config` VALUES ('site', 'a:9:{s:4:\"logo\";s:30:\"/upload\\default\\1494405055.png\";s:4:\"name\";s:3:\"aaa\";s:5:\"title\";s:2:\"vv\";s:4:\"desc\";s:2:\"bb\";s:8:\"keywords\";s:2:\"cc\";s:7:\"company\";s:2:\"dd\";s:9:\"copyright\";s:2:\"dd\";s:7:\"aboutus\";s:1305:\"<p>作为最早进入中国的外商独资企业之一，3M中国在过去的30多年里始终密切把握中国经济的发展脉搏，秉承“扎根中国，服务中国”的本土化发展战略，凭借多元化的技术和解决方案，积极支持中国经济的建设和发展。从基础设施建设到制造业崛起，从中国制造到中国创造，从出口驱动到推动内需，3M将企业的发展战略与中国的发展步伐紧密相连，助力中国市场的快速发展。这也使得3M成为中国本土化最成功的企业之一。\r\n\r\n\r\n\r\n                    3M中国致力开发适合本地市场和客户需求的创新科技和产品，并专注创新人才的培养。目前，3M中国已拥有700多名本土研发人员，贡献了超过千项本地专利发明，并在 3M全球的研发网络中发挥着极为重要的作用。\r\n\r\n\r\n\r\n                    3M中国积极履行社会责任，积极参与环境保护，扶贫减灾，推进志愿者行动。3M中国的努力得到了社会的广泛认可，获得了“大中华区最具领导力企业”、“最受赞赏的在华外商投资企业”、“亚洲最受尊敬公司二十强”等诸多荣誉，并多次入选“世界500强在华贡献排行榜”且名列前茅。\r\n                </p>11111111111\";s:10:\"siteCallus\";s:258:\"<div class=\"phone\"><i class=\"fa  fa-phone\"></i><a href=\"tel:18475555555\"> 1-888-123-4567 </a></div><div class=\"email\"><i class=\"fa  fa-envelope-o \"></i><a href=\"mailto:contact@site.com\">contact@site.com</a> or use <a href=\"help/index\"> contact form</a></div>\";}');
 INSERT INTO `car_config` VALUES ('path', 'a:2:{s:10:\"systemfile\";s:18:\"D:\\new\\carproject\\\";s:11:\"defaultfile\";s:33:\"D:\\new\\carproject\\upload\\default\\\";}');
 INSERT INTO `car_config` VALUES ('phone', 'a:3:{s:8:\"signname\";s:18:\"傲邦名车服务\";s:6:\"appkey\";s:16:\"LTAIarXdLsgiKww4\";s:9:\"secretKey\";s:30:\"7Zt9crGZjNzEHPCnoLC7jhb0QjcWxJ\";}');
@@ -422,7 +462,7 @@ INSERT INTO `car_product` VALUES ('16', '2', '测试产品44', 'dfdfsdfdsfsdfds'
 INSERT INTO `car_product` VALUES ('17', '2', '11222', '21212121', '11', '11', '1', '<p>fdaf</p>', '13', 'dfsfda', 'fdaf', 'fdaf', null, null, null, '0', '1', '1500277498', null, null);
 INSERT INTO `car_product` VALUES ('18', '1', 'dfaadfda', 'fdaf', '11', '11', '1', '<p>fd</p>', '13', 'fdaf', 'dfa', 'fd', '1', '19', '20', '0', '1', '1500277836', null, null);
 INSERT INTO `car_product` VALUES ('19', '11', '11111111111111111111', '13211233', '20', '17', '4', '<p>fdfdf</p>', '5', 'fdfd', 'fdf', 'fdfd', '3078', null, null, '0', '1', '1500280593', '1500369754', null);
-INSERT INTO `car_product` VALUES ('20', '1', '123232', 'f677881', '21', '13', '5', '<p>fdafa</p>', '4', 'dafda', 'fda', 'fdfd', '22', '39', '41', '0', '1', '1500280853', '1500373595', null);
+INSERT INTO `car_product` VALUES ('20', '1', '123232', 'f677881', '21', '11', '5', '<p>fdafa</p>', '4', 'dafda', 'fda', 'fdfd', '22', '39', '41', '0', '1', '1500280853', '1500434650', null);
 
 -- ----------------------------
 -- Table structure for car_region
@@ -3969,20 +4009,27 @@ INSERT INTO `car_region` VALUES ('3523', '澳门特别行政区', '0', '820000')
 DROP TABLE IF EXISTS `car_sms_record`;
 CREATE TABLE `car_sms_record` (
   `id` int(13) NOT NULL AUTO_INCREMENT COMMENT '主键id',
-  `type` tinyint(1) DEFAULT '0' COMMENT '短信类型',
+  `type` varchar(20) DEFAULT NULL COMMENT '短信类型',
   `phone` char(13) DEFAULT NULL COMMENT '手机号码',
   `request_id` varchar(100) DEFAULT NULL COMMENT '短信request_id',
-  `status` tinyint(1) DEFAULT NULL COMMENT '发送状态',
-  `model` varchar(100) DEFAULT NULL COMMENT '返回参数model',
-  `err_code` varchar(100) DEFAULT NULL COMMENT '错误码',
-  `msg` varchar(100) DEFAULT NULL COMMENT '返回信息',
+  `status` tinyint(1) DEFAULT '1' COMMENT '发送状态：1：成功；2：失败；',
+  `bizid` varchar(100) DEFAULT NULL COMMENT '返回参数bizid',
+  `code` varchar(100) DEFAULT NULL COMMENT '错误码',
+  `message` varchar(100) DEFAULT NULL COMMENT '返回信息',
+  `sms_code` varchar(100) DEFAULT NULL COMMENT '短信模板编号',
   `ext` text COMMENT '短信发送信息',
+  `ctime` int(13) DEFAULT NULL COMMENT '调用接口时间',
+  `sendtime` int(13) DEFAULT NULL COMMENT '发送时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of car_sms_record
 -- ----------------------------
+INSERT INTO `car_sms_record` VALUES ('1', 'auth', '13992891749', 'B168E793-C4C0-44FF-86D6-4F40023040CA', '1', '108847286703^1111874542682', 'OK', 'OK', 'SMS_77475079', 'YTo0OntzOjc6Ik1lc3NhZ2UiO3M6MjoiT0siO3M6OToiUmVxdWVzdElkIjtzOjM2OiJCMTY4RTc5My1DNEMwLTQ0RkYtODZENi00RjQwMDIzMDQwQ0EiO3M6NToiQml6SWQiO3M6MjY6IjEwODg0NzI4NjcwM14xMTExODc0NTQyNjgyIjtzOjQ6IkNvZGUiO3M6MjoiT0siO30=', null, null);
+INSERT INTO `car_sms_record` VALUES ('2', 'auth', '13992891749', '256A8231-2B73-47FE-BE54-58B66233D637', '1', '108847485672^1111874806625', 'OK', 'OK', 'SMS_77475079', 'YTo0OntzOjc6Ik1lc3NhZ2UiO3M6MjoiT0siO3M6OToiUmVxdWVzdElkIjtzOjM2OiIyNTZBODIzMS0yQjczLTQ3RkUtQkU1NC01OEI2NjIzM0Q2MzciO3M6NToiQml6SWQiO3M6MjY6IjEwODg0NzQ4NTY3Ml4xMTExODc0ODA2NjI1IjtzOjQ6IkNvZGUiO3M6MjoiT0siO30=', null, null);
+INSERT INTO `car_sms_record` VALUES ('3', 'auth', '13992891749', '63785C86-6386-4460-BA44-5B8F50C2C84C', '1', '108850528020^1111878525880', 'OK', 'OK', 'SMS_77475079', 'YTo0OntzOjc6Ik1lc3NhZ2UiO3M6MjoiT0siO3M6OToiUmVxdWVzdElkIjtzOjM2OiI2Mzc4NUM4Ni02Mzg2LTQ0NjAtQkE0NC01QjhGNTBDMkM4NEMiO3M6NToiQml6SWQiO3M6MjY6IjEwODg1MDUyODAyMF4xMTExODc4NTI1ODgwIjtzOjQ6IkNvZGUiO3M6MjoiT0siO30=', null, null);
+INSERT INTO `car_sms_record` VALUES ('4', 'auth', '13992891749', '2435900F-857E-4826-92ED-FCC4DA0AADB3', '1', '108850618176^1111878572167', 'OK', 'OK', 'SMS_77475079', 'YTo0OntzOjc6Ik1lc3NhZ2UiO3M6MjoiT0siO3M6OToiUmVxdWVzdElkIjtzOjM2OiIyNDM1OTAwRi04NTdFLTQ4MjYtOTJFRC1GQ0M0REEwQUFEQjMiO3M6NToiQml6SWQiO3M6MjY6IjEwODg1MDYxODE3Nl4xMTExODc4NTcyMTY3IjtzOjQ6IkNvZGUiO3M6MjoiT0siO30=', '1500445292', '1500445292');
 
 -- ----------------------------
 -- Table structure for car_store
@@ -4081,7 +4128,7 @@ CREATE TABLE `car_warranty` (
   `extension` text COMMENT '质保的详细数据',
   `is_send` tinyint(2) NOT NULL DEFAULT '0' COMMENT '是否发送信息：0：未发送；1：已发送；',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=53 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=54 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of car_warranty
@@ -4135,6 +4182,32 @@ INSERT INTO `car_warranty` VALUES ('49', '20170718172231', 'fdafafa', '11', '19'
 INSERT INTO `car_warranty` VALUES ('50', '20170718172233', 'fdafafa', '11', '19', '5', 'dafaf', '13992891749', 'fdafa', 'fdafa', '1df', '111333', '1498838400', '1', '1', '1', '1500369753', '1500369753', '', 'fdafa', 'fdafa', 'YToxOntpOjA7YToxMDp7czoxMzoic2VyaWVzX251bWJlciI7czo4OiIxMzIxMTIzMyI7czozOiJwaWQiO3M6MjoiMTkiO3M6MzoibWlkIjtzOjI6IjExIjtzOjU6Im1vZGVsIjtzOjc6IuWei+WPtzIiO3M6NToiYnJhbmQiO3M6Nzoi5ZOB54mMMiI7czo0OiJuYW1lIjtzOjIwOiIxMTExMTExMTExMTExMTExMTExMSI7czoxMToiY3VycmVudF9udW0iO3M6MjoiMjAiO3M6NDoidHlwZSI7czoxOiIxIjtzOjM6Im51bSI7czoxOiIxIjtzOjEyOiJ3YXJyYW50eXRpbWUiO3M6MToiMSI7fX0=', '0');
 INSERT INTO `car_warranty` VALUES ('51', '20170718172537', 'fdafafafa', '1', '20', '4', '张小辉', '13992891749', '对方的身份的事', '13212321', '122111', '222333', '1499443200', '1', '1', '1', '1500369937', '1500369937', '', 'fdaffdafa', 'fdaf', 'YToxOntpOjA7YToxMDp7czoxMzoic2VyaWVzX251bWJlciI7czo3OiJmNjc3ODgxIjtzOjM6InBpZCI7czoyOiIyMCI7czozOiJtaWQiO3M6MToiMSI7czo1OiJtb2RlbCI7czozOiJhYmMiO3M6NToiYnJhbmQiO3M6Nzoi5ZOB54mMMyI7czo0OiJuYW1lIjtzOjY6IjEyMzIzMiI7czoxMToiY3VycmVudF9udW0iO3M6MjoiMTUiO3M6NDoidHlwZSI7czoxOiIxIjtzOjM6Im51bSI7czoxOiIxIjtzOjEyOiJ3YXJyYW50eXRpbWUiO3M6MToiMSI7fX0=', '0');
 INSERT INTO `car_warranty` VALUES ('52', '20170718182635', null, '1', '20', '4', '张小辉', '13992891749', 'fdafa', '121', 'dfafa', '445566', '1498838400', '1', '1', '1', '1500373595', '1500372608', '', 'fda', 'fdafa', 'YToxOntpOjA7YToxMDp7czoxMzoic2VyaWVzX251bWJlciI7czo3OiJmNjc3ODgxIjtzOjM6InBpZCI7czoyOiIyMCI7czozOiJtaWQiO3M6MToiMSI7czo1OiJtb2RlbCI7czozOiJhYmMiO3M6NToiYnJhbmQiO3M6Nzoi5ZOB54mMMyI7czo0OiJuYW1lIjtzOjY6IjEyMzIzMiI7czoxMToiY3VycmVudF9udW0iO3M6MjoiMTQiO3M6NDoidHlwZSI7czoxOiIxIjtzOjM6Im51bSI7czoxOiIxIjtzOjEyOiJ3YXJyYW50eXRpbWUiO3M6MToiMSI7fX0=', '1');
+INSERT INTO `car_warranty` VALUES ('53', '20170719112156', 'fdafafafafa', '1,1', '20,20', '4', 'zhangxiaohui', '13992891749', 'fadfa', 'fdafafa', 'dfafafa', '132111', '1498838400', '1,1', '1', '1', '1500434649', '1500434516', '', 'dafdafa', 'fdafa', 'YToyOntpOjA7YToxMTp7czoxMzoic2VyaWVzX251bWJlciI7czo3OiJmNjc3ODgxIjtzOjM6InBpZCI7czoyOiIyMCI7czozOiJtaWQiO3M6MToiMSI7czozOiJzaWQiO3M6MToiNCI7czo1OiJtb2RlbCI7czozOiJhYmMiO3M6NToiYnJhbmQiO3M6Nzoi5ZOB54mMMyI7czo0OiJuYW1lIjtzOjY6IjEyMzIzMiI7czoxMToiY3VycmVudF9udW0iO3M6MjoiMTMiO3M6NDoidHlwZSI7czoxOiIyIjtzOjM6Im51bSI7czoxOiIxIjtzOjEyOiJ3YXJyYW50eXRpbWUiO3M6MToiMSI7fWk6MTthOjExOntzOjEzOiJzZXJpZXNfbnVtYmVyIjtzOjc6ImY2Nzc4ODEiO3M6MzoicGlkIjtzOjI6IjIwIjtzOjM6Im1pZCI7czoxOiIxIjtzOjM6InNpZCI7czoxOiI0IjtzOjU6Im1vZGVsIjtzOjM6ImFiYyI7czo1OiJicmFuZCI7czo3OiLlk4HniYwzIjtzOjQ6Im5hbWUiO3M6NjoiMTIzMjMyIjtzOjExOiJjdXJyZW50X251bSI7czoyOiIxMyI7czo0OiJ0eXBlIjtzOjE6IjIiO3M6MzoibnVtIjtzOjE6IjEiO3M6MTI6IndhcnJhbnR5dGltZSI7czoxOiIxIjt9fQ==', '1');
+
+-- ----------------------------
+-- Table structure for car_warranty_action
+-- ----------------------------
+DROP TABLE IF EXISTS `car_warranty_action`;
+CREATE TABLE `car_warranty_action` (
+  `id` int(13) NOT NULL AUTO_INCREMENT,
+  `wid` int(13) DEFAULT NULL COMMENT '质保单编号',
+  `actpart` int(13) DEFAULT NULL COMMENT '施工位置',
+  `storeid` int(13) DEFAULT NULL COMMENT '质保门店',
+  `constructor` varchar(300) DEFAULT NULL COMMENT '施工员',
+  `action_no` varchar(300) DEFAULT NULL COMMENT '质保行为序列号',
+  `action` varchar(300) DEFAULT NULL COMMENT '质保行为',
+  `acttime` int(13) DEFAULT NULL COMMENT '质保时间',
+  `act_reason` varchar(300) DEFAULT NULL COMMENT '质保原因',
+  `remark` text COMMENT '备注',
+  `admin_id` int(13) DEFAULT NULL COMMENT '操作者id',
+  `ctime` int(13) DEFAULT NULL COMMENT '添加记录时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of car_warranty_action
+-- ----------------------------
+INSERT INTO `car_warranty_action` VALUES ('1', '53', '1', '3', 'dsfadfafa', 'fafad', 'fdafa', '1498838400', 'dafda', '<p><img src=\"/upload/images/20170719/20170719565738.png\" title=\"20170719565738.png\" alt=\"brand_example.png\" />adfafafa</p>', '1', '1500459711');
 
 -- ----------------------------
 -- Table structure for car_warranty_detail
@@ -4149,7 +4222,7 @@ CREATE TABLE `car_warranty_detail` (
   `type` int(13) DEFAULT NULL COMMENT '安装位置',
   `ctime` int(13) NOT NULL COMMENT '质保时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=92 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=98 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of car_warranty_detail
@@ -4210,3 +4283,5 @@ INSERT INTO `car_warranty_detail` VALUES ('88', '49', '19', '1', '18', '1', '150
 INSERT INTO `car_warranty_detail` VALUES ('89', '50', '19', '1', '17', '1', '1500369754');
 INSERT INTO `car_warranty_detail` VALUES ('90', '51', '20', '1', '14', '1', '1500369937');
 INSERT INTO `car_warranty_detail` VALUES ('91', '52', '20', '1', '13', '1', '1500373595');
+INSERT INTO `car_warranty_detail` VALUES ('96', '53', '20', '1', '12', '2', '1500434650');
+INSERT INTO `car_warranty_detail` VALUES ('97', '53', '20', '1', '11', '2', '1500434650');

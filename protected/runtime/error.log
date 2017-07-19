@@ -1920,3 +1920,942 @@ in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController
 in D:\new\carproject\protected\models\Warranty.php (280)
 in D:\new\carproject\protected\models\Warranty.php (214)
 in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/19 09:27:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/fonts/fontawesome-webfont.woff2".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/f...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/fonts/fontawesome-webfont.woff2?v=4.7.0
+HTTP_REFERER=http://www.carproject.com/statics/front/fonts/font-awesome.min.css
+---
+2017/07/19 09:27:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/images/favicon.png".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/i...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/images/favicon.png
+HTTP_REFERER=http://www.carproject.com/wap/warranty/add.html
+---
+2017/07/19 09:27:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/images/favicon.png".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/i...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/images/favicon.png
+HTTP_REFERER=http://www.carproject.com/wap/warranty/add.html
+---
+2017/07/19 09:27:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/js/bootstrap-select.js.map".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/j...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/js/bootstrap-select.js.map
+---
+2017/07/19 09:27:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/css/bootstrap.min.css.map".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/c...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/css/bootstrap.min.css.map
+---
+2017/07/19 09:27:47 [error] [php] include(ProductDomain.php): failed to open stream: No such file or directory (D:\new\framework\YiiBase.php:432)
+Stack trace:
+#0 D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Regions\EndpointConfig.php(58): spl_autoload_call()
+#1 D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Config.php(21): include_once()
+#2 D:\new\carproject\protected\utils\CUtils.php(742): require_once()
+#3 D:\new\carproject\protected\components\Controller.php(794): sendMsg()
+#4 D:\new\carproject\protected\modules\wap\controllers\WarrantyController.php(189): WarrantyController->sendPhoneCode()
+#5 D:\new\carproject\protected\modules\wap\controllers\WarrantyController.php(106): WarrantyController->__sendauthcode()
+#6 D:\new\framework\web\actions\CInlineAction.php(49): WarrantyController->actionSetting()
+#7 D:\new\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 D:\new\framework\web\CController.php(286): WarrantyController->runAction()
+#9 D:\new\framework\web\CController.php(265): WarrantyController->runActionWithFilters()
+#10 D:\new\framework\web\CWebApplication.php(282): WarrantyController->run()
+#11 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#13 D:\new\carproject\index.php(17): CWebApplication->run()
+REQUEST_URI=/wap/warranty/setting.html
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Regions\EndpointConfig.php (58)
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Config.php (21)
+in D:\new\carproject\protected\utils\CUtils.php (742)
+2017/07/19 09:31:44 [error] [php] include(ProductDomain.php): failed to open stream: No such file or directory (D:\new\framework\YiiBase.php:432)
+Stack trace:
+#0 D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Regions\EndpointConfig.php(58): spl_autoload_call()
+#1 D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Config.php(23): include_once()
+#2 D:\new\carproject\protected\utils\CUtils.php(742): require_once()
+#3 D:\new\carproject\protected\components\Controller.php(794): sendMsg()
+#4 D:\new\carproject\protected\modules\wap\controllers\WarrantyController.php(189): WarrantyController->sendPhoneCode()
+#5 D:\new\carproject\protected\modules\wap\controllers\WarrantyController.php(106): WarrantyController->__sendauthcode()
+#6 D:\new\framework\web\actions\CInlineAction.php(49): WarrantyController->actionSetting()
+#7 D:\new\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 D:\new\framework\web\CController.php(286): WarrantyController->runAction()
+#9 D:\new\framework\web\CController.php(265): WarrantyController->runActionWithFilters()
+#10 D:\new\framework\web\CWebApplication.php(282): WarrantyController->run()
+#11 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#13 D:\new\carproject\index.php(17): CWebApplication->run()
+REQUEST_URI=/wap/warranty/setting.html
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Regions\EndpointConfig.php (58)
+in D:\new\carproject\protected\extensions\aliyunMsg\aliyun-php-sdk-core\Config.php (23)
+in D:\new\carproject\protected\utils\CUtils.php (742)
+2017/07/19 09:56:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/admin/img/inst_logo.png".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/admin/i...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/admin/img/inst_logo.png
+HTTP_REFERER=http://www.carproject.com/admin
+---
+2017/07/19 09:56:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/images/baijia.ico".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/i...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/images/baijia.ico
+HTTP_REFERER=http://www.carproject.com/admin
+---
+2017/07/19 10:10:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "warranty/test".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('warranty/test')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/warranty/test
+---
+2017/07/19 10:10:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/fonts/fontawesome-webfont.woff2".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/f...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/fonts/fontawesome-webfont.woff2?v=4.7.0
+HTTP_REFERER=http://www.carproject.com/statics/front/fonts/font-awesome.min.css
+---
+2017/07/19 11:10:01 [error] [php] Undefined index: phone (D:\new\carproject\protected\utils\CUtils.php:807)
+Stack trace:
+#0 D:\new\framework\web\actions\CInlineAction.php(49): WarrantyController->actionSetting()
+#1 D:\new\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 D:\new\framework\web\CController.php(286): WarrantyController->runAction()
+#3 D:\new\framework\web\CController.php(265): WarrantyController->runActionWithFilters()
+#4 D:\new\framework\web\CWebApplication.php(282): WarrantyController->run()
+#5 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 D:\new\carproject\index.php(18): CWebApplication->run()
+REQUEST_URI=/wap/warranty/setting.html
+in D:\new\carproject\protected\utils\CUtils.php (807)
+in D:\new\carproject\protected\modules\wap\controllers\WarrantyController.php (190)
+in D:\new\carproject\protected\modules\wap\controllers\WarrantyController.php (106)
+2017/07/19 11:21:03 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'storeid"")' at line 1. The SQL statement executed was: SELECT `t`.`id` AS `t0_c0`, `t`.`mid` AS `t0_c1`, `t`.`name` AS `t0_c2`, `t`.`series_number` AS `t0_c3`, `t`.`total` AS `t0_c4`, `t`.`current_num` AS `t0_c5`, `t`.`bid` AS `t0_c6`, `t`.`intro` AS `t0_c7`, `t`.`storeid` AS `t0_c8`, `t`.`customer` AS `t0_c9`, `t`.`spec` AS `t0_c10`, `t`.`company` AS `t0_c11`, `t`.`province` AS `t0_c12`, `t`.`city` AS `t0_c13`, `t`.`area` AS `t0_c14`, `t`.`type` AS `t0_c15`, `t`.`create_user` AS `t0_c16`, `t`.`ctime` AS `t0_c17`, `t`.`udpatetime` AS `t0_c18`, `t`.`remarks` AS `t0_c19`, `brand`.`id` AS `t1_c0`, `brand`.`name` AS `t1_c1`, `brand`.`intro` AS `t1_c2`, `model`.`id` AS `t2_c0`, `model`.`name` AS `t2_c1` FROM `car_product` `t`  LEFT OUTER JOIN `car_brand` `brand` ON (`t`.`bid`=`brand`.`id`)  LEFT OUTER JOIN `car_models` `model` ON (`t`.`mid`=`model`.`id`)  WHERE (t.series_number = "ng-tip="storeid"").
+in D:\new\carproject\protected\models\Product.php (244)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (187)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (166)
+2017/07/19 11:21:03 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'storeid"")' at line 1. The SQL statement executed was: SELECT `t`.`id` AS `t0_c0`, `t`.`mid` AS `t0_c1`, `t`.`name` AS `t0_c2`, `t`.`series_number` AS `t0_c3`, `t`.`total` AS `t0_c4`, `t`.`current_num` AS `t0_c5`, `t`.`bid` AS `t0_c6`, `t`.`intro` AS `t0_c7`, `t`.`storeid` AS `t0_c8`, `t`.`customer` AS `t0_c9`, `t`.`spec` AS `t0_c10`, `t`.`company` AS `t0_c11`, `t`.`province` AS `t0_c12`, `t`.`city` AS `t0_c13`, `t`.`area` AS `t0_c14`, `t`.`type` AS `t0_c15`, `t`.`create_user` AS `t0_c16`, `t`.`ctime` AS `t0_c17`, `t`.`udpatetime` AS `t0_c18`, `t`.`remarks` AS `t0_c19`, `brand`.`id` AS `t1_c0`, `brand`.`name` AS `t1_c1`, `brand`.`intro` AS `t1_c2`, `model`.`id` AS `t2_c0`, `model`.`name` AS `t2_c1` FROM `car_product` `t`  LEFT OUTER JOIN `car_brand` `brand` ON (`t`.`bid`=`brand`.`id`)  LEFT OUTER JOIN `car_models` `model` ON (`t`.`mid`=`model`.`id`)  WHERE (t.series_number = "ng-tip="storeid"")' in D:\new\framework\db\CDbCommand.php:541
+Stack trace:
+#0 D:\new\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\new\framework\db\ar\CActiveFinder.php(761): CDbCommand->queryAll()
+#2 D:\new\framework\db\ar\CActiveFinder.php(422): CJoinElement->runQuery(Object(CJoinQuery))
+#3 D:\new\framework\db\ar\CActiveFinder.php(68): CJoinElement->find(Object(CDbCriteria))
+#4 D:\new\framework\db\ar\CActiveRecord.php(1302): CActiveFinder->query(Object(CDbCriteria), false)
+#5 D:\new\framework\db\ar\CActiveRecord.php(1402): CActiveRecord->query(Object(CDbCriteria))
+#6 D:\new\carproject\protected\models\Product.php(244): CActiveRecord->find(Object(CDbCriteria))
+#7 D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php(187): Product->getProductData4('ng-tip="storeid...')
+#8 D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php(166): AdminWarrantyController->__getmodel()
+#9 D:\new\framework\web\actions\CInlineAction.php(49): AdminWarrantyController->actionSetting()
+#10 D:\new\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 D:\new\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 D:\new\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 D:\new\framework\web\CWebApplication.php(282): CController->run('setting')
+#14 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/adminWarr...')
+#15 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 D:\new\carproject\index.php(18): CApplication->run()
+#17 {main}
+REQUEST_URI=/admin/adminWarranty/setting.html
+HTTP_REFERER=http://www.carproject.com/admin/adminWarranty/add.html
+---
+2017/07/19 11:21:56 [warning] [application] Failed to set unsafe attribute "pack_name" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (224)
+in D:\new\carproject\protected\models\Warranty.php (216)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/19 11:21:56 [warning] [application] Failed to set unsafe attribute "carmodel" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (224)
+in D:\new\carproject\protected\models\Warranty.php (216)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/19 11:21:56 [warning] [application] Failed to set unsafe attribute "constructor" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (224)
+in D:\new\carproject\protected\models\Warranty.php (216)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/19 11:21:56 [warning] [application] Failed to set unsafe attribute "guide" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (224)
+in D:\new\carproject\protected\models\Warranty.php (216)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/19 11:21:56 [warning] [application] Failed to set unsafe attribute "status" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (224)
+in D:\new\carproject\protected\models\Warranty.php (216)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/19 11:21:56 [warning] [application] Failed to set unsafe attribute "refuse_reason" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (224)
+in D:\new\carproject\protected\models\Warranty.php (216)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/19 11:21:56 [warning] [application] Failed to set unsafe attribute "mid" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (224)
+in D:\new\carproject\protected\models\Warranty.php (216)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/19 11:21:56 [warning] [application] Failed to set unsafe attribute "pid" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (224)
+in D:\new\carproject\protected\models\Warranty.php (216)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/19 11:21:56 [warning] [application] Failed to set unsafe attribute "extension" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (224)
+in D:\new\carproject\protected\models\Warranty.php (216)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/19 11:21:56 [warning] [application] Failed to set unsafe attribute "create_user" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (224)
+in D:\new\carproject\protected\models\Warranty.php (216)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/19 11:21:57 [error] [php] Undefined index: status (D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php:84)
+Stack trace:
+#0 D:\new\framework\web\CController.php(286): AdminWarrantyController->runAction()
+#1 D:\new\framework\web\CController.php(265): AdminWarrantyController->runActionWithFilters()
+#2 D:\new\framework\web\CWebApplication.php(282): AdminWarrantyController->run()
+#3 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 D:\new\carproject\index.php(18): CWebApplication->run()
+REQUEST_URI=/admin/adminWarranty/add.html
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (84)
+in D:\new\carproject\index.php (18)
+2017/07/19 03:23:06 [warning] [application] Failed to set unsafe attribute "pack_name" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (280)
+in D:\new\carproject\protected\models\Warranty.php (214)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/19 03:23:06 [warning] [application] Failed to set unsafe attribute "carmodel" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (280)
+in D:\new\carproject\protected\models\Warranty.php (214)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/19 03:23:06 [warning] [application] Failed to set unsafe attribute "constructor" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (280)
+in D:\new\carproject\protected\models\Warranty.php (214)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/19 03:23:06 [warning] [application] Failed to set unsafe attribute "guide" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (280)
+in D:\new\carproject\protected\models\Warranty.php (214)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/19 03:23:06 [warning] [application] Failed to set unsafe attribute "status" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (280)
+in D:\new\carproject\protected\models\Warranty.php (214)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/19 03:23:06 [warning] [application] Failed to set unsafe attribute "refuse_reason" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (280)
+in D:\new\carproject\protected\models\Warranty.php (214)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/19 03:23:06 [warning] [application] Failed to set unsafe attribute "mid" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (280)
+in D:\new\carproject\protected\models\Warranty.php (214)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/19 03:23:06 [warning] [application] Failed to set unsafe attribute "pid" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (280)
+in D:\new\carproject\protected\models\Warranty.php (214)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/19 03:23:06 [warning] [application] Failed to set unsafe attribute "extension" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (280)
+in D:\new\carproject\protected\models\Warranty.php (214)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/19 03:23:06 [warning] [application] Failed to set unsafe attribute "create_user" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (280)
+in D:\new\carproject\protected\models\Warranty.php (214)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/19 03:24:09 [warning] [application] Failed to set unsafe attribute "pack_name" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (281)
+in D:\new\carproject\protected\models\Warranty.php (214)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/19 03:24:09 [warning] [application] Failed to set unsafe attribute "carmodel" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (281)
+in D:\new\carproject\protected\models\Warranty.php (214)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/19 03:24:09 [warning] [application] Failed to set unsafe attribute "constructor" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (281)
+in D:\new\carproject\protected\models\Warranty.php (214)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/19 03:24:09 [warning] [application] Failed to set unsafe attribute "guide" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (281)
+in D:\new\carproject\protected\models\Warranty.php (214)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/19 03:24:09 [warning] [application] Failed to set unsafe attribute "status" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (281)
+in D:\new\carproject\protected\models\Warranty.php (214)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/19 03:24:09 [warning] [application] Failed to set unsafe attribute "refuse_reason" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (281)
+in D:\new\carproject\protected\models\Warranty.php (214)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/19 03:24:09 [warning] [application] Failed to set unsafe attribute "mid" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (281)
+in D:\new\carproject\protected\models\Warranty.php (214)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/19 03:24:09 [warning] [application] Failed to set unsafe attribute "pid" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (281)
+in D:\new\carproject\protected\models\Warranty.php (214)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/19 03:24:09 [warning] [application] Failed to set unsafe attribute "extension" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (281)
+in D:\new\carproject\protected\models\Warranty.php (214)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/19 03:24:09 [warning] [application] Failed to set unsafe attribute "create_user" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (281)
+in D:\new\carproject\protected\models\Warranty.php (214)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (80)
+2017/07/19 04:02:49 [warning] [application] Failed to set unsafe attribute "type" of "SmsRecord".
+in D:\new\carproject\protected\utils\CUtils.php (944)
+in D:\new\carproject\protected\utils\CUtils.php (925)
+in D:\new\carproject\protected\utils\CUtils.php (813)
+2017/07/19 04:04:37 [warning] [application] Failed to set unsafe attribute "type" of "SmsRecord".
+in D:\new\carproject\protected\utils\CUtils.php (944)
+in D:\new\carproject\protected\utils\CUtils.php (925)
+in D:\new\carproject\protected\utils\CUtils.php (813)
+2017/07/19 06:20:14 [warning] [application] Failed to set unsafe attribute "type" of "SmsRecord".
+in D:\new\carproject\protected\utils\CUtils.php (946)
+in D:\new\carproject\protected\utils\CUtils.php (925)
+in D:\new\carproject\protected\utils\CUtils.php (813)
+2017/07/19 06:20:14 [warning] [application] Failed to set unsafe attribute "ctime" of "SmsRecord".
+in D:\new\carproject\protected\utils\CUtils.php (946)
+in D:\new\carproject\protected\utils\CUtils.php (925)
+in D:\new\carproject\protected\utils\CUtils.php (813)
+2017/07/19 06:20:14 [warning] [application] Failed to set unsafe attribute "sendtime" of "SmsRecord".
+in D:\new\carproject\protected\utils\CUtils.php (946)
+in D:\new\carproject\protected\utils\CUtils.php (925)
+in D:\new\carproject\protected\utils\CUtils.php (813)
+2017/07/19 06:21:32 [warning] [application] Failed to set unsafe attribute "type" of "SmsRecord".
+in D:\new\carproject\protected\utils\CUtils.php (946)
+in D:\new\carproject\protected\utils\CUtils.php (925)
+in D:\new\carproject\protected\utils\CUtils.php (813)
+2017/07/19 06:21:32 [warning] [application] Failed to set unsafe attribute "ctime" of "SmsRecord".
+in D:\new\carproject\protected\utils\CUtils.php (946)
+in D:\new\carproject\protected\utils\CUtils.php (925)
+in D:\new\carproject\protected\utils\CUtils.php (813)
+2017/07/19 06:21:32 [warning] [application] Failed to set unsafe attribute "sendtime" of "SmsRecord".
+in D:\new\carproject\protected\utils\CUtils.php (946)
+in D:\new\carproject\protected\utils\CUtils.php (925)
+in D:\new\carproject\protected\utils\CUtils.php (813)
+2017/07/19 14:42:49 [warning] [application] Failed to set unsafe attribute "type" of "SmsRecord".
+in D:\new\carproject\protected\models\SmsRecord.php (127)
+in D:\new\carproject\protected\modules\admin\controllers\AdminSmsMsgController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/19 14:42:49 [warning] [application] Failed to set unsafe attribute "ctime_start" of "SmsRecord".
+in D:\new\carproject\protected\models\SmsRecord.php (127)
+in D:\new\carproject\protected\modules\admin\controllers\AdminSmsMsgController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/19 14:42:49 [warning] [application] Failed to set unsafe attribute "ctime_end" of "SmsRecord".
+in D:\new\carproject\protected\models\SmsRecord.php (127)
+in D:\new\carproject\protected\modules\admin\controllers\AdminSmsMsgController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/19 14:42:49 [warning] [application] Failed to set unsafe attribute "sendtime_start" of "SmsRecord".
+in D:\new\carproject\protected\models\SmsRecord.php (127)
+in D:\new\carproject\protected\modules\admin\controllers\AdminSmsMsgController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/19 14:42:49 [warning] [application] Failed to set unsafe attribute "sendtime_end" of "SmsRecord".
+in D:\new\carproject\protected\models\SmsRecord.php (127)
+in D:\new\carproject\protected\modules\admin\controllers\AdminSmsMsgController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/19 14:42:58 [warning] [application] Failed to set unsafe attribute "type" of "SmsRecord".
+in D:\new\carproject\protected\models\SmsRecord.php (127)
+in D:\new\carproject\protected\modules\admin\controllers\AdminSmsMsgController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/19 14:42:58 [warning] [application] Failed to set unsafe attribute "ctime_start" of "SmsRecord".
+in D:\new\carproject\protected\models\SmsRecord.php (127)
+in D:\new\carproject\protected\modules\admin\controllers\AdminSmsMsgController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/19 14:42:58 [warning] [application] Failed to set unsafe attribute "ctime_end" of "SmsRecord".
+in D:\new\carproject\protected\models\SmsRecord.php (127)
+in D:\new\carproject\protected\modules\admin\controllers\AdminSmsMsgController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/19 14:42:58 [warning] [application] Failed to set unsafe attribute "sendtime_start" of "SmsRecord".
+in D:\new\carproject\protected\models\SmsRecord.php (127)
+in D:\new\carproject\protected\modules\admin\controllers\AdminSmsMsgController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/19 14:42:58 [warning] [application] Failed to set unsafe attribute "sendtime_end" of "SmsRecord".
+in D:\new\carproject\protected\models\SmsRecord.php (127)
+in D:\new\carproject\protected\modules\admin\controllers\AdminSmsMsgController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/19 14:43:05 [warning] [application] Failed to set unsafe attribute "type" of "SmsRecord".
+in D:\new\carproject\protected\models\SmsRecord.php (127)
+in D:\new\carproject\protected\modules\admin\controllers\AdminSmsMsgController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/19 14:43:05 [warning] [application] Failed to set unsafe attribute "ctime_start" of "SmsRecord".
+in D:\new\carproject\protected\models\SmsRecord.php (127)
+in D:\new\carproject\protected\modules\admin\controllers\AdminSmsMsgController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/19 14:43:05 [warning] [application] Failed to set unsafe attribute "ctime_end" of "SmsRecord".
+in D:\new\carproject\protected\models\SmsRecord.php (127)
+in D:\new\carproject\protected\modules\admin\controllers\AdminSmsMsgController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/19 14:43:05 [warning] [application] Failed to set unsafe attribute "sendtime_start" of "SmsRecord".
+in D:\new\carproject\protected\models\SmsRecord.php (127)
+in D:\new\carproject\protected\modules\admin\controllers\AdminSmsMsgController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/19 14:43:05 [warning] [application] Failed to set unsafe attribute "sendtime_end" of "SmsRecord".
+in D:\new\carproject\protected\models\SmsRecord.php (127)
+in D:\new\carproject\protected\modules\admin\controllers\AdminSmsMsgController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/19 14:43:42 [warning] [application] Failed to set unsafe attribute "type" of "SmsRecord".
+in D:\new\carproject\protected\models\SmsRecord.php (127)
+in D:\new\carproject\protected\modules\admin\controllers\AdminSmsMsgController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/19 14:43:42 [warning] [application] Failed to set unsafe attribute "ctime_start" of "SmsRecord".
+in D:\new\carproject\protected\models\SmsRecord.php (127)
+in D:\new\carproject\protected\modules\admin\controllers\AdminSmsMsgController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/19 14:43:42 [warning] [application] Failed to set unsafe attribute "ctime_end" of "SmsRecord".
+in D:\new\carproject\protected\models\SmsRecord.php (127)
+in D:\new\carproject\protected\modules\admin\controllers\AdminSmsMsgController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/19 14:43:42 [warning] [application] Failed to set unsafe attribute "sendtime_start" of "SmsRecord".
+in D:\new\carproject\protected\models\SmsRecord.php (127)
+in D:\new\carproject\protected\modules\admin\controllers\AdminSmsMsgController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/19 14:43:42 [warning] [application] Failed to set unsafe attribute "sendtime_end" of "SmsRecord".
+in D:\new\carproject\protected\models\SmsRecord.php (127)
+in D:\new\carproject\protected\modules\admin\controllers\AdminSmsMsgController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/19 14:43:57 [warning] [application] Failed to set unsafe attribute "type" of "SmsRecord".
+in D:\new\carproject\protected\models\SmsRecord.php (127)
+in D:\new\carproject\protected\modules\admin\controllers\AdminSmsMsgController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/19 14:43:57 [warning] [application] Failed to set unsafe attribute "ctime_start" of "SmsRecord".
+in D:\new\carproject\protected\models\SmsRecord.php (127)
+in D:\new\carproject\protected\modules\admin\controllers\AdminSmsMsgController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/19 14:43:57 [warning] [application] Failed to set unsafe attribute "ctime_end" of "SmsRecord".
+in D:\new\carproject\protected\models\SmsRecord.php (127)
+in D:\new\carproject\protected\modules\admin\controllers\AdminSmsMsgController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/19 14:43:57 [warning] [application] Failed to set unsafe attribute "sendtime_start" of "SmsRecord".
+in D:\new\carproject\protected\models\SmsRecord.php (127)
+in D:\new\carproject\protected\modules\admin\controllers\AdminSmsMsgController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/19 14:43:57 [warning] [application] Failed to set unsafe attribute "sendtime_end" of "SmsRecord".
+in D:\new\carproject\protected\models\SmsRecord.php (127)
+in D:\new\carproject\protected\modules\admin\controllers\AdminSmsMsgController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/19 14:44:53 [warning] [application] Failed to set unsafe attribute "type" of "SmsRecord".
+in D:\new\carproject\protected\models\SmsRecord.php (127)
+in D:\new\carproject\protected\modules\admin\controllers\AdminSmsMsgController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/19 14:44:53 [warning] [application] Failed to set unsafe attribute "ctime_start" of "SmsRecord".
+in D:\new\carproject\protected\models\SmsRecord.php (127)
+in D:\new\carproject\protected\modules\admin\controllers\AdminSmsMsgController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/19 14:44:53 [warning] [application] Failed to set unsafe attribute "ctime_end" of "SmsRecord".
+in D:\new\carproject\protected\models\SmsRecord.php (127)
+in D:\new\carproject\protected\modules\admin\controllers\AdminSmsMsgController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/19 14:44:53 [warning] [application] Failed to set unsafe attribute "sendtime_start" of "SmsRecord".
+in D:\new\carproject\protected\models\SmsRecord.php (127)
+in D:\new\carproject\protected\modules\admin\controllers\AdminSmsMsgController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/19 14:44:53 [warning] [application] Failed to set unsafe attribute "sendtime_end" of "SmsRecord".
+in D:\new\carproject\protected\models\SmsRecord.php (127)
+in D:\new\carproject\protected\modules\admin\controllers\AdminSmsMsgController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/19 14:45:25 [warning] [application] Failed to set unsafe attribute "type" of "SmsRecord".
+in D:\new\carproject\protected\models\SmsRecord.php (127)
+in D:\new\carproject\protected\modules\admin\controllers\AdminSmsMsgController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/19 14:45:25 [warning] [application] Failed to set unsafe attribute "ctime_start" of "SmsRecord".
+in D:\new\carproject\protected\models\SmsRecord.php (127)
+in D:\new\carproject\protected\modules\admin\controllers\AdminSmsMsgController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/19 14:45:25 [warning] [application] Failed to set unsafe attribute "ctime_end" of "SmsRecord".
+in D:\new\carproject\protected\models\SmsRecord.php (127)
+in D:\new\carproject\protected\modules\admin\controllers\AdminSmsMsgController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/19 14:45:25 [warning] [application] Failed to set unsafe attribute "sendtime_start" of "SmsRecord".
+in D:\new\carproject\protected\models\SmsRecord.php (127)
+in D:\new\carproject\protected\modules\admin\controllers\AdminSmsMsgController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/19 14:45:25 [warning] [application] Failed to set unsafe attribute "sendtime_end" of "SmsRecord".
+in D:\new\carproject\protected\models\SmsRecord.php (127)
+in D:\new\carproject\protected\modules\admin\controllers\AdminSmsMsgController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/19 16:52:34 [error] [exception.CException] exception 'CException' with message 'Property "WarrantyAction.ctime_start" is not defined.' in D:\new\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\new\framework\db\ar\CActiveRecord.php(143): CComponent->__get('ctime_start')
+#1 D:\new\framework\web\helpers\CHtml.php(2255): CActiveRecord->__get('ctime_start')
+#2 D:\new\framework\web\helpers\CHtml.php(1980): CHtml::resolveValue(Object(WarrantyAction), 'ctime_start')
+#3 D:\new\framework\web\helpers\CHtml.php(1257): CHtml::activeInputField('text', Object(WarrantyAction), 'ctime_start', Array)
+#4 D:\new\framework\web\widgets\CActiveForm.php(657): CHtml::activeTextField(Object(WarrantyAction), 'ctime_start', Array)
+#5 D:\new\carproject\protected\modules\admin\views\adminWarrantyAction\index.php(180): CActiveForm->textField(Object(WarrantyAction), 'ctime_start', Array)
+#6 D:\new\framework\web\CBaseController.php(126): require('D:\\new\\carproje...')
+#7 D:\new\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\\new\\carproje...', Array, true)
+#8 D:\new\framework\web\CController.php(869): CBaseController->renderFile('D:\\new\\carproje...', Array, true)
+#9 D:\new\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#10 D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyActionController.php(32): CController->render('index', Array)
+#11 D:\new\framework\web\actions\CInlineAction.php(49): AdminWarrantyActionController->actionIndex()
+#12 D:\new\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 D:\new\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#14 D:\new\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 D:\new\framework\web\CWebApplication.php(282): CController->run('index')
+#16 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/adminWarr...')
+#17 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#18 D:\new\carproject\index.php(18): CApplication->run()
+#19 {main}
+REQUEST_URI=/admin/adminWarrantyAction/index.html
+HTTP_REFERER=http://www.carproject.com/admin/adminSmsMsg/index.html
+---
+2017/07/19 16:53:22 [error] [php] Undefined variable: models_data (D:\new\carproject\protected\modules\admin\views\adminWarrantyAction\index.php:207)
+Stack trace:
+#0 D:\new\framework\web\CController.php(869): AdminWarrantyActionController->renderFile()
+#1 D:\new\framework\web\CController.php(782): AdminWarrantyActionController->renderPartial()
+#2 D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyActionController.php(32): AdminWarrantyActionController->render()
+#3 D:\new\framework\web\actions\CInlineAction.php(49): AdminWarrantyActionController->actionIndex()
+#4 D:\new\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\new\framework\web\CController.php(286): AdminWarrantyActionController->runAction()
+#6 D:\new\framework\web\CController.php(265): AdminWarrantyActionController->runActionWithFilters()
+#7 D:\new\framework\web\CWebApplication.php(282): AdminWarrantyActionController->run()
+#8 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\new\carproject\index.php(18): CWebApplication->run()
+REQUEST_URI=/admin/adminWarrantyAction/index.html
+in D:\new\carproject\protected\modules\admin\views\adminWarrantyAction\index.php (207)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyActionController.php (32)
+in D:\new\carproject\index.php (18)
+2017/07/19 17:14:35 [error] [exception.CException] exception 'CException' with message 'Property "WarrantyAction.total" is not defined.' in D:\new\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\new\framework\db\ar\CActiveRecord.php(143): CComponent->__get('total')
+#1 D:\new\framework\base\CModel.php(595): CActiveRecord->__get('total')
+#2 D:\new\carproject\protected\modules\admin\views\adminWarrantyAction\add.php(358): CModel->offsetGet('total')
+#3 D:\new\framework\web\CBaseController.php(126): require('D:\\new\\carproje...')
+#4 D:\new\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\\new\\carproje...', Array, true)
+#5 D:\new\framework\web\CController.php(869): CBaseController->renderFile('D:\\new\\carproje...', Array, true)
+#6 D:\new\framework\web\CController.php(782): CController->renderPartial('add', Array, true)
+#7 D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyActionController.php(86): CController->render('add', Array)
+#8 D:\new\framework\web\actions\CInlineAction.php(49): AdminWarrantyActionController->actionAdd()
+#9 D:\new\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 D:\new\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 D:\new\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\new\framework\web\CWebApplication.php(282): CController->run('add')
+#13 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/adminWarr...')
+#14 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 D:\new\carproject\index.php(18): CApplication->run()
+#16 {main}
+REQUEST_URI=/admin/adminWarrantyAction/add.html
+HTTP_REFERER=http://www.carproject.com/admin/adminWarrantyAction/index.html
+---
+2017/07/19 17:38:14 [error] [php] Undefined variable: key (D:\new\carproject\protected\modules\admin\views\adminWarrantyAction\add.php:53)
+Stack trace:
+#0 D:\new\framework\web\CController.php(869): AdminWarrantyActionController->renderFile()
+#1 D:\new\framework\web\CController.php(782): AdminWarrantyActionController->renderPartial()
+#2 D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyActionController.php(86): AdminWarrantyActionController->render()
+#3 D:\new\framework\web\actions\CInlineAction.php(49): AdminWarrantyActionController->actionAdd()
+#4 D:\new\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\new\framework\web\CController.php(286): AdminWarrantyActionController->runAction()
+#6 D:\new\framework\web\CController.php(265): AdminWarrantyActionController->runActionWithFilters()
+#7 D:\new\framework\web\CWebApplication.php(282): AdminWarrantyActionController->run()
+#8 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\new\carproject\index.php(18): CWebApplication->run()
+REQUEST_URI=/admin/adminWarrantyAction/add.html
+in D:\new\carproject\protected\modules\admin\views\adminWarrantyAction\add.php (53)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyActionController.php (86)
+in D:\new\carproject\index.php (18)
+2017/07/19 18:13:37 [error] [php] Undefined index: adminwarrantyaction (D:\new\carproject\protected\utils\CUtils.php:696)
+Stack trace:
+#0 D:\new\framework\web\CController.php(286): AdminWarrantyActionController->runAction()
+#1 D:\new\framework\web\CController.php(265): AdminWarrantyActionController->runActionWithFilters()
+#2 D:\new\framework\web\CWebApplication.php(282): AdminWarrantyActionController->run()
+#3 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 D:\new\carproject\index.php(18): CWebApplication->run()
+REQUEST_URI=/admin/adminWarrantyAction/add.html
+in D:\new\carproject\protected\utils\CUtils.php (696)
+in D:\new\carproject\protected\modules\admin\components\CAdminController.php (39)
+in D:\new\carproject\index.php (18)
+2017/07/19 18:15:32 [error] [php] Undefined index: Product (D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyActionController.php:44)
+Stack trace:
+#0 D:\new\framework\web\CController.php(286): AdminWarrantyActionController->runAction()
+#1 D:\new\framework\web\CController.php(265): AdminWarrantyActionController->runActionWithFilters()
+#2 D:\new\framework\web\CWebApplication.php(282): AdminWarrantyActionController->run()
+#3 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 D:\new\carproject\index.php(18): CWebApplication->run()
+REQUEST_URI=/admin/adminWarrantyAction/add.html
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyActionController.php (44)
+in D:\new\carproject\index.php (18)
+2017/07/19 18:21:51 [warning] [application] Failed to set unsafe attribute "admin_id" of "WarrantyAction".
+in D:\new\carproject\protected\models\WarrantyAction.php (138)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyActionController.php (54)
+in D:\new\carproject\index.php (18)
+2017/07/19 18:21:51 [warning] [application] Failed to set unsafe attribute "ctime" of "WarrantyAction".
+in D:\new\carproject\protected\models\WarrantyAction.php (138)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyActionController.php (54)
+in D:\new\carproject\index.php (18)
+2017/07/19 18:21:56 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in where clause is ambiguous. The SQL statement executed was: SELECT `t`.`id` AS `t0_c0`, `t`.`wid` AS `t0_c1`, `t`.`actpart` AS `t0_c2`, `t`.`storeid` AS `t0_c3`, `t`.`constructor` AS `t0_c4`, `t`.`action_no` AS `t0_c5`, `t`.`action` AS `t0_c6`, `t`.`acttime` AS `t0_c7`, `t`.`act_reason` AS `t0_c8`, `t`.`remark` AS `t0_c9`, `t`.`admin_id` AS `t0_c10`, `t`.`ctime` AS `t0_c11`, `admin`.`id` AS `t1_c0`, `admin`.`username` AS `t1_c1`, `admin`.`password` AS `t1_c2`, `admin`.`status` AS `t1_c3`, `admin`.`role_id` AS `t1_c4`, `admin`.`province` AS `t1_c5`, `admin`.`city` AS `t1_c6`, `admin`.`area` AS `t1_c7`, `admin`.`created` AS `t1_c8`, `warranty`.`id` AS `t2_c0`, `warranty`.`series_number` AS `t2_c1`, `warranty`.`pack_name` AS `t2_c2`, `warranty`.`mid` AS `t2_c3`, `warranty`.`pid` AS `t2_c4`, `warranty`.`storeid` AS `t2_c5`, `warranty`.`name` AS `t2_c6`, `warranty`.`telephone` AS `t2_c7`, `warranty`.`address` AS `t2_c8`, `warranty`.`carmodel` AS `t2_c9`, `warranty`.`carlicence` AS `t2_c10`, `warranty`.`engineno` AS `t2_c11`, `warranty`.`construct_time` AS `t2_c12`, `warranty`.`warrantytime` AS `t2_c13`, `warranty`.`status` AS `t2_c14`, `warranty`.`create_user` AS `t2_c15`, `warranty`.`ctime` AS `t2_c16`, `warranty`.`createtime` AS `t2_c17`, `warranty`.`refuse_reason` AS `t2_c18`, `warranty`.`constructor` AS `t2_c19`, `warranty`.`guide` AS `t2_c20`, `warranty`.`extension` AS `t2_c21`, `warranty`.`is_send` AS `t2_c22`, `store`.`id` AS `t3_c0`, `store`.`name` AS `t3_c1`, `store`.`type` AS `t3_c2`, `store`.`provinceid` AS `t3_c3`, `store`.`cityid` AS `t3_c4`, `store`.`areaid` AS `t3_c5`, `store`.`address` AS `t3_c6`, `store`.`telephone` AS `t3_c7`, `store`.`lat` AS `t3_c8`, `store`.`lng` AS `t3_c9` FROM `car_warranty_action` `t`  LEFT OUTER JOIN `car_admin` `admin` ON (`t`.`admin_id`=`admin`.`id`)  LEFT OUTER JOIN `car_warranty` `warranty` ON (`t`.`wid`=`warranty`.`id`)  LEFT OUTER JOIN `car_store` `store` ON (`warranty`.`storeid`=`store`.`id`)  WHERE (id="1").
+in D:\new\carproject\protected\models\WarrantyAction.php (156)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyActionController.php (41)
+in D:\new\carproject\index.php (18)
+2017/07/19 18:21:56 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in where clause is ambiguous. The SQL statement executed was: SELECT `t`.`id` AS `t0_c0`, `t`.`wid` AS `t0_c1`, `t`.`actpart` AS `t0_c2`, `t`.`storeid` AS `t0_c3`, `t`.`constructor` AS `t0_c4`, `t`.`action_no` AS `t0_c5`, `t`.`action` AS `t0_c6`, `t`.`acttime` AS `t0_c7`, `t`.`act_reason` AS `t0_c8`, `t`.`remark` AS `t0_c9`, `t`.`admin_id` AS `t0_c10`, `t`.`ctime` AS `t0_c11`, `admin`.`id` AS `t1_c0`, `admin`.`username` AS `t1_c1`, `admin`.`password` AS `t1_c2`, `admin`.`status` AS `t1_c3`, `admin`.`role_id` AS `t1_c4`, `admin`.`province` AS `t1_c5`, `admin`.`city` AS `t1_c6`, `admin`.`area` AS `t1_c7`, `admin`.`created` AS `t1_c8`, `warranty`.`id` AS `t2_c0`, `warranty`.`series_number` AS `t2_c1`, `warranty`.`pack_name` AS `t2_c2`, `warranty`.`mid` AS `t2_c3`, `warranty`.`pid` AS `t2_c4`, `warranty`.`storeid` AS `t2_c5`, `warranty`.`name` AS `t2_c6`, `warranty`.`telephone` AS `t2_c7`, `warranty`.`address` AS `t2_c8`, `warranty`.`carmodel` AS `t2_c9`, `warranty`.`carlicence` AS `t2_c10`, `warranty`.`engineno` AS `t2_c11`, `warranty`.`construct_time` AS `t2_c12`, `warranty`.`warrantytime` AS `t2_c13`, `warranty`.`status` AS `t2_c14`, `warranty`.`create_user` AS `t2_c15`, `warranty`.`ctime` AS `t2_c16`, `warranty`.`createtime` AS `t2_c17`, `warranty`.`refuse_reason` AS `t2_c18`, `warranty`.`constructor` AS `t2_c19`, `warranty`.`guide` AS `t2_c20`, `warranty`.`extension` AS `t2_c21`, `warranty`.`is_send` AS `t2_c22`, `store`.`id` AS `t3_c0`, `store`.`name` AS `t3_c1`, `store`.`type` AS `t3_c2`, `store`.`provinceid` AS `t3_c3`, `store`.`cityid` AS `t3_c4`, `store`.`areaid` AS `t3_c5`, `store`.`address` AS `t3_c6`, `store`.`telephone` AS `t3_c7`, `store`.`lat` AS `t3_c8`, `store`.`lng` AS `t3_c9` FROM `car_warranty_action` `t`  LEFT OUTER JOIN `car_admin` `admin` ON (`t`.`admin_id`=`admin`.`id`)  LEFT OUTER JOIN `car_warranty` `warranty` ON (`t`.`wid`=`warranty`.`id`)  LEFT OUTER JOIN `car_store` `store` ON (`warranty`.`storeid`=`store`.`id`)  WHERE (id="1")' in D:\new\framework\db\CDbCommand.php:541
+Stack trace:
+#0 D:\new\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\new\framework\db\ar\CActiveFinder.php(761): CDbCommand->queryAll()
+#2 D:\new\framework\db\ar\CActiveFinder.php(422): CJoinElement->runQuery(Object(CJoinQuery))
+#3 D:\new\framework\db\ar\CActiveFinder.php(68): CJoinElement->find(Object(CDbCriteria))
+#4 D:\new\framework\db\ar\CActiveRecord.php(1302): CActiveFinder->query(Object(CDbCriteria), false)
+#5 D:\new\framework\db\ar\CActiveRecord.php(1402): CActiveRecord->query(Object(CDbCriteria))
+#6 D:\new\carproject\protected\models\WarrantyAction.php(156): CActiveRecord->find(Object(CDbCriteria))
+#7 D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyActionController.php(41): WarrantyAction->getActionData('1')
+#8 D:\new\framework\web\actions\CInlineAction.php(49): AdminWarrantyActionController->actionAdd()
+#9 D:\new\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 D:\new\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 D:\new\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\new\framework\web\CWebApplication.php(282): CController->run('add')
+#13 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/adminWarr...')
+#14 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 D:\new\carproject\index.php(18): CApplication->run()
+#16 {main}
+REQUEST_URI=/admin/adminWarrantyAction/add/id/1.html
+HTTP_REFERER=http://www.carproject.com/admin/adminWarrantyAction/index.html
+---
+2017/07/19 18:24:44 [warning] [application] Failed to set unsafe attribute "ctime_start" of "WarrantyAction".
+in D:\new\carproject\protected\models\WarrantyAction.php (162)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyActionController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/19 18:24:44 [warning] [application] Failed to set unsafe attribute "ctime_end" of "WarrantyAction".
+in D:\new\carproject\protected\models\WarrantyAction.php (162)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyActionController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/19 18:24:44 [warning] [application] Failed to set unsafe attribute "acttime_end" of "WarrantyAction".
+in D:\new\carproject\protected\models\WarrantyAction.php (162)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyActionController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/19 18:24:48 [warning] [application] Failed to set unsafe attribute "ctime_start" of "WarrantyAction".
+in D:\new\carproject\protected\models\WarrantyAction.php (162)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyActionController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/19 18:24:48 [warning] [application] Failed to set unsafe attribute "ctime_end" of "WarrantyAction".
+in D:\new\carproject\protected\models\WarrantyAction.php (162)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyActionController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/19 18:24:48 [warning] [application] Failed to set unsafe attribute "acttime_end" of "WarrantyAction".
+in D:\new\carproject\protected\models\WarrantyAction.php (162)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyActionController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/19 18:24:53 [warning] [application] Failed to set unsafe attribute "ctime_start" of "WarrantyAction".
+in D:\new\carproject\protected\models\WarrantyAction.php (162)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyActionController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/19 18:24:53 [warning] [application] Failed to set unsafe attribute "ctime_end" of "WarrantyAction".
+in D:\new\carproject\protected\models\WarrantyAction.php (162)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyActionController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/19 18:24:53 [warning] [application] Failed to set unsafe attribute "acttime_end" of "WarrantyAction".
+in D:\new\carproject\protected\models\WarrantyAction.php (162)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyActionController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/19 18:26:57 [warning] [application] Failed to set unsafe attribute "ctime_start" of "WarrantyAction".
+in D:\new\carproject\protected\models\WarrantyAction.php (162)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyActionController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/19 18:26:57 [warning] [application] Failed to set unsafe attribute "ctime_end" of "WarrantyAction".
+in D:\new\carproject\protected\models\WarrantyAction.php (162)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyActionController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/19 18:26:57 [warning] [application] Failed to set unsafe attribute "acttime_end" of "WarrantyAction".
+in D:\new\carproject\protected\models\WarrantyAction.php (162)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyActionController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/19 18:30:17 [warning] [application] Failed to set unsafe attribute "ctime_start" of "WarrantyAction".
+in D:\new\carproject\protected\models\WarrantyAction.php (162)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyActionController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/19 18:30:17 [warning] [application] Failed to set unsafe attribute "ctime_end" of "WarrantyAction".
+in D:\new\carproject\protected\models\WarrantyAction.php (162)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyActionController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/19 18:30:17 [warning] [application] Failed to set unsafe attribute "acttime_end" of "WarrantyAction".
+in D:\new\carproject\protected\models\WarrantyAction.php (162)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyActionController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/19 18:30:17 [error] [exception.CException] exception 'CException' with message 'Property "Admin.name" is not defined.' in D:\new\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\new\framework\db\ar\CActiveRecord.php(143): CComponent->__get('name')
+#1 D:\new\carproject\protected\modules\admin\views\adminWarrantyAction\index.php(88): CActiveRecord->__get('name')
+#2 D:\new\framework\web\CBaseController.php(126): require('D:\\new\\carproje...')
+#3 D:\new\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\\new\\carproje...', Array, true)
+#4 D:\new\framework\web\CController.php(869): CBaseController->renderFile('D:\\new\\carproje...', Array, true)
+#5 D:\new\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#6 D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyActionController.php(32): CController->render('index', Array)
+#7 D:\new\framework\web\actions\CInlineAction.php(49): AdminWarrantyActionController->actionIndex()
+#8 D:\new\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 D:\new\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 D:\new\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 D:\new\framework\web\CWebApplication.php(282): CController->run('index')
+#12 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/adminWarr...')
+#13 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 D:\new\carproject\index.php(18): CApplication->run()
+#15 {main}
+REQUEST_URI=/admin/adminWarrantyAction/index.html?WarrantyAction%5Bstoreid%5D=&WarrantyAction%5Bactpart%5D=1&WarrantyAction%5Bwid%5D=&WarrantyAction%5Bconstructor%5D=a&WarrantyAction%5Baction_no%5D=&WarrantyAction%5Baction%5D=&WarrantyAction%5Bctime_start%5D=&WarrantyAction%5Bctime_end%5D=&WarrantyAction%5Bacttime_end%5D=&WarrantyAction%5Bacttime_end%5D=&yt0=%E6%90%9C%E7%B4%A2
+HTTP_REFERER=http://www.carproject.com/admin/adminWarrantyAction/index.html?WarrantyAction%5Bstoreid%5D=&WarrantyAction%5Bactpart%5D=2&WarrantyAction%5Bwid%5D=&WarrantyAction%5Bconstructor%5D=&WarrantyAction%5Baction_no%5D=&WarrantyAction%5Baction%5D=&WarrantyAction%5Bctime_start%5D=&WarrantyAction%5Bctime_end%5D=&WarrantyAction%5Bacttime_end%5D=&WarrantyAction%5Bacttime_end%5D=&yt0=%E6%90%9C%E7%B4%A2
+---
+2017/07/19 18:30:33 [warning] [application] Failed to set unsafe attribute "ctime_start" of "WarrantyAction".
+in D:\new\carproject\protected\models\WarrantyAction.php (162)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyActionController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/19 18:30:33 [warning] [application] Failed to set unsafe attribute "ctime_end" of "WarrantyAction".
+in D:\new\carproject\protected\models\WarrantyAction.php (162)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyActionController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/19 18:30:33 [warning] [application] Failed to set unsafe attribute "acttime_end" of "WarrantyAction".
+in D:\new\carproject\protected\models\WarrantyAction.php (162)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyActionController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/19 18:30:50 [warning] [application] Failed to set unsafe attribute "ctime_start" of "WarrantyAction".
+in D:\new\carproject\protected\models\WarrantyAction.php (162)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyActionController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/19 18:30:50 [warning] [application] Failed to set unsafe attribute "ctime_end" of "WarrantyAction".
+in D:\new\carproject\protected\models\WarrantyAction.php (162)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyActionController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/19 18:30:50 [warning] [application] Failed to set unsafe attribute "acttime_end" of "WarrantyAction".
+in D:\new\carproject\protected\models\WarrantyAction.php (162)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyActionController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/19 18:32:41 [warning] [application] Failed to set unsafe attribute "admin_id" of "WarrantyAction".
+in D:\new\carproject\protected\models\WarrantyAction.php (138)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyActionController.php (56)
+in D:\new\carproject\index.php (18)
+2017/07/19 18:32:41 [warning] [application] Failed to set unsafe attribute "ctime" of "WarrantyAction".
+in D:\new\carproject\protected\models\WarrantyAction.php (138)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyActionController.php (56)
+in D:\new\carproject\index.php (18)
+2017/07/19 18:50:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/admin/img/inst_logo.png".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/admin/i...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/admin/img/inst_logo.png
+HTTP_REFERER=http://www.carproject.com/admin/login/index.html
+---
+2017/07/19 18:50:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/images/baijia.ico".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/i...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/images/baijia.ico
+HTTP_REFERER=http://www.carproject.com/admin/login/index.html
+---
+2017/07/19 18:50:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/admin/img/inst_logo.png".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/admin/i...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/admin/img/inst_logo.png
+HTTP_REFERER=http://www.carproject.com/admin/login/index.html
+---
+2017/07/19 18:50:50 [warning] [application] Failed to set unsafe attribute "id" of "Admin".
+in D:\new\carproject\protected\modules\admin\controllers\AdminListController.php (90)
+in D:\new\carproject\index.php (18)
+2017/07/19 18:50:50 [warning] [application] Failed to set unsafe attribute "newpassword" of "Admin".
+in D:\new\carproject\protected\modules\admin\controllers\AdminListController.php (90)
+in D:\new\carproject\index.php (18)
+2017/07/19 18:50:50 [warning] [application] Failed to set unsafe attribute "confirm_password" of "Admin".
+in D:\new\carproject\protected\modules\admin\controllers\AdminListController.php (90)
+in D:\new\carproject\index.php (18)
+2017/07/19 18:50:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/admin/img/inst_logo.png".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/admin/i...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/admin/img/inst_logo.png
+HTTP_REFERER=http://www.carproject.com/admin/login/index.html
+---
+2017/07/19 18:51:23 [warning] [application] Failed to set unsafe attribute "id" of "Admin".
+in D:\new\carproject\protected\modules\admin\controllers\AdminListController.php (90)
+in D:\new\carproject\index.php (18)
+2017/07/19 18:51:23 [warning] [application] Failed to set unsafe attribute "newpassword" of "Admin".
+in D:\new\carproject\protected\modules\admin\controllers\AdminListController.php (90)
+in D:\new\carproject\index.php (18)
+2017/07/19 18:51:23 [warning] [application] Failed to set unsafe attribute "confirm_password" of "Admin".
+in D:\new\carproject\protected\modules\admin\controllers\AdminListController.php (90)
+in D:\new\carproject\index.php (18)
+2017/07/19 18:51:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/admin/img/inst_logo.png".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/admin/i...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/admin/img/inst_logo.png
+HTTP_REFERER=http://www.carproject.com/admin/login/index.html
+---
+2017/07/19 18:59:59 [error] [php] Undefined index: adminuser (D:\new\carproject\protected\utils\CUtils.php:696)
+Stack trace:
+#0 D:\new\framework\web\CController.php(286): AdminUserController->runAction()
+#1 D:\new\framework\web\CController.php(265): AdminUserController->runActionWithFilters()
+#2 D:\new\framework\web\CWebApplication.php(282): AdminUserController->run()
+#3 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 D:\new\carproject\index.php(18): CWebApplication->run()
+REQUEST_URI=/admin/adminUser/updatePass/id/1.html
+in D:\new\carproject\protected\utils\CUtils.php (696)
+in D:\new\carproject\protected\modules\admin\components\CAdminController.php (39)
+in D:\new\carproject\index.php (18)
+2017/07/19 19:00:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message '参数若无' in D:\new\carproject\protected\modules\admin\controllers\AdminUserController.php:8
+Stack trace:
+#0 D:\new\framework\web\actions\CInlineAction.php(49): AdminUserController->actionUpdatePass()
+#1 D:\new\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 D:\new\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#3 D:\new\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 D:\new\framework\web\CWebApplication.php(282): CController->run('updatePass')
+#5 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/adminUser...')
+#6 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 D:\new\carproject\index.php(18): CApplication->run()
+#8 {main}
+REQUEST_URI=/admin/adminUser/updatePass/id/1.html
+HTTP_REFERER=http://www.carproject.com/admin/AdminSettingPanel/index.html
+---
+2017/07/19 19:01:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message '参数若无' in D:\new\carproject\protected\modules\admin\controllers\AdminUserController.php:8
+Stack trace:
+#0 D:\new\framework\web\actions\CInlineAction.php(49): AdminUserController->actionUpdatePass()
+#1 D:\new\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 D:\new\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#3 D:\new\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 D:\new\framework\web\CWebApplication.php(282): CController->run('updatePass')
+#5 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/adminUser...')
+#6 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 D:\new\carproject\index.php(18): CApplication->run()
+#8 {main}
+REQUEST_URI=/admin/adminUser/updatePass/id/1.html
+HTTP_REFERER=http://www.carproject.com/admin/adminSettingPanel/index.html
+---
+2017/07/19 19:03:01 [error] [exception.CException] exception 'CException' with message 'AdminUserController cannot find the requested view "update".' in D:\new\framework\web\CController.php:878
+Stack trace:
+#0 D:\new\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#1 D:\new\carproject\protected\modules\admin\controllers\AdminUserController.php(35): CController->render('update', Array)
+#2 [internal function]: AdminUserController->actionUpdatePass('1')
+#3 D:\new\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(AdminUserController), Array)
+#4 D:\new\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AdminUserController), Object(ReflectionMethod), Array)
+#5 D:\new\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 D:\new\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 D:\new\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 D:\new\framework\web\CWebApplication.php(282): CController->run('updatePass')
+#9 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/adminUser...')
+#10 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 D:\new\carproject\index.php(18): CApplication->run()
+#12 {main}
+REQUEST_URI=/admin/adminUser/updatePass/id/1.html
+HTTP_REFERER=http://www.carproject.com/admin/adminSettingPanel/index.html
+---
+2017/07/19 19:03:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in D:\new\framework\web\CController.php:483
+Stack trace:
+#0 D:\new\framework\web\CController.php(270): CController->missingAction('index')
+#1 D:\new\framework\web\CWebApplication.php(282): CController->run('index')
+#2 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/adminUser...')
+#3 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\new\carproject\index.php(18): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/adminUser/index.html
+HTTP_REFERER=http://www.carproject.com/admin/adminUser/updatePass/id/1.html
+---
+2017/07/19 19:05:23 [warning] [application] Failed to set unsafe attribute "id" of "Admin".
+in D:\new\carproject\protected\modules\admin\controllers\AdminUserController.php (23)
+in D:\new\carproject\index.php (18)
+2017/07/19 19:05:23 [warning] [application] Failed to set unsafe attribute "newpassword" of "Admin".
+in D:\new\carproject\protected\modules\admin\controllers\AdminUserController.php (23)
+in D:\new\carproject\index.php (18)
+2017/07/19 19:05:23 [warning] [application] Failed to set unsafe attribute "confirm_password" of "Admin".
+in D:\new\carproject\protected\modules\admin\controllers\AdminUserController.php (23)
+in D:\new\carproject\index.php (18)
+2017/07/19 19:05:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in D:\new\framework\web\CController.php:483
+Stack trace:
+#0 D:\new\framework\web\CController.php(270): CController->missingAction('index')
+#1 D:\new\framework\web\CWebApplication.php(282): CController->run('index')
+#2 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/adminUser...')
+#3 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\new\carproject\index.php(18): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/adminUser/index.html
+HTTP_REFERER=http://www.carproject.com/admin/adminUser/updatePass/id/1.html
+---
+2017/07/19 19:05:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/admin/img/inst_logo.png".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/admin/i...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/admin/img/inst_logo.png
+HTTP_REFERER=http://www.carproject.com/admin/login/index.html
+---
+2017/07/19 19:05:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/images/baijia.ico".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/i...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/images/baijia.ico
+HTTP_REFERER=http://www.carproject.com/admin/login/index.html
+---
+2017/07/19 19:05:55 [warning] [application] Failed to set unsafe attribute "id" of "Admin".
+in D:\new\carproject\protected\modules\admin\controllers\AdminUserController.php (23)
+in D:\new\carproject\index.php (18)
+2017/07/19 19:05:55 [warning] [application] Failed to set unsafe attribute "newpassword" of "Admin".
+in D:\new\carproject\protected\modules\admin\controllers\AdminUserController.php (23)
+in D:\new\carproject\index.php (18)
+2017/07/19 19:05:55 [warning] [application] Failed to set unsafe attribute "confirm_password" of "Admin".
+in D:\new\carproject\protected\modules\admin\controllers\AdminUserController.php (23)
+in D:\new\carproject\index.php (18)
+2017/07/19 19:05:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in D:\new\framework\web\CController.php:483
+Stack trace:
+#0 D:\new\framework\web\CController.php(270): CController->missingAction('index')
+#1 D:\new\framework\web\CWebApplication.php(282): CController->run('index')
+#2 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/adminUser...')
+#3 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\new\carproject\index.php(18): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/adminUser/index.html
+HTTP_REFERER=http://www.carproject.com/admin/adminUser/updatePass/id/1.html
+---
+2017/07/19 19:07:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/admin/img/inst_logo.png".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/admin/i...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/admin/img/inst_logo.png
+HTTP_REFERER=http://www.carproject.com/admin/login/index.html
+---
+2017/07/19 19:07:37 [warning] [application] Failed to set unsafe attribute "id" of "Admin".
+in D:\new\carproject\protected\modules\admin\controllers\AdminUserController.php (23)
+in D:\new\carproject\index.php (18)
+2017/07/19 19:07:37 [warning] [application] Failed to set unsafe attribute "newpassword" of "Admin".
+in D:\new\carproject\protected\modules\admin\controllers\AdminUserController.php (23)
+in D:\new\carproject\index.php (18)
+2017/07/19 19:07:37 [warning] [application] Failed to set unsafe attribute "confirm_password" of "Admin".
+in D:\new\carproject\protected\modules\admin\controllers\AdminUserController.php (23)
+in D:\new\carproject\index.php (18)
+2017/07/19 19:07:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/admin/img/inst_logo.png".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/admin/i...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/admin/img/inst_logo.png
+HTTP_REFERER=http://www.carproject.com/admin/login/index.html
+---
+2017/07/19 19:07:58 [warning] [application] Failed to set unsafe attribute "id" of "Admin".
+in D:\new\carproject\protected\modules\admin\controllers\AdminUserController.php (23)
+in D:\new\carproject\index.php (18)
+2017/07/19 19:07:58 [warning] [application] Failed to set unsafe attribute "newpassword" of "Admin".
+in D:\new\carproject\protected\modules\admin\controllers\AdminUserController.php (23)
+in D:\new\carproject\index.php (18)
+2017/07/19 19:07:58 [warning] [application] Failed to set unsafe attribute "confirm_password" of "Admin".
+in D:\new\carproject\protected\modules\admin\controllers\AdminUserController.php (23)
+in D:\new\carproject\index.php (18)

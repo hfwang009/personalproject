@@ -34,17 +34,17 @@
                                 </div>
                             </td>
                         </tr>
-                        <tr>
-                            <td>
-                                <div class="form-group">
-                                    <?php echo $form->label($model,'password',array('class'=>'col-sm-2 col-xs-3 control-label'));?>
-                                    <div class="col-sm-5 col-xs-8">
-                                        <?php echo $form->passwordField($model, 'password', array("class"=>"form-control",'ng-check'=>'js_check_admin()','ng-id'=>!empty($model)?$model['id']:''));?>
-                                        <?php echo $form->error($model,'password',array('class'=>'help-block'));?>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
+<!--                        <tr>-->
+<!--                            <td>-->
+<!--                                <div class="form-group">-->
+<!--                                    --><?php //echo $form->label($model,'password',array('class'=>'col-sm-2 col-xs-3 control-label'));?>
+<!--                                    <div class="col-sm-5 col-xs-8">-->
+<!--                                        --><?php //echo $form->passwordField($model, 'password', array("class"=>"form-control",'ng-check'=>'js_check_admin()','ng-id'=>!empty($model)?$model['id']:''));?>
+<!--                                        --><?php //echo $form->error($model,'password',array('class'=>'help-block'));?>
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </td>-->
+<!--                        </tr>-->
                         <tr>
                             <td>
                                 <div class="form-group">
@@ -119,20 +119,20 @@
         });
     }
     var submit_form = function(){
-        var pass = $('#Admin_password').val();
+//        var pass = $('#Admin_password').val();
         var npass = $('#Admin_newpassword').val();
         var cpass = $('#Admin_confirm_password').val();
-        if(isEmpty(pass)||isEmpty(npass)||isEmpty(cpass)){
+        if(isEmpty(npass)||isEmpty(cpass)){
             show_tip_message('请输入密码！');
             return false;
         }
-        if(pass==npass||pass==cpass){
-            $('#Admin_password').val('');
-            $('#Admin_newpassword').val('');
-            $('#Admin_confirm_password').val('');
-            show_tip_message('没有重置密码！');
-            return false;
-        }
+//        if(pass==npass||pass==cpass){
+//            $('#Admin_password').val('');
+//            $('#Admin_newpassword').val('');
+//            $('#Admin_confirm_password').val('');
+//            show_tip_message('没有重置密码！');
+//            return false;
+//        }
         if(npass!==cpass){
             $('#Admin_newpassword').val('');
             $('#Admin_confirm_password').val('');

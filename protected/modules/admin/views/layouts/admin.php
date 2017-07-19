@@ -38,6 +38,12 @@ $controller = Yii::app()->controller->id;
 					</a>
 
 					<ul class="dropdown-menu pull-right mod-user">
+                        <li>
+                            <a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->module->id.'/'.'adminUser/updatePass',array('id'=>Yii::app()->user->id)); ?>">
+                                <i class="icon icon-logout"></i>
+                                修改密码
+                            </a>
+                        </li>
 						<li>
 							<a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->module->id.'/'.'Login/logout'); ?>">
 								<i class="icon icon-logout"></i>
@@ -56,6 +62,9 @@ $controller = Yii::app()->controller->id;
 					<a title="车辆产品前台" href="<?php echo Yii::app()->createUrl(Yii::app()->controller->module->id.'/'.'help/index'); ?>" class="btn btn-sm">
 						<i class="icon icon-home"></i>
 					</a>
+                    <a title="修改密码" href="<?php echo Yii::app()->createUrl(Yii::app()->controller->module->id.'/'.'adminUser/updatePass',array('id'=>Yii::app()->user->id)); ?>" class="btn btn-sm">
+                        <i class="icon icon-facebook"></i>
+                    </a>
 					<a title="退出" href="<?php echo Yii::app()->createUrl(Yii::app()->controller->module->id.'/'.'Login/logout'); ?>" class="btn btn-sm">
 						<i class="icon icon-logout"></i>
 					</a>

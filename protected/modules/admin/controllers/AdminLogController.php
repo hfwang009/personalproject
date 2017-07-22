@@ -10,7 +10,7 @@ class AdminLogController extends CAdminController
         $criteria->condition = 1;
         $condition = $_GET;
         list($criteria, $condition, $search) = $search->getCriteriaCondition($criteria, $condition, $search);
-        $model = new CActiveDataProvider('Warranty',
+        $model = new CActiveDataProvider('AdminLog',
             array(
                 'criteria' => $criteria,
                 'pagination' => array(
@@ -18,18 +18,20 @@ class AdminLogController extends CAdminController
                 ),
             )
         );
+        $count = AdminLog::model()->count($criteria);
         $ajax_url = $this->createUrl('setting');
-//        $models_data = Models::model()->getModelData();
+        $admin_data = Admin::model()->getAdminData();
 //        $product_data = Product::model()->getProductData3();
         $result = $model->getData();
 //        $result = $this->__formatData($result, $models_data, $product_data);
         $this->render("index", array(
             "search" => $search,
             "condition" => $condition,
-//            "models_data" => $models_data,
+            "admin_data" => $admin_data,
 //            "product_data" => $product_data,
             "pager" => $model->getPagination(),
             "ajax_url" => $ajax_url,
+            "count"=>$count,
             "model" => $result
         ));
     }

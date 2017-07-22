@@ -131,6 +131,13 @@
                 );
                 ?>
                 <div class="form-group">
+                    <?php echo $form->label($search,'wid',array('class'=>'col-sm-2 col-xs-3 control-label'));?>
+                    <div class="col-sm-5 col-xs-8">
+                        <?php echo $form->dropDownList($search,'wid',$warranty_data,array('empty'=>'-- 请选择  --','class'=>'form-control'));?>
+                        <?php echo $form->error($search,'wid',array('class'=>'help-block'));?>
+                    </div>
+                </div>
+                <div class="form-group">
                     <?php echo $form->label($search,'storeid',array('class'=>'col-sm-2 col-xs-3 control-label'));?>
                     <div class="col-sm-5 col-xs-8">
                         <?php echo $form->dropDownList($search,'storeid',$store_data,array('empty'=>'-- 请选择  --','class'=>'form-control'));?>
@@ -145,10 +152,17 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <?php echo $form->label($search,'wid',array('class'=>'col-sm-2 col-xs-3 control-label'));?>
+                    <?php echo $form->label($search,'mid',array('class'=>'col-sm-2 col-xs-3 control-label'));?>
                     <div class="col-sm-5 col-xs-8">
-                        <?php echo $form->dropDownList($search,'wid',$warranty_data,array('empty'=>'-- 请选择  --','class'=>'form-control'));?>
-                        <?php echo $form->error($search,'wid',array('class'=>'help-block'));?>
+                        <?php echo $form->dropDownList($search,'mid',$models_data,array('empty'=>'-- 请选择  --','class'=>'form-control'));?>
+                        <?php echo $form->error($search,'mid',array('class'=>'help-block'));?>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <?php echo $form->label($search,'carmodel',array('class'=>'col-sm-2 col-xs-3 control-label'));?>
+                    <div class="col-sm-5 col-xs-8">
+                        <?php echo $form->textField($search, 'carmodel', array("class"=>"form-control"));?>
+                        <?php echo $form->error($search,'carmodel',array('class'=>'help-block'));?>
                     </div>
                 </div>
                 <div class="form-group">

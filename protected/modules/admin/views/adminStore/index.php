@@ -32,8 +32,11 @@
                                     <a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->module->id.'/'.Yii::app()->controller->id . '/' . $this->getAction()->getId(), array_merge($condition,array('sortFiled'=>'name','sortValue'=>(isset($condition['sortFiled']) && $condition['sortFiled']=='name')?($condition['sortValue'] == "asc"?"desc":"asc"):"asc")));?>">门店名称<span class="glyphicon <?php echo $condition['sortFiled'] == 'name'?($condition['sortValue'] == "asc"?"glyphicon-chevron-up":"glyphicon-chevron-down"):'';?>"></span></a>
                                 </th>
                                 <th>
-                                    <a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->module->id.'/'.Yii::app()->controller->id . '/' . $this->getAction()->getId(), array_merge($condition,array('sortFiled'=>'type','sortValue'=>(isset($condition['sortFiled']) && $condition['sortFiled']=='type')?($condition['sortValue'] == "asc"?"desc":"asc"):"asc")));?>">门店类型<span class="glyphicon <?php echo $condition['sortFiled'] == 'type'?($condition['sortValue'] == "asc"?"glyphicon-chevron-up":"glyphicon-chevron-down"):'';?>"></span></a>
+                                    <a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->module->id.'/'.Yii::app()->controller->id . '/' . $this->getAction()->getId(), array_merge($condition,array('sortFiled'=>'ename','sortValue'=>(isset($condition['sortFiled']) && $condition['sortFiled']=='ename')?($condition['sortValue'] == "asc"?"desc":"asc"):"asc")));?>">英文门店名称<span class="glyphicon <?php echo $condition['sortFiled'] == 'ename'?($condition['sortValue'] == "asc"?"glyphicon-chevron-up":"glyphicon-chevron-down"):'';?>"></span></a>
                                 </th>
+<!--                                <th>-->
+<!--                                    <a href="--><?php //echo Yii::app()->createUrl(Yii::app()->controller->module->id.'/'.Yii::app()->controller->id . '/' . $this->getAction()->getId(), array_merge($condition,array('sortFiled'=>'type','sortValue'=>(isset($condition['sortFiled']) && $condition['sortFiled']=='type')?($condition['sortValue'] == "asc"?"desc":"asc"):"asc")));?><!--">门店类型<span class="glyphicon --><?php //echo $condition['sortFiled'] == 'type'?($condition['sortValue'] == "asc"?"glyphicon-chevron-up":"glyphicon-chevron-down"):'';?><!--"></span></a>-->
+<!--                                </th>-->
                                 <th>
                                     <a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->module->id.'/'.Yii::app()->controller->id . '/' . $this->getAction()->getId(), array_merge($condition,array('sortFiled'=>'provinceid','sortValue'=>(isset($condition['sortFiled']) && $condition['sortFiled']=='provinceid')?($condition['sortValue'] == "asc"?"desc":"asc"):"asc")));?>">所在省份<span class="glyphicon <?php echo $condition['sortFiled'] == 'provinceid'?($condition['sortValue'] == "asc"?"glyphicon-chevron-up":"glyphicon-chevron-down"):'';?>"></span></a>
                                 </th>
@@ -65,7 +68,8 @@
                                         </td>
                                         <td><?php echo $_model['id'];?></td>
                                         <td><?php echo $_model['name'];?></td>
-                                        <td><?php echo !empty($_model['type'])?$type[$_model['type']]:'--';?></td>
+                                        <td><?php echo !empty($_model['ename'])?$_model['ename']:'--';?></td>
+<!--                                        <td>--><?php //echo !empty($_model['type'])?$type[$_model['type']]:'--';?><!--</td>-->
                                         <td><?php echo !empty($_model['provinceid'])?$areas[$_model['provinceid']]:'--';?></td>
                                         <td><?php echo !empty($_model['cityid'])?$areas[$_model['cityid']]:'--';?></td>
                                         <td><?php echo !empty($_model['areaid'])?$areas[$_model['areaid']]:'--';?></td>
@@ -126,6 +130,13 @@
                     </div>
                 </div>
                 <div class="form-group">
+                    <?php echo $form->label($search,'ename',array('class'=>'col-sm-2 col-xs-3 control-label'));?>
+                    <div class="col-sm-5 col-xs-8">
+                        <?php echo $form->textField($search, 'ename', array("class"=>"form-control"));?>
+                        <?php echo $form->error($search,'ename',array('class'=>'help-block'));?>
+                    </div>
+                </div>
+                <div class="form-group">
                     <?php echo $form->label($search,'provinceid',array('class'=>'col-sm-2 col-xs-3 control-label'));?>
                     <div class="col-sm-5 col-xs-8">
                         <?php echo $form->dropDownList($search,'provinceid',$provinces,array(
@@ -182,6 +193,13 @@
                     <div class="col-sm-5 col-xs-8">
                         <?php echo $form->textField($search, 'address', array("class"=>"form-control"));?>
                         <?php echo $form->error($search,'address',array('class'=>'help-block'));?>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <?php echo $form->label($search,'eaddress',array('class'=>'col-sm-2 col-xs-3 control-label'));?>
+                    <div class="col-sm-5 col-xs-8">
+                        <?php echo $form->textField($search, 'eaddress', array("class"=>"form-control"));?>
+                        <?php echo $form->error($search,'eaddress',array('class'=>'help-block'));?>
                     </div>
                 </div>
                 <div class="form-group">

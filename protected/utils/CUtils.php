@@ -685,8 +685,8 @@ class CUtils {
      * 添加后台管理员的操作日志，列表和setting操作没有统计进去
      * */
     public static function addAdminLog($controller,$action,$request,$adminid){
-        $control_arr = Yii::app()->params['conf']['setting']['controller'];
-        $act_arr = Yii::app()->params['conf']['setting']['action'];
+        $control_arr = Yii::app()->params['conf']['syssetting']['controller'];
+        $act_arr = Yii::app()->params['conf']['syssetting']['action'];
         if($action=='setting'||$action=='index'||empty($request)){
             return true;
         }
@@ -1168,5 +1168,169 @@ class CUtils {
         }
 
         return $obj;
+    }
+
+    //设置上传路径
+    public static function setUplodaPath($type){
+        $path = Yii::app()->params['conf']['path'];
+        switch ($type){
+            case 'logo':
+                Yii::app()->upload->images_path = $path['defaultfile'];
+                Yii::app()->upload->images_url = Yii::app()->baseUrl . str_replace($path['systemfile'], '', $path['defaultfile']);
+                break;
+            case 'news':
+                Yii::app()->upload->images_path = $path['newspath'];
+                Yii::app()->upload->images_url = Yii::app()->baseUrl . str_replace($path['systemfile'], '', $path['newspath']);
+                break;
+            case 'videopic':
+                Yii::app()->upload->images_path = $path['videopic'];
+                Yii::app()->upload->images_url = Yii::app()->baseUrl . str_replace($path['systemfile'], '', $path['videopic']);
+                break;
+            case 'articleimages':
+                Yii::app()->upload->images_path = $path['articleimages'];
+                Yii::app()->upload->images_url = Yii::app()->baseUrl . str_replace($path['systemfile'], '', $path['articleimages']);
+                break;
+            default:
+                Yii::app()->upload->images_path = $path['defaultfile'];
+                Yii::app()->upload->images_url = Yii::app()->baseUrl . str_replace($path['systemfile'], '', $path['defaultfile']);
+                break;
+        }
+    }
+
+    public static function getImageType($filename){
+        $mime_types = array(
+            'gif'  => 'image/gif',
+            'ief'  => 'image/ief',
+            'jpe'  => 'image/jpeg',
+            'jpeg' => 'image/jpeg',
+            'jpg'  => 'image/jpeg',
+            'jfif' => 'image/pipeg',
+            'bmp'  => 'image/bmp',
+            'png'  => 'image/png',
+        );
+        $ext = explode('.',$filename);
+        $ext = strtolower(array_pop($ext));
+        if (array_key_exists($ext, $mime_types)) {
+            return $mime_types[$ext];
+        }
+        return false;
+    }
+
+    public static function upladImage($type,$modelName,$modelAttr="",$width=0,$height=0,$iswatermark=false,$isthumb=false,$thumb_width=100,$thumb_height=100){
+        $imgArr = array();
+        if(!empty($_FILES[$modelName]['tmp_name'][$modelAttr])){
+            $cutils = new CUtils();
+            $cutils->setUplodaPath($type);
+            $upfile = Yii::app()->upload->parse($_FILES[$modelName]);
+            $image = Yii::app()->upload->load($upfile[$modelAttr]);
+            if ($image->file_is_image) {
+                if ($image->uploaded) {
+                    $image->jpeg_quality = Yii::app()->upload->jpeg_quality;
+                    if ($iswatermark) {
+                        $image->image_watermark = Yii::app()->assetManager->basePath . '/watermark/watermark.png';
+                        $image->image_watermark_position = Yii::app()->upload->watermark_position;
+                    }
+                    $image->file_new_name_body = time();
+                    //$image->image_resize = true;
+                    if (intval($width) > 0) {
+                        $image->image_x = $width;
+                    }else{
+                        $image->image_ratio_x = true;
+                    }
+                    if (intval($height) > 0) {
+                        $image->image_y = $height;
+                    }else{
+                        $image->image_ratio_y = true;
+                    }
+                    $image->Process(Yii::app()->upload->images_path);
+                    if ($image->processed) {
+                        $imgArr = array('src_img' => Yii::app()->upload->images_url . $image->file_dst_name);
+                        //Create thumb image
+                        if ($isthumb) {
+                            if ($iswatermark) {
+                                $image->image_watermark = Yii::app()->assetManager->basePath . '/watermark/watermark_thumb.png';
+                                $image->image_watermark_position = Yii::app()->upload->watermark_position;
+                            }
+                            $image->image_convert = $image->file_dst_name_ext;
+                            $image->file_new_name_body = "thumb_" . $image->file_dst_name_body;
+                            $image->image_resize = true;
+                            if (intval($thumb_width) > 0) {
+                                $image->image_x = $thumb_width;
+                            }else{
+                                $image->image_ratio_x = true;
+                            }
+                            if (intval($thumb_height) > 0) {
+                                $image->image_y = $thumb_height;
+                            }else{
+                                $image->image_ratio_y = true;
+                            }
+                            $image->Process(Yii::app()->upload->images_path);
+                            if ($image->processed)
+                                $imgArr['thumb_img'] = Yii::app()->upload->images_url . $image->file_dst_name;
+                        }
+                    }
+                }
+            }
+        }
+        return $imgArr;
+    }
+
+    /**
+     * 字符截取 支持UTF8/GBK
+     * @param $string
+     * @param $length
+     * @param $dot
+     */
+    public static function str_cut($string, $length, $dot = '...', $charset = 'utf-8') {
+        $strlen = strlen($string);
+        if($strlen <= $length) return $string;
+        $string = str_replace(array(' ','&nbsp;', '&amp;', '&quot;', '&#039;', '&ldquo;', '&rdquo;', '&mdash;', '&lt;', '&gt;', '&middot;', '&hellip;'), array('∵',' ', '&', '"', "'", '“', '”', '—', '<', '>', '·', '…'), $string);
+        $strcut = '';
+        if(strtolower($charset) == 'utf-8') {
+            $length = intval($length-strlen($dot)-$length/3);
+            $n = $tn = $noc = 0;
+            while($n < strlen($string)) {
+                $t = ord($string[$n]);
+                if($t == 9 || $t == 10 || (32 <= $t && $t <= 126)) {
+                    $tn = 1; $n++; $noc++;
+                } elseif(194 <= $t && $t <= 223) {
+                    $tn = 2; $n += 2; $noc += 2;
+                } elseif(224 <= $t && $t <= 239) {
+                    $tn = 3; $n += 3; $noc += 2;
+                } elseif(240 <= $t && $t <= 247) {
+                    $tn = 4; $n += 4; $noc += 2;
+                } elseif(248 <= $t && $t <= 251) {
+                    $tn = 5; $n += 5; $noc += 2;
+                } elseif($t == 252 || $t == 253) {
+                    $tn = 6; $n += 6; $noc += 2;
+                } else {
+                    $n++;
+                }
+                if($noc >= $length) {
+                    break;
+                }
+            }
+            if($noc > $length) {
+                $n -= $tn;
+            }
+            $strcut = substr($string, 0, $n);
+            $strcut = str_replace(array('∵', '&', '"', "'", '“', '”', '—', '<', '>', '·', '…'), array(' ', '&amp;', '&quot;', '&#039;', '&ldquo;', '&rdquo;', '&mdash;', '&lt;', '&gt;', '&middot;', '&hellip;'), $strcut);
+        } else {
+            $dotlen = strlen($dot);
+            $maxi = $length - $dotlen - 1;
+            $current_str = '';
+            $search_arr = array('&',' ', '"', "'", '“', '”', '—', '<', '>', '·', '…','∵');
+            $replace_arr = array('&amp;','&nbsp;', '&quot;', '&#039;', '&ldquo;', '&rdquo;', '&mdash;', '&lt;', '&gt;', '&middot;', '&hellip;',' ');
+            $search_flip = array_flip($search_arr);
+            for ($i = 0; $i < $maxi; $i++) {
+                $current_str = ord($string[$i]) > 127 ? $string[$i].$string[++$i] : $string[$i];
+                if (in_array($current_str, $search_arr)) {
+                    $key = $search_flip[$current_str];
+                    $current_str = str_replace($search_arr[$key], $replace_arr[$key], $current_str);
+                }
+                $strcut .= $current_str;
+            }
+        }
+        return $strcut.$dot;
     }
 }

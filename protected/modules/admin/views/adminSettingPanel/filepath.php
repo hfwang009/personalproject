@@ -22,6 +22,9 @@
                         <li>
                             <a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->module->id.'/'.Yii::app()->controller->id . '/set');?>">参数设置</a>
                         </li>
+                        <li>
+                            <a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->module->id.'/'.Yii::app()->controller->id . '/sysset');?>">系统参数设置</a>
+                        </li>
 					</ul>
 				</h3>
 			</div>
@@ -58,13 +61,53 @@
 						<tr>
 							<td>
 								<div class="form-group">
-									<span class="col-sm-4 col-xs-3 control-label">软件库默认存储路径:</span>
+									<span class="col-sm-4 col-xs-3 control-label">默认存储路径:</span>
 									<div class="col-sm-5 col-xs-8">
 										<?php echo $form->textField($model,'datavalue[path][defaultfile]',array('class'=>'form-control','value'=>isset($config['path']['defaultfile'])?$config['path']['defaultfile']:'')); ?>
 									</div>
 								</div>
 							</td>
 						</tr>
+                        <tr>
+                            <td>
+                                <div class="form-group">
+                                    <span class="col-sm-4 col-xs-3 control-label">广告图片存储路径:</span>
+                                    <div class="col-sm-5 col-xs-8">
+                                        <?php echo $form->textField($model,'datavalue[path][adpic]',array('class'=>'form-control','value'=>isset($config['path']['adpic'])?$config['path']['adpic']:'')); ?>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="form-group">
+                                    <span class="col-sm-4 col-xs-3 control-label">视频图片存储路径:</span>
+                                    <div class="col-sm-5 col-xs-8">
+                                        <?php echo $form->textField($model,'datavalue[path][videopic]',array('class'=>'form-control','value'=>isset($config['path']['videopic'])?$config['path']['videopic']:'')); ?>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="form-group">
+                                    <span class="col-sm-4 col-xs-3 control-label">视频存储路径:</span>
+                                    <div class="col-sm-5 col-xs-8">
+                                        <?php echo $form->textField($model,'datavalue[path][videopath]',array('class'=>'form-control','value'=>isset($config['path']['videopath'])?$config['path']['videopath']:'')); ?>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="form-group">
+                                    <span class="col-sm-4 col-xs-3 control-label">文章图片存储路径:</span>
+                                    <div class="col-sm-5 col-xs-8">
+                                        <?php echo $form->textField($model,'datavalue[path][articleimages]',array('class'=>'form-control','value'=>isset($config['path']['articleimages'])?$config['path']['articleimages']:'')); ?>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
 					</tbody>
 				</table>
 			</div>

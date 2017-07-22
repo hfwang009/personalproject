@@ -77,7 +77,7 @@ class Warranty extends CActiveRecord
 			array('telephone', 'length', 'max'=>11),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, series_number, mid, pid, name, telephone, address, carlicence, engineno, construct_time, warrantytime, storeid, ctime, status, create_user, createtime, refuse_reason, constructor, guide, is_send, extension, carmodel,pack_name', 'safe', 'on'=>'search'),
+			array('id, series_number, mid, pid, name, telephone, address, carlicence, engineno, construct_time, warrantytime, storeid, ctime, status, create_user, createtime, refuse_reason, constructor, guide, is_send, extension, carmodel, pack_name', 'safe', 'on'=>'search'),
 		);
 	}
 	/**
@@ -394,6 +394,12 @@ class Warranty extends CActiveRecord
     public function getCriteriaCondition($criteria,$condition,$search){
         if(isset($condition['Warranty']) && (count(array_filter($condition['Warranty'])) > 0 ||$condition['Warranty']['status'] == '0')){
             $search->attributes = $condition['Warranty'];
+            if (!empty($condition['Warranty']['pack_name'])) {
+                $criteria->condition .= ' and t.pack_name like "%' . $condition['Warranty']['pack_name'] .'%" ';
+            }
+            if (!empty($condition['Warranty']['name'])) {
+                $criteria->condition .= ' and t.name like "%' . $condition['Warranty']['name'] .'%" ';
+            }
             if (!empty($condition['Warranty']['telephone'])) {
                 $criteria->condition .= ' and t.telephone like "%' . $condition['Warranty']['telephone'] .'%" ';
             }

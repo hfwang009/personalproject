@@ -19,6 +19,7 @@ class AdminWarrantyActionController extends CAdminController{
         $ajax_url = $this->createUrl('setting');
         $ptype = Yii::app()->params['conf']['setting']['ptype'];
         $warranty_data = Warranty::model()->getWarrantyData1();
+        $models_data= Models::model()->getModelData();
         $store_data = Store::model()->getStore();
         $this->render("index",array(
             "search"=>$search,
@@ -27,6 +28,7 @@ class AdminWarrantyActionController extends CAdminController{
             "ajax_url"=>$ajax_url,
             "ptype"=>$ptype,
             "warranty_data"=>$warranty_data,
+            "models_data"=>$models_data,
             "store_data"=>$store_data,
             "model"=>$model->getData()
         ));

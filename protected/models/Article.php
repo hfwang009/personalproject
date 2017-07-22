@@ -7,7 +7,9 @@
  * @property integer $id
  * @property string $title
  * @property string $content
+ * @property string $images
  * @property integer $ctime
+ * @property integer $lang
  */
 class Article extends CActiveRecord
 {
@@ -45,7 +47,7 @@ class Article extends CActiveRecord
             array('title', 'length', 'max'=>20000000),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
-            array('id, title, content, ctime', 'safe', 'on'=>'search'),
+            array('id, title, content, ctime, images, lang', 'safe', 'on'=>'search'),
         );
     }
 
@@ -69,7 +71,9 @@ class Article extends CActiveRecord
             'id' => 'ID',
             'title' => '标题',
             'content' => '内容',
+            'images' => '文章图片集合',
             'ctime' => '添加时间',
+            'lang' => '语言',
         );
     }
 
@@ -87,7 +91,9 @@ class Article extends CActiveRecord
         $criteria->compare('id',$this->id);
         $criteria->compare('title',$this->title,true);
         $criteria->compare('content',$this->content,true);
+        $criteria->compare('images',$this->images,true);
         $criteria->compare('ctime',$this->ctime);
+        $criteria->compare('lang',$this->lang);
 
         return new CActiveDataProvider($this, array(
             'criteria'=>$criteria,
@@ -99,6 +105,8 @@ class Article extends CActiveRecord
             $article = $this->find("id=:id",array(":id"=>$_REQUEST['id']));
             if(!empty($article)){
                 $article->attributes = $post["Article"];
+                $article->images = $post["Article"]['images'];
+                $article->lang = $post["Article"]['lang'];
                 $article->ctime = time();
                 if($article->validate()){
                     if($article->save()){
@@ -111,6 +119,8 @@ class Article extends CActiveRecord
         }else{
             $model = new Article();
             $model->attributes = $post['Article'];
+            $model->images = $post["Article"]['images'];
+            $model->lang = $post["Article"]['lang'];
             $model->ctime = time();
             if($model->validate()){
                 if($model->save()){
@@ -186,6 +196,9 @@ class Article extends CActiveRecord
             $search->attributes = $condition['Article'];
             if (!empty($condition['Article']['title'])) {
                 $criteria->condition .= ' and t.title like "%' . $condition['Article']['title'] .'%" ';
+            }
+            if (!empty($condition['Article']['lang'])) {
+                $criteria->condition .= ' and t.lang = "' . $condition['Article']['lang'] .'" ';
             }
             if (!empty($condition['Article']['ctime_start'])) {
                 $criteria->condition .= ' and t.ctime >= ' . strtotime($condition['Article']['ctime_start'] .' 00:00:00');

@@ -8,6 +8,7 @@
  * @property string $name
  * @property integer $cid
  * @property integer $type
+ * @property string $ename
  */
 class Models extends CActiveRecord
 {
@@ -41,7 +42,7 @@ class Models extends CActiveRecord
 			array('name', 'length', 'max'=>20000000),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, name', 'safe', 'on'=>'search'),
+			array('id, name, ename', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -66,6 +67,7 @@ class Models extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'name' => '型号名称',
+            'ename' => '英文型号名称',
 		);
 	}
 
@@ -82,6 +84,7 @@ class Models extends CActiveRecord
 
 		$criteria->compare('id',$this->id);
 		$criteria->compare('name',$this->name,true);
+        $criteria->compare('ename',$this->ename);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -93,6 +96,7 @@ class Models extends CActiveRecord
             $model = $this->find("id=:id",array(":id"=>$_REQUEST['id']));
             if(!empty($model)){
                 $model->attributes = $post["Models"];
+                $model->ename = $post["Models"]['ename'];
                 if($model->validate()){
                     if($model->save()){
                         return true;
@@ -104,6 +108,7 @@ class Models extends CActiveRecord
         }else{
             $model = new Models();
             $model->attributes = $post['Models'];
+            $model->ename = $post["Models"]['ename'];
             if($model->validate()){
                 if($model->save()){
                     return true;
@@ -156,6 +161,9 @@ class Models extends CActiveRecord
             $search->attributes = $condition['Models'];
             if (!empty($condition['Models']['name'])) {
                 $criteria->condition .= ' and t.name like "%' . $condition['Models']['name'] .'%" ';
+            }
+            if (!empty($condition['Models']['ename'])) {
+                $criteria->condition .= ' and t.ename like "%' . $condition['Models']['ename'] .'%" ';
             }
         }
         if(empty($condition['sortFiled']) || empty($condition['sortValue'])){

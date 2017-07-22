@@ -8,6 +8,7 @@
  * @property string $title
  * @property string $content
  * @property integer $ctime
+ * @property integer $lang
  */
 class News extends CActiveRecord
 {
@@ -45,7 +46,7 @@ class News extends CActiveRecord
 			array('title', 'length', 'max'=>20000000),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, title, content, ctime', 'safe', 'on'=>'search'),
+			array('id, title, content, ctime, lang', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -70,6 +71,7 @@ class News extends CActiveRecord
 			'title' => '标题',
 			'content' => '内容',
 			'ctime' => '添加时间',
+            'lang' => '语言',
 		);
 	}
 
@@ -88,6 +90,7 @@ class News extends CActiveRecord
 		$criteria->compare('title',$this->title,true);
 		$criteria->compare('content',$this->content,true);
 		$criteria->compare('ctime',$this->ctime);
+        $criteria->compare('lang',$this->lang);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -99,6 +102,7 @@ class News extends CActiveRecord
             $news = $this->find("id=:id",array(":id"=>$_REQUEST['id']));
             if(!empty($news)){
                 $news->attributes = $post["News"];
+                $news->lang = $post["News"]['lang'];
                 $news->ctime = time();
                 if($news->validate()){
                     if($news->save()){
@@ -111,6 +115,7 @@ class News extends CActiveRecord
         }else{
             $model = new News();
             $model->attributes = $post['News'];
+            $model->lang = $post["News"]['lang'];
             $model->ctime = time();
             if($model->validate()){
                 if($model->save()){
@@ -173,6 +178,9 @@ class News extends CActiveRecord
             $search->attributes = $condition['News'];
             if (!empty($condition['News']['title'])) {
                 $criteria->condition .= ' and t.title like "%' . $condition['News']['title'] .'%" ';
+            }
+            if (!empty($condition['News']['lang'])) {
+                $criteria->condition .= ' and t.lang = "' . $condition['News']['lang'] .'" ';
             }
             if (!empty($condition['News']['ctime_start'])) {
                 $criteria->condition .= ' and t.ctime >= ' . strtotime($condition['News']['ctime_start'] .' 00:00:00');

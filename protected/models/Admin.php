@@ -148,7 +148,6 @@ class Admin extends CActiveRecord
                     return true;
                 }
             }else{
-                var_dump($this->getErrors());exit;
                 $this->getErrors();
             }
         }
@@ -180,5 +179,11 @@ class Admin extends CActiveRecord
             $condition,
             $search
         );
+    }
+
+    public function getAdminData($flag=false){
+        $where = $flag?'':'status=2';
+        $admins = CHtml::listData($this->findAll($where),'id','username');
+        return $admins;
     }
 }

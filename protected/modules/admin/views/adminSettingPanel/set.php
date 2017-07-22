@@ -22,6 +22,9 @@
                     <li class="active">
                         <a href="javascript:;">参数设置</a>
                     </li>
+                    <li>
+                        <a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->module->id.'/'.Yii::app()->controller->id . '/sysset');?>">系统参数设置</a>
+                    </li>
                 </ul>
             </h3>
         </div>
@@ -115,105 +118,6 @@
 <!--                        </div>-->
 <!--                    </td>-->
 <!--                </tr>-->
-
-                <tr>
-                    <td>
-                        <div class="form-group">
-                            <span class="col-sm-2 col-xs-3 control-label">控制器操作设置:</span>
-                            <div class="col-sm-8 col-xs-8" ng-click="js_controllers_container()">
-                                <?php
-                                if(isset($config['setting']['controllers']) && !empty($config['setting']['controllers'])){
-                                    foreach ($config['setting']['controllers'] as $key=>$_controllers){
-                                        ?>
-                                        <div class="row" ng-index="<?php echo $key;?>">
-                                            <div class="col-xs-11  col-sm-3 mod-double">
-                                                <?php echo $form->textField($model,'datavalue[setting][controllers]['.$key.'][econtrol]',array('placeholder'=>'控制器操作设置','value'=>$_controllers['econtrol'],'class'=>'form-control'));?>
-                                            </div>
-                                            <div class="col-xs-11  col-sm-3 mod-double">
-                                                <?php echo $form->textField($model,'datavalue[setting][controllers]['.$key.'][ccontrol]',array('placeholder'=>'控制器操作中文','value'=>$_controllers['ccontrol'],'class'=>'form-control'));?>
-                                            </div>
-                                            <?php
-                                            if($key == 1){
-                                                ?>
-                                                <a class="icon icon-plus md-tip" ng-click="js_controllers_add()" style="margin: 5px;" href="javascript:;" title="添加"></a>
-                                            <?php
-                                            }else{
-                                                ?>
-                                                <a class="icon icon-delete md-tip" ng-click="js_controllers_delete()" style="margin: 5px;" href="javascript:;" title="删除"></a>
-                                            <?php
-                                            }
-                                            ?>
-                                        </div>
-                                    <?php
-                                    }
-                                }else{
-                                    ?>
-                                    <div class="row" ng-index="0">
-                                        <div class="col-xs-11  col-sm-3 mod-double">
-                                            <?php echo $form->textField($model,'datavalue[setting][controllers][1][econtrol]',array('placeholder'=>'控制器操作设置','class'=>'form-control'));?>
-                                        </div>
-                                        <div class="col-xs-11  col-sm-3 mod-double">
-                                            <?php echo $form->textField($model,'datavalue[setting][controllers][1][ccontrol]',array('placeholder'=>'控制器操作中文','class'=>'form-control'));?>
-                                        </div>
-                                        <a class="icon icon-plus md-tip" ng-click="js_controllers_add()" style="margin: 5px;" href="javascript:;" title="添加"></a>
-                                    </div>
-                                <?php
-                                }
-                                ?>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <div class="form-group">
-                            <span class="col-sm-2 col-xs-3 control-label">操作设置:</span>
-                            <div class="col-sm-8 col-xs-8" ng-click="js_actions_container()">
-                                <?php
-                                if(isset($config['setting']['actions']) && !empty($config['setting']['actions'])){
-                                    foreach ($config['setting']['actions'] as $key=>$_actions){
-                                        ?>
-                                        <div class="row" ng-index="<?php echo $key;?>">
-                                            <div class="col-xs-11  col-sm-3 mod-double">
-                                                <?php echo $form->textField($model,'datavalue[setting][actions]['.$key.'][eaction]',array('placeholder'=>'操作设置','value'=>$_actions['eaction'],'class'=>'form-control'));?>
-                                            </div>
-                                            <div class="col-xs-11  col-sm-3 mod-double">
-                                                <?php echo $form->textField($model,'datavalue[setting][actions]['.$key.'][caction]',array('placeholder'=>'操作设置中文','value'=>$_actions['caction'],'class'=>'form-control'));?>
-                                            </div>
-                                            <?php
-                                            if($key == 1){
-                                                ?>
-                                                <a class="icon icon-plus md-tip" ng-click="js_actions_add()" style="margin: 5px;" href="javascript:;" title="添加"></a>
-                                            <?php
-                                            }else{
-                                                ?>
-                                                <a class="icon icon-delete md-tip" ng-click="js_actions_delete()" style="margin: 5px;" href="javascript:;" title="删除"></a>
-                                            <?php
-                                            }
-                                            ?>
-                                        </div>
-                                    <?php
-                                    }
-                                }else{
-                                    ?>
-                                    <div class="row" ng-index="0">
-                                        <div class="col-xs-11  col-sm-3 mod-double">
-                                            <?php echo $form->textField($model,'datavalue[setting][actions][1][eaction]',array('placeholder'=>'操作设置','class'=>'form-control'));?>
-                                        </div>
-                                        <div class="col-xs-11  col-sm-3 mod-double">
-                                            <?php echo $form->textField($model,'datavalue[setting][actions][1][caction]',array('placeholder'=>'操作设置','class'=>'form-control'));?>
-                                        </div>
-                                        <a class="icon icon-plus md-tip" ng-click="js_actions_add()" style="margin: 5px;" href="javascript:;" title="添加"></a>
-                                    </div>
-                                <?php
-                                }
-                                ?>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-
 <!--                <tr>-->
 <!--                    <td>-->
 <!--                        <div class="form-group">-->
@@ -336,23 +240,6 @@
 //            js_type_delete(this);
 //            return false;
 //        });
-        $('body').on('click','a[ng-click="js_controllers_add()"]',function(){
-            js_controllers_add();
-            return false;
-        });
-        $('body').on('click','a[ng-click="js_controller_delete()"]',function(){
-            js_controller_delete(this);
-            return false;
-        });
-
-        $('body').on('click','a[ng-click="js_actions_add()"]',function(){
-            js_actions_add();
-            return false;
-        });
-        $('body').on('click','a[ng-click="js_actions_delete()"]',function(){
-            js_actions_delete(this);
-            return false;
-        });
 
 
         $('body').on('click','a[ng-click="js_ptype_add()"]',function(){
@@ -364,68 +251,6 @@
             return false;
         });
     });
-
-    var js_controllers_add = function(){
-        var container = $('div[ng-click="js_controllers_container()"]');
-        if(container.length > 0){
-            var chlid = container.children();
-            var chlidnode = chlid.length;
-            if(chlidnode > 0){
-                var index = parseInt(chlid.eq(chlidnode-1).attr('ng-index'))+1;
-                var node = chlid.eq(0);
-                var copynode = node.clone();
-                copynode.find('div[class="tooltip fade top in"]').remove();
-                copynode.attr('ng-index',index);
-                copynode.find('input').each(function(){
-                    var name = $(this).attr('name');
-                    var change_name = name.replace('1',index);
-                    $(this).attr('name',change_name);
-                    var id = $(this).attr('id');
-                    var change_id = id.replace('1',index);
-                    $(this).attr('id',change_id);
-                    $(this).val('');
-                });
-                copynode.find('a').replaceWith('<a class="icon icon-delete md-tip" ng-click="js_controllers_delete()" style="margin: 5px;" href="javascript:;" title="删除"></a>');
-                container.append(copynode);
-            }
-        }
-        return false;
-    };
-    var js_controller_delete = function(eve){
-        $(eve).parent('div[class="row"]').remove();
-        return false;
-    };
-
-    var js_actions_add = function(){
-        var container = $('div[ng-click="js_actions_container()"]');
-        if(container.length > 0){
-            var chlid = container.children();
-            var chlidnode = chlid.length;
-            if(chlidnode > 0){
-                var index = parseInt(chlid.eq(chlidnode-1).attr('ng-index'))+1;
-                var node = chlid.eq(0);
-                var copynode = node.clone();
-                copynode.find('div[class="tooltip fade top in"]').remove();
-                copynode.attr('ng-index',index);
-                copynode.find('input').each(function(){
-                    var name = $(this).attr('name');
-                    var change_name = name.replace('1',index);
-                    $(this).attr('name',change_name);
-                    var id = $(this).attr('id');
-                    var change_id = id.replace('1',index);
-                    $(this).attr('id',change_id);
-                    $(this).val('');
-                });
-                copynode.find('a').replaceWith('<a class="icon icon-delete md-tip" ng-click="js_actions_delete()" style="margin: 5px;" href="javascript:;" title="删除"></a>');
-                container.append(copynode);
-            }
-        }
-        return false;
-    };
-    var js_actions_delete = function(eve){
-        $(eve).parent('div[class="row"]').remove();
-        return false;
-    };
 
     var js_size_add = function(){
         var container = $('div[ng-click="js_size_container()"]');
@@ -537,7 +362,7 @@
                     $(this).attr('id',change_id);
                     $(this).val('');
                 });
-                copynode.find('a').replaceWith('<a class="icon icon-delete md-tip" ng-click="js_type_delete()" style="margin: 5px;" href="javascript:;" title="删除"></a>');
+                copynode.find('a').replaceWith('<a class="icon icon-delete md-tip" ng-click="js_ptype_delete()" style="margin: 5px;" href="javascript:;" title="删除"></a>');
                 container.append(copynode);
             }
         }

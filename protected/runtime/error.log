@@ -2859,3 +2859,893 @@ in D:\new\carproject\index.php (18)
 2017/07/19 19:07:58 [warning] [application] Failed to set unsafe attribute "confirm_password" of "Admin".
 in D:\new\carproject\protected\modules\admin\controllers\AdminUserController.php (23)
 in D:\new\carproject\index.php (18)
+2017/07/20 09:00:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/admin/img/inst_logo.png".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/admin/i...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/admin/img/inst_logo.png
+HTTP_REFERER=http://www.carproject.com/admin
+---
+2017/07/20 09:00:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/images/baijia.ico".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/i...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/images/baijia.ico
+HTTP_REFERER=http://www.carproject.com/admin
+---
+2017/07/20 09:02:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/admin/img/inst_logo.png".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/admin/i...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/admin/img/inst_logo.png
+HTTP_REFERER=http://www.carproject.com/admin
+---
+2017/07/20 09:02:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/admin/img/inst_logo.png".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/admin/i...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/admin/img/inst_logo.png
+HTTP_REFERER=http://www.carproject.com/admin
+---
+2017/07/20 09:55:14 [error] [php] Undefined index: sysset (D:\new\carproject\protected\utils\CUtils.php:697)
+Stack trace:
+#0 D:\new\framework\web\CController.php(286): AdminSettingPanelController->runAction()
+#1 D:\new\framework\web\CController.php(265): AdminSettingPanelController->runActionWithFilters()
+#2 D:\new\framework\web\CWebApplication.php(282): AdminSettingPanelController->run()
+#3 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 D:\new\carproject\index.php(18): CWebApplication->run()
+REQUEST_URI=/admin/adminSettingPanel/sysset.html
+in D:\new\carproject\protected\utils\CUtils.php (697)
+in D:\new\carproject\protected\modules\admin\components\CAdminController.php (39)
+in D:\new\carproject\index.php (18)
+2017/07/20 09:55:48 [error] [php] Undefined index: sysset (D:\new\carproject\protected\utils\CUtils.php:697)
+Stack trace:
+#0 D:\new\framework\web\CController.php(286): AdminSettingPanelController->runAction()
+#1 D:\new\framework\web\CController.php(265): AdminSettingPanelController->runActionWithFilters()
+#2 D:\new\framework\web\CWebApplication.php(282): AdminSettingPanelController->run()
+#3 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 D:\new\carproject\index.php(18): CWebApplication->run()
+REQUEST_URI=/admin/adminSettingPanel/sysset.html
+in D:\new\carproject\protected\utils\CUtils.php (697)
+in D:\new\carproject\protected\modules\admin\components\CAdminController.php (39)
+in D:\new\carproject\index.php (18)
+2017/07/20 10:23:07 [error] [exception.CException] exception 'CException' with message 'Property "AdminLog.adminid" is not defined.' in D:\new\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\new\framework\db\ar\CActiveRecord.php(143): CComponent->__get('adminid')
+#1 D:\new\framework\web\helpers\CHtml.php(2255): CActiveRecord->__get('adminid')
+#2 D:\new\framework\web\helpers\CHtml.php(1565): CHtml::resolveValue(Object(AdminLog), 'adminid')
+#3 D:\new\framework\web\widgets\CActiveForm.php(763): CHtml::activeDropDownList(Object(AdminLog), 'adminid', Array, Array)
+#4 D:\new\carproject\protected\modules\admin\views\adminLog\index.php(96): CActiveForm->dropDownList(Object(AdminLog), 'adminid', Array, Array)
+#5 D:\new\framework\web\CBaseController.php(126): require('D:\\new\\carproje...')
+#6 D:\new\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\\new\\carproje...', Array, true)
+#7 D:\new\framework\web\CController.php(869): CBaseController->renderFile('D:\\new\\carproje...', Array, true)
+#8 D:\new\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#9 D:\new\carproject\protected\modules\admin\controllers\AdminLogController.php(34): CController->render('index', Array)
+#10 D:\new\framework\web\actions\CInlineAction.php(49): AdminLogController->actionIndex()
+#11 D:\new\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 D:\new\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 D:\new\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 D:\new\framework\web\CWebApplication.php(282): CController->run('index')
+#15 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/adminLog/...')
+#16 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#17 D:\new\carproject\index.php(18): CApplication->run()
+#18 {main}
+REQUEST_URI=/admin/adminLog/index.html
+HTTP_REFERER=http://www.carproject.com/admin/adminSettingPanel/index.html
+---
+2017/07/20 10:24:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/admin/img/inst_logo.png".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/admin/i...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/admin/img/inst_logo.png
+HTTP_REFERER=http://www.carproject.com/admin/login/index.html
+---
+2017/07/20 10:24:35 [error] [php] Undefined variable: type (D:\new\carproject\protected\modules\admin\views\adminStore\index.php:68)
+Stack trace:
+#0 D:\new\framework\web\CController.php(869): AdminStoreController->renderFile()
+#1 D:\new\framework\web\CController.php(782): AdminStoreController->renderPartial()
+#2 D:\new\carproject\protected\modules\admin\controllers\AdminStoreController.php(36): AdminStoreController->render()
+#3 D:\new\framework\web\actions\CInlineAction.php(49): AdminStoreController->actionIndex()
+#4 D:\new\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\new\framework\web\CController.php(286): AdminStoreController->runAction()
+#6 D:\new\framework\web\CController.php(265): AdminStoreController->runActionWithFilters()
+#7 D:\new\framework\web\CWebApplication.php(282): AdminStoreController->run()
+#8 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\new\carproject\index.php(18): CWebApplication->run()
+REQUEST_URI=/admin/adminStore/index.html
+in D:\new\carproject\protected\modules\admin\views\adminStore\index.php (68)
+in D:\new\carproject\protected\modules\admin\controllers\AdminStoreController.php (36)
+in D:\new\carproject\index.php (18)
+2017/07/20 10:26:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/admin/img/inst_logo.png".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/admin/i...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/admin/img/inst_logo.png
+HTTP_REFERER=http://www.carproject.com/admin/login/index.html
+---
+2017/07/20 10:27:19 [warning] [application] Failed to set unsafe attribute "ctime_start" of "AdminLog".
+in D:\new\carproject\protected\models\AdminLog.php (141)
+in D:\new\carproject\protected\modules\admin\controllers\AdminLogController.php (12)
+in D:\new\carproject\index.php (18)
+2017/07/20 10:27:19 [warning] [application] Failed to set unsafe attribute "ctime_end" of "AdminLog".
+in D:\new\carproject\protected\models\AdminLog.php (141)
+in D:\new\carproject\protected\modules\admin\controllers\AdminLogController.php (12)
+in D:\new\carproject\index.php (18)
+2017/07/20 10:27:19 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'admin.admin_id' in 'where clause'. The SQL statement executed was: SELECT COUNT(DISTINCT `t`.`id`) FROM `car_admin_log` `t`  LEFT OUTER JOIN `car_admin` `admin` ON (`t`.`admin_id`=`admin`.`id`)  WHERE (1 and admin.admin_id like "%2%" ).
+in D:\new\carproject\protected\modules\admin\controllers\AdminLogController.php (24)
+in D:\new\carproject\index.php (18)
+2017/07/20 10:27:19 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'admin.admin_id' in 'where clause'. The SQL statement executed was: SELECT COUNT(DISTINCT `t`.`id`) FROM `car_admin_log` `t`  LEFT OUTER JOIN `car_admin` `admin` ON (`t`.`admin_id`=`admin`.`id`)  WHERE (1 and admin.admin_id like "%2%" )' in D:\new\framework\db\CDbCommand.php:541
+Stack trace:
+#0 D:\new\framework\db\CDbCommand.php(432): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 D:\new\framework\db\ar\CActiveFinder.php(718): CDbCommand->queryScalar()
+#2 D:\new\framework\db\ar\CActiveFinder.php(151): CJoinElement->count(Object(CDbCriteria))
+#3 D:\new\framework\db\ar\CActiveRecord.php(1550): CActiveFinder->count(Object(CDbCriteria))
+#4 D:\new\framework\web\CActiveDataProvider.php(179): CActiveRecord->count(Object(CDbCriteria))
+#5 D:\new\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#6 D:\new\framework\web\CActiveDataProvider.php(129): CDataProvider->getTotalItemCount()
+#7 D:\new\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#8 D:\new\carproject\protected\modules\admin\controllers\AdminLogController.php(24): CDataProvider->getData()
+#9 D:\new\framework\web\actions\CInlineAction.php(49): AdminLogController->actionIndex()
+#10 D:\new\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 D:\new\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 D:\new\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 D:\new\framework\web\CWebApplication.php(282): CController->run('index')
+#14 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/adminLog/...')
+#15 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 D:\new\carproject\index.php(18): CApplication->run()
+#17 {main}
+REQUEST_URI=/admin/adminLog/index.html?AdminLog%5Badmin_id%5D=2&AdminLog%5Bctime_start%5D=&AdminLog%5Bctime_end%5D=&yt0=%E6%90%9C%E7%B4%A2
+HTTP_REFERER=http://www.carproject.com/admin/adminLog/index.html
+---
+2017/07/20 10:27:52 [warning] [application] Failed to set unsafe attribute "ctime_start" of "AdminLog".
+in D:\new\carproject\protected\models\AdminLog.php (141)
+in D:\new\carproject\protected\modules\admin\controllers\AdminLogController.php (12)
+in D:\new\carproject\index.php (18)
+2017/07/20 10:27:52 [warning] [application] Failed to set unsafe attribute "ctime_end" of "AdminLog".
+in D:\new\carproject\protected\models\AdminLog.php (141)
+in D:\new\carproject\protected\modules\admin\controllers\AdminLogController.php (12)
+in D:\new\carproject\index.php (18)
+2017/07/20 10:57:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/admin/img/inst_logo.png".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/admin/i...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/admin/img/inst_logo.png
+HTTP_REFERER=http://www.carproject.com/admin/login/index.html
+---
+2017/07/20 11:02:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/admin/img/inst_logo.png".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/admin/i...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/admin/img/inst_logo.png
+HTTP_REFERER=http://www.carproject.com/admin/login/index.html
+---
+2017/07/20 11:09:02 [warning] [application] Failed to set unsafe attribute "telephone" of "WarrantyDetail".
+in D:\new\carproject\protected\models\WarrantyDetail.php (128)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyDetailController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/20 11:09:02 [warning] [application] Failed to set unsafe attribute "ctime_start" of "WarrantyDetail".
+in D:\new\carproject\protected\models\WarrantyDetail.php (128)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyDetailController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/20 11:09:02 [warning] [application] Failed to set unsafe attribute "ctime_end" of "WarrantyDetail".
+in D:\new\carproject\protected\models\WarrantyDetail.php (128)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyDetailController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/20 11:14:13 [warning] [application] Failed to set unsafe attribute "pack_name" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (396)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (11)
+in D:\new\carproject\index.php (18)
+2017/07/20 11:14:13 [warning] [application] Failed to set unsafe attribute "carmodel" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (396)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (11)
+in D:\new\carproject\index.php (18)
+2017/07/20 11:14:13 [warning] [application] Failed to set unsafe attribute "mid" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (396)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (11)
+in D:\new\carproject\index.php (18)
+2017/07/20 11:14:13 [warning] [application] Failed to set unsafe attribute "pid" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (396)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (11)
+in D:\new\carproject\index.php (18)
+2017/07/20 11:14:13 [warning] [application] Failed to set unsafe attribute "status" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (396)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyController.php (11)
+in D:\new\carproject\index.php (18)
+2017/07/20 14:12:11 [warning] [application] Failed to set unsafe attribute "type" of "SmsRecord".
+in D:\new\carproject\protected\models\SmsRecord.php (127)
+in D:\new\carproject\protected\modules\admin\controllers\AdminSmsMsgController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/20 14:12:11 [warning] [application] Failed to set unsafe attribute "ctime_start" of "SmsRecord".
+in D:\new\carproject\protected\models\SmsRecord.php (127)
+in D:\new\carproject\protected\modules\admin\controllers\AdminSmsMsgController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/20 14:12:11 [warning] [application] Failed to set unsafe attribute "ctime_end" of "SmsRecord".
+in D:\new\carproject\protected\models\SmsRecord.php (127)
+in D:\new\carproject\protected\modules\admin\controllers\AdminSmsMsgController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/20 14:12:11 [warning] [application] Failed to set unsafe attribute "sendtime_start" of "SmsRecord".
+in D:\new\carproject\protected\models\SmsRecord.php (127)
+in D:\new\carproject\protected\modules\admin\controllers\AdminSmsMsgController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/20 14:12:11 [warning] [application] Failed to set unsafe attribute "sendtime_end" of "SmsRecord".
+in D:\new\carproject\protected\models\SmsRecord.php (127)
+in D:\new\carproject\protected\modules\admin\controllers\AdminSmsMsgController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/20 14:12:20 [warning] [application] Failed to set unsafe attribute "type" of "SmsRecord".
+in D:\new\carproject\protected\models\SmsRecord.php (127)
+in D:\new\carproject\protected\modules\admin\controllers\AdminSmsMsgController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/20 14:12:20 [warning] [application] Failed to set unsafe attribute "ctime_start" of "SmsRecord".
+in D:\new\carproject\protected\models\SmsRecord.php (127)
+in D:\new\carproject\protected\modules\admin\controllers\AdminSmsMsgController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/20 14:12:20 [warning] [application] Failed to set unsafe attribute "ctime_end" of "SmsRecord".
+in D:\new\carproject\protected\models\SmsRecord.php (127)
+in D:\new\carproject\protected\modules\admin\controllers\AdminSmsMsgController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/20 14:12:20 [warning] [application] Failed to set unsafe attribute "sendtime_start" of "SmsRecord".
+in D:\new\carproject\protected\models\SmsRecord.php (127)
+in D:\new\carproject\protected\modules\admin\controllers\AdminSmsMsgController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/20 14:12:20 [warning] [application] Failed to set unsafe attribute "sendtime_end" of "SmsRecord".
+in D:\new\carproject\protected\models\SmsRecord.php (127)
+in D:\new\carproject\protected\modules\admin\controllers\AdminSmsMsgController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/21 09:13:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/admin/img/inst_logo.png".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/admin/i...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/admin/img/inst_logo.png
+HTTP_REFERER=http://www.carproject.com/admin
+---
+2017/07/21 09:13:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/images/baijia.ico".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/i...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/images/baijia.ico
+HTTP_REFERER=http://www.carproject.com/admin
+---
+2017/07/21 09:38:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/adminVideo".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/adminVide...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/adminVideo
+---
+2017/07/21 09:40:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/adminVideo".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/adminVide...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/adminVideo
+---
+2017/07/21 09:41:25 [error] [exception.CException] exception 'CException' with message 'Property "Video.show_type" is not defined.' in D:\new\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\new\framework\db\ar\CActiveRecord.php(143): CComponent->__get('show_type')
+#1 D:\new\framework\web\helpers\CHtml.php(2255): CActiveRecord->__get('show_type')
+#2 D:\new\framework\web\helpers\CHtml.php(1565): CHtml::resolveValue(Object(Video), 'show_type')
+#3 D:\new\framework\web\widgets\CActiveForm.php(763): CHtml::activeDropDownList(Object(Video), 'show_type', Array, Array)
+#4 D:\new\carproject\protected\modules\admin\views\adminVideo\add.php(154): CActiveForm->dropDownList(Object(Video), 'show_type', Array, Array)
+#5 D:\new\framework\web\CBaseController.php(126): require('D:\\new\\carproje...')
+#6 D:\new\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\\new\\carproje...', Array, true)
+#7 D:\new\framework\web\CController.php(869): CBaseController->renderFile('D:\\new\\carproje...', Array, true)
+#8 D:\new\framework\web\CController.php(782): CController->renderPartial('add', Array, true)
+#9 D:\new\carproject\protected\modules\admin\controllers\AdminVideoController.php(43): CController->render('add', Array)
+#10 D:\new\framework\web\actions\CInlineAction.php(49): AdminVideoController->actionAdd()
+#11 D:\new\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 D:\new\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 D:\new\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 D:\new\framework\web\CWebApplication.php(282): CController->run('add')
+#15 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/adminVide...')
+#16 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#17 D:\new\carproject\index.php(18): CApplication->run()
+#18 {main}
+REQUEST_URI=/admin/adminVideo/add.html
+HTTP_REFERER=http://www.carproject.com/admin/adminVideo
+---
+2017/07/21 09:41:56 [error] [exception.CException] exception 'CException' with message 'Property "Video.show_type" is not defined.' in D:\new\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\new\framework\db\ar\CActiveRecord.php(143): CComponent->__get('show_type')
+#1 D:\new\framework\web\helpers\CHtml.php(2255): CActiveRecord->__get('show_type')
+#2 D:\new\framework\web\helpers\CHtml.php(1565): CHtml::resolveValue(Object(Video), 'show_type')
+#3 D:\new\framework\web\widgets\CActiveForm.php(763): CHtml::activeDropDownList(Object(Video), 'show_type', Array, Array)
+#4 D:\new\carproject\protected\modules\admin\views\adminVideo\add.php(154): CActiveForm->dropDownList(Object(Video), 'show_type', Array, Array)
+#5 D:\new\framework\web\CBaseController.php(126): require('D:\\new\\carproje...')
+#6 D:\new\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\\new\\carproje...', Array, true)
+#7 D:\new\framework\web\CController.php(869): CBaseController->renderFile('D:\\new\\carproje...', Array, true)
+#8 D:\new\framework\web\CController.php(782): CController->renderPartial('add', Array, true)
+#9 D:\new\carproject\protected\modules\admin\controllers\AdminVideoController.php(43): CController->render('add', Array)
+#10 D:\new\framework\web\actions\CInlineAction.php(49): AdminVideoController->actionAdd()
+#11 D:\new\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 D:\new\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 D:\new\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 D:\new\framework\web\CWebApplication.php(282): CController->run('add')
+#15 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/adminVide...')
+#16 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#17 D:\new\carproject\index.php(18): CApplication->run()
+#18 {main}
+REQUEST_URI=/admin/adminVideo/add.html
+HTTP_REFERER=http://www.carproject.com/admin/adminVideo
+---
+2017/07/21 09:42:41 [error] [exception.CException] exception 'CException' with message 'Property "Video.show_type" is not defined.' in D:\new\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\new\framework\db\ar\CActiveRecord.php(143): CComponent->__get('show_type')
+#1 D:\new\framework\web\helpers\CHtml.php(2255): CActiveRecord->__get('show_type')
+#2 D:\new\framework\web\helpers\CHtml.php(1565): CHtml::resolveValue(Object(Video), 'show_type')
+#3 D:\new\framework\web\widgets\CActiveForm.php(763): CHtml::activeDropDownList(Object(Video), 'show_type', Array, Array)
+#4 D:\new\carproject\protected\modules\admin\views\adminVideo\add.php(154): CActiveForm->dropDownList(Object(Video), 'show_type', Array, Array)
+#5 D:\new\framework\web\CBaseController.php(126): require('D:\\new\\carproje...')
+#6 D:\new\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\\new\\carproje...', Array, true)
+#7 D:\new\framework\web\CController.php(869): CBaseController->renderFile('D:\\new\\carproje...', Array, true)
+#8 D:\new\framework\web\CController.php(782): CController->renderPartial('add', Array, true)
+#9 D:\new\carproject\protected\modules\admin\controllers\AdminVideoController.php(43): CController->render('add', Array)
+#10 D:\new\framework\web\actions\CInlineAction.php(49): AdminVideoController->actionAdd()
+#11 D:\new\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 D:\new\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 D:\new\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 D:\new\framework\web\CWebApplication.php(282): CController->run('add')
+#15 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/adminVide...')
+#16 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#17 D:\new\carproject\index.php(18): CApplication->run()
+#18 {main}
+REQUEST_URI=/admin/adminVideo/add.html
+HTTP_REFERER=http://www.carproject.com/admin/adminVideo
+---
+2017/07/21 09:42:41 [error] [exception.CException] exception 'CException' with message 'Property "Video.show_type" is not defined.' in D:\new\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\new\framework\db\ar\CActiveRecord.php(143): CComponent->__get('show_type')
+#1 D:\new\framework\web\helpers\CHtml.php(2255): CActiveRecord->__get('show_type')
+#2 D:\new\framework\web\helpers\CHtml.php(1565): CHtml::resolveValue(Object(Video), 'show_type')
+#3 D:\new\framework\web\widgets\CActiveForm.php(763): CHtml::activeDropDownList(Object(Video), 'show_type', Array, Array)
+#4 D:\new\carproject\protected\modules\admin\views\adminVideo\add.php(154): CActiveForm->dropDownList(Object(Video), 'show_type', Array, Array)
+#5 D:\new\framework\web\CBaseController.php(126): require('D:\\new\\carproje...')
+#6 D:\new\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\\new\\carproje...', Array, true)
+#7 D:\new\framework\web\CController.php(869): CBaseController->renderFile('D:\\new\\carproje...', Array, true)
+#8 D:\new\framework\web\CController.php(782): CController->renderPartial('add', Array, true)
+#9 D:\new\carproject\protected\modules\admin\controllers\AdminVideoController.php(43): CController->render('add', Array)
+#10 D:\new\framework\web\actions\CInlineAction.php(49): AdminVideoController->actionAdd()
+#11 D:\new\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 D:\new\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 D:\new\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 D:\new\framework\web\CWebApplication.php(282): CController->run('add')
+#15 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/adminVide...')
+#16 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#17 D:\new\carproject\index.php(18): CApplication->run()
+#18 {main}
+REQUEST_URI=/admin/adminVideo/add.html
+HTTP_REFERER=http://www.carproject.com/admin/adminVideo
+---
+2017/07/21 09:45:25 [error] [exception.CException] exception 'CException' with message 'Property "Video.show_type" is not defined.' in D:\new\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\new\framework\db\ar\CActiveRecord.php(143): CComponent->__get('show_type')
+#1 D:\new\framework\web\helpers\CHtml.php(2255): CActiveRecord->__get('show_type')
+#2 D:\new\framework\web\helpers\CHtml.php(1565): CHtml::resolveValue(Object(Video), 'show_type')
+#3 D:\new\framework\web\widgets\CActiveForm.php(763): CHtml::activeDropDownList(Object(Video), 'show_type', Array, Array)
+#4 D:\new\carproject\protected\modules\admin\views\adminVideo\add.php(154): CActiveForm->dropDownList(Object(Video), 'show_type', Array, Array)
+#5 D:\new\framework\web\CBaseController.php(126): require('D:\\new\\carproje...')
+#6 D:\new\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\\new\\carproje...', Array, true)
+#7 D:\new\framework\web\CController.php(869): CBaseController->renderFile('D:\\new\\carproje...', Array, true)
+#8 D:\new\framework\web\CController.php(782): CController->renderPartial('add', Array, true)
+#9 D:\new\carproject\protected\modules\admin\controllers\AdminVideoController.php(43): CController->render('add', Array)
+#10 D:\new\framework\web\actions\CInlineAction.php(49): AdminVideoController->actionAdd()
+#11 D:\new\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 D:\new\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 D:\new\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 D:\new\framework\web\CWebApplication.php(282): CController->run('add')
+#15 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/adminVide...')
+#16 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#17 D:\new\carproject\index.php(18): CApplication->run()
+#18 {main}
+REQUEST_URI=/admin/adminVideo/add.html
+HTTP_REFERER=http://www.carproject.com/admin/adminVideo
+---
+2017/07/21 09:45:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/js/webuploader.js".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/j...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/js/webuploader.js
+HTTP_REFERER=http://www.carproject.com/admin/adminVideo/add.html
+---
+2017/07/21 09:45:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/js/webuploader.js".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/j...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/js/webuploader.js
+HTTP_REFERER=http://www.carproject.com/admin/adminVideo/add.html
+---
+2017/07/21 09:46:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/js/webuploader.js".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/j...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/js/webuploader.js
+HTTP_REFERER=http://www.carproject.com/admin/adminVideo/add.html
+---
+2017/07/21 09:46:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/js/webuploader.js".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/j...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/js/webuploader.js
+HTTP_REFERER=http://www.carproject.com/admin/adminVideo/add.html
+---
+2017/07/21 09:53:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/adminAd".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/adminAd')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/adminAd.html
+---
+2017/07/21 09:54:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/adminAd".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/adminAd')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/adminAd.html
+---
+2017/07/21 09:54:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "adminadlist/add".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('adminadlist/add')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/adminadlist/add.html
+HTTP_REFERER=http://www.carproject.com/admin/adminadlist
+---
+2017/07/21 09:54:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/css/bootstrap.min.css.map".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/c...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/css/bootstrap.min.css.map
+---
+2017/07/21 09:54:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/fonts/fontawesome-webfont.woff2".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/f...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/fonts/fontawesome-webfont.woff2?v=4.7.0
+HTTP_REFERER=http://www.carproject.com/statics/front/fonts/font-awesome.min.css
+---
+2017/07/21 09:54:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/js/bootstrap-select.js.map".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/j...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/js/bootstrap-select.js.map
+---
+2017/07/21 09:54:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/images/favicon.png".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/i...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/images/favicon.png
+HTTP_REFERER=http://www.carproject.com/adminadlist/add.html
+---
+2017/07/21 09:54:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/images/favicon.png".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/i...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/images/favicon.png
+HTTP_REFERER=http://www.carproject.com/adminadlist/add.html
+---
+2017/07/21 10:00:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "adminadlist/add".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('adminadlist/add')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/adminadlist/add.html
+HTTP_REFERER=http://www.carproject.com/admin/adminadlist
+---
+2017/07/21 10:00:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/css/bootstrap.min.css.map".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/c...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/css/bootstrap.min.css.map
+---
+2017/07/21 10:00:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/fonts/fontawesome-webfont.woff2".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/f...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/fonts/fontawesome-webfont.woff2?v=4.7.0
+HTTP_REFERER=http://www.carproject.com/statics/front/fonts/font-awesome.min.css
+---
+2017/07/21 10:00:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/js/bootstrap-select.js.map".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/j...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/js/bootstrap-select.js.map
+---
+2017/07/21 10:00:19 [error] [exception.CException] exception 'CException' with message 'Property "AjaxFileUpload.fileTextId" is not defined.' in D:\new\framework\base\CComponent.php:173
+Stack trace:
+#0 D:\new\framework\web\CWidgetFactory.php(161): CComponent->__set('fileTextId', 'flash-polaroid')
+#1 D:\new\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(AdminAdListController), 'application.ext...', Array)
+#2 D:\new\framework\web\CBaseController.php(172): CBaseController->createWidget('application.ext...', Array)
+#3 D:\new\carproject\protected\modules\admin\views\adminAdList\add.php(187): CBaseController->widget('application.ext...', Array)
+#4 D:\new\framework\web\CBaseController.php(126): require('D:\\new\\carproje...')
+#5 D:\new\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\\new\\carproje...', Array, true)
+#6 D:\new\framework\web\CController.php(869): CBaseController->renderFile('D:\\new\\carproje...', Array, true)
+#7 D:\new\framework\web\CController.php(782): CController->renderPartial('add', Array, true)
+#8 D:\new\carproject\protected\modules\admin\controllers\AdminAdListController.php(69): CController->render('add', Array)
+#9 D:\new\framework\web\actions\CInlineAction.php(49): AdminAdListController->actionAdd()
+#10 D:\new\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 D:\new\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 D:\new\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 D:\new\framework\web\CWebApplication.php(282): CController->run('add')
+#14 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/adminadli...')
+#15 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 D:\new\carproject\index.php(18): CApplication->run()
+#17 {main}
+REQUEST_URI=/admin/adminadlist/add.html
+HTTP_REFERER=http://www.carproject.com/admin/adminadlist
+---
+2017/07/21 10:03:53 [warning] [application] Failed to set unsafe attribute "start_time_start" of "Ad".
+in D:\new\carproject\protected\models\Ad.php (179)
+in D:\new\carproject\protected\modules\admin\controllers\AdminAdListController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/21 10:03:53 [warning] [application] Failed to set unsafe attribute "start_time_end" of "Ad".
+in D:\new\carproject\protected\models\Ad.php (179)
+in D:\new\carproject\protected\modules\admin\controllers\AdminAdListController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/21 10:03:53 [warning] [application] Failed to set unsafe attribute "end_time_start" of "Ad".
+in D:\new\carproject\protected\models\Ad.php (179)
+in D:\new\carproject\protected\modules\admin\controllers\AdminAdListController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/21 10:03:53 [warning] [application] Failed to set unsafe attribute "end_time_end" of "Ad".
+in D:\new\carproject\protected\models\Ad.php (179)
+in D:\new\carproject\protected\modules\admin\controllers\AdminAdListController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/21 10:04:22 [warning] [application] Failed to set unsafe attribute "start_time_start" of "Ad".
+in D:\new\carproject\protected\models\Ad.php (179)
+in D:\new\carproject\protected\modules\admin\controllers\AdminAdListController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/21 10:04:22 [warning] [application] Failed to set unsafe attribute "start_time_end" of "Ad".
+in D:\new\carproject\protected\models\Ad.php (179)
+in D:\new\carproject\protected\modules\admin\controllers\AdminAdListController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/21 10:04:22 [warning] [application] Failed to set unsafe attribute "end_time_start" of "Ad".
+in D:\new\carproject\protected\models\Ad.php (179)
+in D:\new\carproject\protected\modules\admin\controllers\AdminAdListController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/21 10:04:22 [warning] [application] Failed to set unsafe attribute "end_time_end" of "Ad".
+in D:\new\carproject\protected\models\Ad.php (179)
+in D:\new\carproject\protected\modules\admin\controllers\AdminAdListController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/21 10:04:38 [warning] [application] Failed to set unsafe attribute "start_time_start" of "Ad".
+in D:\new\carproject\protected\models\Ad.php (179)
+in D:\new\carproject\protected\modules\admin\controllers\AdminAdListController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/21 10:04:38 [warning] [application] Failed to set unsafe attribute "start_time_end" of "Ad".
+in D:\new\carproject\protected\models\Ad.php (179)
+in D:\new\carproject\protected\modules\admin\controllers\AdminAdListController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/21 10:04:38 [warning] [application] Failed to set unsafe attribute "end_time_start" of "Ad".
+in D:\new\carproject\protected\models\Ad.php (179)
+in D:\new\carproject\protected\modules\admin\controllers\AdminAdListController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/21 10:04:38 [warning] [application] Failed to set unsafe attribute "end_time_end" of "Ad".
+in D:\new\carproject\protected\models\Ad.php (179)
+in D:\new\carproject\protected\modules\admin\controllers\AdminAdListController.php (10)
+in D:\new\carproject\index.php (18)
+2017/07/21 10:41:12 [error] [php] Undefined index: filepath (D:\new\carproject\protected\utils\CUtils.php:697)
+Stack trace:
+#0 D:\new\framework\web\CController.php(286): AdminSettingPanelController->runAction()
+#1 D:\new\framework\web\CController.php(265): AdminSettingPanelController->runActionWithFilters()
+#2 D:\new\framework\web\CWebApplication.php(282): AdminSettingPanelController->run()
+#3 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 D:\new\carproject\index.php(18): CWebApplication->run()
+REQUEST_URI=/admin/adminSettingPanel/filePath.html
+in D:\new\carproject\protected\utils\CUtils.php (697)
+in D:\new\carproject\protected\modules\admin\components\CAdminController.php (39)
+in D:\new\carproject\index.php (18)
+2017/07/21 10:42:01 [error] [php] Undefined index: filepath (D:\new\carproject\protected\utils\CUtils.php:697)
+Stack trace:
+#0 D:\new\framework\web\CController.php(286): AdminSettingPanelController->runAction()
+#1 D:\new\framework\web\CController.php(265): AdminSettingPanelController->runActionWithFilters()
+#2 D:\new\framework\web\CWebApplication.php(282): AdminSettingPanelController->run()
+#3 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 D:\new\carproject\index.php(18): CWebApplication->run()
+REQUEST_URI=/admin/adminSettingPanel/filePath.html
+in D:\new\carproject\protected\utils\CUtils.php (697)
+in D:\new\carproject\protected\modules\admin\components\CAdminController.php (39)
+in D:\new\carproject\index.php (18)
+2017/07/21 10:51:30 [error] [php] Undefined index: adminadlist (D:\new\carproject\protected\utils\CUtils.php:696)
+Stack trace:
+#0 D:\new\framework\web\CController.php(286): AdminAdListController->runAction()
+#1 D:\new\framework\web\CController.php(265): AdminAdListController->runActionWithFilters()
+#2 D:\new\framework\web\CWebApplication.php(282): AdminAdListController->run()
+#3 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 D:\new\carproject\index.php(18): CWebApplication->run()
+REQUEST_URI=/admin/adminAdList/uploadImage.html
+in D:\new\carproject\protected\utils\CUtils.php (696)
+in D:\new\carproject\protected\modules\admin\components\CAdminController.php (39)
+in D:\new\carproject\index.php (18)
+2017/07/21 10:56:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/js/webuploader.js".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/j...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/js/webuploader.js
+HTTP_REFERER=http://www.carproject.com/admin/adminVideo/add.html
+---
+2017/07/21 11:00:20 [error] [php] Undefined index: system (D:\new\carproject\protected\modules\admin\controllers\AdminVideoController.php:158)
+Stack trace:
+#0 D:\new\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 D:\new\framework\web\CController.php(286): AdminVideoController->runAction()
+#2 D:\new\framework\web\CController.php(265): AdminVideoController->runActionWithFilters()
+#3 D:\new\framework\web\CWebApplication.php(282): AdminVideoController->run()
+#4 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 D:\new\carproject\index.php(18): CWebApplication->run()
+REQUEST_URI=/admin/adminVideo/setting.html
+in D:\new\carproject\protected\modules\admin\controllers\AdminVideoController.php (158)
+in D:\new\carproject\protected\modules\admin\controllers\AdminVideoController.php (94)
+in D:\new\carproject\index.php (18)
+2017/07/21 11:00:21 [error] [php] Undefined index: system (D:\new\carproject\protected\modules\admin\controllers\AdminVideoController.php:158)
+Stack trace:
+#0 D:\new\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 D:\new\framework\web\CController.php(286): AdminVideoController->runAction()
+#2 D:\new\framework\web\CController.php(265): AdminVideoController->runActionWithFilters()
+#3 D:\new\framework\web\CWebApplication.php(282): AdminVideoController->run()
+#4 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 D:\new\carproject\index.php(18): CWebApplication->run()
+REQUEST_URI=/admin/adminVideo/setting.html
+in D:\new\carproject\protected\modules\admin\controllers\AdminVideoController.php (158)
+in D:\new\carproject\protected\modules\admin\controllers\AdminVideoController.php (94)
+in D:\new\carproject\index.php (18)
+2017/07/21 11:11:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/videopic/1500606705.jpg".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/videopic...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/upload/videopic/1500606705.jpg
+HTTP_REFERER=http://www.carproject.com/admin/adminVideo/add.html
+---
+2017/07/21 11:15:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "update".' in D:\new\framework\web\CController.php:483
+Stack trace:
+#0 D:\new\framework\web\CController.php(270): CController->missingAction('update')
+#1 D:\new\framework\web\CWebApplication.php(282): CController->run('update')
+#2 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/adminVide...')
+#3 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\new\carproject\index.php(18): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/adminVideo/update/id/3.html
+HTTP_REFERER=http://www.carproject.com/admin/adminVideo/index.html
+---
+2017/07/21 11:33:14 [error] [php] Undefined index: ad_img (D:\new\carproject\protected\modules\admin\controllers\AdminAdListController.php:42)
+Stack trace:
+#0 D:\new\framework\web\CController.php(286): AdminAdListController->runAction()
+#1 D:\new\framework\web\CController.php(265): AdminAdListController->runActionWithFilters()
+#2 D:\new\framework\web\CWebApplication.php(282): AdminAdListController->run()
+#3 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 D:\new\carproject\index.php(18): CWebApplication->run()
+REQUEST_URI=/admin/adminAdList/add/id/25.html
+2017/07/21 14:59:27 [error] [php] Undefined index: Goods (D:\new\carproject\protected\modules\admin\controllers\AdminArticleController.php:99)
+Stack trace:
+#0 D:\new\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 D:\new\framework\web\CController.php(286): AdminArticleController->runAction()
+#2 D:\new\framework\web\CController.php(265): AdminArticleController->runActionWithFilters()
+#3 D:\new\framework\web\CWebApplication.php(282): AdminArticleController->run()
+#4 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 D:\new\carproject\index.php(18): CWebApplication->run()
+REQUEST_URI=/admin/adminArticle/setting.html
+2017/07/21 15:22:40 [error] [php] Undefined index: adminarticle (D:\new\carproject\protected\utils\CUtils.php:696)
+Stack trace:
+#0 D:\new\framework\web\CController.php(286): AdminArticleController->runAction()
+#1 D:\new\framework\web\CController.php(265): AdminArticleController->runActionWithFilters()
+#2 D:\new\framework\web\CWebApplication.php(282): AdminArticleController->run()
+#3 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 D:\new\carproject\index.php(18): CWebApplication->run()
+REQUEST_URI=/admin/adminArticle/add.html
+2017/07/21 15:26:14 [error] [php] Array to string conversion (D:\new\framework\db\schema\CDbColumnSchema.php:146)
+Stack trace:
+#0 D:\new\framework\db\ar\CActiveRecord.php(795): Article->insert()
+#1 D:\new\carproject\protected\models\Article.php(121): Article->save()
+#2 D:\new\carproject\protected\modules\admin\controllers\AdminArticleController.php(43): Article->addArticle()
+#3 D:\new\framework\web\actions\CInlineAction.php(49): AdminArticleController->actionAdd()
+#4 D:\new\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\new\framework\web\CController.php(286): AdminArticleController->runAction()
+#6 D:\new\framework\web\CController.php(265): AdminArticleController->runActionWithFilters()
+#7 D:\new\framework\web\CWebApplication.php(282): AdminArticleController->run()
+#8 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\new\carproject\index.php(18): CWebApplication->run()
+REQUEST_URI=/admin/adminArticle/add.html
+2017/07/21 15:26:35 [error] [php] Array to string conversion (D:\new\framework\db\schema\CDbColumnSchema.php:146)
+Stack trace:
+#0 D:\new\framework\db\ar\CActiveRecord.php(795): Article->insert()
+#1 D:\new\carproject\protected\models\Article.php(121): Article->save()
+#2 D:\new\carproject\protected\modules\admin\controllers\AdminArticleController.php(43): Article->addArticle()
+#3 D:\new\framework\web\actions\CInlineAction.php(49): AdminArticleController->actionAdd()
+#4 D:\new\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\new\framework\web\CController.php(286): AdminArticleController->runAction()
+#6 D:\new\framework\web\CController.php(265): AdminArticleController->runActionWithFilters()
+#7 D:\new\framework\web\CWebApplication.php(282): AdminArticleController->run()
+#8 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\new\carproject\index.php(18): CWebApplication->run()
+REQUEST_URI=/admin/adminArticle/add.html
+2017/07/21 15:27:54 [error] [php] unserialize(): Error at offset 0 of 79 bytes (D:\new\carproject\protected\modules\admin\views\adminArticle\add.php:57)
+Stack trace:
+#0 D:\new\framework\web\CBaseController.php(95): AdminArticleController->renderInternal()
+#1 D:\new\framework\web\CController.php(869): AdminArticleController->renderFile()
+#2 D:\new\framework\web\CController.php(782): AdminArticleController->renderPartial()
+#3 D:\new\carproject\protected\modules\admin\controllers\AdminArticleController.php(54): AdminArticleController->render()
+#4 D:\new\framework\web\actions\CInlineAction.php(49): AdminArticleController->actionAdd()
+#5 D:\new\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 D:\new\framework\web\CController.php(286): AdminArticleController->runAction()
+#7 D:\new\framework\web\CController.php(265): AdminArticleController->runActionWithFilters()
+#8 D:\new\framework\web\CWebApplication.php(282): AdminArticleController->run()
+#9 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 D:\new\carproject\index.php(18): CWebApplication->run()
+REQUEST_URI=/admin/adminArticle/add/id/6.html
+2017/07/21 15:28:23 [error] [php] Illegal string offset 'img_url' (D:\new\carproject\protected\modules\admin\views\adminArticle\add.php:63)
+Stack trace:
+#0 D:\new\framework\web\CController.php(869): AdminArticleController->renderFile()
+#1 D:\new\framework\web\CController.php(782): AdminArticleController->renderPartial()
+#2 D:\new\carproject\protected\modules\admin\controllers\AdminArticleController.php(54): AdminArticleController->render()
+#3 D:\new\framework\web\actions\CInlineAction.php(49): AdminArticleController->actionAdd()
+#4 D:\new\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\new\framework\web\CController.php(286): AdminArticleController->runAction()
+#6 D:\new\framework\web\CController.php(265): AdminArticleController->runActionWithFilters()
+#7 D:\new\framework\web\CWebApplication.php(282): AdminArticleController->run()
+#8 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\new\carproject\index.php(18): CWebApplication->run()
+REQUEST_URI=/admin/adminArticle/add/id/6.html
+2017/07/21 15:28:25 [error] [php] Illegal string offset 'img_url' (D:\new\carproject\protected\modules\admin\views\adminArticle\add.php:63)
+Stack trace:
+#0 D:\new\framework\web\CController.php(869): AdminArticleController->renderFile()
+#1 D:\new\framework\web\CController.php(782): AdminArticleController->renderPartial()
+#2 D:\new\carproject\protected\modules\admin\controllers\AdminArticleController.php(54): AdminArticleController->render()
+#3 D:\new\framework\web\actions\CInlineAction.php(49): AdminArticleController->actionAdd()
+#4 D:\new\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\new\framework\web\CController.php(286): AdminArticleController->runAction()
+#6 D:\new\framework\web\CController.php(265): AdminArticleController->runActionWithFilters()
+#7 D:\new\framework\web\CWebApplication.php(282): AdminArticleController->run()
+#8 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\new\carproject\index.php(18): CWebApplication->run()
+REQUEST_URI=/admin/adminArticle/add/id/6.html
+2017/07/21 18:46:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/admin/img/inst_logo.png".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/admin/i...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/admin/img/inst_logo.png
+HTTP_REFERER=http://www.carproject.com/admin/login/index.html?backUrl=aHR0cDovL3d3dy5jYXJwcm9qZWN0LmNvbS9hZG1pbi9hZG1pbkFydGljbGUvaW5kZXguaHRtbA==
+---
+2017/07/22 09:52:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/admin/img/inst_logo.png".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/admin/i...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/admin/img/inst_logo.png
+HTTP_REFERER=http://www.carproject.com/admin/login/index.html?backUrl=aHR0cDovL3d3dy5jYXJwcm9qZWN0LmNvbS9hZG1pbi9hZG1pblN0b3JlL2FkZA==
+---
+2017/07/22 09:52:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/images/baijia.ico".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/i...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/images/baijia.ico
+HTTP_REFERER=http://www.carproject.com/admin/login/index.html?backUrl=aHR0cDovL3d3dy5jYXJwcm9qZWN0LmNvbS9hZG1pbi9hZG1pblN0b3JlL2FkZA==
+---
+2017/07/22 11:18:24 [error] [php] Undefined variable: search (D:\new\carproject\protected\modules\admin\views\adminAdList\add.php:305)
+Stack trace:
+#0 D:\new\framework\web\CController.php(869): AdminAdListController->renderFile()
+#1 D:\new\framework\web\CController.php(782): AdminAdListController->renderPartial()
+#2 D:\new\carproject\protected\modules\admin\controllers\AdminAdListController.php(84): AdminAdListController->render()
+#3 D:\new\framework\web\actions\CInlineAction.php(49): AdminAdListController->actionAdd()
+#4 D:\new\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\new\framework\web\CController.php(286): AdminAdListController->runAction()
+#6 D:\new\framework\web\CController.php(265): AdminAdListController->runActionWithFilters()
+#7 D:\new\framework\web\CWebApplication.php(282): AdminAdListController->run()
+#8 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\new\carproject\index.php(18): CWebApplication->run()
+REQUEST_URI=/admin/adminAdList/add.html
+2017/07/22 11:28:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/adpic/adfile/1500607511591.jpg".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/adpic/ad...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/upload/adpic/adfile/1500607511591.jpg
+HTTP_REFERER=http://www.carproject.com/admin/adminAdList/add/id/25.html
+---
+2017/07/22 14:56:08 [error] [php] Undefined index: adminproduct (D:\new\carproject\protected\utils\CUtils.php:696)
+Stack trace:
+#0 D:\new\framework\web\CController.php(286): AdminProductController->runAction()
+#1 D:\new\framework\web\CController.php(265): AdminProductController->runActionWithFilters()
+#2 D:\new\framework\web\CWebApplication.php(282): AdminProductController->run()
+#3 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 D:\new\carproject\index.php(18): CWebApplication->run()
+REQUEST_URI=/admin/adminProduct/add.html
+2017/07/22 15:22:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/videopic/1500606876.jpg".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/videopic...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/upload/videopic/1500606876.jpg
+HTTP_REFERER=http://www.carproject.com/admin/adminVideo/index.html
+---
+2017/07/22 15:23:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/videopic/1500606876.jpg".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/videopic...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/upload/videopic/1500606876.jpg
+HTTP_REFERER=http://www.carproject.com/admin/adminVideo/index.html
+---
+2017/07/22 15:24:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/videopic/1500606876.jpg".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('upload/videopic...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/upload/videopic/1500606876.jpg
+HTTP_REFERER=http://www.carproject.com/admin/adminVideo/index.html
+---

@@ -21,6 +21,8 @@ class WarrantyAction extends CActiveRecord
     public $ctime_end;
     public $acttime_start;
     public $acttime_end;
+    public $carmodel;
+    public $mid;
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
@@ -88,6 +90,8 @@ class WarrantyAction extends CActiveRecord
 			'remark' => '备注',
             'admin_id'=>'管理员',
             'ctime'=>'添加记录时间',
+            'mid'=>'型号',
+            'carmodel'=>'车型',
 		);
 	}
 
@@ -167,7 +171,13 @@ class WarrantyAction extends CActiveRecord
                 $criteria->condition .= ' and t.actpart = "' . $condition['WarrantyAction']['actpart'] .'" ';
             }
             if (!empty($condition['WarrantyAction']['wid'])) {
-                $criteria->condition .= ' and t.wid like "%' . $condition['WarrantyAction']['wid'] .'%" ';
+                $criteria->condition .= ' and t.wid = "' . $condition['WarrantyAction']['wid'] .'" ';
+            }
+            if (!empty($condition['WarrantyAction']['mid'])) {
+                $criteria->condition .= ' and warranty.mid like "%' . $condition['WarrantyAction']['mid'] .'%" ';
+            }
+            if (!empty($condition['WarrantyAction']['carmodel'])) {
+                $criteria->condition .= ' and warranty.carmodel like "%' . $condition['WarrantyAction']['carmodel'] .'%" ';
             }
             if (!empty($condition['WarrantyAction']['constructor'])) {
                 $criteria->condition .= ' and t.constructor like "%' . $condition['WarrantyAction']['constructor'] .'%" ';

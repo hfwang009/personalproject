@@ -31,6 +31,9 @@
                                 <th>
                                     <a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->module->id.'/'.Yii::app()->controller->id . '/' . $this->getAction()->getId(), array_merge($condition,array('sortFiled'=>'name','sortValue'=>(isset($condition['sortFiled']) && $condition['sortFiled']=='name')?($condition['sortValue'] == "asc"?"desc":"asc"):"asc")));?>">套餐名称<span class="glyphicon <?php echo $condition['sortFiled'] == 'name'?($condition['sortValue'] == "asc"?"glyphicon-chevron-up":"glyphicon-chevron-down"):'';?>"></span></a>
                                 </th>
+                                <th>
+                                    <a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->module->id.'/'.Yii::app()->controller->id . '/' . $this->getAction()->getId(), array_merge($condition,array('sortFiled'=>'ename','sortValue'=>(isset($condition['sortFiled']) && $condition['sortFiled']=='ename')?($condition['sortValue'] == "asc"?"desc":"asc"):"asc")));?>">英文套餐名称<span class="glyphicon <?php echo $condition['sortFiled'] == 'ename'?($condition['sortValue'] == "asc"?"glyphicon-chevron-up":"glyphicon-chevron-down"):'';?>"></span></a>
+                                </th>
                                 <th>操作</th>
                             </tr>
                             </thead>
@@ -47,6 +50,7 @@
                                         </td>
                                         <td><?php echo $_model['id'];?></td>
                                         <td><?php echo $_model['name'];?></td>
+                                        <td><?php echo !empty($_model['ename'])?$_model['ename']:'--';?></td>
                                         <td class="nowrap">
                                             <a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->module->id.'/'.Yii::app()->controller->id . '/add',array('id'=>$_model['id']));?>" class="icon icon-edit md-tip" title="编辑"></a>
 <!--                                            <a href="javascript:;" class="icon icon-delete md-tip" title="删除" ng-model="--><?php //echo $_model['id'];?><!--" ng-click="js_delete()"></a>-->
@@ -98,6 +102,13 @@
                     <?php echo $form->label($search,'name',array('class'=>'col-sm-2 col-xs-3 control-label'));?>
                     <div class="col-sm-5 col-xs-8">
                         <?php echo $form->textField($search, 'name', array("class"=>"form-control"));?>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <?php echo $form->label($search,'ename',array('class'=>'col-sm-2 col-xs-3 control-label'));?>
+                    <div class="col-sm-5 col-xs-8">
+                        <?php echo $form->textField($search, 'ename', array("class"=>"form-control"));?>
+                        <?php echo $form->error($search,'ename',array('class'=>'help-block'));?>
                     </div>
                 </div>
                 <div class="form-group">

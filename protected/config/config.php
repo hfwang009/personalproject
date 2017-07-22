@@ -2,162 +2,10 @@
 return array(
 	'setting' => array
 		(
-		'controllers' => array
-			(
-			1 => array
-				(
-				'econtrol' => 'adminarticle',
-				'ccontrol' => '文章'
-				),
-			2 => array
-				(
-				'econtrol' => 'adminbrand',
-				'ccontrol' => '品牌'
-				),
-			3 => array
-				(
-				'econtrol' => 'adminlist',
-				'ccontrol' => '管理员'
-				),
-			4 => array
-				(
-				'econtrol' => 'adminmodel',
-				'ccontrol' => '模型'
-				),
-			5 => array
-				(
-				'econtrol' => 'adminnews',
-				'ccontrol' => '新闻'
-				),
-			6 => array
-				(
-				'econtrol' => 'adminpackage',
-				'ccontrol' => '套餐'
-				),
-			7 => array
-				(
-				'econtrol' => 'adminprivilieges',
-				'ccontrol' => '权限'
-				),
-			8 => array
-				(
-				'econtrol' => 'adminrole',
-				'ccontrol' => '角色'
-				),
-			9 => array
-				(
-				'econtrol' => 'adminsettingpanel',
-				'ccontrol' => '网站设置'
-				),
-			10 => array
-				(
-				'econtrol' => 'adminstore',
-				'ccontrol' => '门店'
-				),
-			11 => array
-				(
-				'econtrol' => 'admintools',
-				'ccontrol' => '系统工具'
-				),
-			12 => array
-				(
-				'econtrol' => 'adminwarranty',
-				'ccontrol' => '质保'
-				),
-			13 => array
-				(
-				'econtrol' => 'adminwarrantydetail',
-				'ccontrol' => '质保详情'
-				),
-			14 => array
-				(
-				'econtrol' => 'login',
-				'ccontrol' => '登录'
-				),
-			15 => array
-				(
-				'econtrol' => 'adminwarrantyaction',
-				'ccontrol' => '质保操作'
-				),
-			16 => array
-				(
-				'econtrol' => 'adminuser',
-				'ccontrol' => '用户'
-				),
-
-			),
-		'actions' => array
-			(
-			1 => array
-				(
-				'eaction' => 'index',
-				'caction' => '列表'
-				),
-			2 => array
-				(
-				'eaction' => 'add',
-				'caction' => '添加'
-				),
-			3 => array
-				(
-				'eaction' => 'update',
-				'caction' => '修改'
-				),
-			4 => array
-				(
-				'eaction' => 'delete',
-				'caction' => '删除'
-				),
-			5 => array
-				(
-				'eaction' => 'setting',
-				'caction' => '设置'
-				),
-			6 => array
-				(
-				'eaction' => 'set',
-				'caction' => '设置'
-				),
-			7 => array
-				(
-				'eaction' => 'updatepass',
-				'caction' => '修改密码'
-				),
-
-			),
 		'ptype' => array
 			(
 			1 => '车身',
 			2 => '前挡'
-			),
-		'controller' => array
-			(
-			'adminarticle' => '文章',
-			'adminbrand' => '品牌',
-			'adminlist' => '管理员',
-			'adminmodel' => '模型',
-			'adminnews' => '新闻',
-			'adminpackage' => '套餐',
-			'adminprivilieges' => '权限',
-			'adminrole' => '角色',
-			'adminsettingpanel' => '网站设置',
-			'adminstore' => '门店',
-			'admintools' => '系统工具',
-			'adminwarranty' => '质保',
-			'adminwarrantydetail' => '质保详情',
-			'login' => '登录',
-			'adminwarrantyaction' => '质保操作',
-			'adminuser' => '用户'
-			),
-		'action' => array
-			(
-			'index' => '列表',
-			'add' => '添加',
-			'update' => '修改',
-			'delete' => '删除',
-			'setting' => '设置',
-			'set' => '设置',
-			'updatepass' => '修改密码'
 			),
 
 		),
@@ -184,8 +32,12 @@ return array(
 		),
 	'path' => array
 		(
-		'systemfile' => 'D:\\new\\carproject\\',
-		'defaultfile' => 'D:\\new\\carproject\\upload\\default\\'
+		'systemfile' => 'D:\\new\\carproject',
+		'defaultfile' => 'D:\\new\\carproject\\upload\\default\\',
+		'adpic' => 'D:\\new\\carproject\\upload\\adpic\\',
+		'videopic' => 'D:\\new\\carproject\\upload\\videopic\\',
+		'videopath' => 'D:\\new\\carproject\\upload\\videopath\\',
+		'articleimages' => 'D:\\new\\carproject\\upload\\articlepic\\'
 		),
 	'phone' => array
 		(
@@ -212,6 +64,221 @@ return array(
 			'code' => 'SMS_77475079',
 			'count' => 3,
 			'time' => 600
+			),
+
+		),
+	'syssetting' => array
+		(
+		'controllers' => array
+			(
+			1 => array
+				(
+				'econtrol' => 'adminbrand',
+				'ccontrol' => '品牌'
+				),
+			2 => array
+				(
+				'econtrol' => 'adminlist',
+				'ccontrol' => '管理员'
+				),
+			3 => array
+				(
+				'econtrol' => 'adminmodel',
+				'ccontrol' => '模型'
+				),
+			4 => array
+				(
+				'econtrol' => 'adminnews',
+				'ccontrol' => '新闻'
+				),
+			5 => array
+				(
+				'econtrol' => 'adminpackage',
+				'ccontrol' => '套餐'
+				),
+			6 => array
+				(
+				'econtrol' => 'adminprivilieges',
+				'ccontrol' => '权限'
+				),
+			7 => array
+				(
+				'econtrol' => 'adminrole',
+				'ccontrol' => '角色'
+				),
+			8 => array
+				(
+				'econtrol' => 'adminsettingpanel',
+				'ccontrol' => '网站设置'
+				),
+			9 => array
+				(
+				'econtrol' => 'adminstore',
+				'ccontrol' => '门店'
+				),
+			10 => array
+				(
+				'econtrol' => 'admintools',
+				'ccontrol' => '系统工具'
+				),
+			11 => array
+				(
+				'econtrol' => 'adminwarranty',
+				'ccontrol' => '质保'
+				),
+			12 => array
+				(
+				'econtrol' => 'adminwarrantydetail',
+				'ccontrol' => '质保详情'
+				),
+			13 => array
+				(
+				'econtrol' => 'login',
+				'ccontrol' => '登录'
+				),
+			14 => array
+				(
+				'econtrol' => 'adminwarrantyaction',
+				'ccontrol' => '质保操作'
+				),
+			15 => array
+				(
+				'econtrol' => 'adminuser',
+				'ccontrol' => '用户'
+				),
+			16 => array
+				(
+				'econtrol' => 'adminsmsmsg',
+				'ccontrol' => '平台短信'
+				),
+			17 => array
+				(
+				'econtrol' => 'adminlog',
+				'ccontrol' => '管理员操作日志'
+				),
+			18 => array
+				(
+				'econtrol' => 'adminvideo',
+				'ccontrol' => '视频'
+				),
+			19 => array
+				(
+				'econtrol' => 'adminadlist',
+				'ccontrol' => '广告'
+				),
+			20 => array
+				(
+				'econtrol' => 'adminadposition',
+				'ccontrol' => '广告位'
+				),
+			21 => array
+				(
+				'econtrol' => 'adminrecruit',
+				'ccontrol' => '招聘'
+				),
+			22 => array
+				(
+				'econtrol' => 'adminarticle',
+				'ccontrol' => '文章'
+				),
+			23 => array
+				(
+				'econtrol' => 'adminproduct',
+				'ccontrol' => '产品'
+				),
+
+			),
+		'actions' => array
+			(
+			1 => array
+				(
+				'eaction' => 'add',
+				'caction' => '添加'
+				),
+			2 => array
+				(
+				'eaction' => 'update',
+				'caction' => '修改'
+				),
+			3 => array
+				(
+				'eaction' => 'delete',
+				'caction' => '删除'
+				),
+			4 => array
+				(
+				'eaction' => 'setting',
+				'caction' => '设置'
+				),
+			5 => array
+				(
+				'eaction' => 'set',
+				'caction' => '设置'
+				),
+			6 => array
+				(
+				'eaction' => 'updatepass',
+				'caction' => '修改密码'
+				),
+			7 => array
+				(
+				'eaction' => 'sysset',
+				'caction' => '系统设置'
+				),
+			8 => array
+				(
+				'eaction' => 'filepath',
+				'caction' => '路径设置'
+				),
+			9 => array
+				(
+				'eaction' => 'uploadimage',
+				'caction' => '上传图片'
+				),
+
+			),
+		'lang' => array
+			(
+			1 => '中文',
+			2 => '英语'
+			),
+		'controller' => array
+			(
+			'adminbrand' => '品牌',
+			'adminlist' => '管理员',
+			'adminmodel' => '模型',
+			'adminnews' => '新闻',
+			'adminpackage' => '套餐',
+			'adminprivilieges' => '权限',
+			'adminrole' => '角色',
+			'adminsettingpanel' => '网站设置',
+			'adminstore' => '门店',
+			'admintools' => '系统工具',
+			'adminwarranty' => '质保',
+			'adminwarrantydetail' => '质保详情',
+			'login' => '登录',
+			'adminwarrantyaction' => '质保操作',
+			'adminuser' => '用户',
+			'adminsmsmsg' => '平台短信',
+			'adminlog' => '管理员操作日志',
+			'adminvideo' => '视频',
+			'adminadlist' => '广告',
+			'adminadposition' => '广告位',
+			'adminrecruit' => '招聘',
+			'adminarticle' => '文章',
+			'adminproduct' => '产品'
+			),
+		'action' => array
+			(
+			'add' => '添加',
+			'update' => '修改',
+			'delete' => '删除',
+			'setting' => '设置',
+			'set' => '设置',
+			'updatepass' => '修改密码',
+			'sysset' => '系统设置',
+			'filepath' => '路径设置',
+			'uploadimage' => '上传图片'
 			),
 
 		),

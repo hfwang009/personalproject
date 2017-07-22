@@ -10,10 +10,40 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2017-07-19 19:09:33
+Date: 2017-07-22 17:50:20
 */
 
 SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for car_ad
+-- ----------------------------
+DROP TABLE IF EXISTS `car_ad`;
+CREATE TABLE `car_ad` (
+  `ad_id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '广告ID',
+  `position_id` int(11) unsigned NOT NULL COMMENT '广告位置ID',
+  `media_type` tinyint(3) unsigned NOT NULL DEFAULT '1' COMMENT '广告类型',
+  `ad_name` varchar(60) NOT NULL DEFAULT '' COMMENT '广告标题',
+  `ad_link` varchar(255) NOT NULL DEFAULT '' COMMENT '广告链接',
+  `ad_code` text NOT NULL COMMENT '广告内容',
+  `start_time` int(11) NOT NULL COMMENT '开始时间',
+  `end_time` int(11) NOT NULL COMMENT '结束时间',
+  `ad_link_type` tinyint(2) NOT NULL DEFAULT '1' COMMENT '外链类型(1.当前标签页打开2.新建标签页打开)',
+  `link_man` varchar(60) DEFAULT '' COMMENT '联系人姓名',
+  `link_email` varchar(60) DEFAULT '' COMMENT '联系人邮箱',
+  `link_phone` varchar(11) DEFAULT '' COMMENT '联系人手机',
+  `click_count` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT '点击次数',
+  `enabled` tinyint(3) unsigned NOT NULL DEFAULT '1' COMMENT '是否启用',
+  `sort_order` int(11) NOT NULL DEFAULT '1' COMMENT '排序号',
+  `lang` tinyint(1) DEFAULT '1' COMMENT '语言：1：中文；2：英文；',
+  PRIMARY KEY (`ad_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of car_ad
+-- ----------------------------
+INSERT INTO `car_ad` VALUES ('25', '16', '1', 'fdafadfaf', '1111111111111111', '\\upload\\adpic\\adfile/1500607511591.jpg', '1498838400', '1498838400', '1', 'fdaf', 'dfaf', 'dfafda', '0', '1', '2', '1');
+INSERT INTO `car_ad` VALUES ('26', '16', '1', 'fdafda', 'fdafad', '\\upload\\adpic\\adfile/1500694075151.jpg', '1970', '1970', '1', 'fdafad', 'fdaf', 'dfafa', '0', '1', '1', '2');
 
 -- ----------------------------
 -- Table structure for car_admin
@@ -53,7 +83,7 @@ CREATE TABLE `car_admin_log` (
   `admin_id` int(13) DEFAULT NULL COMMENT '操作管理员id',
   `ctime` int(13) DEFAULT NULL COMMENT '操作时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=123 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=259 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of car_admin_log
@@ -180,6 +210,142 @@ INSERT INTO `car_admin_log` VALUES ('119', 'adminuser', 'updatepass', '用户', 
 INSERT INTO `car_admin_log` VALUES ('120', 'adminuser', 'updatepass', '用户', '修改密码', '127.0.0.1', '1', '1500462457');
 INSERT INTO `car_admin_log` VALUES ('121', 'adminuser', 'updatepass', '用户', '修改密码', '127.0.0.1', '1', '1500462470');
 INSERT INTO `car_admin_log` VALUES ('122', 'adminuser', 'updatepass', '用户', '修改密码', '127.0.0.1', '1', '1500462478');
+INSERT INTO `car_admin_log` VALUES ('123', 'adminsettingpanel', 'sysset', '网站设置', '系统设置', '127.0.0.1', '1', '1500516187');
+INSERT INTO `car_admin_log` VALUES ('124', 'adminsettingpanel', 'set', '网站设置', '设置', '127.0.0.1', '1', '1500516844');
+INSERT INTO `car_admin_log` VALUES ('125', 'adminstore', 'add', '门店', '添加', '127.0.0.1', '2', '1500517563');
+INSERT INTO `car_admin_log` VALUES ('126', 'adminstore', 'add', '门店', '添加', '127.0.0.1', '2', '1500517613');
+INSERT INTO `car_admin_log` VALUES ('127', 'adminprivilieges', 'add', '权限', '添加', '127.0.0.1', '1', '1500518352');
+INSERT INTO `car_admin_log` VALUES ('128', 'adminprivilieges', 'add', '权限', '添加', '127.0.0.1', '1', '1500518373');
+INSERT INTO `car_admin_log` VALUES ('129', 'adminprivilieges', 'add', '权限', '添加', '127.0.0.1', '1', '1500518473');
+INSERT INTO `car_admin_log` VALUES ('130', 'adminprivilieges', 'add', '权限', '编辑', '127.0.0.1', '1', '1500518497');
+INSERT INTO `car_admin_log` VALUES ('131', 'adminprivilieges', 'add', '权限', '编辑', '127.0.0.1', '1', '1500518501');
+INSERT INTO `car_admin_log` VALUES ('132', 'adminprivilieges', 'add', '权限', '编辑', '127.0.0.1', '1', '1500518503');
+INSERT INTO `car_admin_log` VALUES ('133', 'adminprivilieges', 'add', '权限', '添加', '127.0.0.1', '1', '1500518545');
+INSERT INTO `car_admin_log` VALUES ('134', 'adminprivilieges', 'add', '权限', '添加', '127.0.0.1', '1', '1500518590');
+INSERT INTO `car_admin_log` VALUES ('135', 'adminprivilieges', 'add', '权限', '编辑', '127.0.0.1', '1', '1500518595');
+INSERT INTO `car_admin_log` VALUES ('136', 'adminprivilieges', 'add', '权限', '编辑', '127.0.0.1', '1', '1500518604');
+INSERT INTO `car_admin_log` VALUES ('137', 'adminprivilieges', 'add', '权限', '编辑', '127.0.0.1', '1', '1500518612');
+INSERT INTO `car_admin_log` VALUES ('138', 'adminprivilieges', 'add', '权限', '编辑', '127.0.0.1', '1', '1500518621');
+INSERT INTO `car_admin_log` VALUES ('139', 'adminprivilieges', 'add', '权限', '编辑', '127.0.0.1', '1', '1500518626');
+INSERT INTO `car_admin_log` VALUES ('140', 'adminprivilieges', 'add', '权限', '编辑', '127.0.0.1', '1', '1500518675');
+INSERT INTO `car_admin_log` VALUES ('141', 'adminprivilieges', 'add', '权限', '编辑', '127.0.0.1', '1', '1500518699');
+INSERT INTO `car_admin_log` VALUES ('142', 'adminprivilieges', 'add', '权限', '添加', '127.0.0.1', '1', '1500518729');
+INSERT INTO `car_admin_log` VALUES ('143', 'adminprivilieges', 'add', '权限', '添加', '127.0.0.1', '1', '1500518758');
+INSERT INTO `car_admin_log` VALUES ('144', 'adminprivilieges', 'add', '权限', '添加', '127.0.0.1', '1', '1500518777');
+INSERT INTO `car_admin_log` VALUES ('145', 'adminrole', 'add', '角色', '编辑', '127.0.0.1', '1', '1500518917');
+INSERT INTO `car_admin_log` VALUES ('146', 'adminrole', 'add', '角色', '编辑', '127.0.0.1', '1', '1500519038');
+INSERT INTO `car_admin_log` VALUES ('147', 'adminrole', 'add', '角色', '编辑', '127.0.0.1', '1', '1500519041');
+INSERT INTO `car_admin_log` VALUES ('148', 'adminrole', 'add', '角色', '编辑', '127.0.0.1', '1', '1500519119');
+INSERT INTO `car_admin_log` VALUES ('149', 'adminrole', 'add', '角色', '编辑', '127.0.0.1', '1', '1500519154');
+INSERT INTO `car_admin_log` VALUES ('150', 'adminrole', 'add', '角色', '编辑', '127.0.0.1', '1', '1500519392');
+INSERT INTO `car_admin_log` VALUES ('151', 'adminrole', 'add', '角色', '编辑', '127.0.0.1', '1', '1500519421');
+INSERT INTO `car_admin_log` VALUES ('152', 'adminuser', 'updatepass', '用户', '修改密码', '127.0.0.1', '2', '1500519457');
+INSERT INTO `car_admin_log` VALUES ('153', 'adminsettingpanel', 'sysset', '网站设置', '系统设置', '127.0.0.1', '1', '1500599741');
+INSERT INTO `car_admin_log` VALUES ('154', 'adminsettingpanel', 'sysset', '网站设置', '系统设置', '127.0.0.1', '1', '1500599768');
+INSERT INTO `car_admin_log` VALUES ('155', 'adminsettingpanel', 'sysset', '网站设置', '系统设置', '127.0.0.1', '1', '1500604916');
+INSERT INTO `car_admin_log` VALUES ('156', 'adminsettingpanel', 'sysset', '网站设置', '系统设置', '127.0.0.1', '1', '1500604931');
+INSERT INTO `car_admin_log` VALUES ('157', 'adminsettingpanel', 'sysset', '网站设置', '系统设置', '127.0.0.1', '1', '1500604945');
+INSERT INTO `car_admin_log` VALUES ('158', 'adminsettingpanel', 'filepath', '网站设置', '路径设置', '127.0.0.1', '1', '1500604948');
+INSERT INTO `car_admin_log` VALUES ('159', 'adminsettingpanel', 'filepath', '网站设置', '路径设置', '127.0.0.1', '1', '1500605437');
+INSERT INTO `car_admin_log` VALUES ('160', 'adminsettingpanel', 'filepath', '网站设置', '路径设置', '127.0.0.1', '1', '1500605450');
+INSERT INTO `car_admin_log` VALUES ('161', 'adminsettingpanel', 'sysset', '网站设置', '系统设置', '127.0.0.1', '1', '1500605642');
+INSERT INTO `car_admin_log` VALUES ('162', 'adminsettingpanel', 'sysset', '网站设置', '系统设置', '127.0.0.1', '1', '1500605662');
+INSERT INTO `car_admin_log` VALUES ('163', 'adminsettingpanel', 'sysset', '网站设置', '系统设置', '127.0.0.1', '1', '1500605697');
+INSERT INTO `car_admin_log` VALUES ('164', 'adminsettingpanel', 'sysset', '网站设置', '系统设置', '127.0.0.1', '1', '1500605723');
+INSERT INTO `car_admin_log` VALUES ('165', 'adminadlist', 'uploadimage', '广告', '上传图片', '127.0.0.1', '1', '1500605741');
+INSERT INTO `car_admin_log` VALUES ('166', 'adminvideo', 'add', '视频', '添加', '127.0.0.1', '1', '1500606936');
+INSERT INTO `car_admin_log` VALUES ('167', 'adminvideo', 'add', '视频', '编辑', '127.0.0.1', '1', '1500606986');
+INSERT INTO `car_admin_log` VALUES ('168', 'adminvideo', 'add', '视频', '编辑', '127.0.0.1', '1', '1500607145');
+INSERT INTO `car_admin_log` VALUES ('169', 'adminvideo', 'add', '视频', '编辑', '127.0.0.1', '1', '1500607212');
+INSERT INTO `car_admin_log` VALUES ('170', 'adminvideo', 'add', '视频', '编辑', '127.0.0.1', '1', '1500607213');
+INSERT INTO `car_admin_log` VALUES ('171', 'adminvideo', 'add', '视频', '编辑', '127.0.0.1', '1', '1500607282');
+INSERT INTO `car_admin_log` VALUES ('172', 'adminvideo', 'add', '视频', '编辑', '127.0.0.1', '1', '1500607305');
+INSERT INTO `car_admin_log` VALUES ('173', 'adminvideo', 'add', '视频', '编辑', '127.0.0.1', '1', '1500607307');
+INSERT INTO `car_admin_log` VALUES ('174', 'adminvideo', 'add', '视频', '编辑', '127.0.0.1', '1', '1500607350');
+INSERT INTO `car_admin_log` VALUES ('175', 'adminvideo', 'add', '视频', '编辑', '127.0.0.1', '1', '1500607363');
+INSERT INTO `car_admin_log` VALUES ('176', 'adminadposition', 'add', '广告位', '添加', '127.0.0.1', '1', '1500607433');
+INSERT INTO `car_admin_log` VALUES ('177', 'adminadposition', 'add', '广告位', '添加', '127.0.0.1', '1', '1500607477');
+INSERT INTO `car_admin_log` VALUES ('178', 'adminadlist', 'uploadimage', '广告', '上传图片', '127.0.0.1', '1', '1500607511');
+INSERT INTO `car_admin_log` VALUES ('179', 'adminadlist', 'add', '广告', '添加', '127.0.0.1', '1', '1500607514');
+INSERT INTO `car_admin_log` VALUES ('180', 'adminadlist', 'add', '广告', '编辑', '127.0.0.1', '1', '1500607564');
+INSERT INTO `car_admin_log` VALUES ('181', 'adminadlist', 'add', '广告', '编辑', '127.0.0.1', '1', '1500607678');
+INSERT INTO `car_admin_log` VALUES ('182', 'adminadlist', 'add', '广告', '编辑', '127.0.0.1', '1', '1500607785');
+INSERT INTO `car_admin_log` VALUES ('183', 'adminadlist', 'add', '广告', '编辑', '127.0.0.1', '1', '1500607791');
+INSERT INTO `car_admin_log` VALUES ('184', 'adminadlist', 'add', '广告', '编辑', '127.0.0.1', '1', '1500607798');
+INSERT INTO `car_admin_log` VALUES ('185', 'adminadlist', 'add', '广告', '编辑', '127.0.0.1', '1', '1500607870');
+INSERT INTO `car_admin_log` VALUES ('186', 'adminadlist', 'add', '广告', '编辑', '127.0.0.1', '1', '1500607986');
+INSERT INTO `car_admin_log` VALUES ('187', 'adminadlist', 'add', '广告', '编辑', '127.0.0.1', '1', '1500607993');
+INSERT INTO `car_admin_log` VALUES ('188', 'adminadlist', 'add', '广告', '编辑', '127.0.0.1', '1', '1500608094');
+INSERT INTO `car_admin_log` VALUES ('189', 'adminadlist', 'add', '广告', '编辑', '127.0.0.1', '1', '1500608132');
+INSERT INTO `car_admin_log` VALUES ('190', 'adminadlist', 'add', '广告', '编辑', '127.0.0.1', '1', '1500608137');
+INSERT INTO `car_admin_log` VALUES ('191', 'adminadlist', 'add', '广告', '编辑', '127.0.0.1', '1', '1500608140');
+INSERT INTO `car_admin_log` VALUES ('192', 'adminrecruit', 'add', '招聘', '添加', '127.0.0.1', '1', '1500608248');
+INSERT INTO `car_admin_log` VALUES ('193', 'adminrecruit', 'add', '招聘', '编辑', '127.0.0.1', '1', '1500608250');
+INSERT INTO `car_admin_log` VALUES ('194', 'adminrecruit', 'add', '招聘', '编辑', '127.0.0.1', '1', '1500609080');
+INSERT INTO `car_admin_log` VALUES ('195', 'adminadposition', 'add', '广告位', '编辑', '127.0.0.1', '1', '1500609211');
+INSERT INTO `car_admin_log` VALUES ('196', 'adminadposition', 'add', '广告位', '编辑', '127.0.0.1', '1', '1500609216');
+INSERT INTO `car_admin_log` VALUES ('197', 'adminadlist', 'add', '广告', '编辑', '127.0.0.1', '1', '1500609223');
+INSERT INTO `car_admin_log` VALUES ('198', 'adminsettingpanel', 'filepath', '网站设置', '路径设置', '127.0.0.1', '1', '1500620338');
+INSERT INTO `car_admin_log` VALUES ('199', 'adminsettingpanel', 'sysset', '网站设置', '系统设置', '127.0.0.1', '1', '1500621850');
+INSERT INTO `car_admin_log` VALUES ('200', 'adminarticle', 'add', '文章', '添加', '127.0.0.1', '1', '1500621871');
+INSERT INTO `car_admin_log` VALUES ('201', 'adminarticle', 'add', '文章', '添加', '127.0.0.1', '1', '1500621878');
+INSERT INTO `car_admin_log` VALUES ('202', 'adminarticle', 'add', '文章', '添加', '127.0.0.1', '1', '1500621974');
+INSERT INTO `car_admin_log` VALUES ('203', 'adminarticle', 'add', '文章', '添加', '127.0.0.1', '1', '1500621995');
+INSERT INTO `car_admin_log` VALUES ('204', 'adminarticle', 'add', '文章', '添加', '127.0.0.1', '1', '1500622062');
+INSERT INTO `car_admin_log` VALUES ('205', 'adminarticle', 'add', '文章', '编辑', '127.0.0.1', '1', '1500622074');
+INSERT INTO `car_admin_log` VALUES ('206', 'adminarticle', 'add', '文章', '编辑', '127.0.0.1', '1', '1500622103');
+INSERT INTO `car_admin_log` VALUES ('207', 'adminarticle', 'add', '文章', '编辑', '127.0.0.1', '1', '1500622105');
+INSERT INTO `car_admin_log` VALUES ('208', 'adminarticle', 'add', '文章', '编辑', '127.0.0.1', '1', '1500622140');
+INSERT INTO `car_admin_log` VALUES ('209', 'adminarticle', 'add', '文章', '编辑', '127.0.0.1', '1', '1500622284');
+INSERT INTO `car_admin_log` VALUES ('210', 'adminarticle', 'add', '文章', '编辑', '127.0.0.1', '1', '1500622304');
+INSERT INTO `car_admin_log` VALUES ('211', 'adminarticle', 'add', '文章', '编辑', '127.0.0.1', '1', '1500622307');
+INSERT INTO `car_admin_log` VALUES ('212', 'adminarticle', 'add', '文章', '编辑', '127.0.0.1', '1', '1500688375');
+INSERT INTO `car_admin_log` VALUES ('213', 'adminadlist', 'uploadimage', '广告', '上传图片', '127.0.0.1', '1', '1500693601');
+INSERT INTO `car_admin_log` VALUES ('214', 'adminadlist', 'add', '广告', '添加', '127.0.0.1', '1', '1500693612');
+INSERT INTO `car_admin_log` VALUES ('215', 'adminadlist', 'uploadimage', '广告', '上传图片', '127.0.0.1', '1', '1500693670');
+INSERT INTO `car_admin_log` VALUES ('216', 'adminadlist', 'add', '广告', '添加', '127.0.0.1', '1', '1500693673');
+INSERT INTO `car_admin_log` VALUES ('217', 'adminadlist', 'uploadimage', '广告', '上传图片', '127.0.0.1', '1', '1500693727');
+INSERT INTO `car_admin_log` VALUES ('218', 'adminadlist', 'uploadimage', '广告', '上传图片', '127.0.0.1', '1', '1500693843');
+INSERT INTO `car_admin_log` VALUES ('219', 'adminadlist', 'uploadimage', '广告', '上传图片', '127.0.0.1', '1', '1500693926');
+INSERT INTO `car_admin_log` VALUES ('220', 'adminadlist', 'add', '广告', '添加', '127.0.0.1', '1', '1500693937');
+INSERT INTO `car_admin_log` VALUES ('221', 'adminadlist', 'add', '广告', '添加', '127.0.0.1', '1', '1500694004');
+INSERT INTO `car_admin_log` VALUES ('222', 'adminadlist', 'add', '广告', '添加', '127.0.0.1', '1', '1500694009');
+INSERT INTO `car_admin_log` VALUES ('223', 'adminadlist', 'uploadimage', '广告', '上传图片', '127.0.0.1', '1', '1500694056');
+INSERT INTO `car_admin_log` VALUES ('224', 'adminadlist', 'add', '广告', '添加', '127.0.0.1', '1', '1500694058');
+INSERT INTO `car_admin_log` VALUES ('225', 'adminadlist', 'uploadimage', '广告', '上传图片', '127.0.0.1', '1', '1500694075');
+INSERT INTO `car_admin_log` VALUES ('226', 'adminadlist', 'add', '广告', '添加', '127.0.0.1', '1', '1500694077');
+INSERT INTO `car_admin_log` VALUES ('227', 'adminadlist', 'add', '广告', '编辑', '127.0.0.1', '1', '1500694080');
+INSERT INTO `car_admin_log` VALUES ('228', 'adminadlist', 'add', '广告', '编辑', '127.0.0.1', '1', '1500694089');
+INSERT INTO `car_admin_log` VALUES ('229', 'adminadlist', 'add', '广告', '编辑', '127.0.0.1', '1', '1500694096');
+INSERT INTO `car_admin_log` VALUES ('230', 'adminadlist', 'add', '广告', '编辑', '127.0.0.1', '1', '1500694100');
+INSERT INTO `car_admin_log` VALUES ('231', 'adminadlist', 'add', '广告', '编辑', '127.0.0.1', '1', '1500694124');
+INSERT INTO `car_admin_log` VALUES ('232', 'adminadlist', 'add', '广告', '编辑', '127.0.0.1', '1', '1500694133');
+INSERT INTO `car_admin_log` VALUES ('233', 'adminadlist', 'add', '广告', '编辑', '127.0.0.1', '1', '1500694136');
+INSERT INTO `car_admin_log` VALUES ('234', 'adminarticle', 'add', '文章', '添加', '127.0.0.1', '1', '1500694352');
+INSERT INTO `car_admin_log` VALUES ('235', 'adminarticle', 'add', '文章', '编辑', '127.0.0.1', '1', '1500694434');
+INSERT INTO `car_admin_log` VALUES ('236', 'adminarticle', 'add', '文章', '编辑', '127.0.0.1', '1', '1500694439');
+INSERT INTO `car_admin_log` VALUES ('237', 'adminarticle', 'add', '文章', '编辑', '127.0.0.1', '1', '1500694465');
+INSERT INTO `car_admin_log` VALUES ('238', 'adminarticle', 'add', '文章', '编辑', '127.0.0.1', '1', '1500694469');
+INSERT INTO `car_admin_log` VALUES ('239', 'adminbrand', 'add', '品牌', '添加', '127.0.0.1', '1', '1500694756');
+INSERT INTO `car_admin_log` VALUES ('240', 'adminmodel', 'add', '模型', '添加', '127.0.0.1', '1', '1500695024');
+INSERT INTO `car_admin_log` VALUES ('241', 'adminmodel', 'add', '模型', '编辑', '127.0.0.1', '1', '1500695033');
+INSERT INTO `car_admin_log` VALUES ('242', 'adminmodel', 'add', '模型', '编辑', '127.0.0.1', '1', '1500695036');
+INSERT INTO `car_admin_log` VALUES ('243', 'adminnews', 'add', '新闻', '添加', '127.0.0.1', '1', '1500695335');
+INSERT INTO `car_admin_log` VALUES ('244', 'adminnews', 'add', '新闻', '编辑', '127.0.0.1', '1', '1500695347');
+INSERT INTO `car_admin_log` VALUES ('245', 'adminnews', 'add', '新闻', '编辑', '127.0.0.1', '1', '1500695359');
+INSERT INTO `car_admin_log` VALUES ('246', 'adminnews', 'add', '新闻', '编辑', '127.0.0.1', '1', '1500695568');
+INSERT INTO `car_admin_log` VALUES ('247', 'adminnews', 'add', '新闻', '编辑', '127.0.0.1', '1', '1500695593');
+INSERT INTO `car_admin_log` VALUES ('248', 'adminnews', 'add', '新闻', '编辑', '127.0.0.1', '1', '1500695595');
+INSERT INTO `car_admin_log` VALUES ('249', 'adminsettingpanel', 'sysset', '网站设置', '系统设置', '127.0.0.1', '1', '1500706616');
+INSERT INTO `car_admin_log` VALUES ('250', 'adminproduct', 'add', '产品', '添加', '127.0.0.1', '1', '1500706635');
+INSERT INTO `car_admin_log` VALUES ('251', 'adminproduct', 'add', '产品', '编辑', '127.0.0.1', '1', '1500707267');
+INSERT INTO `car_admin_log` VALUES ('252', 'adminrecruit', 'add', '招聘', '编辑', '127.0.0.1', '1', '1500707556');
+INSERT INTO `car_admin_log` VALUES ('253', 'adminrecruit', 'add', '招聘', '添加', '127.0.0.1', '1', '1500707573');
+INSERT INTO `car_admin_log` VALUES ('254', 'adminstore', 'add', '门店', '添加', '127.0.0.1', '1', '1500707847');
+INSERT INTO `car_admin_log` VALUES ('255', 'adminstore', 'add', '门店', '编辑', '127.0.0.1', '1', '1500707854');
+INSERT INTO `car_admin_log` VALUES ('256', 'adminstore', 'add', '门店', '编辑', '127.0.0.1', '1', '1500707864');
+INSERT INTO `car_admin_log` VALUES ('257', 'adminvideo', 'add', '视频', '添加', '127.0.0.1', '1', '1500708287');
+INSERT INTO `car_admin_log` VALUES ('258', 'adminvideo', 'add', '视频', '编辑', '127.0.0.1', '1', '1500708293');
 
 -- ----------------------------
 -- Table structure for car_admin_privilieges
@@ -194,7 +360,7 @@ CREATE TABLE `car_admin_privilieges` (
   `action` char(30) NOT NULL COMMENT '权限方法',
   `ctime` int(11) NOT NULL COMMENT '添加时间',
   PRIMARY KEY (`pid`)
-) ENGINE=MyISAM AUTO_INCREMENT=202 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=210 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of car_admin_privilieges
@@ -251,6 +417,14 @@ INSERT INTO `car_admin_privilieges` VALUES ('198', '195', '质保删除', 'warra
 INSERT INTO `car_admin_privilieges` VALUES ('199', '195', '质保明细列表', 'warranty', 'adminwarrantydetail', 'index', '1498638378');
 INSERT INTO `car_admin_privilieges` VALUES ('200', '162', '管理员删除', 'adminlist', 'adminlist', 'delete', '1499732992');
 INSERT INTO `car_admin_privilieges` VALUES ('201', '181', '角色删除', 'adminrole', 'adminrole', 'delete', '1499733017');
+INSERT INTO `car_admin_privilieges` VALUES ('202', '0', '质保操作记录', 'warrantyaction', 'adminwarrantyaction', 'all', '1500518699');
+INSERT INTO `car_admin_privilieges` VALUES ('203', '162', '管理员日志列表', 'log', 'adminlog', 'index', '1500518626');
+INSERT INTO `car_admin_privilieges` VALUES ('204', '184', '网站系统设置', 'settingpanel', 'adminsettingpanel', 'sysset', '1500518501');
+INSERT INTO `car_admin_privilieges` VALUES ('205', '0', '网站短信日志', 'smsmsg', 'adminsmsmsg', 'all', '1500518545');
+INSERT INTO `car_admin_privilieges` VALUES ('206', '205', '网站短信日志列表', 'smsmsg', 'adminsmsmsg', 'index', '1500518590');
+INSERT INTO `car_admin_privilieges` VALUES ('207', '202', '质保操作记录列表', 'warrantyaction', 'adminwarrantyaction', 'index', '1500518729');
+INSERT INTO `car_admin_privilieges` VALUES ('208', '202', '添加质保操作记录', 'warrantyaction', 'adminwarrantyaction', 'add', '1500518758');
+INSERT INTO `car_admin_privilieges` VALUES ('209', '202', '删除质保操作记录', 'warrantyaction', 'adminwarrantyaction', 'delete', '1500518777');
 
 -- ----------------------------
 -- Table structure for car_admin_role
@@ -271,7 +445,27 @@ CREATE TABLE `car_admin_role` (
 -- Records of car_admin_role
 -- ----------------------------
 INSERT INTO `car_admin_role` VALUES ('1', '超级管理员', '1', 'all_allow', 'all_allow', 'all_allow', '2147483647');
-INSERT INTO `car_admin_role` VALUES ('5', '测试角色', '1', '151,154,155,153,156,157,159,160,161,163,164,165,200,167,168,171,172,173,175,176,177,179,180,182,183,201,185,186,187,188,190,191,192,194,196,197,198,199', 'a:14:{s:12:\"adminproduct\";a:3:{i:0;s:6:\"delete\";i:1;s:5:\"index\";i:2;s:3:\"add\";}s:10:\"adminbrand\";a:3:{i:0;s:5:\"index\";i:1;s:3:\"add\";i:2;s:6:\"delete\";}s:12:\"adminarticle\";a:3:{i:0;s:5:\"index\";i:1;s:3:\"add\";i:2;s:6:\"delete\";}s:9:\"adminlist\";a:4:{i:0;s:5:\"index\";i:1;s:3:\"add\";i:2;s:6:\"update\";i:3;s:6:\"delete\";}s:10:\"adminmodel\";a:2:{i:0;s:5:\"index\";i:1;s:3:\"add\";}s:9:\"adminnews\";a:3:{i:0;s:5:\"index\";i:1;s:3:\"add\";i:2;s:6:\"delete\";}s:12:\"adminpackage\";a:3:{i:0;s:5:\"index\";i:1;s:3:\"add\";i:2;s:6:\"delete\";}s:16:\"adminprivilieges\";a:2:{i:0;s:5:\"index\";i:1;s:3:\"add\";}s:9:\"adminrole\";a:3:{i:0;s:5:\"index\";i:1;s:3:\"add\";i:2;s:6:\"delete\";}s:17:\"adminsettingpanel\";a:4:{i:0;s:8:\"filepath\";i:1;s:5:\"index\";i:2;s:3:\"set\";i:3;s:6:\"upload\";}s:10:\"adminstore\";a:3:{i:0;s:5:\"index\";i:1;s:3:\"add\";i:2;s:6:\"delete\";}s:10:\"admintools\";a:1:{i:0;s:5:\"index\";}s:13:\"adminwarranty\";a:3:{i:0;s:5:\"index\";i:1;s:3:\"add\";i:2;s:6:\"delete\";}s:19:\"adminwarrantydetail\";a:1:{i:0;s:5:\"index\";}}', '产品删除,产品列表,产品添加,品牌列表,品牌添加,品牌删除,文章列表,文章添加,文章删除,管理员列表,管理员添加,管理员修改密码,管理员删除,型号列表,型号添加,资讯列表,资讯添加,资讯删除,套餐列表,套餐添加,套餐删除,权限列表,权限添加,角色列表,角色添加,角色删除,网站路径设置,网站基本设置,网站参数设置,网站logo上传,门店列表,门店添加,门店删除,缓存清理工具,质保列表,质保添加,质保删除,质保明细列表', '1499733039');
+INSERT INTO `car_admin_role` VALUES ('5', '测试角色', '1', '151,154,155,153,156,157,159,160,161,163,164,165,200,167,168,171,172,173,175,176,177,179,180,182,183,201,185,186,187,188,190,191,192,194,196,197,198,199,207,206', 'a:16:{s:12:\"adminproduct\";a:3:{i:0;s:6:\"delete\";i:1;s:5:\"index\";i:2;s:3:\"add\";}s:10:\"adminbrand\";a:3:{i:0;s:5:\"index\";i:1;s:3:\"add\";i:2;s:6:\"delete\";}s:12:\"adminarticle\";a:3:{i:0;s:5:\"index\";i:1;s:3:\"add\";i:2;s:6:\"delete\";}s:9:\"adminlist\";a:4:{i:0;s:5:\"index\";i:1;s:3:\"add\";i:2;s:6:\"update\";i:3;s:6:\"delete\";}s:10:\"adminmodel\";a:2:{i:0;s:5:\"index\";i:1;s:3:\"add\";}s:9:\"adminnews\";a:3:{i:0;s:5:\"index\";i:1;s:3:\"add\";i:2;s:6:\"delete\";}s:12:\"adminpackage\";a:3:{i:0;s:5:\"index\";i:1;s:3:\"add\";i:2;s:6:\"delete\";}s:16:\"adminprivilieges\";a:2:{i:0;s:5:\"index\";i:1;s:3:\"add\";}s:9:\"adminrole\";a:3:{i:0;s:5:\"index\";i:1;s:3:\"add\";i:2;s:6:\"delete\";}s:17:\"adminsettingpanel\";a:4:{i:0;s:8:\"filepath\";i:1;s:5:\"index\";i:2;s:3:\"set\";i:3;s:6:\"upload\";}s:10:\"adminstore\";a:3:{i:0;s:5:\"index\";i:1;s:3:\"add\";i:2;s:6:\"delete\";}s:10:\"admintools\";a:1:{i:0;s:5:\"index\";}s:13:\"adminwarranty\";a:3:{i:0;s:5:\"index\";i:1;s:3:\"add\";i:2;s:6:\"delete\";}s:19:\"adminwarrantydetail\";a:1:{i:0;s:5:\"index\";}s:19:\"adminwarrantyaction\";a:1:{i:0;s:5:\"index\";}s:11:\"adminsmsmsg\";a:1:{i:0;s:5:\"index\";}}', '产品删除,产品列表,产品添加,品牌列表,品牌添加,品牌删除,文章列表,文章添加,文章删除,管理员列表,管理员添加,管理员修改密码,管理员删除,型号列表,型号添加,资讯列表,资讯添加,资讯删除,套餐列表,套餐添加,套餐删除,权限列表,权限添加,角色列表,角色添加,角色删除,网站路径设置,网站基本设置,网站参数设置,网站logo上传,门店列表,门店添加,门店删除,缓存清理工具,质保列表,质保添加,质保删除,质保明细列表,质保操作记录列表,网站短信日志列表', '1500519421');
+
+-- ----------------------------
+-- Table structure for car_ad_position
+-- ----------------------------
+DROP TABLE IF EXISTS `car_ad_position`;
+CREATE TABLE `car_ad_position` (
+  `position_id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '广告位置ID',
+  `position_name` varchar(60) NOT NULL DEFAULT '' COMMENT '广告位置名称',
+  `ad_width` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT '宽度',
+  `ad_height` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT '高度',
+  `position_desc` varchar(255) NOT NULL DEFAULT '' COMMENT '广告描述',
+  `position_style` text NOT NULL COMMENT '广告样式',
+  PRIMARY KEY (`position_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of car_ad_position
+-- ----------------------------
+INSERT INTO `car_ad_position` VALUES ('16', 'fdafa', '111', '111', 'dfafa', '');
+INSERT INTO `car_ad_position` VALUES ('17', 'fdafa', '111', '111', 'dfafa', '');
 
 -- ----------------------------
 -- Table structure for car_article
@@ -281,14 +475,18 @@ CREATE TABLE `car_article` (
   `id` int(13) NOT NULL AUTO_INCREMENT,
   `title` varchar(200) NOT NULL,
   `content` text NOT NULL,
+  `images` text COMMENT '文章的图片集合',
+  `lang` tinyint(1) DEFAULT '1' COMMENT '语言：1：中文；2：英文；',
   `ctime` int(13) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of car_article
 -- ----------------------------
-INSERT INTO `car_article` VALUES ('5', 'fdafda1111', '<p><img src=\"/upload/images/20170517/20170517963825.jpg\" title=\"20170517963825.jpg\" alt=\"9097c6c8a786c9176bf3e0cccc3d70cf3ac7572b.jpg\" /></p>', '1494992304');
+INSERT INTO `car_article` VALUES ('5', 'fdafda1111', '<p><img src=\"/upload/images/20170517/20170517963825.jpg\" title=\"20170517963825.jpg\" alt=\"9097c6c8a786c9176bf3e0cccc3d70cf3ac7572b.jpg\" /></p>', null, '1', '1494992304');
+INSERT INTO `car_article` VALUES ('6', 'fdafafad', '<p>fdafafa</p>', '[\"\\\\upload\\\\articlepic\\\\1500622054.jpg\",\"\\\\upload\\\\articlepic\\\\1500622295.jpg\",\"\\\\upload\\\\articlepic\\\\1500622301.jpg\"]', '1', '1500622304');
+INSERT INTO `car_article` VALUES ('7', 'fafafadfafa', '<p>fdafadf</p>', '[]', '2', '1500694469');
 
 -- ----------------------------
 -- Table structure for car_auth_code_record
@@ -318,18 +516,21 @@ DROP TABLE IF EXISTS `car_brand`;
 CREATE TABLE `car_brand` (
   `id` int(13) NOT NULL AUTO_INCREMENT COMMENT '自增主键ID',
   `name` varchar(50) NOT NULL COMMENT '品牌名称',
+  `ename` varchar(200) DEFAULT '' COMMENT '英文名称',
   `intro` text COMMENT '品牌简介',
+  `eintro` text COMMENT '英文简介',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of car_brand
 -- ----------------------------
-INSERT INTO `car_brand` VALUES ('1', 'aaaa', '<p>aaaa</p>');
-INSERT INTO `car_brand` VALUES ('2', 'aaaa2223333', '<p>aaaa222222</p>');
-INSERT INTO `car_brand` VALUES ('3', 'ffff', '<p>aaaddd</p>');
-INSERT INTO `car_brand` VALUES ('4', '品牌2', '<p>品牌2品牌2品牌2品牌2品牌2品牌2品牌2品牌2品牌2品牌2</p>');
-INSERT INTO `car_brand` VALUES ('5', '品牌3', '<p>品牌3品牌3品牌3品牌3品牌3品牌3品牌3品牌3品牌3品牌3品牌3品牌3品牌3品牌3品牌3品牌3品牌3品牌3品牌3品牌3品牌3品牌3品牌3</p>');
+INSERT INTO `car_brand` VALUES ('1', 'aaaa', '1', '<p>aaaa</p>', null);
+INSERT INTO `car_brand` VALUES ('2', 'aaaa2223333', '1', '<p>aaaa222222</p>', null);
+INSERT INTO `car_brand` VALUES ('3', 'ffff', '1', '<p>aaaddd</p>', null);
+INSERT INTO `car_brand` VALUES ('4', '品牌2', '1', '<p>品牌2品牌2品牌2品牌2品牌2品牌2品牌2品牌2品牌2品牌2</p>', null);
+INSERT INTO `car_brand` VALUES ('5', '品牌3', '1', '<p>品牌3品牌3品牌3品牌3品牌3品牌3品牌3品牌3品牌3品牌3品牌3品牌3品牌3品牌3品牌3品牌3品牌3品牌3品牌3品牌3品牌3品牌3品牌3</p>', null);
+INSERT INTO `car_brand` VALUES ('6', 'faf', 'fafa', '<p>fafdafafafa</p>', '<p>111111111111</p>');
 
 -- ----------------------------
 -- Table structure for car_config
@@ -344,11 +545,12 @@ CREATE TABLE `car_config` (
 -- ----------------------------
 -- Records of car_config
 -- ----------------------------
-INSERT INTO `car_config` VALUES ('setting', 'a:3:{s:11:\"controllers\";a:16:{i:1;a:2:{s:8:\"econtrol\";s:12:\"adminarticle\";s:8:\"ccontrol\";s:6:\"文章\";}i:2;a:2:{s:8:\"econtrol\";s:10:\"adminbrand\";s:8:\"ccontrol\";s:6:\"品牌\";}i:3;a:2:{s:8:\"econtrol\";s:9:\"adminlist\";s:8:\"ccontrol\";s:9:\"管理员\";}i:4;a:2:{s:8:\"econtrol\";s:10:\"adminmodel\";s:8:\"ccontrol\";s:6:\"模型\";}i:5;a:2:{s:8:\"econtrol\";s:9:\"adminnews\";s:8:\"ccontrol\";s:6:\"新闻\";}i:6;a:2:{s:8:\"econtrol\";s:12:\"adminpackage\";s:8:\"ccontrol\";s:6:\"套餐\";}i:7;a:2:{s:8:\"econtrol\";s:16:\"adminprivilieges\";s:8:\"ccontrol\";s:6:\"权限\";}i:8;a:2:{s:8:\"econtrol\";s:9:\"adminrole\";s:8:\"ccontrol\";s:6:\"角色\";}i:9;a:2:{s:8:\"econtrol\";s:17:\"adminsettingpanel\";s:8:\"ccontrol\";s:12:\"网站设置\";}i:10;a:2:{s:8:\"econtrol\";s:10:\"adminstore\";s:8:\"ccontrol\";s:6:\"门店\";}i:11;a:2:{s:8:\"econtrol\";s:10:\"admintools\";s:8:\"ccontrol\";s:12:\"系统工具\";}i:12;a:2:{s:8:\"econtrol\";s:13:\"adminwarranty\";s:8:\"ccontrol\";s:6:\"质保\";}i:13;a:2:{s:8:\"econtrol\";s:19:\"adminwarrantydetail\";s:8:\"ccontrol\";s:12:\"质保详情\";}i:14;a:2:{s:8:\"econtrol\";s:5:\"login\";s:8:\"ccontrol\";s:6:\"登录\";}i:15;a:2:{s:8:\"econtrol\";s:19:\"adminwarrantyaction\";s:8:\"ccontrol\";s:12:\"质保操作\";}i:16;a:2:{s:8:\"econtrol\";s:9:\"adminuser\";s:8:\"ccontrol\";s:6:\"用户\";}}s:7:\"actions\";a:7:{i:1;a:2:{s:7:\"eaction\";s:5:\"index\";s:7:\"caction\";s:6:\"列表\";}i:2;a:2:{s:7:\"eaction\";s:3:\"add\";s:7:\"caction\";s:6:\"添加\";}i:3;a:2:{s:7:\"eaction\";s:6:\"update\";s:7:\"caction\";s:6:\"修改\";}i:4;a:2:{s:7:\"eaction\";s:6:\"delete\";s:7:\"caction\";s:6:\"删除\";}i:5;a:2:{s:7:\"eaction\";s:7:\"setting\";s:7:\"caction\";s:6:\"设置\";}i:6;a:2:{s:7:\"eaction\";s:3:\"set\";s:7:\"caction\";s:6:\"设置\";}i:7;a:2:{s:7:\"eaction\";s:10:\"updatepass\";s:7:\"caction\";s:12:\"修改密码\";}}s:5:\"ptype\";a:2:{i:1;s:6:\"车身\";i:2;s:6:\"前挡\";}}');
+INSERT INTO `car_config` VALUES ('setting', 'a:1:{s:5:\"ptype\";a:2:{i:1;s:6:\"车身\";i:2;s:6:\"前挡\";}}');
 INSERT INTO `car_config` VALUES ('site', 'a:9:{s:4:\"logo\";s:30:\"/upload\\default\\1494405055.png\";s:4:\"name\";s:3:\"aaa\";s:5:\"title\";s:2:\"vv\";s:4:\"desc\";s:2:\"bb\";s:8:\"keywords\";s:2:\"cc\";s:7:\"company\";s:2:\"dd\";s:9:\"copyright\";s:2:\"dd\";s:7:\"aboutus\";s:1305:\"<p>作为最早进入中国的外商独资企业之一，3M中国在过去的30多年里始终密切把握中国经济的发展脉搏，秉承“扎根中国，服务中国”的本土化发展战略，凭借多元化的技术和解决方案，积极支持中国经济的建设和发展。从基础设施建设到制造业崛起，从中国制造到中国创造，从出口驱动到推动内需，3M将企业的发展战略与中国的发展步伐紧密相连，助力中国市场的快速发展。这也使得3M成为中国本土化最成功的企业之一。\r\n\r\n\r\n\r\n                    3M中国致力开发适合本地市场和客户需求的创新科技和产品，并专注创新人才的培养。目前，3M中国已拥有700多名本土研发人员，贡献了超过千项本地专利发明，并在 3M全球的研发网络中发挥着极为重要的作用。\r\n\r\n\r\n\r\n                    3M中国积极履行社会责任，积极参与环境保护，扶贫减灾，推进志愿者行动。3M中国的努力得到了社会的广泛认可，获得了“大中华区最具领导力企业”、“最受赞赏的在华外商投资企业”、“亚洲最受尊敬公司二十强”等诸多荣誉，并多次入选“世界500强在华贡献排行榜”且名列前茅。\r\n                </p>11111111111\";s:10:\"siteCallus\";s:258:\"<div class=\"phone\"><i class=\"fa  fa-phone\"></i><a href=\"tel:18475555555\"> 1-888-123-4567 </a></div><div class=\"email\"><i class=\"fa  fa-envelope-o \"></i><a href=\"mailto:contact@site.com\">contact@site.com</a> or use <a href=\"help/index\"> contact form</a></div>\";}');
-INSERT INTO `car_config` VALUES ('path', 'a:2:{s:10:\"systemfile\";s:18:\"D:\\new\\carproject\\\";s:11:\"defaultfile\";s:33:\"D:\\new\\carproject\\upload\\default\\\";}');
+INSERT INTO `car_config` VALUES ('path', 'a:6:{s:10:\"systemfile\";s:17:\"D:\\new\\carproject\";s:11:\"defaultfile\";s:33:\"D:\\new\\carproject\\upload\\default\\\";s:5:\"adpic\";s:31:\"D:\\new\\carproject\\upload\\adpic\\\";s:8:\"videopic\";s:34:\"D:\\new\\carproject\\upload\\videopic\\\";s:9:\"videopath\";s:35:\"D:\\new\\carproject\\upload\\videopath\\\";s:13:\"articleimages\";s:36:\"D:\\new\\carproject\\upload\\articlepic\\\";}');
 INSERT INTO `car_config` VALUES ('phone', 'a:3:{s:8:\"signname\";s:18:\"傲邦名车服务\";s:6:\"appkey\";s:16:\"LTAIarXdLsgiKww4\";s:9:\"secretKey\";s:30:\"7Zt9crGZjNzEHPCnoLC7jhb0QjcWxJ\";}');
 INSERT INTO `car_config` VALUES ('phone1', 'a:3:{s:7:\"success\";a:3:{s:4:\"code\";s:12:\"SMS_77615074\";s:5:\"count\";s:0:\"\";s:4:\"time\";s:0:\"\";}s:4:\"fail\";a:3:{s:4:\"code\";s:12:\"SMS_77490077\";s:5:\"count\";s:0:\"\";s:4:\"time\";s:0:\"\";}s:4:\"auth\";a:3:{s:4:\"code\";s:12:\"SMS_77475079\";s:5:\"count\";s:1:\"3\";s:4:\"time\";s:3:\"600\";}}');
+INSERT INTO `car_config` VALUES ('syssetting', 'a:3:{s:11:\"controllers\";a:23:{i:1;a:2:{s:8:\"econtrol\";s:10:\"adminbrand\";s:8:\"ccontrol\";s:6:\"品牌\";}i:2;a:2:{s:8:\"econtrol\";s:9:\"adminlist\";s:8:\"ccontrol\";s:9:\"管理员\";}i:3;a:2:{s:8:\"econtrol\";s:10:\"adminmodel\";s:8:\"ccontrol\";s:6:\"模型\";}i:4;a:2:{s:8:\"econtrol\";s:9:\"adminnews\";s:8:\"ccontrol\";s:6:\"新闻\";}i:5;a:2:{s:8:\"econtrol\";s:12:\"adminpackage\";s:8:\"ccontrol\";s:6:\"套餐\";}i:6;a:2:{s:8:\"econtrol\";s:16:\"adminprivilieges\";s:8:\"ccontrol\";s:6:\"权限\";}i:7;a:2:{s:8:\"econtrol\";s:9:\"adminrole\";s:8:\"ccontrol\";s:6:\"角色\";}i:8;a:2:{s:8:\"econtrol\";s:17:\"adminsettingpanel\";s:8:\"ccontrol\";s:12:\"网站设置\";}i:9;a:2:{s:8:\"econtrol\";s:10:\"adminstore\";s:8:\"ccontrol\";s:6:\"门店\";}i:10;a:2:{s:8:\"econtrol\";s:10:\"admintools\";s:8:\"ccontrol\";s:12:\"系统工具\";}i:11;a:2:{s:8:\"econtrol\";s:13:\"adminwarranty\";s:8:\"ccontrol\";s:6:\"质保\";}i:12;a:2:{s:8:\"econtrol\";s:19:\"adminwarrantydetail\";s:8:\"ccontrol\";s:12:\"质保详情\";}i:13;a:2:{s:8:\"econtrol\";s:5:\"login\";s:8:\"ccontrol\";s:6:\"登录\";}i:14;a:2:{s:8:\"econtrol\";s:19:\"adminwarrantyaction\";s:8:\"ccontrol\";s:12:\"质保操作\";}i:15;a:2:{s:8:\"econtrol\";s:9:\"adminuser\";s:8:\"ccontrol\";s:6:\"用户\";}i:16;a:2:{s:8:\"econtrol\";s:11:\"adminsmsmsg\";s:8:\"ccontrol\";s:12:\"平台短信\";}i:17;a:2:{s:8:\"econtrol\";s:8:\"adminlog\";s:8:\"ccontrol\";s:21:\"管理员操作日志\";}i:18;a:2:{s:8:\"econtrol\";s:10:\"adminvideo\";s:8:\"ccontrol\";s:6:\"视频\";}i:19;a:2:{s:8:\"econtrol\";s:11:\"adminadlist\";s:8:\"ccontrol\";s:6:\"广告\";}i:20;a:2:{s:8:\"econtrol\";s:15:\"adminadposition\";s:8:\"ccontrol\";s:9:\"广告位\";}i:21;a:2:{s:8:\"econtrol\";s:12:\"adminrecruit\";s:8:\"ccontrol\";s:6:\"招聘\";}i:22;a:2:{s:8:\"econtrol\";s:12:\"adminarticle\";s:8:\"ccontrol\";s:6:\"文章\";}i:23;a:2:{s:8:\"econtrol\";s:12:\"adminproduct\";s:8:\"ccontrol\";s:6:\"产品\";}}s:7:\"actions\";a:9:{i:1;a:2:{s:7:\"eaction\";s:3:\"add\";s:7:\"caction\";s:6:\"添加\";}i:2;a:2:{s:7:\"eaction\";s:6:\"update\";s:7:\"caction\";s:6:\"修改\";}i:3;a:2:{s:7:\"eaction\";s:6:\"delete\";s:7:\"caction\";s:6:\"删除\";}i:4;a:2:{s:7:\"eaction\";s:7:\"setting\";s:7:\"caction\";s:6:\"设置\";}i:5;a:2:{s:7:\"eaction\";s:3:\"set\";s:7:\"caction\";s:6:\"设置\";}i:6;a:2:{s:7:\"eaction\";s:10:\"updatepass\";s:7:\"caction\";s:12:\"修改密码\";}i:7;a:2:{s:7:\"eaction\";s:6:\"sysset\";s:7:\"caction\";s:12:\"系统设置\";}i:8;a:2:{s:7:\"eaction\";s:8:\"filepath\";s:7:\"caction\";s:12:\"路径设置\";}i:9;a:2:{s:7:\"eaction\";s:11:\"uploadimage\";s:7:\"caction\";s:12:\"上传图片\";}}s:4:\"lang\";a:2:{i:1;s:6:\"中文\";i:2;s:6:\"英语\";}}');
 
 -- ----------------------------
 -- Table structure for car_models
@@ -357,23 +559,25 @@ DROP TABLE IF EXISTS `car_models`;
 CREATE TABLE `car_models` (
   `id` int(13) NOT NULL AUTO_INCREMENT COMMENT '自增主键ID',
   `name` varchar(50) NOT NULL COMMENT '型号名称',
+  `ename` varchar(200) DEFAULT '' COMMENT '英文',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of car_models
 -- ----------------------------
-INSERT INTO `car_models` VALUES ('1', 'abc');
-INSERT INTO `car_models` VALUES ('2', 'ssss');
-INSERT INTO `car_models` VALUES ('8', 'fdafadfa');
-INSERT INTO `car_models` VALUES ('9', 'abdcc');
-INSERT INTO `car_models` VALUES ('10', '型号1');
-INSERT INTO `car_models` VALUES ('11', '型号2');
-INSERT INTO `car_models` VALUES ('12', '型号3');
-INSERT INTO `car_models` VALUES ('13', '型号4');
-INSERT INTO `car_models` VALUES ('14', '型号5');
-INSERT INTO `car_models` VALUES ('15', '22222');
-INSERT INTO `car_models` VALUES ('16', '333333');
+INSERT INTO `car_models` VALUES ('1', 'abc', '1');
+INSERT INTO `car_models` VALUES ('2', 'ssss', '1');
+INSERT INTO `car_models` VALUES ('8', 'fdafadfa', '1');
+INSERT INTO `car_models` VALUES ('9', 'abdcc', '1');
+INSERT INTO `car_models` VALUES ('10', '型号1', '1');
+INSERT INTO `car_models` VALUES ('11', '型号2', '1');
+INSERT INTO `car_models` VALUES ('12', '型号3', '1');
+INSERT INTO `car_models` VALUES ('13', '型号4', '1');
+INSERT INTO `car_models` VALUES ('14', '型号5', '1');
+INSERT INTO `car_models` VALUES ('15', '22222', '1');
+INSERT INTO `car_models` VALUES ('16', '333333', '1');
+INSERT INTO `car_models` VALUES ('17', 'dfaf', 'dafae');
 
 -- ----------------------------
 -- Table structure for car_news
@@ -382,16 +586,18 @@ DROP TABLE IF EXISTS `car_news`;
 CREATE TABLE `car_news` (
   `id` int(13) NOT NULL AUTO_INCREMENT,
   `title` varchar(200) NOT NULL,
+  `lang` tinyint(1) DEFAULT '1' COMMENT '语言：1：中文；2：英文；',
   `content` text NOT NULL,
   `ctime` int(13) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of car_news
 -- ----------------------------
-INSERT INTO `car_news` VALUES ('1', 'aaaaaaaaaaa', '<p><img src=\"/upload/images/20170510/20170510690574.jpg\" title=\"20170510690574.jpg\" alt=\"03087bf40ad162d949e23df511dfa9ec8b13cdcf.jpg\" /></p><p><img src=\"/upload/images/20170510/20170510492197.jpg\" title=\"20170510492197.jpg\" alt=\"20170510492197.jpg\" /></p><p><img src=\"/upload/images/20170510/20170510240805.png\" title=\"20170510240805.png\" alt=\"20170510240805.png\" /></p><p><br /></p>', '1494376801');
-INSERT INTO `car_news` VALUES ('2', 'bbbbddd', '<p>bbbbbbbb<br /></p>', '1494376858');
+INSERT INTO `car_news` VALUES ('1', 'aaaaaaaaaaa', '1', '<p><img src=\"/upload/images/20170510/20170510690574.jpg\" title=\"20170510690574.jpg\" alt=\"03087bf40ad162d949e23df511dfa9ec8b13cdcf.jpg\" /></p><p><img src=\"/upload/images/20170510/20170510492197.jpg\" title=\"20170510492197.jpg\" alt=\"20170510492197.jpg\" /></p><p><img src=\"/upload/images/20170510/20170510240805.png\" title=\"20170510240805.png\" alt=\"20170510240805.png\" /></p><p><br /></p>', '1494376801');
+INSERT INTO `car_news` VALUES ('2', 'bbbbddd', '1', '<p>bbbbbbbb<br /></p>', '1494376858');
+INSERT INTO `car_news` VALUES ('3', 'fdafaf', '2', '<p>fdafadfa</p>', '1500695335');
 
 -- ----------------------------
 -- Table structure for car_package
@@ -400,17 +606,19 @@ DROP TABLE IF EXISTS `car_package`;
 CREATE TABLE `car_package` (
   `id` int(13) NOT NULL AUTO_INCREMENT,
   `name` varchar(500) DEFAULT NULL,
+  `ename` varchar(500) DEFAULT '' COMMENT '英文名臣',
   `intro` text,
+  `eintro` text COMMENT '英文简介',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of car_package
 -- ----------------------------
-INSERT INTO `car_package` VALUES ('1', '1112', '<p>22232323211111<span style=\"white-space: normal;\">22232323211111</span><span style=\"white-space: normal;\">22232323211111</span><span style=\"white-space: normal;\">22232323211111</span>22232323211111<span style=\"white-space: normal;\">22232323211111</span><span style=\"white-space: normal;\">22232323211111</span><span style=\"white-space: normal;\">22232323211111</span>22232323211111<span style=\"white-space: normal;\">22232323211111</span>2223232321111122232323211111<span style=\"white-space: normal;\">22232323211111</span>22232323211111<span style=\"white-space: normal;\">22232323211111</span></p>');
-INSERT INTO `car_package` VALUES ('2', '1212121', '<div><video controls=\"\" preload=\"none\" width=\"320\" height=\"280\" src=\"/upload/video/20170711/1499741081958360.mp4\"><source src=\"/upload/video/20170711/1499741081958360.mp4\" type=\"video/mp4\"/></video>11111</div>');
-INSERT INTO `car_package` VALUES ('3', '444444444', '<p><video class=\"edui-upload-video  vjs-default-skin video-js\" controls=\"\" preload=\"none\" width=\"420\" height=\"280\" src=\"/upload/video/20170711/1499742976978112.mp4\" data-setup=\"{}\"><source src=\"/upload/video/20170711/1499742976978112.mp4\" type=\"video/mp4\"/></video></p>');
-INSERT INTO `car_package` VALUES ('4', 'dafd', '<p>dfafafafa</p>');
+INSERT INTO `car_package` VALUES ('1', '1112', '1', '<p>22232323211111<span style=\"white-space: normal;\">22232323211111</span><span style=\"white-space: normal;\">22232323211111</span><span style=\"white-space: normal;\">22232323211111</span>22232323211111<span style=\"white-space: normal;\">22232323211111</span><span style=\"white-space: normal;\">22232323211111</span><span style=\"white-space: normal;\">22232323211111</span>22232323211111<span style=\"white-space: normal;\">22232323211111</span>2223232321111122232323211111<span style=\"white-space: normal;\">22232323211111</span>22232323211111<span style=\"white-space: normal;\">22232323211111</span></p>', null);
+INSERT INTO `car_package` VALUES ('2', '1212121', '1', '<div><video controls=\"\" preload=\"none\" width=\"320\" height=\"280\" src=\"/upload/video/20170711/1499741081958360.mp4\"><source src=\"/upload/video/20170711/1499741081958360.mp4\" type=\"video/mp4\"/></video>11111</div>', null);
+INSERT INTO `car_package` VALUES ('3', '444444444', '1', '<p><video class=\"edui-upload-video  vjs-default-skin video-js\" controls=\"\" preload=\"none\" width=\"420\" height=\"280\" src=\"/upload/video/20170711/1499742976978112.mp4\" data-setup=\"{}\"><source src=\"/upload/video/20170711/1499742976978112.mp4\" type=\"video/mp4\"/></video></p>', null);
+INSERT INTO `car_package` VALUES ('4', 'dafd', '1', '<p>dfafafafa</p>', null);
 
 -- ----------------------------
 -- Table structure for car_product
@@ -420,6 +628,7 @@ CREATE TABLE `car_product` (
   `id` int(13) NOT NULL AUTO_INCREMENT COMMENT '自增主键编号ID',
   `mid` int(13) NOT NULL COMMENT '关联型号ID',
   `name` varchar(500) NOT NULL COMMENT '产品名称',
+  `ename` varchar(500) DEFAULT '' COMMENT '英文名称',
   `series_number` varchar(500) NOT NULL COMMENT '序列号',
   `total` int(15) NOT NULL DEFAULT '0' COMMENT '总数量',
   `current_num` int(15) NOT NULL DEFAULT '0' COMMENT '当前数量',
@@ -438,31 +647,57 @@ CREATE TABLE `car_product` (
   `udpatetime` int(13) DEFAULT NULL COMMENT '出库时间',
   `remarks` text COMMENT '备注',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of car_product
 -- ----------------------------
-INSERT INTO `car_product` VALUES ('1', '1', '产品1', '4', '3', '0', '1', '<p>产品1产品1产品1产品1</p>', '0', null, null, null, null, null, null, '0', '1', '1494290690', null, '111111111111111111');
-INSERT INTO `car_product` VALUES ('2', '1', '产品2', '1', '1', '0', '1', '', '0', null, null, null, null, null, null, '0', '1', '1494290690', null, null);
-INSERT INTO `car_product` VALUES ('3', '8', '产品3', '3', '3', '0', '1', '', '0', null, null, null, null, null, null, '0', '1', '1494290690', null, null);
-INSERT INTO `car_product` VALUES ('4', '9', 'aaaaaaaaaaaaaaaaa', '2', '3', '0', '1', '', '0', null, null, null, null, null, null, '0', '1', '1494324366', null, null);
-INSERT INTO `car_product` VALUES ('5', '9', 'aaaabbbccc', '5', '4', '0', '1', '<p>aaaaaaaaaaaaaa</p>', '0', null, null, null, null, null, null, '0', '1', '1494376217', null, null);
-INSERT INTO `car_product` VALUES ('6', '10', '产品11', '4', '4', '0', '1', '<p>产品产品产品产品产品产品产品产品产品产品产品</p>', '0', null, null, null, null, null, null, '0', '1', '1494461031', null, null);
-INSERT INTO `car_product` VALUES ('7', '11', '产品22', '3', '1', '0', '1', '<p>产品产品产品产品产品产品产品产品产品产品产品产品产品产品产品产品产品产品产品产品产品产品产品产品产品产品产品产品</p>', '0', null, null, null, null, null, null, '0', '1', '1494461061', null, null);
-INSERT INTO `car_product` VALUES ('8', '14', '产品33', '3', '3', '0', '2', '<p>产品33产品33产品33产品33产品33产品33产品33产品33产品33产品33产品33产品33产品33产品33产品33产品33产品33产品33产品33</p>', '0', null, null, null, null, null, null, '0', '1', '1494461552', null, null);
-INSERT INTO `car_product` VALUES ('9', '8', '111', '2', '2', '0', '3', '', '0', null, null, null, null, null, null, '0', '1', '1495179696', null, null);
-INSERT INTO `car_product` VALUES ('10', '12', '反对方答复', '2', '3', '0', '1', '<p>dfaafafa</p>', '0', null, null, null, null, null, null, '0', '1', '1495180118', null, null);
-INSERT INTO `car_product` VALUES ('11', '1', '测试111', 'dafafdafa', '222', '207', '2', '<p>fdafdafda</p>', '0', null, null, null, '887', '926', '927', '2', '1', '1497511909', '1498726668', null);
-INSERT INTO `car_product` VALUES ('12', '14', '测试产品2', 'aaaaaaabbbbbbcccccc', '20000', '19970', '4', '<p>1234567890</p>', '0', null, null, null, '1', '2', '4', '1', '1', '1497516934', '1499500385', null);
-INSERT INTO `car_product` VALUES ('13', '14', '测试产品3', '112233445566', '0', '0', '5', '<p>afdsfa</p>', '0', null, null, null, null, null, null, '2', '1', '1497516968', null, null);
-INSERT INTO `car_product` VALUES ('14', '11', '测试穿品1', 'dfdsfsfs', '123', '121', '5', '<p>dasfdafda111</p>', '0', null, null, null, '22', '23', '28', '2', '1', '1497603984', '1498725120', null);
-INSERT INTO `car_product` VALUES ('15', '13', '测试产品3', '34311232·3·3', '30', '5', '5', '<p>dfsfds</p>', '0', '111', '222', '333', '3078', '3079', '3082', '1', '1', '1498529073', '1499500384', '4444444444');
-INSERT INTO `car_product` VALUES ('16', '2', '测试产品44', 'dfdfsdfdsfsdfds', '100', '73', '2', '<p>fdafa</p>', '0', 'fdafadf', 'fdafa', 'dfafad', '238', '264', '266', '0', '1', '1498724503', '1499500384', null);
-INSERT INTO `car_product` VALUES ('17', '2', '11222', '21212121', '11', '11', '1', '<p>fdaf</p>', '13', 'dfsfda', 'fdaf', 'fdaf', null, null, null, '0', '1', '1500277498', null, null);
-INSERT INTO `car_product` VALUES ('18', '1', 'dfaadfda', 'fdaf', '11', '11', '1', '<p>fd</p>', '13', 'fdaf', 'dfa', 'fd', '1', '19', '20', '0', '1', '1500277836', null, null);
-INSERT INTO `car_product` VALUES ('19', '11', '11111111111111111111', '13211233', '20', '17', '4', '<p>fdfdf</p>', '5', 'fdfd', 'fdf', 'fdfd', '3078', null, null, '0', '1', '1500280593', '1500369754', null);
-INSERT INTO `car_product` VALUES ('20', '1', '123232', 'f677881', '21', '11', '5', '<p>fdafa</p>', '4', 'dafda', 'fda', 'fdfd', '22', '39', '41', '0', '1', '1500280853', '1500434650', null);
+INSERT INTO `car_product` VALUES ('1', '1', '产品1', '1', '4', '3', '0', '1', '<p>产品1产品1产品1产品1</p>', '0', null, null, null, null, null, null, '0', '1', '1494290690', null, '111111111111111111');
+INSERT INTO `car_product` VALUES ('2', '1', '产品2', '1', '1', '1', '0', '1', '', '0', null, null, null, null, null, null, '0', '1', '1494290690', null, null);
+INSERT INTO `car_product` VALUES ('3', '8', '产品3', '1', '3', '3', '0', '1', '', '0', null, null, null, null, null, null, '0', '1', '1494290690', null, null);
+INSERT INTO `car_product` VALUES ('4', '9', 'aaaaaaaaaaaaaaaaa', '1', '2', '3', '0', '1', '', '0', null, null, null, null, null, null, '0', '1', '1494324366', null, null);
+INSERT INTO `car_product` VALUES ('5', '9', 'aaaabbbccc', '1', '5', '4', '0', '1', '<p>aaaaaaaaaaaaaa</p>', '0', null, null, null, null, null, null, '0', '1', '1494376217', null, null);
+INSERT INTO `car_product` VALUES ('6', '10', '产品11', '1', '4', '4', '0', '1', '<p>产品产品产品产品产品产品产品产品产品产品产品</p>', '0', null, null, null, null, null, null, '0', '1', '1494461031', null, null);
+INSERT INTO `car_product` VALUES ('7', '11', '产品22', '1', '3', '1', '0', '1', '<p>产品产品产品产品产品产品产品产品产品产品产品产品产品产品产品产品产品产品产品产品产品产品产品产品产品产品产品产品</p>', '0', null, null, null, null, null, null, '0', '1', '1494461061', null, null);
+INSERT INTO `car_product` VALUES ('8', '14', '产品33', '1', '3', '3', '0', '2', '<p>产品33产品33产品33产品33产品33产品33产品33产品33产品33产品33产品33产品33产品33产品33产品33产品33产品33产品33产品33</p>', '0', null, null, null, null, null, null, '0', '1', '1494461552', null, null);
+INSERT INTO `car_product` VALUES ('9', '8', '111', '1', '2', '2', '0', '3', '', '0', null, null, null, null, null, null, '0', '1', '1495179696', null, null);
+INSERT INTO `car_product` VALUES ('10', '12', '反对方答复', '1', '2', '3', '0', '1', '<p>dfaafafa</p>', '0', null, null, null, null, null, null, '0', '1', '1495180118', null, null);
+INSERT INTO `car_product` VALUES ('11', '1', '测试111', '1', 'dafafdafa', '222', '207', '2', '<p>fdafdafda</p>', '0', null, null, null, '887', '926', '927', '2', '1', '1497511909', '1498726668', null);
+INSERT INTO `car_product` VALUES ('12', '14', '测试产品2', '1', 'aaaaaaabbbbbbcccccc', '20000', '19970', '4', '<p>1234567890</p>', '0', null, null, null, '1', '2', '4', '1', '1', '1497516934', '1499500385', null);
+INSERT INTO `car_product` VALUES ('13', '14', '测试产品3', '1', '112233445566', '0', '0', '5', '<p>afdsfa</p>', '0', null, null, null, null, null, null, '2', '1', '1497516968', null, null);
+INSERT INTO `car_product` VALUES ('14', '11', '测试穿品1', '1', 'dfdsfsfs', '123', '121', '5', '<p>dasfdafda111</p>', '0', null, null, null, '22', '23', '28', '2', '1', '1497603984', '1498725120', null);
+INSERT INTO `car_product` VALUES ('15', '13', '测试产品3', '1', '34311232·3·3', '30', '5', '5', '<p>dfsfds</p>', '0', '111', '222', '333', '3078', '3079', '3082', '1', '1', '1498529073', '1499500384', '4444444444');
+INSERT INTO `car_product` VALUES ('16', '2', '测试产品44', '1', 'dfdfsdfdsfsdfds', '100', '73', '2', '<p>fdafa</p>', '0', 'fdafadf', 'fdafa', 'dfafad', '238', '264', '266', '0', '1', '1498724503', '1499500384', null);
+INSERT INTO `car_product` VALUES ('17', '2', '11222', '1', '21212121', '11', '11', '1', '<p>fdaf</p>', '13', 'dfsfda', 'fdaf', 'fdaf', null, null, null, '0', '1', '1500277498', null, null);
+INSERT INTO `car_product` VALUES ('18', '1', 'dfaadfda', '1', 'fdaf', '11', '11', '1', '<p>fd</p>', '13', 'fdaf', 'dfa', 'fd', '1', '19', '20', '0', '1', '1500277836', null, null);
+INSERT INTO `car_product` VALUES ('19', '11', '11111111111111111111', '1', '13211233', '20', '17', '4', '<p>fdfdf</p>', '5', 'fdfd', 'fdf', 'fdfd', '3078', null, null, '0', '1', '1500280593', '1500369754', null);
+INSERT INTO `car_product` VALUES ('20', '1', '123232', '1', 'f677881', '21', '11', '5', '<p>fdafa</p>', '4', 'dafda', 'fda', 'fdfd', '22', '39', '41', '0', '1', '1500280853', '1500434650', null);
+INSERT INTO `car_product` VALUES ('21', '1', 'fdafdafdasf', 'fdafafa', '1fafdafafda', '20', '20', '6', '<p>fafadfa<br/></p>', '13', 'dafad', 'fdafafda', 'fdafa', null, null, null, '0', '1', '1500706635', null, null);
+
+-- ----------------------------
+-- Table structure for car_recruit
+-- ----------------------------
+DROP TABLE IF EXISTS `car_recruit`;
+CREATE TABLE `car_recruit` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键id',
+  `lang` tinyint(1) DEFAULT '1' COMMENT '语言：1：中文；2：英文；',
+  `employ_name` varchar(200) NOT NULL DEFAULT '' COMMENT '职位名称',
+  `edu_level` varchar(100) NOT NULL DEFAULT '' COMMENT '教育程度',
+  `sex` tinyint(1) DEFAULT '1' COMMENT '性别：1：男；2：女；3：不限；',
+  `specialty` varchar(200) NOT NULL DEFAULT '' COMMENT '专业',
+  `employ_length` varchar(100) NOT NULL DEFAULT '' COMMENT '工作年限',
+  `desc` text NOT NULL COMMENT '详情描述',
+  `enable` tinyint(1) DEFAULT '1' COMMENT '是否激活：1：激活；2：未激活；',
+  `isdeleted` tinyint(1) DEFAULT '1' COMMENT '是否删除：1：未删除；2：已删除；',
+  `ctime` int(20) DEFAULT '0' COMMENT '添加招聘时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of car_recruit
+-- ----------------------------
+INSERT INTO `car_recruit` VALUES ('11', '1', 'fdafa', 'dafa', '2', 'fdafa', 'dfafa', '<p>fadfaa</p>', '1', '1', '1500608249');
+INSERT INTO `car_recruit` VALUES ('12', '2', 'fdafa', 'fdafafda', '3', 'fdafadf', 'fdafa', '<p>fdafadf</p>', '1', '1', '1500707573');
 
 -- ----------------------------
 -- Table structure for car_region
@@ -4038,32 +4273,36 @@ DROP TABLE IF EXISTS `car_store`;
 CREATE TABLE `car_store` (
   `id` int(13) NOT NULL AUTO_INCREMENT COMMENT '自增主键ID',
   `name` varchar(300) NOT NULL COMMENT '门店名称',
+  `ename` varchar(300) DEFAULT '' COMMENT '英文名称',
   `type` tinyint(2) NOT NULL COMMENT '门店类型',
   `provinceid` int(13) NOT NULL COMMENT '门店所在省ID',
   `cityid` int(13) NOT NULL COMMENT '门店所在城市ID',
   `areaid` int(13) DEFAULT NULL COMMENT '区县id',
   `address` varchar(500) NOT NULL DEFAULT '' COMMENT '门店地址',
+  `eaddress` varchar(500) DEFAULT '' COMMENT '门店地址英文',
   `telephone` char(25) NOT NULL COMMENT '门店联系电话',
   `lat` char(25) NOT NULL COMMENT '门店经度',
   `lng` char(25) NOT NULL COMMENT '门店维度',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of car_store
 -- ----------------------------
-INSERT INTO `car_store` VALUES ('2', 'aaaa', '1', '238', '251', '259', '1dfafdfda', '132323232', '', '');
-INSERT INTO `car_store` VALUES ('3', 'dafdafda', '1', '865', '885', '886', 'dfafa', '12321321321', '', '');
-INSERT INTO `car_store` VALUES ('4', '测试店铺', '1', '22', '39', '41', '天津市静海县', '13992891749', '38.953446', '116.980747');
-INSERT INTO `car_store` VALUES ('5', '百佳科技股份有限公司', '1', '3078', '3079', '3086', '西安市碑林区丈八一路蓝海大厦', '13992891749', '34.203527', '108.890938');
-INSERT INTO `car_store` VALUES ('6', '春夏不秋冬', '1', '1020', '1021', '1027', '浙江省杭州市西湖区文二路2', '15958209072', '30.288699', '120.125797');
-INSERT INTO `car_store` VALUES ('7', '测试地址', '2', '3078', '3079', '3082', '陕西省西安市友谊西路188号公安五处高层', '13992891749', '34.247019', '108.943165');
-INSERT INTO `car_store` VALUES ('8', '测试门店1', '3', '3078', '3079', '3082', '陕西省西安市长安大学', '13992891749', '34.238905', '108.96253');
-INSERT INTO `car_store` VALUES ('9', '地址测试', '2', '709', '829', null, '黑龙江省牡丹江市绥芬河市天佑国际', '13992891749', '44.410588', '131.169873');
-INSERT INTO `car_store` VALUES ('10', 'aaaaaaaaaaaa11111', '1', '2476', '2477', '2479', '西安市碑林区', '13992891749', '34.236608', '108.940746');
-INSERT INTO `car_store` VALUES ('11', '康顺-长春尚腾', '1', '631', '632', '638', '长春市长沈路4222号（南四环与西湖大路交汇立交桥）', '4008204052', '43.824446', '125.211788');
-INSERT INTO `car_store` VALUES ('12', '恒信-武汉星隆', '1', '1868', '1869', '1874', '湖北省武汉市汉阳区龙阳大道邱家大湾特1号', '4008204052', '30.554911', '114.210211');
-INSERT INTO `car_store` VALUES ('13', '测试门店1', '1', '1', '19', '20', '陕西省西安市公安五处高层', '4008204052', '34.247019', '108.943165');
+INSERT INTO `car_store` VALUES ('2', 'aaaa', '1', '1', '238', '251', '259', '1dfafdfda', '', '132323232', '', '');
+INSERT INTO `car_store` VALUES ('3', 'dafdafda', '1', '1', '865', '885', '886', 'dfafa', '', '12321321321', '', '');
+INSERT INTO `car_store` VALUES ('4', '测试店铺', '1', '1', '22', '39', '41', '天津市静海县', '', '13992891749', '38.953446', '116.980747');
+INSERT INTO `car_store` VALUES ('5', '百佳科技股份有限公司', '1', '1', '3078', '3079', '3086', '西安市碑林区丈八一路蓝海大厦', '', '13992891749', '34.203527', '108.890938');
+INSERT INTO `car_store` VALUES ('6', '春夏不秋冬', '1', '1', '1020', '1021', '1027', '浙江省杭州市西湖区文二路2', '', '15958209072', '30.288699', '120.125797');
+INSERT INTO `car_store` VALUES ('7', '测试地址', '1', '2', '3078', '3079', '3082', '陕西省西安市友谊西路188号公安五处高层', '', '13992891749', '34.247019', '108.943165');
+INSERT INTO `car_store` VALUES ('8', '测试门店1', '1', '3', '3078', '3079', '3082', '陕西省西安市长安大学', '', '13992891749', '34.238905', '108.96253');
+INSERT INTO `car_store` VALUES ('9', '地址测试', '1', '2', '709', '829', null, '黑龙江省牡丹江市绥芬河市天佑国际', '', '13992891749', '44.410588', '131.169873');
+INSERT INTO `car_store` VALUES ('10', 'aaaaaaaaaaaa11111', '1', '1', '2476', '2477', '2479', '西安市碑林区', '', '13992891749', '34.236608', '108.940746');
+INSERT INTO `car_store` VALUES ('11', '康顺-长春尚腾', '1', '1', '631', '632', '638', '长春市长沈路4222号（南四环与西湖大路交汇立交桥）', '', '4008204052', '43.824446', '125.211788');
+INSERT INTO `car_store` VALUES ('12', '恒信-武汉星隆', '1', '1', '1868', '1869', '1874', '湖北省武汉市汉阳区龙阳大道邱家大湾特1号', '', '4008204052', '30.554911', '114.210211');
+INSERT INTO `car_store` VALUES ('13', '测试门店1', '1', '1', '1', '19', '20', '陕西省西安市公安五处高层', '', '4008204052', '34.247019', '108.943165');
+INSERT INTO `car_store` VALUES ('14', '测试店铺1111', '1', '0', '1', '2', '5', '北京市上地', '', '13992891749', '39.965505', '116.305044');
+INSERT INTO `car_store` VALUES ('15', 'fadfdafadf', 'dafaf', '0', '1', '19', '21', '西安', 'dfafa', '13992891749', '34.347281', '108.946107');
 
 -- ----------------------------
 -- Table structure for car_user
@@ -4098,6 +4337,30 @@ CREATE TABLE `car_user` (
 -- ----------------------------
 -- Records of car_user
 -- ----------------------------
+
+-- ----------------------------
+-- Table structure for car_video
+-- ----------------------------
+DROP TABLE IF EXISTS `car_video`;
+CREATE TABLE `car_video` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+  `lang` tinyint(1) DEFAULT '1' COMMENT '语言：1：中文；2：英文；',
+  `title` varchar(255) NOT NULL COMMENT '标题',
+  `thumb` varchar(255) NOT NULL COMMENT '图片',
+  `show_type` tinyint(1) DEFAULT NULL,
+  `video` varchar(255) NOT NULL COMMENT '视频',
+  `desc` varchar(1000) NOT NULL COMMENT '简介',
+  `is_deleted` tinyint(1) NOT NULL DEFAULT '1' COMMENT '是否删除：1未删除；0：已删除；',
+  `ctime` int(11) NOT NULL COMMENT '添加时间',
+  `mtime` int(11) NOT NULL COMMENT '更新时间',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of car_video
+-- ----------------------------
+INSERT INTO `car_video` VALUES ('3', '1', 'fdafafafda', '\\upload\\videopic\\1500606876.jpg', '2', 'a:3:{s:9:\"file_name\";s:27:\"04个人工作室认证.mp4\";s:9:\"file_size\";s:8:\"18782328\";s:9:\"file_path\";s:74:\"/\\upload\\videopath\\20170721/fc1db97697bbb4565c3d3baab8af55b01276381811.mp4\";}', 'fdafafaf', '1', '1500606936', '1500606939');
+INSERT INTO `car_video` VALUES ('4', '2', 'fdafafa', '\\upload\\videopic\\1500708256.jpg', '2', 'a:3:{s:9:\"file_name\";s:30:\"2.内容分类操作演示.mp4\";s:9:\"file_size\";s:7:\"9482331\";s:9:\"file_path\";s:74:\"/\\upload\\videopath\\20170722/1a825fd63494469501b3bbb3668d51061168527577.mp4\";}', 'fdafafa', '1', '1500708288', '1500708288');
 
 -- ----------------------------
 -- Table structure for car_warranty
@@ -4202,7 +4465,7 @@ CREATE TABLE `car_warranty_action` (
   `admin_id` int(13) DEFAULT NULL COMMENT '操作者id',
   `ctime` int(13) DEFAULT NULL COMMENT '添加记录时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of car_warranty_action

@@ -1,3 +1,6 @@
+<style>
+    ul.ztree{height:390px;}
+</style>
 <div class="aw-content-wrap">
     <div class="mod">
         <div class="mod-head">
@@ -114,13 +117,12 @@
         getztree();
     });
     function showMenu() {
-        console.log(111);
         var Obj = $("#select_res");
         var ObjOffset = $("#select_res").offset();
         console.log(ObjOffset);
         console.log(Obj);
         $("#menuContent").css({left:ObjOffset.left + "px", top:ObjOffset.top + Obj.outerHeight() + "px"}).slideDown("fast");
-
+        $('#menuContent ul')
         $("body").bind("mousedown", onBodyDown);
     }
 

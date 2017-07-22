@@ -7,6 +7,8 @@
  * @property string $id
  * @property string $name
  * @property string $intro
+ * @property string $ename
+ * @property string $eintro
  *
  * The followings are the available model relations:
  * @property User $user
@@ -43,7 +45,7 @@ class Brand extends CActiveRecord
 			array('intro,name', 'length', 'max'=>20000000, 'tooLong' =>'{attribute}长度不能大于200个字节！'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, name, intro', 'safe', 'on'=>'search'),
+			array('id, name, intro, ename, eintro', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -67,7 +69,9 @@ class Brand extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'name' => '品牌名称',
-			'intro' => '品牌简介'
+			'intro' => '品牌简介',
+            'ename' => '英文品牌名称',
+            'eintro' => '英文品牌简介',
 		);
 	}
 
@@ -84,7 +88,9 @@ class Brand extends CActiveRecord
 
 		$criteria->compare('id',$this->id,true);
 		$criteria->compare('name',$this->name,true);
-		$criteria->compare('intro',$this->intro,true);;
+		$criteria->compare('intro',$this->intro,true);
+        $criteria->compare('ename',$this->ename);
+        $criteria->compare('eintro',$this->eintro);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -96,6 +102,8 @@ class Brand extends CActiveRecord
             $brand = $this->find("id=:id",array(":id"=>$_REQUEST['id']));
             if(!empty($brand)){
                 $brand->attributes = $post["Brand"];
+                $brand->ename = $post['Brand']['ename'];
+                $brand->eintro = $post['Brand']['eintro'];
                 if($brand->validate()){
                     if($brand->save()){
                         return true;
@@ -107,6 +115,8 @@ class Brand extends CActiveRecord
         }else{
             $model = new Brand();
             $model->attributes = $post['Brand'];
+            $model->ename = $post['Brand']['ename'];
+            $model->eintro = $post['Brand']['eintro'];
             if($model->validate()){
                 if($model->save()){
                     return true;
@@ -128,6 +138,9 @@ class Brand extends CActiveRecord
             $search->attributes = $condition['Brand'];
             if (!empty($condition['Brand']['name'])) {
                 $criteria->condition .= ' and t.name like "%' . $condition['Brand']['name'] .'%" ';
+            }
+            if (!empty($condition['Brand']['ename'])) {
+                $criteria->condition .= ' and t.ename like "%' . $condition['Brand']['ename'] .'%" ';
             }
         }
         if(empty($condition['sortFiled']) || empty($condition['sortValue'])){

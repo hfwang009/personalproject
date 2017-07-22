@@ -16,13 +16,15 @@ class AdminSmsMsgController extends CAdminController{
                 ),
             )
         );
+        $count = SmsRecord::model()->count($criteria);
         $ajax_url = $this->createUrl('setting');
         $this->render("index",array(
             "search"=>$search,
             "condition"=>$condition,
             "pager"=>$model->getPagination(),
             "ajax_url"=>$ajax_url,
-            "model"=>$model->getData()
+            "model"=>$model->getData(),
+            "count"=>$count
         ));
     }
 }

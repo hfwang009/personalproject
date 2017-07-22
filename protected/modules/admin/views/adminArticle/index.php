@@ -32,6 +32,9 @@
                                     <a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->module->id.'/'.Yii::app()->controller->id . '/' . $this->getAction()->getId(), array_merge($condition,array('sortFiled'=>'title','sortValue'=>(isset($condition['sortFiled']) && $condition['sortFiled']=='title')?($condition['sortValue'] == "asc"?"desc":"asc"):"asc")));?>">文章名称<span class="glyphicon <?php echo $condition['sortFiled'] == 'title'?($condition['sortValue'] == "asc"?"glyphicon-chevron-up":"glyphicon-chevron-down"):'';?>"></span></a>
                                 </th>
                                 <th>
+                                    <a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->module->id.'/'.Yii::app()->controller->id . '/' . $this->getAction()->getId(), array_merge($condition,array('sortFiled'=>'lang','sortValue'=>(isset($condition['sortFiled']) && $condition['sortFiled']=='lang')?($condition['sortValue'] == "asc"?"desc":"asc"):"asc")));?>">文章名称<span class="glyphicon <?php echo $condition['sortFiled'] == 'lang'?($condition['sortValue'] == "asc"?"glyphicon-chevron-up":"glyphicon-chevron-down"):'';?>"></span></a>
+                                </th>
+                                <th>
                                     <a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->module->id.'/'.Yii::app()->controller->id . '/' . $this->getAction()->getId(), array_merge($condition,array('sortFiled'=>'ctime','sortValue'=>(isset($condition['sortFiled']) && $condition['sortFiled']=='ctime')?($condition['sortValue'] == "asc"?"desc":"asc"):"asc")));?>">文章型号名称<span class="glyphicon <?php echo $condition['sortFiled'] == 'ctime'?($condition['sortValue'] == "asc"?"glyphicon-chevron-up":"glyphicon-chevron-down"):'';?>"></span></a>
                                 </th>
                                 <th>操作</th>
@@ -50,6 +53,7 @@
                                         </td>
                                         <td><?php echo $_model['id'];?></td>
                                         <td><?php echo $_model['title'];?></td>
+                                        <td><?php echo $langs[$_model['lang']];?></td>
                                         <td><?php echo !empty($_model['ctime'])?date('Y-m-d',$_model['ctime']):'--';?></td>
                                         <td class="nowrap">
                                             <a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->module->id.'/'.Yii::app()->controller->id . '/add',array('id'=>$_model['id']));?>" class="icon icon-edit md-tip" title="编辑"></a>
@@ -102,6 +106,12 @@
                     <?php echo $form->label($search,'title',array('class'=>'col-sm-2 col-xs-3 control-label'));?>
                     <div class="col-sm-5 col-xs-8">
                         <?php echo $form->textField($search, 'title', array("class"=>"form-control"));?>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <?php echo $form->label($search,'lang',array('class'=>'col-sm-2 col-xs-3 control-label'));?>
+                    <div class="col-sm-5 col-xs-8">
+                        <?php echo $form->dropdownList($search, 'lang',$langs, array("class"=>"form-control"));?>
                     </div>
                 </div>
                 <div class="form-group">

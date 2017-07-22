@@ -495,6 +495,20 @@
                 );
                 ?>
                 <div class="form-group">
+                    <?php echo $form->label($search,'name',array('class'=>'col-sm-2 col-xs-3 control-label'));?>
+                    <div class="col-sm-5 col-xs-8">
+                        <?php echo $form->textField($search, 'name', array("class"=>"form-control"));?>
+                        <?php echo $form->error($search,'name',array('class'=>'help-block'));?>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <?php echo $form->label($search,'pack_name',array('class'=>'col-sm-2 col-xs-3 control-label'));?>
+                    <div class="col-sm-5 col-xs-8">
+                        <?php echo $form->textField($search, 'pack_name', array("class"=>"form-control"));?>
+                        <?php echo $form->error($search,'pack_name',array('class'=>'help-block'));?>
+                    </div>
+                </div>
+                <div class="form-group">
                     <?php echo $form->label($search,'telephone',array('class'=>'col-sm-2 col-xs-3 control-label'));?>
                     <div class="col-sm-5 col-xs-8">
                         <?php echo $form->textField($search, 'telephone', array("class"=>"form-control"));?>

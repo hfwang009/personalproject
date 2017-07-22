@@ -55,6 +55,7 @@ return array(
                 array('subject' => '管理员设置', 'link' => 'admin/adminList/index', 'controller'=>'adminList'),
                 array('subject' => '管理员角色设置', 'link' => 'admin/adminRole/index', 'controller'=>'adminRole'),
                 array('subject' => '管理员权限设置', 'link' => 'admin/adminPrivilieges/index', 'controller'=>'adminPrivilieges'),
+                array('subject' => '管理员操作日志', 'link' => 'admin/adminLog/index', 'controller'=>'adminLog'),
             ),
         ),
 		7 => array(
@@ -65,7 +66,32 @@ return array(
 					array('subject' => '缓存清理工具', 'link' => 'admin/adminTools/index', 'controller'=>'adminTools'),
 					array('subject' => '短信发送统计', 'link' => 'admin/adminSmsMsg/index', 'controller'=>'adminSmsMsg'),
 			),
-		)
+		),
+        8 => array(
+            'subject' => '广告',
+            'column' => 'ad',
+            'icon' => 'icon-reply',
+            'submenu' => array(
+                array('subject' => '广告列表', 'link' => 'admin/adminAdList/index', 'controller'=>'adminAdList'),
+                array('subject' => '广告位列表', 'link' => 'admin/adminAdPosition/index', 'controller'=>'adminAdPosition'),
+            ),
+        ),
+        9 => array(
+            'subject' => '视频',
+            'column' => 'video',
+            'icon' => 'icon-reply',
+            'submenu' => array(
+                array('subject' => '视频列表', 'link' => 'admin/adminVideo/index', 'controller'=>'adminVideo'),
+            ),
+        ),
+        10 => array(
+            'subject' => '招聘',
+            'column' => 'hr',
+            'icon' => 'icon-reply',
+            'submenu' => array(
+                array('subject' => '招聘列表', 'link' => 'admin/adminRecruit/index', 'controller'=>'adminRecruit'),
+            ),
+        )
 	)
 );
 ?>

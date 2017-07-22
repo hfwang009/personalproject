@@ -18,11 +18,13 @@ class AdminArticleController extends CAdminController{
             )
         );
         $ajax_url = $this->createUrl('setting');
+        $langs = Yii::app()->params['conf']['syssetting']['lang'];
         $this->render("index",array(
             "search"=>$search,
             "condition"=>$condition,
             "pager"=>$model->getPagination(),
             "ajax_url"=>$ajax_url,
+            'langs' => $langs,
             "model"=>$model->getData()
         ));
     }
@@ -36,18 +38,22 @@ class AdminArticleController extends CAdminController{
             $model = Article::model()->findByPk($id);
         }
         if(isset($_POST['Article'])){
+//            print_r($_POST['Article']);exit;
             $_POST['Article']['title'] = $this->FilterXss($_POST['Article']['title']);
-//            $_POST['Article']['content'] = !empty($_POST['Article']['content'])?$this->FilterXss($_POST['Article']['content']):'';
+            $_POST['Article']['content'] = !empty($_POST['Article']['content'])?$this->FilterXss($_POST['Article']['content']):'';
+            $_POST['Article']['images'] = !empty($_POST['Article']['images'])?json_encode($_POST['Article']['images']):json_encode(array());
             $res = Article::model()->addArticle($_POST);
             if($res){
                 $this->redirect(Yii::app()->createUrl(Yii::app()->controller->module->id.'/'.Yii::app()->controller->id.'/index'));
             }
         }
         $ajax_url = $this->createUrl('setting');
+        $langs = Yii::app()->params['conf']['syssetting']['lang'];
         $this->render("add",
             array(
                 "model"=>$model,
                 "search"=>$search,
+                'langs' => $langs,
                 "ajax_url"=>$ajax_url,
             ));
     }
@@ -83,10 +89,34 @@ class AdminArticleController extends CAdminController{
         }
         if($ct == "article" && $ac == "delete"){
             $this->__delete();
+        }elseif($ct == "article" && $ac == "uploadimgs"){
+            $this->__uploadimgs();
         }else{
             echo CJSON::encode(CUtils::retCode(false, 0, '参数错误'));
             Yii::app ()->end ();
         }
+    }
+
+    //软件相册上传
+    private function __uploadimgs(){
+        $state = false;
+        $message = '图片上传错误';
+        $file = $_FILES['Article'];
+        $file_name = $file['name']['images'];
+        $file_size = $file['size']['images'];
+        if(!CUtils::getImageType($file_name)){
+            $message = '仅支持.jpg,.bmp,.gif,.png为后缀名的文件!';
+        }elseif($file_size > 2097152){
+            $message = '上传图片不能超过2MB';
+        }else{
+            $imgArr = CUtils::upladImage('articleimages', 'Article','images','','',false,true,140,110);
+            if(!($imgArr === array())){
+                $state = true;
+                $message = $imgArr;
+            }
+        }
+        echo CJSON::encode( CUtils::retMessage ( $state, 1, $message ) );
+        Yii::app ()->end ();
     }
 
     //文章单个删除

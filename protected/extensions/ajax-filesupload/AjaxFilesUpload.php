@@ -79,15 +79,7 @@ class AjaxFilesUpload extends CInputWidget{
 					if(container.length > 0){
 						var newcontainer = $('{$this->uploadView}');
 						newcontainer.find('.{$this->fileImgClass}').attr('src',data.msg.src_img);
-						if({$this->isThumb}){
-							var img = data.msg.src_img + '-img-' + data.msg.thumb_img;
-							newcontainer.find('.{$this->file_input_img_name_replace}').val(img);
-						}else{
-							newcontainer.find('.{$this->file_input_img_name_replace}').val(data.msg.src_img);
-						}
-						if({$this->file_input_imgid_sure}){
-							newcontainer.find('.{$this->file_input_imgid_name_replace}').val(data.msg.imgId);
-						}
+						newcontainer.find('.{$this->file_input_img_name_replace}').val(data.msg.src_img);
 						container.append(newcontainer);
 					}		
 				}else{

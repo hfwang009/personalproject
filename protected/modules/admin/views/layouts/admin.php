@@ -40,7 +40,7 @@ $controller = Yii::app()->controller->id;
 					<ul class="dropdown-menu pull-right mod-user">
                         <li>
                             <a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->module->id.'/'.'adminUser/updatePass',array('id'=>Yii::app()->user->id)); ?>">
-                                <i class="icon icon-logout"></i>
+                                <i class="icon icon-format"></i>
                                 修改密码
                             </a>
                         </li>
@@ -63,7 +63,7 @@ $controller = Yii::app()->controller->id;
 						<i class="icon icon-home"></i>
 					</a>
                     <a title="修改密码" href="<?php echo Yii::app()->createUrl(Yii::app()->controller->module->id.'/'.'adminUser/updatePass',array('id'=>Yii::app()->user->id)); ?>" class="btn btn-sm">
-                        <i class="icon icon-facebook"></i>
+                        <i class="icon icon-format"></i>
                     </a>
 					<a title="退出" href="<?php echo Yii::app()->createUrl(Yii::app()->controller->module->id.'/'.'Login/logout'); ?>" class="btn btn-sm">
 						<i class="icon icon-logout"></i>

@@ -25,6 +25,7 @@
  * @property integer $company
  * @property integer $remarks
  * @property integer $storeid
+ * @property string $ename
  */
 class Product extends CActiveRecord
 {
@@ -65,7 +66,7 @@ class Product extends CActiveRecord
 			array('name, intro', 'length', 'max'=>20000000),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, mid, name, series_number, total, current_num, bid, province, city, area, intro, create_user, ctime, type, customer, spec, udpatetime, company, remarks,storeid', 'safe', 'on'=>'search'),
+			array('id, mid, name, series_number, total, current_num, bid, province, city, area, intro, create_user, ctime, type, customer, spec, udpatetime, company, remarks, storeid, ename', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -116,6 +117,7 @@ class Product extends CActiveRecord
 			'city1' => '所属城市',
 			'area1' => '所属区县',
 			'storeid1' => '门店名称',
+            'ename' => '英文产品名称',
 		);
 	}
 
@@ -150,6 +152,7 @@ class Product extends CActiveRecord
 		$criteria->compare('company',$this->company,true);
 		$criteria->compare('remarks',$this->remarks,true);
 		$criteria->compare('storeid',$this->remarks,true);
+        $criteria->compare('ename',$this->ename);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -170,6 +173,7 @@ class Product extends CActiveRecord
                 $product->spec = $post['Product']['spec'];
                 $product->company = $post['Product']['company'];
                 $product->current_num = $post['Product']['current_num'];
+                $product->ename = $post['Product']['ename'];
                 if($product->validate()){
                     if($product->save()){
                         return true;
@@ -191,6 +195,7 @@ class Product extends CActiveRecord
             $model->spec = $post['Product']['spec'];
             $model->company = $post['Product']['company'];
             $model->current_num = $post['Product']['current_num'];
+            $model->ename = $post['Product']['ename'];
             if($model->validate()){
                 if($model->save()){
                     return true;
@@ -402,6 +407,9 @@ class Product extends CActiveRecord
             if (!empty($condition['Product']['name'])) {
                 $criteria->condition .= ' and t.name like "%' . $condition['Product']['name'] .'%" ';
             }
+             if (!empty($condition['Product']['ename'])) {
+                 $criteria->condition .= ' and t.ename like "%' . $condition['Product']['ename'] .'%" ';
+             }
             if (!empty($condition['Product']['series_number'])) {
                 $criteria->condition .= ' and t.series_number like "%' . $condition['Product']['series_number'] .'%" ';
             }

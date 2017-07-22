@@ -36,6 +36,9 @@
                                     <a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->module->id.'/'.Yii::app()->controller->id . '/' . $this->getAction()->getId(), array_merge($condition,array('sortFiled'=>'name','sortValue'=>(isset($condition['sortFiled']) && $condition['sortFiled']=='name')?($condition['sortValue'] == "asc"?"desc":"asc"):"asc")));?>">质保用户姓名<span class="glyphicon <?php echo $condition['sortFiled'] == 'name'?($condition['sortValue'] == "asc"?"glyphicon-chevron-up":"glyphicon-chevron-down"):'';?>"></span></a>
                                 </th>
                                 <th>
+                                    <a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->module->id.'/'.Yii::app()->controller->id . '/' . $this->getAction()->getId(), array_merge($condition,array('sortFiled'=>'pack_name','sortValue'=>(isset($condition['sortFiled']) && $condition['sortFiled']=='pack_name')?($condition['sortValue'] == "asc"?"desc":"asc"):"asc")));?>">套餐名称<span class="glyphicon <?php echo $condition['sortFiled'] == 'pack_name'?($condition['sortValue'] == "asc"?"glyphicon-chevron-up":"glyphicon-chevron-down"):'';?>"></span></a>
+                                </th>
+                                <th>
                                     <a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->module->id.'/'.Yii::app()->controller->id . '/' . $this->getAction()->getId(), array_merge($condition,array('sortFiled'=>'mid','sortValue'=>(isset($condition['sortFiled']) && $condition['sortFiled']=='mid')?($condition['sortValue'] == "asc"?"desc":"asc"):"asc")));?>">型号<span class="glyphicon <?php echo $condition['sortFiled'] == 'mid'?($condition['sortValue'] == "asc"?"glyphicon-chevron-up":"glyphicon-chevron-down"):'';?>"></span></a>
                                 </th>
                                 <th>
@@ -100,6 +103,7 @@
                                         <td><?php echo $_model['id'];?></td>
                                         <td><?php echo $_model['series_number'];?></td>
                                         <td><?php echo $_model['name'];?></td>
+                                        <td><?php echo !empty($_model['pack_name'])?$_model['pack_name']:'--';?></td>
                                         <td><?php echo $_model['mid'];?></td>
                                         <td><?php echo $_model['pid'];?></td>
                                         <td><?php echo !empty($_model->store)?$_model->store->name:'--';?></td>
@@ -167,6 +171,20 @@
                     )
                 );
                 ?>
+                <div class="form-group">
+                    <?php echo $form->label($search,'name',array('class'=>'col-sm-2 col-xs-3 control-label'));?>
+                    <div class="col-sm-5 col-xs-8">
+                        <?php echo $form->textField($search, 'name', array("class"=>"form-control"));?>
+                        <?php echo $form->error($search,'name',array('class'=>'help-block'));?>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <?php echo $form->label($search,'pack_name',array('class'=>'col-sm-2 col-xs-3 control-label'));?>
+                    <div class="col-sm-5 col-xs-8">
+                        <?php echo $form->textField($search, 'pack_name', array("class"=>"form-control"));?>
+                        <?php echo $form->error($search,'pack_name',array('class'=>'help-block'));?>
+                    </div>
+                </div>
                 <div class="form-group">
                     <?php echo $form->label($search,'telephone',array('class'=>'col-sm-2 col-xs-3 control-label'));?>
                     <div class="col-sm-5 col-xs-8">

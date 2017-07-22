@@ -31,9 +31,9 @@
                         'htmlOptions'=>array('enctype'=>'multipart/form-data'),
                     ));
                     ?>
+                    <input type="hidden" value="<?php echo !empty($model['id'])?$model['id']:''; ?>" name="id">
                     <table class="table table-striped">
                         <tbody>
-                        <input type="hidden" value="<?php echo !empty($model['id'])?$model['id']:''; ?>" name="id">
                         <tr>
                             <td>
                                 <div class="form-group">
@@ -41,6 +41,17 @@
                                     <div class="col-sm-6 col-xs-8">
                                         <?php echo $form->textField($model, 'name', array("class"=>"form-control"));?>
                                         <?php echo $form->error($model,'name',array('class'=>'help-block'));?>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="form-group">
+                                    <?php echo $form->label($model,'ename',array('class'=>'col-sm-2 col-xs-3 control-label'));?>
+                                    <div class="col-sm-6 col-xs-8">
+                                        <?php echo $form->textField($model, 'ename', array("class"=>"form-control"));?>
+                                        <?php echo $form->error($model,'ename',array('class'=>'help-block'));?>
                                     </div>
                                 </div>
                             </td>
@@ -304,6 +315,12 @@
                     <?php echo $form->label($search,'name',array('class'=>'col-sm-2 col-xs-3 control-label'));?>
                     <div class="col-sm-5 col-xs-8">
                         <?php echo $form->textField($search, 'name', array("class"=>"form-control"));?>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <?php echo $form->label($search,'ename',array('class'=>'col-sm-2 col-xs-3 control-label'));?>
+                    <div class="col-sm-5 col-xs-8">
+                        <?php echo $form->textField($search, 'ename', array("class"=>"form-control"));?>
                     </div>
                 </div>
                 <div class="form-group">

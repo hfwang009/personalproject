@@ -92,6 +92,37 @@ class AdminSettingPanelController extends CAdminController{
         ));
     }
 
+    //友情链接
+    public function actionSysSet() {
+        if (!empty($_POST['Config'])) {
+            foreach ($_POST['Config']['datavalue'] as $key => $val) {
+                if (is_array($val))
+                    $val = serialize($val);
+                $configModel = Config::model()->findByPk($key);
+                if ($configModel) {
+                    $configModel->var = $key;
+                    $configModel->datavalue = $val;
+                    $configModel->save();
+                }
+                else {
+                    $configModel = new Config();
+                    $configModel->var = $key;
+                    $configModel->datavalue = $val;
+                    $configModel->save();
+                }
+            }
+            $this->cache_write();
+        }
+
+        $model = Config::model();
+        $config = $model->getData();
+
+        $this->render('systemset', array (
+            'model' => $model,
+            'config'=>$config
+        ));
+    }
+
     public function actionLogin(){
         $this->render('login');
     }

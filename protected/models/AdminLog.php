@@ -140,7 +140,7 @@ class AdminLog extends CActiveRecord
         if(isset($condition['AdminLog']) && (count(array_filter($condition['AdminLog'])) > 0 ||$condition['AdminLog']['status'] == '0')){
             $search->attributes = $condition['AdminLog'];
             if (!empty($condition['AdminLog']['admin_id'])) {
-                $criteria->condition .= ' and admin.admin_id like "%' . $condition['AdminLog']['admin_id'] .'%" ';
+                $criteria->condition .= ' and t.admin_id = "' . $condition['AdminLog']['admin_id'] .'" ';
             }
 
             if (!empty($condition['AdminLog']['ctime_start'])) {

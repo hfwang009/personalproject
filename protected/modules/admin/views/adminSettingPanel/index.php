@@ -22,6 +22,9 @@
                         <li>
                             <a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->module->id.'/'.Yii::app()->controller->id . '/set');?>">参数设置</a>
                         </li>
+                        <li>
+                            <a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->module->id.'/'.Yii::app()->controller->id . '/sysset');?>">系统参数设置</a>
+                        </li>
 					</ul>
 				</h3>
 			</div>

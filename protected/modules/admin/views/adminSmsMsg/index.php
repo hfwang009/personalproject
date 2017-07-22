@@ -14,6 +14,14 @@
         </div>
         <div class="mod-body tab-content">
             <div class="tab-pane active" id="list">
+                <div class="mod-table-foot">
+                    <div class="col-sm-4 col-xs-12 form-group">
+                        <label class="col-sm-2 col-xm-3 control-label nopadding" style="line-height: 32px;">数量:</label>
+                        <div class="col-sm-10 col-xs-9">
+                            <input type="text" name="count" id="count" value="<?php echo $count; ?>" class="form-control " disabled="disabled">
+                        </div>
+                    </div>
+                </div>
                 <div class="table-responsive">
                     <form method="post" action="<?php echo Yii::app()->createUrl(Yii::app()->controller->module->id.'/'.Yii::app()->controller->id .'/delete')?>" id="brand_form">
                         <table class="table table-striped">

@@ -14,6 +14,8 @@
  * @property string $telephone
  * @property string $lat
  * @property string $lng
+ * @property string $eaddress
+ * @property string $ename
  */
 class Store extends CActiveRecord
 {
@@ -43,14 +45,14 @@ class Store extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name, type, provinceid, cityid,telephone,address', 'required','message'=>'{attribute}必须填写！'),
+			array('name, provinceid, cityid,telephone,address', 'required','message'=>'{attribute}必须填写！'),
 			array('type, provinceid, cityid,areaid', 'numerical', 'integerOnly'=>true),
 			array('name', 'length', 'max'=>20000000),
 			array('address', 'length', 'max'=>20000000),
 			array('telephone, lat, lng', 'length', 'max'=>25),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, name, type, provinceid, cityid,areaid, address, telephone, lat, lng', 'safe', 'on'=>'search'),
+			array('id, name, type, provinceid, cityid,areaid, address, telephone, lat, lng, ename, eaddress', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -83,6 +85,8 @@ class Store extends CActiveRecord
 			'telephone' => '联系电话',
 			'lat' => '经度',
 			'lng' => '维度',
+            'ename' => '英文门店名称',
+            'eaddress' => '英文详细地址',
 		);
 	}
 
@@ -107,6 +111,8 @@ class Store extends CActiveRecord
 		$criteria->compare('telephone',$this->telephone,true);
 		$criteria->compare('lat',$this->lat,true);
 		$criteria->compare('lng',$this->lng,true);
+        $criteria->compare('ename',$this->ename);
+        $criteria->compare('eaddress',$this->eaddress);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -122,6 +128,8 @@ class Store extends CActiveRecord
             $store = $this->find("id=:id",array(":id"=>$_REQUEST['id']));
             if(!empty($store)){
                 $store->attributes = $post["Store"];
+                $store->ename = $post["Store"]['ename'];
+                $store->eaddress = $post["Store"]['eaddress'];
                 if($store->validate()){
                     if($store->save()){
                         return true;
@@ -133,6 +141,8 @@ class Store extends CActiveRecord
         }else{
             $model = new Store();
             $model->attributes = $post['Store'];
+            $model->ename = $post["Store"]['ename'];
+            $model->eaddress = $post["Store"]['eaddress'];
             if($model->validate()){
                 if($model->save()){
                     return true;
@@ -168,6 +178,9 @@ class Store extends CActiveRecord
             if (!empty($condition['Store']['name'])) {
                 $criteria->condition .= ' and t.name like "%' . $condition['Store']['name'] .'%" ';
             }
+            if (!empty($condition['Store']['ename'])) {
+                $criteria->condition .= ' and t.ename like "%' . $condition['Store']['ename'] .'%" ';
+            }
             if (!empty($condition['Store']['provinceid'])&&empty($condition['Store']['cityid'])) {
                 $criteria->condition .= ' and t.provinceid = "' . $condition['Store']['provinceid'] .'" ';
             }
@@ -182,6 +195,9 @@ class Store extends CActiveRecord
             }
             if (!empty($condition['Store']['address'])) {
                 $criteria->condition .= ' and t.address like "%' . $condition['Store']['address'] .'%" ';
+            }
+            if (!empty($condition['Store']['eaddress'])) {
+                $criteria->condition .= ' and t.eaddress like "%' . $condition['Store']['eaddress'] .'%" ';
             }
         }
         if(empty($condition['sortFiled']) || empty($condition['sortValue'])){

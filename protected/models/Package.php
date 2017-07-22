@@ -7,6 +7,8 @@
  * @property string $id
  * @property string $name
  * @property string $intro
+ * @property string $eintro
+ * @property string $ename
  *
  * The followings are the available model relations:
  * @property User $user
@@ -43,7 +45,7 @@ class Package extends CActiveRecord
             array('intro,name', 'length', 'max'=>20000000, 'tooLong' =>'{attribute}长度不能大于200个字节！'),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
-            array('id, name, intro', 'safe', 'on'=>'search'),
+            array('id, name, intro, ename, eintro ', 'safe', 'on'=>'search'),
         );
     }
 
@@ -67,7 +69,9 @@ class Package extends CActiveRecord
         return array(
             'id' => 'ID',
             'name' => '套餐名称',
-            'intro' => '套餐简介'
+            'intro' => '套餐简介',
+            'ename' => '英文套餐名称',
+            'eintro' => '英文套餐简介',
         );
     }
 
@@ -84,7 +88,9 @@ class Package extends CActiveRecord
 
         $criteria->compare('id',$this->id,true);
         $criteria->compare('name',$this->name,true);
-        $criteria->compare('intro',$this->intro,true);;
+        $criteria->compare('intro',$this->intro,true);
+        $criteria->compare('ename',$this->ename);
+        $criteria->compare('eintro',$this->eintro);
 
         return new CActiveDataProvider($this, array(
             'criteria'=>$criteria,
@@ -96,6 +102,8 @@ class Package extends CActiveRecord
             $package = $this->find("id=:id",array(":id"=>$_REQUEST['id']));
             if(!empty($package)){
                 $package->attributes = $post["Package"];
+                $package->ename = $post["Package"]['ename'];
+                $package->eintro = $post["Package"]['eintro'];
                 if($package->validate()){
                     if($package->save()){
                         return true;
@@ -107,6 +115,8 @@ class Package extends CActiveRecord
         }else{
             $model = new Package();
             $model->attributes = $post['Package'];
+            $model->ename = $post["Package"]['ename'];
+            $model->eintro = $post["Package"]['eintro'];
             if($model->validate()){
                 if($model->save()){
                     return true;
@@ -128,6 +138,9 @@ class Package extends CActiveRecord
             $search->attributes = $condition['Package'];
             if (!empty($condition['Package']['name'])) {
                 $criteria->condition .= ' and t.name like "%' . $condition['Package']['name'] .'%" ';
+            }
+            if (!empty($condition['Package']['ename'])) {
+                $criteria->condition .= ' and t.ename like "%' . $condition['Package']['ename'] .'%" ';
             }
         }
         if(empty($condition['sortFiled']) || empty($condition['sortValue'])){

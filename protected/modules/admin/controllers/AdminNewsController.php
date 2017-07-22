@@ -17,11 +17,13 @@ class AdminNewsController extends CAdminController{
             )
         );
         $ajax_url = $this->createUrl('setting');
+        $langs = Yii::app()->params['conf']['syssetting']['lang'];
         $this->render("index",array(
             "search"=>$search,
             "condition"=>$condition,
             "pager"=>$model->getPagination(),
             "ajax_url"=>$ajax_url,
+            'langs' => $langs,
             "model"=>$model->getData()
         ));
     }
@@ -43,10 +45,12 @@ class AdminNewsController extends CAdminController{
             }
         }
         $ajax_url = $this->createUrl('setting');
+        $langs = Yii::app()->params['conf']['syssetting']['lang'];
         $this->render("add",
             array(
                 "model"=>$model,
                 "search"=>$search,
+                'langs' => $langs,
                 "ajax_url"=>$ajax_url,
             ));
     }

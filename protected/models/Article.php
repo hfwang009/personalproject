@@ -182,6 +182,7 @@ class Article extends CActiveRecord
         $model = RedisInit::getInstance()->get('carproject:article:index')?json_decode(RedisInit::getInstance()->get('carproject:article:index'),true):false;
         if(!$model){
             $criteria = new CDbCriteria();
+            $criteria->condition = 'lang=1';
             $model = $this->findAll($criteria);
             $model = json_decode(CJSON::encode($model),true);
             $model = $this->__formatThumb($model);

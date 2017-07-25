@@ -144,6 +144,7 @@ class News extends CActiveRecord
         $news_model = RedisInit::getInstance()->get('carproject:news:index:'.($current_pageNo-1))?json_decode(RedisInit::getInstance()->get('carproject:news:index:'.($current_pageNo-1)),true):false;
         if(!$news_model){
             $criteria = new CDbCriteria();
+            $criteria->condition = 'lang=1';
             $criteria->order = 'ctime '.$order;
             $model = new CActiveDataProvider('News',array(
                 'criteria'=>$criteria,

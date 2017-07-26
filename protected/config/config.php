@@ -186,6 +186,11 @@ return array(
 				'econtrol' => 'adminproduct',
 				'ccontrol' => '产品'
 				),
+			24 => array
+				(
+				'econtrol' => 'adminmessage',
+				'ccontrol' => '反馈'
+				),
 
 			),
 		'actions' => array
@@ -235,6 +240,11 @@ return array(
 				'eaction' => 'uploadimage',
 				'caction' => '上传图片'
 				),
+			10 => array
+				(
+				'eaction' => 'detail',
+				'caction' => '详情'
+				),
 
 			),
 		'lang' => array
@@ -266,7 +276,8 @@ return array(
 			'adminadposition' => '广告位',
 			'adminrecruit' => '招聘',
 			'adminarticle' => '文章',
-			'adminproduct' => '产品'
+			'adminproduct' => '产品',
+			'adminmessage' => '反馈'
 			),
 		'action' => array
 			(
@@ -278,7 +289,8 @@ return array(
 			'updatepass' => '修改密码',
 			'sysset' => '系统设置',
 			'filepath' => '路径设置',
-			'uploadimage' => '上传图片'
+			'uploadimage' => '上传图片',
+			'detail' => '详情'
 			),
 
 		),

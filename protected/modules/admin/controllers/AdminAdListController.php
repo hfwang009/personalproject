@@ -71,6 +71,8 @@ class AdminAdListController extends CAdminController{
 //            print_r($_POST['Ad']);exit;
             $model->attributes = $_POST['Ad'];
             $model->lang = $_POST['Ad']['lang'];
+            $model->start_time = $_POST['Ad']['start_time'];
+            $model->end_time = $_POST['Ad']['end_time'];
             if ($model->save()){
                 $this->redirect(Yii::app()->createUrl(Yii::app()->controller->module->id .'/'.Yii::app()->controller->id . '/index'));
             }else{

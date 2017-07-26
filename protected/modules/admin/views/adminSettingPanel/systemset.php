@@ -190,7 +190,7 @@
             js_controllers_add();
             return false;
         });
-        $('body').on('click','a[ng-click="js_controller_delete()"]',function(){
+        $('body').on('click','a[ng-click="js_controllers_delete()"]',function(){
             js_controller_delete(this);
             return false;
         });

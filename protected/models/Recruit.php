@@ -155,4 +155,12 @@ class Recruit extends CActiveRecord
             $search
         );
     }
+
+    public function getRecurites(){
+        $criteria = new CDbCriteria();
+        $criteria->condition = 'lang = 1 AND enable = 1';
+        $criteria->order = 'ctime desc';
+        $recurits = $this->findAll($criteria);
+        return $recurits;
+    }
 }

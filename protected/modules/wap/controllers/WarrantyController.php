@@ -15,6 +15,14 @@ class WarrantyController extends Controller{
     public function actionAdd(){
         $model = new Warranty();
         if(Yii::app ()->request->isPostRequest){
+            if(empty($_POST['Warranty']['authcode'])){
+                $this->redirect(Yii::app()->createUrl(Yii::app()->controller->module->id.'/'.Yii::app()->controller->id.'/index'));
+            }else{
+                $result = CUtils::validVerify($_POST['Warranty']['telephone'],$_POST['Warranty']['authcode'],'auth');
+                if($result['status']!=true){
+                    $this->redirect(Yii::app()->createUrl(Yii::app()->controller->module->id.'/'.Yii::app()->controller->id.'/index'));
+                }
+            }
             unset($_POST['Warranty']['provinceid']);
             unset($_POST['Warranty']['cityid']);
             unset($_POST['Warranty']['areaid']);

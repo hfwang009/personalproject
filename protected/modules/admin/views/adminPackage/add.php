@@ -45,7 +45,7 @@
                                 </div>
                             </td>
                         </tr>
-                        tr>
+                        <tr>
                         <td>
                             <div class="form-group">
                                 <?php echo $form->label($model,'ename',array('class'=>'col-sm-2 col-xs-3 control-label'));?>

@@ -17,6 +17,7 @@ class WarrantyDetail extends CActiveRecord
     public $ctime_start;
     public $ctime_end;
     public $telephone;
+    public $store;
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
@@ -47,7 +48,7 @@ class WarrantyDetail extends CActiveRecord
 			array('wid, pid, num, current_total, ctime', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, wid, pid, num, ctime, current_total,type,telephone', 'safe', 'on'=>'search'),
+			array('id, wid, pid, num, ctime, current_total,type,telephone,store', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -78,6 +79,7 @@ class WarrantyDetail extends CActiveRecord
 			'type' => '安装位置',
 			'ctime' => '质保时间',
 			'telephone' => '手机号码',
+			'store' => '4S门店',
 		);
 	}
 
@@ -129,6 +131,9 @@ class WarrantyDetail extends CActiveRecord
             if (!empty($condition['WarrantyDetail']['wid'])) {
                 $criteria->condition .= ' and warranty.series_number LIKE "%' . $condition['WarrantyDetail']['wid'] .'%" ';
             }
+            if (!empty($condition['WarrantyDetail']['store'])) {
+                $criteria->condition .= ' and store.name LIKE "%' . $condition['WarrantyDetail']['store'] .'%" ';
+            }
             if (!empty($condition['WarrantyDetail']['pid'])) {
                 $criteria->condition .= ' and t.pid = "' . $condition['WarrantyDetail']['pid'] .'" ';
             }
@@ -144,7 +149,7 @@ class WarrantyDetail extends CActiveRecord
                 $search->ctime_end = $condition['WarrantyDetail']['ctime_end'];
             }
         }
-        $criteria->with = array('warranty','product'=>array('with'=>'model'));
+        $criteria->with = array('warranty'=>array('with'=>'store'),'product'=>array('with'=>'model'));
         if(empty($condition['sortFiled']) || empty($condition['sortValue'])){
             $condition['sortFiled'] = 'id';
             $condition['sortValue'] = 'desc';

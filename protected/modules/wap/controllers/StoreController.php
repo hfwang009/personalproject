@@ -7,7 +7,7 @@ class StoreController extends Controller{
         $provinces = Region::model()->getRegions();
         $citys = array();
         $areas = array();
-        $types = Yii::app()->params['conf']['setting']['type'];
+//        $types = Yii::app()->params['conf']['setting']['type'];
         $this->opertmize_seo('门店搜索','门店搜索');
         $ajax_url = $this->createUrl('setting');
         $this->render('index',array(
@@ -15,7 +15,7 @@ class StoreController extends Controller{
             'provinces'=>$provinces,
             'citys'=>$citys,
             'areas'=>$areas,
-            'types'=>$types,
+//            'types'=>$types,
             'news'=>$this->news,
             'ajax_url'=>$ajax_url,
         ));
@@ -24,14 +24,14 @@ class StoreController extends Controller{
     public function actionSearch(){
         if(Yii::app()->request->isPostRequest){
             $params = $_POST['Store'];
-            $type = isset($params['type'])?$params['type']:'';
+//            $type = isset($params['type'])?$params['type']:'';
             $provinceid = isset($params['provinceid'])?$params['provinceid']:'';
             if(empty($provinceid)){
                 $this->redirect(Yii::app()->createUrl(Yii::app()->controller->module->id.'/'.Yii::app()->controller->id.'/index'));
             }
             $cityid = isset($params['cityid'])?$params['cityid']:'';
             $areaid = isset($params['areaid'])?$params['areaid']:'';
-            $results = Store::model()->getStoresByParams($type,$provinceid,$cityid,$areaid);
+            $results = Store::model()->getStoresByParams(null,$provinceid,$cityid,$areaid);
         }else{
             $this->redirect(Yii::app()->createUrl(Yii::app()->controller->module->id.'/'.Yii::app()->controller->id.'/index'));
         }

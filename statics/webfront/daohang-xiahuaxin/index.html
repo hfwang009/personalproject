@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>xiahuaxian</title>
+<style>
+*{ margin:0; padding:0; list-style:none;}
+img{ border:0;}
+
+.header{ width:100%; background:#F5F5F5;}
+.nav{ width:1000px; margin:0 auto; overflow:hidden;}
+.nav ul li{ height:40px; line-height:40px; float:left; padding:10px 5px; margin:0px 5px;position:relative;}
+.nav ul li a{ color:#666; font-family:'Microsoft Yahei'; font-size:14px; text-decoration:none;}
+.nav ul li a:hover{ color:#000; text-decoration:none;}
+.nav ul li span{ display:block; position:absolute; width:0px; height:0px; background:#1FAEFF; top:55px; left:50%;}
+</style>
+</head>
+<body>
+<!-- 代码begin -->
+<div class="header">
+<div class="nav">
+	<ul>
+		<li><a href='http://sc.chinaz.com/'>首页</a><span></span></li>
+    	<li><a href='http://sc.chinaz.com/'>Flash素材</a><span></span></li>
+    	<li><a href='http://sc.chinaz.com/'>菜单导航</a><span></span></li>
+    	<li><a href='http://sc.chinaz.com/'>时间日期</a><span></span></li>
+    	<li><a href='http://sc.chinaz.com/'>焦点图</a><span></span></li>
+    	<li><a href='http://sc.chinaz.com/'>tab标签</a><span></span></li>
+    	<li><a href='http://sc.chinaz.com/'>jquery特效</a><span></span></li>
+    	<li><a href='http://sc.chinaz.com/'>在线客服</a><span></span></li>
+    	<li><a href='http://sc.chinaz.com/'>广告代码</a><span></span></li>
+    	<li><a href='http://sc.chinaz.com/'>相册代码</a><span></span></li>
+    	<li><a href='http://sc.chinaz.com/'>图片特效</a><span></span></li>
+    	<li><a href='http://sc.chinaz.com/'>名站特效</a><span></span></li>
+    	<li><a href='http://sc.chinaz.com/'>其他代码</a><span></span></li>
+	</ul>
+</div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script>
+$(function(){
+	$('.nav li').hover(function(){
+		$('span',this).stop().css('height','20px');
+		$('span',this).animate({
+			left:'0',
+			width:'100%',
+			right:'0'
+		},200);
+	},function(){
+		$('span',this).stop().animate({
+			left:'50%',
+			width:'0'
+		},200);
+	});
+});
+</script>
+<!-- 代码end -->
+</body>
+</html>

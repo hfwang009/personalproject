@@ -47,6 +47,9 @@
                                     质保申请时间
                                 </th>
                                 <th>
+                                    4S门店
+                                </th>
+                                <th>
                                     <a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->module->id.'/'.Yii::app()->controller->id . '/' . $this->getAction()->getId(), array_merge($condition,array('sortFiled'=>'pid','sortValue'=>(isset($condition['sortFiled']) && $condition['sortFiled']=='pid')?($condition['sortValue'] == "asc"?"desc":"asc"):"asc")));?>">质保产品名称<span class="glyphicon <?php echo $condition['sortFiled'] == 'pid'?($condition['sortValue'] == "asc"?"glyphicon-chevron-up":"glyphicon-chevron-down"):'';?>"></span></a>
                                 </th>
                                 <th>
@@ -88,6 +91,7 @@
                                         <td><?php echo !empty($_model->warranty->carlicence)?$_model->warranty->carlicence:'--';?></td>
                                         <td><?php echo !empty($_model->warranty->engineno)?$_model->warranty->engineno:'--';?></td>
                                         <td><?php echo !empty($_model->warranty->createtime)?date('Y-m-d',$_model->warranty->createtime):'--';?></td>
+                                        <td><?php echo !empty($_model->warranty->store)?$_model->warranty->store->name:'--';?></td>
                                         <td><?php echo !empty($_model->product->name)?$_model->product->name:'--';?></td>
                                         <td><?php echo !empty($_model->product->model->name)?$_model->product->model->name:'--';?></td>
                                         <td><?php echo !empty($_model->product->series_number)?$_model->product->series_number:'--';?></td>
@@ -149,6 +153,13 @@
                     <div class="col-sm-5 col-xs-8">
                         <?php echo $form->textField($search, 'telephone', array("class"=>"form-control"));?>
                         <?php echo $form->error($search,'telephone',array('class'=>'help-block'));?>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <?php echo $form->label($search,'store',array('class'=>'col-sm-2 col-xs-3 control-label'));?>
+                    <div class="col-sm-5 col-xs-8">
+                        <?php echo $form->textField($search, 'store', array("class"=>"form-control"));?>
+                        <?php echo $form->error($search,'store',array('class'=>'help-block'));?>
                     </div>
                 </div>
                 <div class="form-group">

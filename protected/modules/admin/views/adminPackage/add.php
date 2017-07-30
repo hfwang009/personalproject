@@ -101,7 +101,7 @@
                                     <div class="col-sm-8 col-xs-8">
                                         <?php
                                         $this->widget('ext.ueditor.Ueditor', array(
-                                            'id'=>'editor',
+                                            'id'=>'editor1',
                                             'model'=>$model,
                                             'attribute'=>'eintro',
                                             'UEDITOR_CONFIG'=>array(

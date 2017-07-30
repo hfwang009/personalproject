@@ -66,12 +66,15 @@ class Controller extends CController
     }
 
     public function init(){
+        $is_mobile = CUtils::isMobile();
+        
         $news = News::model()->getAllNews();
         shuffle($news);
         $this->news = count($news)>=5?array_slice($news,0,5):$news;
         $this->aboutus = Yii::app()->params['conf']['site']['aboutus'];
         $this->callus = Yii::app()->params['conf']['site']['siteCallus'];
         return $this->news;
+
     }
     
     /**

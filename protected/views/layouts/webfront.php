@@ -69,7 +69,7 @@
                         <li><a href="<?php echo Yii::app()->createUrl('products/respect'); ?>">尊享产品</a><span></span></li>
                         <li><a href="<?php echo Yii::app()->createUrl('news/index'); ?>">市场活动</a><span></span></li>
                         <li><a href="<?php echo Yii::app()->createUrl('warranty/index'); ?>">质保查询</a><span></span></li>
-                        <li><a href="<?php echo Yii::app()->createUrl('groupsupport'); ?>">客户服务</a><span></span></li>
+                        <li><a href="<?php echo Yii::app()->createUrl('GroupSupport'); ?>">客户服务</a><span></span></li>
                         <li><a href="<?php echo Yii::app()->createUrl('products/index'); ?>">漆面保护膜</a><span></span></li>
                         <li><a href="<?php echo Yii::app()->createUrl('products/building'); ?>">家居膜/建筑膜</a><span></span></li>
                         <li><a href="<?php echo Yii::app()->createUrl('about'); ?>">联系我们</a><span></span></li>
@@ -192,12 +192,12 @@
                 </div>
                 <div class="col-md-1 col-sm-1 widget">
                     <ul class="useful_links">
-                        <li><a href="<?php echo Yii::app()->createUrl('groupsupport/index') ?>"><strong>客户服务</strong></a></li>
-                        <li><a href="<?php echo Yii::app()->createUrl('groupsupport/index') ?>#zb">十年质保</a></li>
-                        <li><a href="<?php echo Yii::app()->createUrl('groupsupport/index') ?>#dz">专属定制</a></li>
-                        <li><a href="<?php echo Yii::app()->createUrl('groupsupport/index') ?>#al">施工案例</a></li>
-                        <li><a href="<?php echo Yii::app()->createUrl('groupsupport/index') ?>#bz">施工标准</a></li>
-                        <li><a href="<?php echo Yii::app()->createUrl('groupsupport/index') ?>#xm">选膜标准</a></li>
+                        <li><a href="<?php echo Yii::app()->createUrl('GroupSupport/index') ?>"><strong>客户服务</strong></a></li>
+                        <li><a href="<?php echo Yii::app()->createUrl('GroupSupport/index') ?>#zb">十年质保</a></li>
+                        <li><a href="<?php echo Yii::app()->createUrl('GroupSupport/index') ?>#dz">专属定制</a></li>
+                        <li><a href="<?php echo Yii::app()->createUrl('GroupSupport/index') ?>#al">施工案例</a></li>
+                        <li><a href="<?php echo Yii::app()->createUrl('GroupSupport/index') ?>#bz">施工标准</a></li>
+                        <li><a href="<?php echo Yii::app()->createUrl('GroupSupport/index') ?>#xm">选膜标准</a></li>
                     </ul>
                 </div>
                 <div class="col-md-1 col-sm-1 widget">

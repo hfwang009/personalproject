@@ -20,7 +20,7 @@ class AdminToolsController extends CAdminController{
 
     //获取格式化的redis数据
     private function constructRedisData(){
-        $redis_keys = RedisInit::getInstance()->keys('carproject*');
+        $redis_keys = RedisInit::getInstance()->keys('carproject:*');
         $flush_array = array();
         //获取所有redis的keys,可以执行一次全部清除
         $flush_array['all']['data'] = $redis_keys;

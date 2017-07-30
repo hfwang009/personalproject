@@ -52,14 +52,14 @@
                 <?php foreach($model as $k=>$v){ ?>
                     <div style="margin-left:150px;margin-top:50px;" >
                         <div style="width: 300px;">
-                            <a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->id.'/detail',array('id'=>$v['id'])); ?>"><img src="<?php echo !empty($v['thumb'])?$v['thumb']:Yii::app()->request->baseUrl ?>/statics/webfront/images/zhantinghuodong001.jpg" width="320" height="210" /></a>
+                            <a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->id.'/detail',array('id'=>$v['id'])); ?>"><img src="<?php echo !empty($v['thumb'])?$v['thumb']:Yii::app()->request->baseUrl.'/statics/webfront/images/zhantinghuodong001.jpg' ?>" width="320" height="210" /></a>
                         </div>
                         <div style="float: left;">
                             <div style="font-size:18px;padding-left:20px;color:#737373"><strong><a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->id.'/detail',array('id'=>$v['id'])); ?>"><?php echo $v['title']; ?></a></strong></div><br>
                             <div style="font-size:12px;padding-left:20px;margin-top:-15px;color:#737373"><?php echo date('Y-m-d',$v['ctime']); ?></div><br>
                             <div class="copyrights" align="left" style="border-top:1px solid #d1d1d1;width:95%;margin:-10px 20px 10px 20px"></div>
                             <div style="font-size:14px;padding-left:20px;color:#737373">
-                                <?php echo CUtils::str_cut($v['content'],180); ?>
+                                <?php echo CUtils::str_cut(strip_tags($v['content']),300); ?>
                             </div>
                             <div style="float:right;color:#737373;margin-top:25px;"><a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->id.'/detail',array('id'=>$v['id'])); ?>"><font color="b38756">详情</font></a></div>
                         </div>

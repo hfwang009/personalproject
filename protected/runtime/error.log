@@ -10208,3 +10208,39 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/statics/webfront/css/bootstrap.min.css.map
 ---
+2017/07/27 11:34:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/webfront/images/icons/wave.svg".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/webfron...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/webfront/images/icons/wave.svg
+HTTP_REFERER=http://www.carproject.com/statics/webfront/css/style.css
+---
+2017/07/27 11:34:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/webfront/fonts/fontawesome-webfont.woff2".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/webfron...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/webfront/fonts/fontawesome-webfont.woff2?v=4.7.0
+HTTP_REFERER=http://www.carproject.com/statics/webfront/fonts/font-awesome.min.css
+---
+2017/07/27 11:34:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/webfront/images/images/favicon.png".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/webfron...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/webfront/images/images/favicon.png
+HTTP_REFERER=http://www.carproject.com/
+---
+2017/07/27 11:34:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/webfront/images/favicon.png".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/webfron...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/webfront/images/favicon.png
+HTTP_REFERER=http://www.carproject.com/groupsupport.html
+---

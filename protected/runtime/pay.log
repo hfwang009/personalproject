@@ -9265,3 +9265,328 @@ in D:\new\carproject\protected\views\layouts\web.php (46)
 in D:\new\carproject\protected\controllers\IndexController.php (21)
 2017/07/26 19:26:11 [trace] [system.CModule] Loading "assetManager" application component
 in D:\new\carproject\protected\controllers\IndexController.php (21)
+2017/07/27 11:34:04 [trace] [system.CModule] Loading "log" application component
+in D:\new\carproject\index.php (14)
+2017/07/27 11:34:04 [trace] [system.CModule] Loading "request" application component
+in D:\new\carproject\index.php (14)
+2017/07/27 11:34:04 [trace] [system.CModule] Loading "urlManager" application component
+in D:\new\carproject\index.php (18)
+2017/07/27 11:34:04 [trace] [system.CModule] Loading "db" application component
+in D:\new\carproject\protected\models\News.php (25)
+in D:\new\carproject\protected\components\Controller.php (69)
+in D:\new\carproject\index.php (18)
+2017/07/27 11:34:04 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\new\carproject\protected\models\News.php (25)
+in D:\new\carproject\protected\components\Controller.php (69)
+in D:\new\carproject\index.php (18)
+2017/07/27 11:34:04 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `car_news`
+in D:\new\carproject\protected\models\News.php (25)
+in D:\new\carproject\protected\components\Controller.php (69)
+in D:\new\carproject\index.php (18)
+2017/07/27 11:34:04 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `car_news`
+in D:\new\carproject\protected\models\News.php (25)
+in D:\new\carproject\protected\components\Controller.php (69)
+in D:\new\carproject\index.php (18)
+2017/07/27 11:34:04 [trace] [system.db.ar.CActiveRecord] News.findAll()
+in D:\new\carproject\protected\models\News.php (135)
+in D:\new\carproject\protected\components\Controller.php (69)
+in D:\new\carproject\index.php (18)
+2017/07/27 11:34:04 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `car_news` `t`
+in D:\new\carproject\protected\models\News.php (135)
+in D:\new\carproject\protected\components\Controller.php (69)
+in D:\new\carproject\index.php (18)
+2017/07/27 11:34:05 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `car_video`
+in D:\new\carproject\protected\models\Video.php (35)
+in D:\new\carproject\protected\controllers\IndexController.php (7)
+in D:\new\carproject\index.php (18)
+2017/07/27 11:34:05 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `car_video`
+in D:\new\carproject\protected\models\Video.php (35)
+in D:\new\carproject\protected\controllers\IndexController.php (7)
+in D:\new\carproject\index.php (18)
+2017/07/27 11:34:05 [trace] [system.db.ar.CActiveRecord] Video.findByPk()
+in D:\new\carproject\protected\controllers\IndexController.php (7)
+in D:\new\carproject\index.php (18)
+2017/07/27 11:34:05 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `car_video` `t` WHERE `t`.`id`='4' LIMIT 1
+in D:\new\carproject\protected\controllers\IndexController.php (7)
+in D:\new\carproject\index.php (18)
+2017/07/27 11:34:05 [trace] [system.CModule] Loading "clientScript" application component
+in D:\new\carproject\protected\controllers\IndexController.php (11)
+in D:\new\carproject\index.php (18)
+2017/07/27 11:34:05 [trace] [system.CModule] Loading "log" application component
+in D:\new\carproject\index.php (14)
+2017/07/27 11:34:05 [trace] [system.CModule] Loading "request" application component
+in D:\new\carproject\index.php (14)
+2017/07/27 11:34:05 [trace] [system.CModule] Loading "urlManager" application component
+in D:\new\carproject\index.php (18)
+2017/07/27 11:34:05 [trace] [system.CModule] Loading "coreMessages" application component
+in D:\new\carproject\index.php (18)
+2017/07/27 11:34:05 [trace] [system.CModule] Loading "errorHandler" application component
+2017/07/27 11:34:05 [trace] [system.CModule] Loading "db" application component
+in D:\new\carproject\protected\models\News.php (25)
+in D:\new\carproject\protected\components\Controller.php (69)
+2017/07/27 11:34:05 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\new\carproject\protected\models\News.php (25)
+in D:\new\carproject\protected\components\Controller.php (69)
+2017/07/27 11:34:05 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `car_news`
+in D:\new\carproject\protected\models\News.php (25)
+in D:\new\carproject\protected\components\Controller.php (69)
+2017/07/27 11:34:05 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `car_news`
+in D:\new\carproject\protected\models\News.php (25)
+in D:\new\carproject\protected\components\Controller.php (69)
+2017/07/27 11:34:05 [trace] [system.CModule] Loading "clientScript" application component
+in D:\new\carproject\protected\views\layouts\web.php (46)
+in D:\new\carproject\protected\controllers\IndexController.php (21)
+2017/07/27 11:34:05 [trace] [system.CModule] Loading "assetManager" application component
+in D:\new\carproject\protected\controllers\IndexController.php (21)
+2017/07/27 11:34:05 [trace] [system.CModule] Loading "log" application component
+in D:\new\carproject\index.php (14)
+2017/07/27 11:34:05 [trace] [system.CModule] Loading "request" application component
+in D:\new\carproject\index.php (14)
+2017/07/27 11:34:05 [trace] [system.CModule] Loading "urlManager" application component
+in D:\new\carproject\index.php (18)
+2017/07/27 11:34:05 [trace] [system.CModule] Loading "coreMessages" application component
+in D:\new\carproject\index.php (18)
+2017/07/27 11:34:05 [trace] [system.CModule] Loading "errorHandler" application component
+2017/07/27 11:34:05 [trace] [system.CModule] Loading "db" application component
+in D:\new\carproject\protected\models\News.php (25)
+in D:\new\carproject\protected\components\Controller.php (69)
+2017/07/27 11:34:05 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\new\carproject\protected\models\News.php (25)
+in D:\new\carproject\protected\components\Controller.php (69)
+2017/07/27 11:34:05 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `car_news`
+in D:\new\carproject\protected\models\News.php (25)
+in D:\new\carproject\protected\components\Controller.php (69)
+2017/07/27 11:34:05 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `car_news`
+in D:\new\carproject\protected\models\News.php (25)
+in D:\new\carproject\protected\components\Controller.php (69)
+2017/07/27 11:34:05 [trace] [system.CModule] Loading "clientScript" application component
+in D:\new\carproject\protected\views\layouts\web.php (46)
+in D:\new\carproject\protected\controllers\IndexController.php (21)
+2017/07/27 11:34:05 [trace] [system.CModule] Loading "assetManager" application component
+in D:\new\carproject\protected\controllers\IndexController.php (21)
+2017/07/27 11:34:05 [trace] [system.CModule] Loading "log" application component
+in D:\new\carproject\index.php (14)
+2017/07/27 11:34:05 [trace] [system.CModule] Loading "request" application component
+in D:\new\carproject\index.php (14)
+2017/07/27 11:34:05 [trace] [system.CModule] Loading "urlManager" application component
+in D:\new\carproject\index.php (18)
+2017/07/27 11:34:05 [trace] [system.CModule] Loading "coreMessages" application component
+in D:\new\carproject\index.php (18)
+2017/07/27 11:34:05 [trace] [system.CModule] Loading "errorHandler" application component
+2017/07/27 11:34:05 [trace] [system.CModule] Loading "db" application component
+in D:\new\carproject\protected\models\News.php (25)
+in D:\new\carproject\protected\components\Controller.php (69)
+2017/07/27 11:34:05 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\new\carproject\protected\models\News.php (25)
+in D:\new\carproject\protected\components\Controller.php (69)
+2017/07/27 11:34:05 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `car_news`
+in D:\new\carproject\protected\models\News.php (25)
+in D:\new\carproject\protected\components\Controller.php (69)
+2017/07/27 11:34:05 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `car_news`
+in D:\new\carproject\protected\models\News.php (25)
+in D:\new\carproject\protected\components\Controller.php (69)
+2017/07/27 11:34:05 [trace] [system.CModule] Loading "clientScript" application component
+in D:\new\carproject\protected\views\layouts\web.php (46)
+in D:\new\carproject\protected\controllers\IndexController.php (21)
+2017/07/27 11:34:05 [trace] [system.CModule] Loading "assetManager" application component
+in D:\new\carproject\protected\controllers\IndexController.php (21)
+2017/07/27 11:34:08 [trace] [system.CModule] Loading "log" application component
+in D:\new\carproject\index.php (14)
+2017/07/27 11:34:08 [trace] [system.CModule] Loading "request" application component
+in D:\new\carproject\index.php (14)
+2017/07/27 11:34:08 [trace] [system.CModule] Loading "urlManager" application component
+in D:\new\carproject\index.php (18)
+2017/07/27 11:34:08 [trace] [system.CModule] Loading "db" application component
+in D:\new\carproject\protected\models\News.php (25)
+in D:\new\carproject\protected\components\Controller.php (69)
+in D:\new\carproject\index.php (18)
+2017/07/27 11:34:08 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\new\carproject\protected\models\News.php (25)
+in D:\new\carproject\protected\components\Controller.php (69)
+in D:\new\carproject\index.php (18)
+2017/07/27 11:34:08 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `car_news`
+in D:\new\carproject\protected\models\News.php (25)
+in D:\new\carproject\protected\components\Controller.php (69)
+in D:\new\carproject\index.php (18)
+2017/07/27 11:34:08 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `car_news`
+in D:\new\carproject\protected\models\News.php (25)
+in D:\new\carproject\protected\components\Controller.php (69)
+in D:\new\carproject\index.php (18)
+2017/07/27 11:34:08 [trace] [system.CModule] Loading "clientScript" application component
+in D:\new\carproject\protected\views\layouts\web.php (46)
+in D:\new\carproject\protected\controllers\GroupSupportController.php (6)
+in D:\new\carproject\index.php (18)
+2017/07/27 11:34:08 [trace] [system.CModule] Loading "assetManager" application component
+in D:\new\carproject\protected\controllers\GroupSupportController.php (6)
+in D:\new\carproject\index.php (18)
+2017/07/27 11:34:08 [trace] [system.CModule] Loading "log" application component
+in D:\new\carproject\index.php (14)
+2017/07/27 11:34:08 [trace] [system.CModule] Loading "request" application component
+in D:\new\carproject\index.php (14)
+2017/07/27 11:34:08 [trace] [system.CModule] Loading "urlManager" application component
+in D:\new\carproject\index.php (18)
+2017/07/27 11:34:08 [trace] [system.CModule] Loading "db" application component
+in D:\new\carproject\protected\models\News.php (25)
+in D:\new\carproject\protected\components\Controller.php (69)
+in D:\new\carproject\index.php (18)
+2017/07/27 11:34:08 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\new\carproject\protected\models\News.php (25)
+in D:\new\carproject\protected\components\Controller.php (69)
+in D:\new\carproject\index.php (18)
+2017/07/27 11:34:08 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `car_news`
+in D:\new\carproject\protected\models\News.php (25)
+in D:\new\carproject\protected\components\Controller.php (69)
+in D:\new\carproject\index.php (18)
+2017/07/27 11:34:08 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `car_news`
+in D:\new\carproject\protected\models\News.php (25)
+in D:\new\carproject\protected\components\Controller.php (69)
+in D:\new\carproject\index.php (18)
+2017/07/27 11:34:08 [trace] [system.CModule] Loading "clientScript" application component
+in D:\new\carproject\protected\views\layouts\web.php (46)
+in D:\new\carproject\protected\controllers\GroupSupportController.php (6)
+in D:\new\carproject\index.php (18)
+2017/07/27 11:34:08 [trace] [system.CModule] Loading "assetManager" application component
+in D:\new\carproject\protected\controllers\GroupSupportController.php (6)
+in D:\new\carproject\index.php (18)
+2017/07/27 11:34:09 [trace] [system.CModule] Loading "log" application component
+in D:\new\carproject\index.php (14)
+2017/07/27 11:34:09 [trace] [system.CModule] Loading "request" application component
+in D:\new\carproject\index.php (14)
+2017/07/27 11:34:09 [trace] [system.CModule] Loading "urlManager" application component
+in D:\new\carproject\index.php (18)
+2017/07/27 11:34:09 [trace] [system.CModule] Loading "coreMessages" application component
+in D:\new\carproject\index.php (18)
+2017/07/27 11:34:09 [trace] [system.CModule] Loading "errorHandler" application component
+2017/07/27 11:34:09 [trace] [system.CModule] Loading "db" application component
+in D:\new\carproject\protected\models\News.php (25)
+in D:\new\carproject\protected\components\Controller.php (69)
+2017/07/27 11:34:09 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\new\carproject\protected\models\News.php (25)
+in D:\new\carproject\protected\components\Controller.php (69)
+2017/07/27 11:34:09 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `car_news`
+in D:\new\carproject\protected\models\News.php (25)
+in D:\new\carproject\protected\components\Controller.php (69)
+2017/07/27 11:34:09 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `car_news`
+in D:\new\carproject\protected\models\News.php (25)
+in D:\new\carproject\protected\components\Controller.php (69)
+2017/07/27 11:34:09 [trace] [system.CModule] Loading "clientScript" application component
+in D:\new\carproject\protected\views\layouts\web.php (46)
+in D:\new\carproject\protected\controllers\IndexController.php (21)
+2017/07/27 11:34:09 [trace] [system.CModule] Loading "assetManager" application component
+in D:\new\carproject\protected\controllers\IndexController.php (21)
+2017/07/27 11:34:18 [trace] [system.CModule] Loading "log" application component
+in D:\new\carproject\index.php (14)
+2017/07/27 11:34:18 [trace] [system.CModule] Loading "request" application component
+in D:\new\carproject\index.php (14)
+2017/07/27 11:34:18 [trace] [system.CModule] Loading "urlManager" application component
+in D:\new\carproject\index.php (18)
+2017/07/27 11:34:18 [trace] [system.CModule] Loading "db" application component
+in D:\new\carproject\protected\models\News.php (25)
+in D:\new\carproject\protected\components\Controller.php (69)
+in D:\new\carproject\index.php (18)
+2017/07/27 11:34:18 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\new\carproject\protected\models\News.php (25)
+in D:\new\carproject\protected\components\Controller.php (69)
+in D:\new\carproject\index.php (18)
+2017/07/27 11:34:18 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `car_news`
+in D:\new\carproject\protected\models\News.php (25)
+in D:\new\carproject\protected\components\Controller.php (69)
+in D:\new\carproject\index.php (18)
+2017/07/27 11:34:18 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `car_news`
+in D:\new\carproject\protected\models\News.php (25)
+in D:\new\carproject\protected\components\Controller.php (69)
+in D:\new\carproject\index.php (18)
+2017/07/27 11:34:18 [trace] [system.CModule] Loading "clientScript" application component
+in D:\new\carproject\protected\views\layouts\web.php (46)
+in D:\new\carproject\protected\controllers\GroupSupportController.php (6)
+in D:\new\carproject\index.php (18)
+2017/07/27 11:34:18 [trace] [system.CModule] Loading "assetManager" application component
+in D:\new\carproject\protected\controllers\GroupSupportController.php (6)
+in D:\new\carproject\index.php (18)
+2017/07/27 11:34:28 [trace] [system.CModule] Loading "log" application component
+in D:\new\carproject\index.php (14)
+2017/07/27 11:34:28 [trace] [system.CModule] Loading "request" application component
+in D:\new\carproject\index.php (14)
+2017/07/27 11:34:28 [trace] [system.CModule] Loading "urlManager" application component
+in D:\new\carproject\index.php (18)
+2017/07/27 11:34:28 [trace] [system.CModule] Loading "db" application component
+in D:\new\carproject\protected\models\News.php (25)
+in D:\new\carproject\protected\components\Controller.php (69)
+in D:\new\carproject\index.php (18)
+2017/07/27 11:34:28 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\new\carproject\protected\models\News.php (25)
+in D:\new\carproject\protected\components\Controller.php (69)
+in D:\new\carproject\index.php (18)
+2017/07/27 11:34:28 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `car_news`
+in D:\new\carproject\protected\models\News.php (25)
+in D:\new\carproject\protected\components\Controller.php (69)
+in D:\new\carproject\index.php (18)
+2017/07/27 11:34:28 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `car_news`
+in D:\new\carproject\protected\models\News.php (25)
+in D:\new\carproject\protected\components\Controller.php (69)
+in D:\new\carproject\index.php (18)
+2017/07/27 11:34:28 [trace] [system.CModule] Loading "clientScript" application component
+in D:\new\carproject\protected\views\layouts\web.php (46)
+in D:\new\carproject\protected\controllers\GroupSupportController.php (6)
+in D:\new\carproject\index.php (18)
+2017/07/27 11:34:28 [trace] [system.CModule] Loading "assetManager" application component
+in D:\new\carproject\protected\controllers\GroupSupportController.php (6)
+in D:\new\carproject\index.php (18)
+2017/07/27 11:37:58 [trace] [system.CModule] Loading "log" application component
+in D:\new\carproject\index.php (14)
+2017/07/27 11:37:58 [trace] [system.CModule] Loading "request" application component
+in D:\new\carproject\index.php (14)
+2017/07/27 11:37:58 [trace] [system.CModule] Loading "urlManager" application component
+in D:\new\carproject\index.php (18)
+2017/07/27 11:37:58 [trace] [system.CModule] Loading "db" application component
+in D:\new\carproject\protected\models\News.php (25)
+in D:\new\carproject\protected\components\Controller.php (69)
+in D:\new\carproject\index.php (18)
+2017/07/27 11:37:58 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\new\carproject\protected\models\News.php (25)
+in D:\new\carproject\protected\components\Controller.php (69)
+in D:\new\carproject\index.php (18)
+2017/07/27 11:37:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `car_news`
+in D:\new\carproject\protected\models\News.php (25)
+in D:\new\carproject\protected\components\Controller.php (69)
+in D:\new\carproject\index.php (18)
+2017/07/27 11:37:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `car_news`
+in D:\new\carproject\protected\models\News.php (25)
+in D:\new\carproject\protected\components\Controller.php (69)
+in D:\new\carproject\index.php (18)
+2017/07/27 11:37:58 [trace] [system.CModule] Loading "clientScript" application component
+in D:\new\carproject\protected\views\layouts\web.php (46)
+in D:\new\carproject\protected\controllers\GroupSupportController.php (6)
+in D:\new\carproject\index.php (18)
+2017/07/27 11:37:58 [trace] [system.CModule] Loading "assetManager" application component
+in D:\new\carproject\protected\controllers\GroupSupportController.php (6)
+in D:\new\carproject\index.php (18)
+2017/07/27 11:43:06 [trace] [system.CModule] Loading "log" application component
+in D:\new\carproject\index.php (14)
+2017/07/27 11:43:06 [trace] [system.CModule] Loading "request" application component
+in D:\new\carproject\index.php (14)
+2017/07/27 11:43:06 [trace] [system.CModule] Loading "urlManager" application component
+in D:\new\carproject\index.php (18)
+2017/07/27 11:43:06 [trace] [system.CModule] Loading "db" application component
+in D:\new\carproject\protected\models\News.php (25)
+in D:\new\carproject\protected\components\Controller.php (69)
+in D:\new\carproject\index.php (18)
+2017/07/27 11:43:06 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\new\carproject\protected\models\News.php (25)
+in D:\new\carproject\protected\components\Controller.php (69)
+in D:\new\carproject\index.php (18)
+2017/07/27 11:43:06 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `car_news`
+in D:\new\carproject\protected\models\News.php (25)
+in D:\new\carproject\protected\components\Controller.php (69)
+in D:\new\carproject\index.php (18)
+2017/07/27 11:43:06 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `car_news`
+in D:\new\carproject\protected\models\News.php (25)
+in D:\new\carproject\protected\components\Controller.php (69)
+in D:\new\carproject\index.php (18)
+2017/07/27 11:43:06 [trace] [system.CModule] Loading "clientScript" application component
+in D:\new\carproject\protected\views\layouts\web.php (46)
+in D:\new\carproject\protected\controllers\GroupSupportController.php (6)
+in D:\new\carproject\index.php (18)
+2017/07/27 11:43:06 [trace] [system.CModule] Loading "assetManager" application component
+in D:\new\carproject\protected\controllers\GroupSupportController.php (6)
+in D:\new\carproject\index.php (18)

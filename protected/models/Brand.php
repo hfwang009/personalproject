@@ -102,8 +102,8 @@ class Brand extends CActiveRecord
             $brand = $this->find("id=:id",array(":id"=>$_REQUEST['id']));
             if(!empty($brand)){
                 $brand->attributes = $post["Brand"];
-                $brand->ename = $post['Brand']['ename'];
-                $brand->eintro = $post['Brand']['eintro'];
+                $brand->ename = !empty($post['Brand']['ename'])?$post['Brand']['ename']:'';
+                $brand->eintro = !empty($post['Brand']['eintro'])?$post['Brand']['eintro']:'';
                 if($brand->validate()){
                     if($brand->save()){
                         return true;
@@ -115,8 +115,8 @@ class Brand extends CActiveRecord
         }else{
             $model = new Brand();
             $model->attributes = $post['Brand'];
-            $model->ename = $post['Brand']['ename'];
-            $model->eintro = $post['Brand']['eintro'];
+            $model->ename = !empty($post['Brand']['ename'])?$post['Brand']['ename']:'';
+            $model->eintro = !empty($post['Brand']['eintro'])?$post['Brand']['eintro']:'';
             if($model->validate()){
                 if($model->save()){
                     return true;

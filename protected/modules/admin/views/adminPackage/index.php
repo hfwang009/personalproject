@@ -46,7 +46,7 @@
                                     ?>
                                     <tr>
                                         <td>
-                                            <input type="checkbox" value="<?php echo $_model['id'];?>" name="brand_id[]">
+                                            <input type="checkbox" value="<?php echo $_model['id'];?>" name="package_id[]">
                                         </td>
                                         <td><?php echo $_model['id'];?></td>
                                         <td><?php echo $_model['name'];?></td>

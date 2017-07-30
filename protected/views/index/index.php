@@ -89,4 +89,13 @@
     function submitSearch(){
         $('#search_form').submit();
     }
+    var video1=document.getElementById("example_video_1");
+
+    video1.onclick=function(){
+        if(video1.paused){
+            video1.play();
+        }else{
+            video1.pause();
+        }
+    }
 </script>

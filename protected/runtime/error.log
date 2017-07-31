@@ -10244,3 +10244,75 @@ Stack trace:
 REQUEST_URI=/statics/webfront/images/favicon.png
 HTTP_REFERER=http://www.carproject.com/groupsupport.html
 ---
+2017/07/31 07:43:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/admin/img/inst_logo.png".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/admin/i...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/admin/img/inst_logo.png
+HTTP_REFERER=http://www.carproject.com/admin/login/index.html?backUrl=aHR0cDovL3d3dy5jYXJwcm9qZWN0LmNvbS9hZG1pbi9hZG1pblN0b3JlL2FkZA==
+---
+2017/07/31 07:43:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/images/baijia.ico".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/i...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/images/baijia.ico
+HTTP_REFERER=http://www.carproject.com/admin/login/index.html?backUrl=aHR0cDovL3d3dy5jYXJwcm9qZWN0LmNvbS9hZG1pbi9hZG1pblN0b3JlL2FkZA==
+---
+2017/07/31 08:06:51 [error] [php] Undefined variable: ajax_url (D:\new\carproject\protected\modules\admin\views\adminWarrantyAction\add.php:421)
+Stack trace:
+#0 D:\new\framework\web\CController.php(869): AdminWarrantyActionController->renderFile()
+#1 D:\new\framework\web\CController.php(782): AdminWarrantyActionController->renderPartial()
+#2 D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyActionController.php(101): AdminWarrantyActionController->render()
+#3 D:\new\framework\web\actions\CInlineAction.php(49): AdminWarrantyActionController->actionAdd()
+#4 D:\new\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\new\framework\web\CController.php(286): AdminWarrantyActionController->runAction()
+#6 D:\new\framework\web\CController.php(265): AdminWarrantyActionController->runActionWithFilters()
+#7 D:\new\framework\web\CWebApplication.php(282): AdminWarrantyActionController->run()
+#8 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\new\carproject\index.php(18): CWebApplication->run()
+REQUEST_URI=/admin/adminWarrantyAction/add.html
+in D:\new\carproject\protected\modules\admin\views\adminWarrantyAction\add.php (421)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyActionController.php (101)
+in D:\new\carproject\index.php (18)
+2017/07/31 08:07:12 [error] [php] Undefined variable: ajax_url (D:\new\carproject\protected\modules\admin\views\adminWarrantyAction\add.php:421)
+Stack trace:
+#0 D:\new\framework\web\CController.php(869): AdminWarrantyActionController->renderFile()
+#1 D:\new\framework\web\CController.php(782): AdminWarrantyActionController->renderPartial()
+#2 D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyActionController.php(101): AdminWarrantyActionController->render()
+#3 D:\new\framework\web\actions\CInlineAction.php(49): AdminWarrantyActionController->actionAdd()
+#4 D:\new\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\new\framework\web\CController.php(286): AdminWarrantyActionController->runAction()
+#6 D:\new\framework\web\CController.php(265): AdminWarrantyActionController->runActionWithFilters()
+#7 D:\new\framework\web\CWebApplication.php(282): AdminWarrantyActionController->run()
+#8 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\new\carproject\index.php(18): CWebApplication->run()
+REQUEST_URI=/admin/adminWarrantyAction/add.html
+in D:\new\carproject\protected\modules\admin\views\adminWarrantyAction\add.php (421)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyActionController.php (101)
+in D:\new\carproject\index.php (18)
+2017/07/31 08:10:31 [warning] [application] Failed to set unsafe attribute "province" of "WarrantyAction".
+in D:\new\carproject\protected\models\WarrantyAction.php (149)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyActionController.php (58)
+in D:\new\carproject\index.php (18)
+2017/07/31 08:10:31 [warning] [application] Failed to set unsafe attribute "city" of "WarrantyAction".
+in D:\new\carproject\protected\models\WarrantyAction.php (149)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyActionController.php (58)
+in D:\new\carproject\index.php (18)
+2017/07/31 08:10:31 [warning] [application] Failed to set unsafe attribute "area" of "WarrantyAction".
+in D:\new\carproject\protected\models\WarrantyAction.php (149)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyActionController.php (58)
+in D:\new\carproject\index.php (18)
+2017/07/31 08:10:31 [warning] [application] Failed to set unsafe attribute "admin_id" of "WarrantyAction".
+in D:\new\carproject\protected\models\WarrantyAction.php (149)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyActionController.php (58)
+in D:\new\carproject\index.php (18)
+2017/07/31 08:10:31 [warning] [application] Failed to set unsafe attribute "ctime" of "WarrantyAction".
+in D:\new\carproject\protected\models\WarrantyAction.php (149)
+in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyActionController.php (58)
+in D:\new\carproject\index.php (18)

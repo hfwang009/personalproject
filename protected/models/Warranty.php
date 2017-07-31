@@ -391,6 +391,17 @@ class Warranty extends CActiveRecord
         return $warranty;
     }
 
+
+    public function getWarrantyDataByName($ser){
+        $criteria = new CDbCriteria();
+        $criteria->condition = '1';
+        $criteria->condition .= ' AND t.series_number = "'.$ser.'"';
+        $criteria->condition .= ' AND t.status=1';
+        $criteria->with = array('admin','store');
+        $warranty = $this->find($criteria);
+        return $warranty;
+    }
+
     public function getCriteriaCondition($criteria,$condition,$search){
         if(isset($condition['Warranty']) && (count(array_filter($condition['Warranty'])) > 0 ||$condition['Warranty']['status'] == '0')){
             $search->attributes = $condition['Warranty'];

@@ -51,6 +51,18 @@ class ProductController extends Controller{
         ));
     }
 
+    public function actionRespect(){
+        $this->render('respect');
+    }
+
+    public function actionBuilding(){
+        $this->render('building');
+    }
+
+    public function actionIndex1(){
+        $this->render('index1');
+    }
+
     //ajax 璁剧疆
     public function actionSetting(){
         $ct = Yii::app ()->request->getParam ( 'ct', '-1' );

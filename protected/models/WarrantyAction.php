@@ -23,6 +23,10 @@ class WarrantyAction extends CActiveRecord
     public $acttime_end;
     public $carmodel;
     public $mid;
+
+    public $province;
+    public $city;
+    public $area;
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
@@ -92,6 +96,9 @@ class WarrantyAction extends CActiveRecord
             'ctime'=>'添加记录时间',
             'mid'=>'型号',
             'carmodel'=>'车型',
+            'province'=>'省份',
+            'city'=>'城市',
+            'area'=>'区县',
 		);
 	}
 

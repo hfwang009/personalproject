@@ -64,28 +64,28 @@ class AdminWarrantyActionController extends CAdminController{
         $ptype = Yii::app()->params['conf']['setting']['ptype'];
         $warranty_data = Warranty::model()->getWarrantyData1();
         $store_data = Store::model()->getStore();
-//        if(empty($id)){
-//            $provinces = Region::model()->getRegions();
-//            $citys = array();
-//            $areas = array();
-//            $stores = Store::model()->getRelaStores1(null);
-//        }else{
-//            $provinces = Region::model()->getRegions();
-//            $pid = !empty($model->province)?$model->province:'';
-//            $cid = !empty($model->city)?$model->city:'';
-//            $aid = !empty($model->area)?$model->area:'';
-//            $citys = !empty($pid)?Region::model()->getRegions($pid):array();
-//            $areas = !empty($cid)?Region::model()->getRegions($cid):array();
-//            if(!empty($aid)){
-//                $stores = Store::model()->getRelaStores1($aid,'areaid');
-//            }elseif(empty($aid)&&!empty($cid)){
-//                $stores = Store::model()->getRelaStores1($cid,'cityid');
-//            }elseif(empty($aid)&&empty($cid)&&!empty($pid)){
-//                $stores = Store::model()->getRelaStores1($pid,'provinceid');
-//            }else{
-//                $stores = Store::model()->getRelaStores1(null);
-//            }
-//        }
+        if(empty($id)){
+            $provinces = Region::model()->getRegions();
+            $citys = array();
+            $areas = array();
+            $stores = Store::model()->getRelaStores1(null);
+        }else{
+            $provinces = Region::model()->getRegions();
+            $pid = !empty($model->province)?$model->province:'';
+            $cid = !empty($model->city)?$model->city:'';
+            $aid = !empty($model->area)?$model->area:'';
+            $citys = !empty($pid)?Region::model()->getRegions($pid):array();
+            $areas = !empty($cid)?Region::model()->getRegions($cid):array();
+            if(!empty($aid)){
+                $stores = Store::model()->getRelaStores1($aid,'areaid');
+            }elseif(empty($aid)&&!empty($cid)){
+                $stores = Store::model()->getRelaStores1($cid,'cityid');
+            }elseif(empty($aid)&&empty($cid)&&!empty($pid)){
+                $stores = Store::model()->getRelaStores1($pid,'provinceid');
+            }else{
+                $stores = Store::model()->getRelaStores1(null);
+            }
+        }
         $this->render("add",
             array(
                 "model"=>$model,
@@ -93,6 +93,10 @@ class AdminWarrantyActionController extends CAdminController{
                 "warranty_data"=>$warranty_data,
                 "ptype"=>$ptype,
                 "store_data"=>$store_data,
+                "provinces"=>$provinces,
+                "citys"=>$citys,
+                "areas"=>$areas,
+                "stores"=>$stores,
                 "ajax_url"=>$ajax_url,
             ));
     }
@@ -130,6 +134,12 @@ class AdminWarrantyActionController extends CAdminController{
             $this->__delete();
         }elseif($ct == "warrantyaction" && $ac == "getwarranty"){
             $this->__getwarranty();
+        }elseif($ct == "warrantyaction" && $ac == "getcity"){
+            $this->__getcity();
+        }elseif($ct == "warrantyaction" && $ac == "getarea"){
+            $this->__getarea();
+        }elseif($ct == "warrantyaction" && $ac == "getStore"){
+            $this->__getStore();
         }else{
             echo CJSON::encode(CUtils::retCode(false, 0, '参数错误'));
             Yii::app ()->end ();
@@ -142,7 +152,8 @@ class AdminWarrantyActionController extends CAdminController{
         $message= '质保产品获取错误';
         $id = Yii::app()->request->getParam('id', null);
         if(!empty($id)){
-            $model = Warranty::model()->getWarrantyDataByPk($id,false);
+//            $model = Warranty::model()->getWarrantyDataByPk($id,false);
+            $model = Warranty::model()->getWarrantyDataByName($id);
             if(!empty($model)){
                 $store = !empty($model->store)?$model->store->name:'';
                 $data = CJSON::decode(CJSON::encode($model),true);
@@ -154,6 +165,60 @@ class AdminWarrantyActionController extends CAdminController{
             }
         }
         echo CJSON::encode(CUtils::retMessage($state, $code, $message));
+        Yii::app ()->end ();
+    }
+
+    private function __getcity(){
+        $id = Yii::app()->request->getParam('parent', null);
+        if(empty($id)){
+            $data = array(
+                'citys'=>"<option value=''>-- 请选择  --</option>",
+                'areas'=>"<option value=''>-- 请选择  --</option>",
+                'stores'=>Store::model()->getRelaStores($id,'provinceid',true),
+            );
+            echo CJSON::encode ( CUtils::retMessage ( true, 0,'', $data ) );
+            Yii::app ()->end ();
+        }
+        $data = Region::model()->getRelaCitys($id,true);
+        $data['stores'] = Store::model()->getRelaStores($id,'provinceid',true);
+        echo CJSON::encode ( CUtils::retMessage ( true, 0, '', $data ) );
+        Yii::app ()->end ();
+    }
+
+    private function __getarea(){
+        $id = Yii::app()->request->getParam('parent', null);
+        $_id = Yii::app()->request->getParam('_parent', null);
+        if(empty($id)){
+            $data = array(
+                'citys'=>"<option value=''>-- 请选择  --</option>",
+                'areas'=>"<option value=''>-- 请选择  --</option>",
+                'stores'=>!empty($_id)?Store::model()->getRelaStores($_id,'provinceid',true):Store::model()->getRelaStores(null),
+            );
+            echo CJSON::encode ( CUtils::retMessage ( true, 0,'', $data ) );
+            Yii::app ()->end ();
+        }
+        $data = Region::model()->getRelaAreas($id,true);
+        $data['stores'] = Store::model()->getRelaStores($id,'cityid',true);
+        echo CJSON::encode ( CUtils::retMessage ( true, 0, '', $data ) );
+        Yii::app ()->end ();
+    }
+
+    private function __getStore(){
+        $id = Yii::app()->request->getParam('parent', null);
+        $_id = Yii::app()->request->getParam('_parent', null);
+        $__id = Yii::app()->request->getParam('__parent', null);
+        if(empty($id)){
+            $data = array(
+                'citys'=>"<option value=''>-- 请选择  --</option>",
+                'areas'=>"<option value=''>-- 请选择  --</option>",
+                'stores'=>!empty($_id)?Store::model()->getRelaStores($_id,'cityid',true):(!empty($__id)?Store::model()->getRelaStores($__id,'provinceid',true):Store::model()->getRelaStores(null)),
+            );
+            echo CJSON::encode ( CUtils::retMessage ( true, 0,'', $data ) );
+            Yii::app ()->end ();
+        }
+//        $data = Region::model()->getRelaAreas($id,true);
+        $data['stores'] = Store::model()->getRelaStores($id,'areaid',true);
+        echo CJSON::encode ( CUtils::retMessage ( true, 0, '', $data ) );
         Yii::app ()->end ();
     }
 }

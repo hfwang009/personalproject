@@ -37,9 +37,13 @@
                                     <?php echo $form->label($model,'wid',array('class'=>'col-sm-2 col-xs-3 control-label'));?>
                                     <div class="col-sm-6 col-xs-8">
                                         <?php if(!empty($model['id'])){ ?>
-                                            <?php echo $form->dropDownList($model,'wid',$warranty_data,array('empty'=>'-- 请选择  --','class'=>'form-control','ng-change'=>'js_get_warranty()','readonly'=>'readonly'));?>
+<!--                                            --><?php //echo $form->dropDownList($model,'wid',$warranty_data,array('empty'=>'-- 请选择  --','class'=>'form-control','ng-change'=>'js_get_warranty()','readonly'=>'readonly'));?>
+                                            <input type="text" class="form-control product_product" name="warranty[series_number]" id="warranty_series_number" disabled="disabled" value="<?php echo !empty($model->warranty)?$model->warranty->series_number:''; ?>" ng-change="js_get_warranty()">
+                                            <?php echo $form->hiddenField($model,'wid',array('class'=>'form-control','readonly'=>'readonly'));?>
                                         <?php }else{ ?>
-                                            <?php echo $form->dropDownList($model,'wid',$warranty_data,array('empty'=>'-- 请选择  --','class'=>'form-control','ng-change'=>'js_get_warranty()'));?>
+<!--                                            --><?php //echo $form->dropDownList($model,'wid',$warranty_data,array('empty'=>'-- 请选择  --','class'=>'form-control','ng-change'=>'js_get_warranty()'));?>
+                                            <input type="text" class="form-control product_product" name="warranty[series_number]" id="warranty_series_number" value="<?php echo !empty($model->warranty)?$model->warranty->series_number:''; ?>" ng-change="js_get_warranty()">
+                                            <?php echo $form->hiddenField($model,'wid',array('class'=>'form-control'));?>
                                         <?php } ?>
                                         <?php echo $form->error($model,'wid',array('class'=>'help-block'));?>
                                     </div>
@@ -165,9 +169,89 @@
                         <tr>
                             <td>
                                 <div class="form-group">
+                                    <?php echo $form->label($model,'province',array('class'=>'col-sm-2 col-xs-3 control-label'));?>
+                                    <div class="col-sm-6 col-xs-8">
+                                        <?php echo $form->dropDownList($model,'province',$provinces,
+                                            array(
+                                                'empty'=>'-- 请选择  --',
+//                                                'ajax' => array(
+//                                                    'type' => 'POST',
+//                                                    'url' => $ajax_url,
+//                                                    'dataType' => 'json',
+//                                                    'data' => array('ct'=>'product','ac'=>'getcity','parent' => 'js:this.value'),
+//                                                    'success' => 'function(re) {
+//                                                if(re.state){
+//                                                    $("#Product_city").html(re.html.citys);
+//                                                    $("#Product_area").html(re.html.areas);
+//                                                    $("#Product_storeid").html(re.html.stores);
+//                                                }
+//                                             }',
+//                                                ),
+                                                'class'=>'form-control'));?>
+                                        <?php echo $form->error($model,'province',array('class'=>'help-block'));?>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="form-group">
+                                    <?php echo $form->label($model,'city',array('class'=>'col-sm-2 col-xs-3 control-label'));?>
+                                    <div class="col-sm-6 col-xs-8">
+                                        <?php echo $form->dropDownList($model,'city',$citys,
+                                            array(
+                                                'empty'=>'-- 请选择  --',
+//                                                'ajax' => array(
+//                                                    'type' => 'POST',
+//                                                    'url' => $ajax_url,
+//                                                    'dataType' => 'json',
+//                                                    'data' => array('ct'=>'product','ac'=>'getarea','parent' => 'js:this.value'),
+//                                                    'success' => 'function(re) {
+//                                                if(re.state){
+//                                                    $("#Product_area").html(re.html.areas);
+//                                                }
+//                                             }',
+//                                                ),
+                                                'class'=>'form-control'
+                                            ));?>
+                                        <?php echo $form->error($model,'city',array('class'=>'help-block'));?>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="form-group">
+                                    <?php echo $form->label($model,'area',array('class'=>'col-sm-2 col-xs-3 control-label'));?>
+                                    <div class="col-sm-6 col-xs-8">
+                                        <?php echo $form->dropDownList($model,'area',$areas,
+                                            array(
+                                                'empty'=>'-- 请选择  --',
+                                                'class'=>'form-control',
+//                                                'ajax'=>array(
+//                                                    'type'=>'POST',
+//                                                    'url'=>$ajax_url,
+//                                                    'dataType'=>'json',
+//                                                    'data'=>array('ct'=>'product','ac'=>'getstore','parent'=>'js:this.value'),
+//                                                    'success'=>'function(re){
+//                                                if(re.state){
+//                                                    $("#Product_storeid").html(re.html.stores);
+//                                                }
+//                                             }'
+//                                                )
+                                            )
+                                        );?>
+                                        <?php echo $form->error($model,'area',array('class'=>'help-block'));?>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="form-group">
                                     <?php echo $form->label($model,'storeid',array('class'=>'col-sm-2 col-xs-3 control-label'));?>
                                     <div class="col-sm-6 col-xs-8">
-                                        <?php echo $form->dropDownList($model,'storeid',$store_data,array('empty'=>'-- 请选择  --','class'=>'form-control'));?>
+                                        <?php echo $form->dropDownList($model, 'storeid',$stores, array("class"=>"form-control",'empty'=>'-- 请选择  --'));?>
                                         <?php echo $form->error($model,'storeid',array('class'=>'help-block'));?>
                                     </div>
                                 </div>
@@ -305,8 +389,18 @@
 </div>
 <script>
     $(function(){
-        $('body').on('change','select[ng-change="js_get_warranty()"]',function(){
+        $('body').on('blur','input[ng-change="js_get_warranty()"]',function(){
             js_get_warranty(this);
+        });
+
+        $('body').on('change','select[name="WarrantyAction[province]"]',function(){
+            js_province_store(this);
+        });
+        $('body').on('change','select[name="WarrantyAction[city]"]',function(){
+            js_city_store(this);
+        });
+        $('body').on('change','select[name="WarrantyAction[area]"]',function(){
+            js_area_store(this);
         });
     });
     var js_get_warranty = function(eve){
@@ -321,6 +415,7 @@
                 if(re.state){
                     var msg = JSON.parse(re.msg);
                     $('#warranty_pack_name').val(msg.pack_name);
+                    $('#WarrantyAction_wid').val(msg.id);
                     $('#warranty_name').val(msg.name);
                     $('#warranty_telephone').val(msg.telephone);
                     $('#warranty_address').val(msg.address);
@@ -330,6 +425,7 @@
                     $('#warranty_engineno').val(msg.engineno);
                     $('#warranty_construct_time').val(msg.construct_time);
                 }else{
+                    $('#WarrantyAction_wid').val('');
                     $('#warranty_pack_name').val('');
                     $('#warranty_name').val('');
                     $('#warranty_telephone').val('');
@@ -340,6 +436,57 @@
                     $('#warranty_engineno').val('');
                     $('#warranty_construct_time').val('');
                     show_tip_message(re.msg,null,5000);
+                }
+            }
+        });
+    }
+
+    var js_province_store = function(eve){
+        var parent = $(eve).val();
+        $.ajax({
+            url:'<?php echo $ajax_url ?>',
+            type:'POST',
+            dataType:'json',
+            data:{ct:'warrantyaction',ac:'getcity',parent:parent},
+            success:function(re){
+                if(re.state){
+                    $("#WarrantyAction_city").html(re.html.citys);
+                    $("#WarrantyAction_area").html(re.html.areas);
+                    $("#WarrantyAction_storeid").html(re.html.stores);
+                }
+            }
+        });
+    }
+
+    var js_city_store = function(eve){
+        var parent = $(eve).val();
+        var _parent = $('#WarrantyAction_province').val();
+        $.ajax({
+            url:'<?php echo $ajax_url ?>',
+            type:'POST',
+            dataType:'json',
+            data:{ct:'warrantyaction',ac:'getarea',parent:parent,_parent:_parent},
+            success:function(re){
+                if(re.state){
+                    $("#WarrantyAction_area").html(re.html.areas);
+                    $("#WarrantyAction_storeid").html(re.html.stores);
+                }
+            }
+        });
+    }
+
+    var js_area_store = function(eve){
+        var parent = $(eve).val();
+        var _parent = $('#WarrantyAction_city').val();
+        var __parent = $('#WarrantyAction_province').val();
+        $.ajax({
+            url:'<?php echo $ajax_url ?>',
+            type:'POST',
+            dataType:'json',
+            data:{ct:'warrantyaction',ac:'getstore',parent:parent,_parent:_parent,__parent:__parent},
+            success:function(re){
+                if(re.state){
+                    $("#WarrantyAction_storeid").html(re.html.stores);
                 }
             }
         });

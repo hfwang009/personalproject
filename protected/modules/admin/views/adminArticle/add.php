@@ -56,6 +56,17 @@
                                 </div>
                             </td>
                         </tr>
+                        <tr>
+                            <td>
+                                <div class="form-group">
+                                    <?php echo $form->label($model,'type',array('class'=>'col-sm-2 col-xs-3 control-label'));?>
+                                    <div class="col-sm-6 col-xs-8">
+                                        <?php echo $form->dropdownList($model, 'type', $model->type_arr, array("class"=>"form-control"));?>
+                                        <?php echo $form->error($model,'type',array('class'=>'help-block'));?>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
 <!--                        <tr>-->
 <!--                            <td>-->
 <!--                                <div class="form-group">-->

@@ -10,7 +10,7 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="sidebar">
-                    <aside class="widget" style="width: 500px; height: 500px;margin-bottom:60px;">
+                    <aside class="widget" style="width: 100%; height: 500px;margin-bottom:60px;">
                         <h4>地图位置</h4>
                         <div class="vbf" id="allmap">
 

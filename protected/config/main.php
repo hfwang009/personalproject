@@ -18,6 +18,9 @@ if (file_exists(dirname(__FILE__) . '/menu.php'))
 if (file_exists(dirname(__FILE__) . '/redis_config.php'))
     $redis = require_once(dirname(__FILE__) . '/redis_config.php');
 
+if (file_exists(dirname(__FILE__) . '/setup_config.php'))
+    require_once(dirname(__FILE__) . '/setup_config.php');
+
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'车辆销售系统',

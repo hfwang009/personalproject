@@ -10,12 +10,17 @@
  * @property string $images
  * @property integer $ctime
  * @property integer $lang
+ * @property integer $type
  */
 class Article extends CActiveRecord
 {
     public $ctime_start;
     public $ctime_end;
     public $thumb;
+    public $type_arr;
+    public function init(){
+        $this->type_arr = array(1=>'pc端',2=>'wap端');
+    }
     /**
      * Returns the static model of the specified AR class.
      * @param string $className active record class name.
@@ -47,7 +52,7 @@ class Article extends CActiveRecord
             array('title', 'length', 'max'=>20000000),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
-            array('id, title, content, ctime, images, lang', 'safe', 'on'=>'search'),
+            array('id, title, content, ctime, images, lang, type', 'safe', 'on'=>'search'),
         );
     }
 
@@ -74,6 +79,7 @@ class Article extends CActiveRecord
             'images' => '文章图片集合',
             'ctime' => '添加时间',
             'lang' => '语言',
+            'type'=>'显示平台'
         );
     }
 
@@ -94,6 +100,7 @@ class Article extends CActiveRecord
         $criteria->compare('images',$this->images,true);
         $criteria->compare('ctime',$this->ctime);
         $criteria->compare('lang',$this->lang);
+        $criteria->compare('type',$this->type);
 
         return new CActiveDataProvider($this, array(
             'criteria'=>$criteria,
@@ -107,6 +114,7 @@ class Article extends CActiveRecord
                 $article->attributes = $post["Article"];
                 $article->images = $post["Article"]['images'];
                 $article->lang = $post["Article"]['lang'];
+                $article->type = $post["Article"]['type'];
                 $article->ctime = time();
                 if($article->validate()){
                     if($article->save()){
@@ -121,6 +129,7 @@ class Article extends CActiveRecord
             $model->attributes = $post['Article'];
             $model->images = $post["Article"]['images'];
             $model->lang = $post["Article"]['lang'];
+            $model->type = $post["Article"]['type'];
             $model->ctime = time();
             if($model->validate()){
                 if($model->save()){
@@ -200,6 +209,9 @@ class Article extends CActiveRecord
             }
             if (!empty($condition['Article']['lang'])) {
                 $criteria->condition .= ' and t.lang = "' . $condition['Article']['lang'] .'" ';
+            }
+            if (!empty($condition['Article']['type'])) {
+                $criteria->condition .= ' and t.type = "' . $condition['Article']['type'] .'" ';
             }
             if (!empty($condition['Article']['ctime_start'])) {
                 $criteria->condition .= ' and t.ctime >= ' . strtotime($condition['Article']['ctime_start'] .' 00:00:00');

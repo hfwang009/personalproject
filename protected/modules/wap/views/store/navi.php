@@ -25,7 +25,7 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="sidebar">
-                    <aside class="widget" style="width: 450px;margin-bottom:60px;">
+                    <aside class="widget" style="width: 100%;margin-bottom:60px;">
                         <h4>地图导航</h4>
                         <div id="search">
                             起点位置：<input type="text" id="start" placeholder="正在定位您的位置..." style="border-bottom: 1px solid #DDD; "/>

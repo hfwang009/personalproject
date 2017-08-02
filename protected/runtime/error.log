@@ -10316,3 +10316,355 @@ in D:\new\carproject\index.php (18)
 in D:\new\carproject\protected\models\WarrantyAction.php (149)
 in D:\new\carproject\protected\modules\admin\controllers\AdminWarrantyActionController.php (58)
 in D:\new\carproject\index.php (18)
+2017/08/01 08:08:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/fonts/fontawesome-webfont.woff2".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/f...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/fonts/fontawesome-webfont.woff2?v=4.7.0
+HTTP_REFERER=http://www.carproject.com/statics/front/fonts/font-awesome.min.css
+---
+2017/08/01 08:08:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/images/favicon.png".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/i...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/images/favicon.png
+HTTP_REFERER=http://www.carproject.com/wap/store
+---
+2017/08/01 08:08:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/fonts/glyphicons-halflings-regular.woff2".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/f...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/fonts/glyphicons-halflings-regular.woff2
+HTTP_REFERER=http://www.carproject.com/statics/front/css/bootstrap.min.css
+---
+2017/08/01 08:08:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/fonts/fontawesome-webfont.woff2".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/f...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/fonts/fontawesome-webfont.woff2?v=4.7.0
+HTTP_REFERER=http://www.carproject.com/statics/front/fonts/font-awesome.min.css
+---
+2017/08/01 08:08:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/fonts/fontawesome-webfont.woff2".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/f...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/fonts/fontawesome-webfont.woff2?v=4.7.0
+HTTP_REFERER=http://www.carproject.com/statics/front/fonts/font-awesome.min.css
+---
+2017/08/01 08:08:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/css/bootstrap.min.css.map".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/c...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/css/bootstrap.min.css.map
+---
+2017/08/01 08:08:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/css/bootstrap.min.css.map".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/c...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/css/bootstrap.min.css.map
+---
+2017/08/01 08:08:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/fonts/fontawesome-webfont.woff2".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/f...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/fonts/fontawesome-webfont.woff2?v=4.7.0
+HTTP_REFERER=http://www.carproject.com/statics/front/fonts/font-awesome.min.css
+---
+2017/08/01 08:08:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/js/bootstrap-select.js.map".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/j...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/js/bootstrap-select.js.map
+---
+2017/08/01 08:09:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/fonts/fontawesome-webfont.woff2".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/f...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/fonts/fontawesome-webfont.woff2?v=4.7.0
+HTTP_REFERER=http://www.carproject.com/statics/front/fonts/font-awesome.min.css
+---
+2017/08/01 08:09:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/css/bootstrap.min.css.map".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/c...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/css/bootstrap.min.css.map
+---
+2017/08/01 08:09:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/js/bootstrap-select.js.map".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/j...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/js/bootstrap-select.js.map
+---
+2017/08/01 08:09:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/css/bootstrap.min.css.map".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/c...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/css/bootstrap.min.css.map
+---
+2017/08/01 08:09:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/fonts/fontawesome-webfont.woff2".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/f...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/fonts/fontawesome-webfont.woff2?v=4.7.0
+HTTP_REFERER=http://www.carproject.com/statics/front/fonts/font-awesome.min.css
+---
+2017/08/01 08:09:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/js/bootstrap-select.js.map".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/j...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/js/bootstrap-select.js.map
+---
+2017/08/01 08:47:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/css/bootstrap.min.css.map".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/c...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/css/bootstrap.min.css.map
+---
+2017/08/01 08:47:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/fonts/fontawesome-webfont.woff2".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/f...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/fonts/fontawesome-webfont.woff2?v=4.7.0
+HTTP_REFERER=http://www.carproject.com/statics/front/fonts/font-awesome.min.css
+---
+2017/08/01 08:47:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/js/bootstrap-select.js.map".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/j...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/js/bootstrap-select.js.map
+---
+2017/08/02 14:08:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/webfront/images/favicon.png".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/webfron...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/webfront/images/favicon.png
+HTTP_REFERER=http://www.carproject.com/warranty/index.html
+---
+2017/08/02 06:16:45 [warning] [application] Failed to set unsafe attribute "type" of "SmsRecord".
+in D:\new\carproject\protected\utils\CUtils.php (946)
+in D:\new\carproject\protected\utils\CUtils.php (925)
+in D:\new\carproject\protected\utils\CUtils.php (813)
+2017/08/02 06:16:45 [warning] [application] Failed to set unsafe attribute "ctime" of "SmsRecord".
+in D:\new\carproject\protected\utils\CUtils.php (946)
+in D:\new\carproject\protected\utils\CUtils.php (925)
+in D:\new\carproject\protected\utils\CUtils.php (813)
+2017/08/02 06:16:45 [warning] [application] Failed to set unsafe attribute "sendtime" of "SmsRecord".
+in D:\new\carproject\protected\utils\CUtils.php (946)
+in D:\new\carproject\protected\utils\CUtils.php (925)
+in D:\new\carproject\protected\utils\CUtils.php (813)
+2017/08/02 14:17:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/admin/img/inst_logo.png".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/admin/i...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/admin/img/inst_logo.png
+HTTP_REFERER=http://www.carproject.com/admin
+---
+2017/08/02 14:17:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/images/baijia.ico".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/i...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/images/baijia.ico
+HTTP_REFERER=http://www.carproject.com/admin
+---
+2017/08/02 14:19:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/webfront/css/bootstrap.min.css.map".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/webfron...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/webfront/css/bootstrap.min.css.map
+---
+2017/08/02 14:19:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/webfront/css/bootstrap.min.css.map".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/webfron...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/webfront/css/bootstrap.min.css.map
+---
+2017/08/02 14:20:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/webfront/css/bootstrap.min.css.map".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/webfron...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/webfront/css/bootstrap.min.css.map
+---
+2017/08/02 14:21:38 [warning] [application] Failed to set unsafe attribute "carmodel" of "Warranty".
+in D:\new\carproject\protected\models\Warranty.php (193)
+in D:\new\carproject\protected\controllers\WarrantyController.php (44)
+in D:\new\carproject\index.php (18)
+2017/08/02 14:21:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/webfront/css/bootstrap.min.css.map".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/webfron...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/webfront/css/bootstrap.min.css.map
+---
+2017/08/02 14:21:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/webfront/css/bootstrap.min.css.map".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/webfron...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/webfront/css/bootstrap.min.css.map
+---
+2017/08/02 14:41:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/images/banner/dingbu/918.jpg".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/images/...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/images/banner/dingbu/918.jpg
+HTTP_REFERER=http://www.carproject.com/wap/contact
+---
+2017/08/02 15:15:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/css/bootstrap.min.css.map".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/c...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/css/bootstrap.min.css.map
+---
+2017/08/02 15:15:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/fonts/fontawesome-webfont.woff2".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/f...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/fonts/fontawesome-webfont.woff2?v=4.7.0
+HTTP_REFERER=http://www.carproject.com/statics/front/fonts/font-awesome.min.css
+---
+2017/08/02 15:15:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/images/banner/dingbu/918.jpg".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/images/...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/images/banner/dingbu/918.jpg
+HTTP_REFERER=http://www.carproject.com/wap/contact
+---
+2017/08/02 15:15:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/js/bootstrap-select.js.map".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/j...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/js/bootstrap-select.js.map
+---
+2017/08/02 15:15:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/images/banner/dingbu/918.jpg".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/images/...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/images/banner/dingbu/918.jpg
+HTTP_REFERER=http://www.carproject.com/wap/contact
+---
+2017/08/02 16:20:47 [warning] [application] Failed to set unsafe attribute "lang" of "Article".
+in D:\new\carproject\protected\models\Article.php (129)
+in D:\new\carproject\protected\modules\admin\controllers\AdminArticleController.php (45)
+in D:\new\carproject\index.php (18)
+2017/08/02 16:20:47 [warning] [application] Failed to set unsafe attribute "type" of "Article".
+in D:\new\carproject\protected\models\Article.php (129)
+in D:\new\carproject\protected\modules\admin\controllers\AdminArticleController.php (45)
+in D:\new\carproject\index.php (18)
+2017/08/02 16:20:47 [warning] [application] Failed to set unsafe attribute "images" of "Article".
+in D:\new\carproject\protected\models\Article.php (129)
+in D:\new\carproject\protected\modules\admin\controllers\AdminArticleController.php (45)
+in D:\new\carproject\index.php (18)
+2017/08/02 17:22:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/images/banner/dingbu/918.jpg".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/images/...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/images/banner/dingbu/918.jpg
+HTTP_REFERER=http://www.carproject.com/wap/contact
+---
+2017/08/02 17:22:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/css/bootstrap.min.css.map".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/c...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/css/bootstrap.min.css.map
+---
+2017/08/02 17:22:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/fonts/fontawesome-webfont.woff2".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/f...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/fonts/fontawesome-webfont.woff2?v=4.7.0
+HTTP_REFERER=http://www.carproject.com/statics/front/fonts/font-awesome.min.css
+---
+2017/08/02 17:22:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/js/bootstrap-select.js.map".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/j...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/js/bootstrap-select.js.map
+---
+2017/08/02 17:22:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/images/banner/dingbu/918.jpg".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/images/...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/images/banner/dingbu/918.jpg
+HTTP_REFERER=http://www.carproject.com/wap/contact
+---
+2017/08/02 17:22:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statics/front/images/favicon.png".' in D:\new\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\new\framework\web\CWebApplication.php(141): CWebApplication->runController('statics/front/i...')
+#1 D:\new\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\new\carproject\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/statics/front/images/favicon.png
+HTTP_REFERER=http://www.carproject.com/wap/contact
+---

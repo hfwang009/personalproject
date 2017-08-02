@@ -25,7 +25,6 @@ class WarrantyController extends Controller{
             unset($_POST['Warranty']['provinceid']);
             unset($_POST['Warranty']['cityid']);
             unset($_POST['Warranty']['areaid']);
-            unset($_POST['Warranty']['authcode']);
             if(empty($_POST['Warranty']['authcode'])){
                 $this->redirect(Yii::app()->createUrl(Yii::app()->controller->id.'/index'));
             }else{
@@ -34,6 +33,7 @@ class WarrantyController extends Controller{
                     $this->redirect(Yii::app()->createUrl(Yii::app()->controller->id.'/index'));
                 }
             }
+            unset($_POST['Warranty']['authcode']);
             $_POST['Warranty']['name'] = $this->FilterXss(strval($_POST['Warranty']['name']));
             $_POST['Warranty']['telephone'] = $this->FilterXss(strval($_POST['Warranty']['telephone']));
             $_POST['Warranty']['address'] = $this->FilterXss(strval($_POST['Warranty']['address']));

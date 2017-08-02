@@ -871,7 +871,7 @@ class CUtils {
         $config = Yii::app()->params['conf']['phone1'];
         $setting = $config[$type];
         $res = AuthCodeRecord::model()->find('auth_number="'.$phone.'" AND auth_type="phone" AND auth_cate="'.$setting['code'].'"');
-        $verify = rand(10000000, 99999999);
+        $verify = rand(100000, 999999);
         if(!empty($res)){
             if(date('Ymd') == date('Ymd',$res['ctime'])){
                 if($res['auth_count'] < $setting['count']){

@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2017-07-26 19:47:28
+Date: 2017-08-02 18:00:24
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -83,7 +83,7 @@ CREATE TABLE `car_admin_log` (
   `admin_id` int(13) DEFAULT NULL COMMENT '操作管理员id',
   `ctime` int(13) DEFAULT NULL COMMENT '操作时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=277 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=281 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of car_admin_log
@@ -364,6 +364,10 @@ INSERT INTO `car_admin_log` VALUES ('273', 'adminmessage', 'detail', '反馈', '
 INSERT INTO `car_admin_log` VALUES ('274', 'adminmessage', 'detail', '反馈', '详情', '127.0.0.1', '1', '1501062043');
 INSERT INTO `car_admin_log` VALUES ('275', 'adminmessage', 'detail', '反馈', '详情', '127.0.0.1', '1', '1501062079');
 INSERT INTO `car_admin_log` VALUES ('276', 'adminnews', 'add', '新闻', '编辑', '127.0.0.1', '1', '1501063695');
+INSERT INTO `car_admin_log` VALUES ('277', 'adminwarrantyaction', 'add', '质保操作', '添加', '127.0.0.1', '1', '1501459830');
+INSERT INTO `car_admin_log` VALUES ('278', 'adminwarrantyaction', 'add', '质保操作', '编辑', '127.0.0.1', '1', '1501459834');
+INSERT INTO `car_admin_log` VALUES ('279', 'adminrecruit', 'add', '招聘', '编辑', '127.0.0.1', '1', '1501657101');
+INSERT INTO `car_admin_log` VALUES ('280', 'adminarticle', 'add', '文章', '添加', '127.0.0.1', '1', '1501662047');
 
 -- ----------------------------
 -- Table structure for car_admin_privilieges
@@ -492,19 +496,21 @@ DROP TABLE IF EXISTS `car_article`;
 CREATE TABLE `car_article` (
   `id` int(13) NOT NULL AUTO_INCREMENT,
   `title` varchar(200) NOT NULL,
+  `type` tinyint(1) DEFAULT '1' COMMENT '显示平台：1：windows；2：wap;',
   `content` text NOT NULL,
   `images` text COMMENT '文章的图片集合',
   `lang` tinyint(1) DEFAULT '1' COMMENT '语言：1：中文；2：英文；',
   `ctime` int(13) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of car_article
 -- ----------------------------
-INSERT INTO `car_article` VALUES ('5', 'fdafda1111', '<p><img src=\"/upload/images/20170517/20170517963825.jpg\" title=\"20170517963825.jpg\" alt=\"9097c6c8a786c9176bf3e0cccc3d70cf3ac7572b.jpg\" /></p>', null, '1', '1494992304');
-INSERT INTO `car_article` VALUES ('6', 'fdafafad', '<p>fdafafa</p>', '[\"\\\\upload\\\\articlepic\\\\1500622054.jpg\",\"\\\\upload\\\\articlepic\\\\1500622295.jpg\",\"\\\\upload\\\\articlepic\\\\1500622301.jpg\"]', '1', '1500622304');
-INSERT INTO `car_article` VALUES ('7', 'fafafadfafa', '<p>fdafadf</p>', '[]', '2', '1500694469');
+INSERT INTO `car_article` VALUES ('5', 'fdafda1111', '1', '<p><img src=\"/upload/images/20170517/20170517963825.jpg\" title=\"20170517963825.jpg\" alt=\"9097c6c8a786c9176bf3e0cccc3d70cf3ac7572b.jpg\" /></p>', null, '1', '1494992304');
+INSERT INTO `car_article` VALUES ('6', 'fdafafad', '1', '<p>fdafafa</p>', '[\"\\\\upload\\\\articlepic\\\\1500622054.jpg\",\"\\\\upload\\\\articlepic\\\\1500622295.jpg\",\"\\\\upload\\\\articlepic\\\\1500622301.jpg\"]', '1', '1500622304');
+INSERT INTO `car_article` VALUES ('7', 'fafafadfafa', '1', '<p>fdafadf</p>', '[]', '2', '1500694469');
+INSERT INTO `car_article` VALUES ('8', 'dfdafadf', '1', '<p>fdafad</p>', '[]', '1', '1501662047');
 
 -- ----------------------------
 -- Table structure for car_auth_code_record
@@ -525,7 +531,7 @@ CREATE TABLE `car_auth_code_record` (
 -- Records of car_auth_code_record
 -- ----------------------------
 INSERT INTO `car_auth_code_record` VALUES ('1', '13992891749', 'phone', 'SMS_74650016', '60534362', '2', '1499497910');
-INSERT INTO `car_auth_code_record` VALUES ('2', '13992891749', 'phone', 'SMS_77475079', '92729797', '3', '1501060377');
+INSERT INTO `car_auth_code_record` VALUES ('2', '13992891749', 'phone', 'SMS_77475079', '506329', '1', '1501654602');
 
 -- ----------------------------
 -- Table structure for car_brand
@@ -4297,7 +4303,7 @@ CREATE TABLE `car_sms_record` (
   `ctime` int(13) DEFAULT NULL COMMENT '调用接口时间',
   `sendtime` int(13) DEFAULT NULL COMMENT '发送时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of car_sms_record
@@ -4311,6 +4317,7 @@ INSERT INTO `car_sms_record` VALUES ('6', 'auth', '13992891749', '18113B25-3E60-
 INSERT INTO `car_sms_record` VALUES ('7', 'auth', '13992891749', '0FCE2DCC-265D-4367-9033-68BED8BE9114', '1', '108986896236^1112041555627', 'OK', 'OK', 'SMS_77475079', 'YTo0OntzOjc6Ik1lc3NhZ2UiO3M6MjoiT0siO3M6OToiUmVxdWVzdElkIjtzOjM2OiIwRkNFMkRDQy0yNjVELTQzNjctOTAzMy02OEJFRDhCRTkxMTQiO3M6NToiQml6SWQiO3M6MjY6IjEwODk4Njg5NjIzNl4xMTEyMDQxNTU1NjI3IjtzOjQ6IkNvZGUiO3M6MjoiT0siO30=', '1501035907', '1501035907');
 INSERT INTO `car_sms_record` VALUES ('8', 'auth', '13992891749', '10AEB653-02F1-4F62-8EB9-A1B0FE7EE1CC', '1', '108987328426^1112042148873', 'OK', 'OK', 'SMS_77475079', 'YTo0OntzOjc6Ik1lc3NhZ2UiO3M6MjoiT0siO3M6OToiUmVxdWVzdElkIjtzOjM2OiIxMEFFQjY1My0wMkYxLTRGNjItOEVCOS1BMUIwRkU3RUUxQ0MiO3M6NToiQml6SWQiO3M6MjY6IjEwODk4NzMyODQyNl4xMTEyMDQyMTQ4ODczIjtzOjQ6IkNvZGUiO3M6MjoiT0siO30=', '1501036712', '1501036712');
 INSERT INTO `car_sms_record` VALUES ('9', 'auth', '13992891749', '8415C667-9097-4DEC-B4E1-C7145BA378EB', '1', '108996998777^1112052925709', 'OK', 'OK', 'SMS_77475079', 'YTo0OntzOjc6Ik1lc3NhZ2UiO3M6MjoiT0siO3M6OToiUmVxdWVzdElkIjtzOjM2OiI4NDE1QzY2Ny05MDk3LTRERUMtQjRFMS1DNzE0NUJBMzc4RUIiO3M6NToiQml6SWQiO3M6MjY6IjEwODk5Njk5ODc3N14xMTEyMDUyOTI1NzA5IjtzOjQ6IkNvZGUiO3M6MjoiT0siO30=', '1501060378', '1501060378');
+INSERT INTO `car_sms_record` VALUES ('10', 'auth', '13992891749', '2C28D038-24FF-43F2-AED5-0733751311AB', '1', '109132122141^1112211042842', 'OK', 'OK', 'SMS_77475079', 'YTo0OntzOjc6Ik1lc3NhZ2UiO3M6MjoiT0siO3M6OToiUmVxdWVzdElkIjtzOjM2OiIyQzI4RDAzOC0yNEZGLTQzRjItQUVENS0wNzMzNzUxMzExQUIiO3M6NToiQml6SWQiO3M6MjY6IjEwOTEzMjEyMjE0MV4xMTEyMjExMDQyODQyIjtzOjQ6IkNvZGUiO3M6MjoiT0siO30=', '1501654605', '1501654605');
 
 -- ----------------------------
 -- Table structure for car_store
@@ -4437,7 +4444,7 @@ CREATE TABLE `car_warranty` (
   `extension` text COMMENT '质保的详细数据',
   `is_send` tinyint(2) NOT NULL DEFAULT '0' COMMENT '是否发送信息：0：未发送；1：已发送；',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=61 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=62 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of car_warranty
@@ -4499,6 +4506,7 @@ INSERT INTO `car_warranty` VALUES ('57', null, null, '0', '0', '15', '11111111',
 INSERT INTO `car_warranty` VALUES ('58', null, null, '0', '0', '13', '11111111', '13992891749', 'fdafaf', '131', '', '123456', '1499875200', null, '0', null, '0', '1501036404', null, null, null, null, '0');
 INSERT INTO `car_warranty` VALUES ('59', null, null, '0', '0', '13', '13232', '13992891749', 'dfdfd', '131', '', '112233', '1501084800', null, '0', null, '0', '1501036465', null, null, null, null, '0');
 INSERT INTO `car_warranty` VALUES ('60', null, null, '0', '0', '4', 'zhangxiaohui', '13992891749', 'dfas', '111', '', '132111', '1499788800', null, '0', null, '0', '1501036724', null, null, null, null, '0');
+INSERT INTO `car_warranty` VALUES ('61', null, null, '0', '0', '13', 'zhangxiaohui', '13992891749', 'dsf', '131', '', '132111', '1501776000', null, '0', null, '0', '1501654898', null, null, null, null, '0');
 
 -- ----------------------------
 -- Table structure for car_warranty_action
@@ -4518,12 +4526,13 @@ CREATE TABLE `car_warranty_action` (
   `admin_id` int(13) DEFAULT NULL COMMENT '操作者id',
   `ctime` int(13) DEFAULT NULL COMMENT '添加记录时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of car_warranty_action
 -- ----------------------------
 INSERT INTO `car_warranty_action` VALUES ('1', '53', '1', '3', 'dsfadfafa', 'fafad', 'fdafa', '1498838400', 'dafda', '<p><img src=\"/upload/images/20170719/20170719565738.png\" title=\"20170719565738.png\" alt=\"brand_example.png\" />adfafafa</p>', '1', '1500459711');
+INSERT INTO `car_warranty_action` VALUES ('2', '53', '1', '14', 'dfdasf', 'fdafadf', 'dfafa', '1499443200', 'fdafa', '<p>fdafa</p>', '1', '1501459831');
 
 -- ----------------------------
 -- Table structure for car_warranty_detail

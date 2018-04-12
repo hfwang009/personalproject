@@ -93,7 +93,7 @@ class RedisInit {
     private function __connect($config, $timeout) {
         try {
             if(!$this->redis->connect($config[0], $config[1], $timeout)) {
-                throw new Exception(_('REDIS configuration errors.'));
+                throw new Exception(('REDIS configuration errors.'));
             } else
                 return true;
         } catch (RedisException $e) {

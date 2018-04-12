@@ -6,7 +6,11 @@ class AdminSettingPanelController extends CAdminController{
 	public function actionIndex(){
 		$configModel = Config::model();
 		if (!empty($_POST['Config'])) {
-			foreach ($_POST['Config']['datavalue'] as $key => $val) {
+			foreach ($_POST['Config']['datavalue'] as $key => &$val) {
+                if($key=='group'){
+                    $arr = $this->getMulUpload();
+                    $val = $this->uploadImage($val,$arr);
+                }
 				if (is_array($val))
 					$val = serialize($val);
 				$configModel = Config::model()->findByPk($key);
@@ -22,7 +26,7 @@ class AdminSettingPanelController extends CAdminController{
 					$configModel->success = true;
 				}
 			}
-		
+//		exit;
 			$this->cache_write();
 		}
 		$config = $configModel->getData();
@@ -217,4 +221,118 @@ class AdminSettingPanelController extends CAdminController{
 	
 		return $evaluate;
 	}
+
+
+    private function getMulUpload(){
+        $file = $_FILES['Config'];
+        if(empty($file['tmp_name']) || $file['tmp_name'] === array()){
+            return;
+        }
+        $data = array();
+        $arr = array();
+        foreach($file as $key=>$val){
+            switch($key){
+                case "name":
+                    foreach($file[$key] as $_key=>$_val){
+                        if(is_array($val[$_key])){
+                            foreach($val[$_key] as $__key=>$__val){
+                                $data[$_key][$__key]['name'] = $_val[$__key]['image'];
+                            }
+                        }
+                    }
+                    break;
+                case "type":
+                    foreach($file[$key] as $_key=>$_val){
+                        if(is_array($val[$_key])){
+                            foreach($val[$_key] as $__key=>$__val){
+                                $data[$_key][$__key]['type'] = $_val[$__key]['image'];
+                            }
+                        }
+                    }
+                    break;
+                case "tmp_name":
+                    foreach($file[$key] as $_key=>$_val){
+                        if(is_array($val[$_key])){
+                            foreach($val[$_key] as $__key=>$__val){
+                                $data[$_key][$__key]['tmp_name'] = $_val[$__key]['image'];
+                            }
+                        }
+                    }
+                    break;
+                case "error":
+                    foreach($file[$key] as $_key=>$_val){
+                        if(is_array($val[$_key])){
+                            foreach($val[$_key] as $__key=>$__val){
+                                $data[$_key][$__key]['error'] = $_val[$__key]['image'];
+                            }
+                        }
+                    }
+                    break;
+                case "size":
+                    foreach($file[$key] as $_key=>$_val){
+                        if(is_array($val[$_key])){
+                            foreach($val[$_key] as $__key=>$__val){
+                                $data[$_key][$__key]['size'] = $_val[$__key]['image'];
+                            }
+                        }
+                    }
+                    break;
+            }
+        }
+        print_r($data);
+        foreach($data as $k=>$v){
+            switch($k){
+                case "group":
+                    foreach($data[$k] as $_k=>$_v){
+                        if($_v['error']=='0'){
+                            $arr[] = 'Config[group]['.$_k.'][image]';
+                        }
+                    }
+                    break;
+            }
+        }
+        return $arr;
+    }
+
+    private function uploadImage($data,$arr){
+        if(!empty($arr)){
+            foreach($arr as $a=>$b){
+                $_file = CUploadedFile::getInstanceByName ( $b );
+                if (! empty ( $_file )) {
+                    $_name = $_file->name;
+                    $_newName = $this->generateFileName ( $_name );
+//                    print_r($b);exit;
+                    if ($this->_saveMulFile ( $_file, $_newName ,$b)) {
+                        if(strpos($b,'group')){
+                            preg_match_all("/\d/",$b,$number);
+                            $data[$number[0][0]]['image'] = str_replace(Yii::app()->params['conf']['path']['systemfile'], '', Yii::app()->params['conf']['path']['defaultfile']) . $_newName;
+                        }
+                    } else {
+                        return false;
+                    }
+                }
+            }
+        }
+        return $data;
+    }
+
+    private function _saveMulFile($file, $new_name ,$name) {
+        if(strpos($name,'group')){
+            $savePath = Yii::app()->params['conf']['path']['defaultfile'];
+        }elseif(strpos($name,'group')){
+            $savePath = Yii::app()->params['conf']['path']['defaultfile'];
+        }
+        if (file_exists ( $savePath ) == false) {
+            @mkdir($savePath,0777);
+        }
+        $file->saveAs ( $savePath . $new_name );
+        return true;
+    }
+
+    private function generateFileName($name){
+        $path_parts = pathinfo ( $name );
+        $extension = $path_parts ['extension'];
+        $sha1_name = sha1 ( $name . date ( 'U' ) ) . "." . $extension;
+        return $sha1_name;
+    }
 }

@@ -90,6 +90,7 @@ return array(
             'icon' => 'icon-reply',
             'submenu' => array(
                 array('subject' => '招聘列表', 'link' => 'admin/adminRecruit/index', 'controller'=>'adminRecruit'),
+                array('subject' => '反馈列表', 'link' => 'admin/adminMessage/index', 'controller'=>'adminMessage'),
             ),
         )
 	)

@@ -67,53 +67,53 @@
                                 </div>
                             </td>
                         </tr>
-<!--                        <tr>-->
-<!--                            <td>-->
-<!--                                <div class="form-group">-->
-<!--                                    --><?php //echo $form->label($model,'images',array('class'=>'col-sm-2 col-xs-3 control-label'));?>
-<!--                                    <div class="col-sm-8">-->
-<!--                                        <div class="form-group">-->
-<!--                                            <div class="col-sm-12 nopadding">-->
-<!--                                                <div class="row" id="images_list">-->
-<!--                                                    --><?php
-//                                                    $images = !empty($model['images'])?json_decode($model['images'],true):array();
-//                                                    if(!empty($images)){
-//                                                        foreach ($images as $_image){
-//                                                            ?>
-<!--                                                            <div class="col-xs-11 col-sm-3 nopadding">-->
-<!--                                                                <a class="icon icon-delete md-tip" ng-click="js_app_image_delete()" title="点击删除" href="javascript:;" style="position:absolute;right:20px;top:5px;z-index: 2;"></a>-->
-<!--                                                                <img class="img-polaroid col-sm-12" src="--><?php //echo $_image;?><!--">-->
-<!--                                                                <input type="hidden" name="Article[images][]" value="--><?php //echo $_image;?><!--">-->
-<!--                                                            </div>-->
-<!--                                                        --><?php
-//                                                        }
-//                                                    }
-//                                                    ?>
-<!--                                                </div>-->
-<!--                                            </div>-->
-<!--                                            <div class="col-sm-6 nopadding" id="app_img_upload_preview">-->
-<!--                                                <span class="mod-file">-->
-<!--                                                    <input type="button" value="点击选择图片" class="btn btn-primary">-->
-<!--                                                    --><?php
-//                                                    $this->widget('application.extensions.ajax-filesupload.AjaxFilesUpload', array(
-//                                                        'uploadUrl' => $ajax_url,
-//                                                        'fileShowId' => 'images_list',
-//                                                        'fileElementId' => 'app_img_upload_preview',
-//                                                        'fileImgClass' => 'img-polaroid',
-//                                                        'isThumb' => true,
-//                                                        'file_input_img_name' => 'Article[images][]',
-//                                                        'data'=>array('ct'=>'article','ac'=>'uploadimgs'),
-//                                                        'file_hidden'=>array('a'=>array('class'=>'icon icon-delete md-tip','ng-click'=>'js_app_image_delete()','title'=>'点击删除','href'=>'javascript:;','style'=>'position:absolute;right:20px;top:5px;z-index: 2;'),'img'=>array('class'=>'img-polaroid col-sm-12')),
-//                                                        'htmlOptions' => array('id'=>'Article_images','name'=>'Article[images]','class'=>'mod-input-file'),
-//                                                    ));
-//                                                    ?>
-<!--                                                </span>-->
-<!--                                            </div>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </td>-->
-<!--                        </tr>-->
+                        <tr>
+                            <td>
+                                <div class="form-group">
+                                    <?php echo $form->label($model,'images',array('class'=>'col-sm-2 col-xs-3 control-label'));?>
+                                    <div class="col-sm-8">
+                                        <div class="form-group">
+                                            <div class="col-sm-12 nopadding">
+                                                <div class="row" id="images_list">
+                                                    <?php
+                                                    $images = !empty($model['images'])?json_decode($model['images'],true):array();
+                                                    if(!empty($images)){
+                                                        foreach ($images as $_image){
+                                                            ?>
+                                                            <div class="col-xs-11 col-sm-3 nopadding">
+                                                                <a class="icon icon-delete md-tip" ng-click="js_app_image_delete()" title="点击删除" href="javascript:;" style="position:absolute;right:20px;top:5px;z-index: 2;"></a>
+                                                                <img class="img-polaroid col-sm-12" src="<?php echo $_image;?>">
+                                                                <input type="hidden" name="Article[images][]" value="<?php echo $_image;?>">
+                                                            </div>
+                                                        <?php
+                                                        }
+                                                    }
+                                                    ?>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6 nopadding" id="app_img_upload_preview">
+                                                <span class="mod-file">
+                                                    <input type="button" value="点击选择图片" class="btn btn-primary">
+                                                    <?php
+                                                    $this->widget('application.extensions.ajax-filesupload.AjaxFilesUpload', array(
+                                                        'uploadUrl' => $ajax_url,
+                                                        'fileShowId' => 'images_list',
+                                                        'fileElementId' => 'app_img_upload_preview',
+                                                        'fileImgClass' => 'img-polaroid',
+                                                        'isThumb' => true,
+                                                        'file_input_img_name' => 'Article[images][]',
+                                                        'data'=>array('ct'=>'article','ac'=>'uploadimgs'),
+                                                        'file_hidden'=>array('a'=>array('class'=>'icon icon-delete md-tip','ng-click'=>'js_app_image_delete()','title'=>'点击删除','href'=>'javascript:;','style'=>'position:absolute;right:20px;top:5px;z-index: 2;'),'img'=>array('class'=>'img-polaroid col-sm-12')),
+                                                        'htmlOptions' => array('id'=>'Article_images','name'=>'Article[images]','class'=>'mod-input-file'),
+                                                    ));
+                                                    ?>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
                         <tr>
                             <td>
                                 <div class="form-group">

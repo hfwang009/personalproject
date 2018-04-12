@@ -31,7 +31,7 @@
             var s = $('#sec').val();
             if( parseInt(s) == 0){
                 clearInterval(picTimer);
-                window.location.href="<?php echo Yii::app()->createUrl(Yii::app()->controller->id.'/index');?>";
+                window.location.href="<?php echo Yii::app()->createUrl(Yii::app()->controller->module->id.'/'.Yii::app()->controller->id.'/index');?>";
                 return false;
             }
             $('#sec').val(parseInt(s)-1);

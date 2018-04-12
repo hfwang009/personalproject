@@ -294,6 +294,34 @@ return array(
 			),
 
 		),
+	'group' => array
+		(
+		0 => array
+			(
+			'link' => 'aa',
+			'title' => 'bb',
+			'enable' => '0',
+			'image' => '\\upload\\default\\dfaae31c7dcda408075b9bb6e4d0841c627ce8aa.png',
+			'order' => 1
+			),
+		1 => array
+			(
+			'link' => 'cc',
+			'title' => 'dd',
+			'enable' => 1,
+			'image' => '\\upload\\default\\132619df3d8debcd1fea104a4895f2883997aef6.png',
+			'order' => 2
+			),
+		2 => array
+			(
+			'link' => 'aa',
+			'title' => 'dd',
+			'enable' => 1,
+			'image' => '\\upload\\default\\fead611eeb945ef37206030a79e83f0e9cbd86a8.png',
+			'order' => 3
+			),
+
+		),
 
 )
 ?>

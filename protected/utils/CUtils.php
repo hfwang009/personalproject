@@ -938,7 +938,7 @@ class CUtils {
         $record['status'] = $result->Code=='OK'?1:2;
         $record['ctime'] = time();
         $record['sendtime'] = $result->Code=='OK'?time():null;
-        $record['bizid'] = $result->BizId;
+        $record['bizid'] = !empty($result->BizId)?$result->BizId:'';
         $record['code'] = $result->Code;
         $record['message'] = $result->Message;
         $record['ext'] = base64_encode(serialize(CUtils::object_to_array($result)));

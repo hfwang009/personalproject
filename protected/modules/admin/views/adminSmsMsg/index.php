@@ -31,25 +31,28 @@
                                     <input type="checkbox" class="check-all">
                                 </th>
                                 <th>
-                                    <a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->id . '/' . $this->getAction()->getId(), array_merge($condition,array('sortFiled'=>'id','sortValue'=>(isset($condition['sortFiled']) && $condition['sortFiled']=='id')?($condition['sortValue'] == "asc"?"desc":"asc"):"asc")));?>">ID<span class="glyphicon <?php echo $condition['sortFiled'] == 'id'?($condition['sortValue'] == "asc"?"glyphicon-chevron-up":"glyphicon-chevron-down"):'';?>"></span></a>
+                                    <a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->module->id .'/'.Yii::app()->controller->id . '/' . $this->getAction()->getId(), array_merge($condition,array('sortFiled'=>'id','sortValue'=>(isset($condition['sortFiled']) && $condition['sortFiled']=='id')?($condition['sortValue'] == "asc"?"desc":"asc"):"asc")));?>">ID<span class="glyphicon <?php echo $condition['sortFiled'] == 'id'?($condition['sortValue'] == "asc"?"glyphicon-chevron-up":"glyphicon-chevron-down"):'';?>"></span></a>
                                 </th>
                                 <th>
-                                    <a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->id . '/' . $this->getAction()->getId(), array_merge($condition,array('sortFiled'=>'type','sortValue'=>(isset($condition['sortFiled']) && $condition['sortFiled']=='type')?($condition['sortValue'] == "asc"?"desc":"asc"):"asc")));?>">短信类型<span class="glyphicon <?php echo $condition['sortFiled'] == 'type'?($condition['sortValue'] == "asc"?"glyphicon-chevron-up":"glyphicon-chevron-down"):'';?>"></span></a>
+                                    <a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->module->id .'/'.Yii::app()->controller->id . '/' . $this->getAction()->getId(), array_merge($condition,array('sortFiled'=>'type','sortValue'=>(isset($condition['sortFiled']) && $condition['sortFiled']=='type')?($condition['sortValue'] == "asc"?"desc":"asc"):"asc")));?>">短信类型<span class="glyphicon <?php echo $condition['sortFiled'] == 'type'?($condition['sortValue'] == "asc"?"glyphicon-chevron-up":"glyphicon-chevron-down"):'';?>"></span></a>
                                 </th>
                                 <th>
-                                    <a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->id . '/' . $this->getAction()->getId(), array_merge($condition,array('sortFiled'=>'phone','sortValue'=>(isset($condition['sortFiled']) && $condition['sortFiled']=='phone')?($condition['sortValue'] == "asc"?"desc":"asc"):"asc")));?>">手机号码<span class="glyphicon <?php echo $condition['sortFiled'] == 'phone'?($condition['sortValue'] == "asc"?"glyphicon-chevron-up":"glyphicon-chevron-down"):'';?>"></span></a>
+                                    <a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->module->id .'/'.Yii::app()->controller->id . '/' . $this->getAction()->getId(), array_merge($condition,array('sortFiled'=>'phone','sortValue'=>(isset($condition['sortFiled']) && $condition['sortFiled']=='phone')?($condition['sortValue'] == "asc"?"desc":"asc"):"asc")));?>">手机号码<span class="glyphicon <?php echo $condition['sortFiled'] == 'phone'?($condition['sortValue'] == "asc"?"glyphicon-chevron-up":"glyphicon-chevron-down"):'';?>"></span></a>
                                 </th>
                                 <th>
-                                    <a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->id . '/' . $this->getAction()->getId(), array_merge($condition,array('sortFiled'=>'status','sortValue'=>(isset($condition['sortFiled']) && $condition['sortFiled']=='status')?($condition['sortValue'] == "asc"?"desc":"asc"):"asc")));?>">发送状态<span class="glyphicon <?php echo $condition['sortFiled'] == 'status'?($condition['sortValue'] == "asc"?"glyphicon-chevron-up":"glyphicon-chevron-down"):'';?>"></span></a>
+                                    <a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->module->id .'/'.Yii::app()->controller->id . '/' . $this->getAction()->getId(), array_merge($condition,array('sortFiled'=>'status','sortValue'=>(isset($condition['sortFiled']) && $condition['sortFiled']=='status')?($condition['sortValue'] == "asc"?"desc":"asc"):"asc")));?>">发送状态<span class="glyphicon <?php echo $condition['sortFiled'] == 'status'?($condition['sortValue'] == "asc"?"glyphicon-chevron-up":"glyphicon-chevron-down"):'';?>"></span></a>
                                 </th>
                                 <th>
-                                    <a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->id . '/' . $this->getAction()->getId(), array_merge($condition,array('sortFiled'=>'sms_code','sortValue'=>(isset($condition['sortFiled']) && $condition['sortFiled']=='sms_code')?($condition['sortValue'] == "asc"?"desc":"asc"):"asc")));?>">短信模板编码<span class="glyphicon <?php echo $condition['sortFiled'] == 'sms_code'?($condition['sortValue'] == "asc"?"glyphicon-chevron-up":"glyphicon-chevron-down"):'';?>"></span></a>
+                                    <a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->module->id .'/'.Yii::app()->controller->id . '/' . $this->getAction()->getId(), array_merge($condition,array('sortFiled'=>'sms_code','sortValue'=>(isset($condition['sortFiled']) && $condition['sortFiled']=='sms_code')?($condition['sortValue'] == "asc"?"desc":"asc"):"asc")));?>">短信模板编码<span class="glyphicon <?php echo $condition['sortFiled'] == 'sms_code'?($condition['sortValue'] == "asc"?"glyphicon-chevron-up":"glyphicon-chevron-down"):'';?>"></span></a>
                                 </th>
                                 <th>
-                                    <a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->id . '/' . $this->getAction()->getId(), array_merge($condition,array('sortFiled'=>'ctime','sortValue'=>(isset($condition['sortFiled']) && $condition['sortFiled']=='ctime')?($condition['sortValue'] == "asc"?"desc":"asc"):"asc")));?>">调用接口时间<span class="glyphicon <?php echo $condition['sortFiled'] == 'ctime'?($condition['sortValue'] == "asc"?"glyphicon-chevron-up":"glyphicon-chevron-down"):'';?>"></span></a>
+                                    <a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->module->id .'/'.Yii::app()->controller->id . '/' . $this->getAction()->getId(), array_merge($condition,array('sortFiled'=>'message','sortValue'=>(isset($condition['sortFiled']) && $condition['sortFiled']=='message')?($condition['sortValue'] == "asc"?"desc":"asc"):"asc")));?>">短信发送结果信息<span class="glyphicon <?php echo $condition['sortFiled'] == 'message'?($condition['sortValue'] == "asc"?"glyphicon-chevron-up":"glyphicon-chevron-down"):'';?>"></span></a>
                                 </th>
                                 <th>
-                                    <a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->id . '/' . $this->getAction()->getId(), array_merge($condition,array('sortFiled'=>'sendtime','sortValue'=>(isset($condition['sortFiled']) && $condition['sortFiled']=='sendtime')?($condition['sortValue'] == "asc"?"desc":"asc"):"asc")));?>">发送时间<span class="glyphicon <?php echo $condition['sortFiled'] == 'sendtime'?($condition['sortValue'] == "asc"?"glyphicon-chevron-up":"glyphicon-chevron-down"):'';?>"></span></a>
+                                    <a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->module->id .'/'.Yii::app()->controller->id . '/' . $this->getAction()->getId(), array_merge($condition,array('sortFiled'=>'ctime','sortValue'=>(isset($condition['sortFiled']) && $condition['sortFiled']=='ctime')?($condition['sortValue'] == "asc"?"desc":"asc"):"asc")));?>">调用接口时间<span class="glyphicon <?php echo $condition['sortFiled'] == 'ctime'?($condition['sortValue'] == "asc"?"glyphicon-chevron-up":"glyphicon-chevron-down"):'';?>"></span></a>
+                                </th>
+                                <th>
+                                    <a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->module->id .'/'.Yii::app()->controller->id . '/' . $this->getAction()->getId(), array_merge($condition,array('sortFiled'=>'sendtime','sortValue'=>(isset($condition['sortFiled']) && $condition['sortFiled']=='sendtime')?($condition['sortValue'] == "asc"?"desc":"asc"):"asc")));?>">发送时间<span class="glyphicon <?php echo $condition['sortFiled'] == 'sendtime'?($condition['sortValue'] == "asc"?"glyphicon-chevron-up":"glyphicon-chevron-down"):'';?>"></span></a>
                                 </th>
                             </tr>
                             </thead>
@@ -69,6 +72,7 @@
                                         <td><?php echo !empty($_model['phone'])?$_model['phone']:'--';?></td>
                                         <td><?php echo !empty($_model['status'])?$_model->status_arr[$_model['status']]:'--';?></td>
                                         <td><?php echo !empty($_model['sms_code'])?$_model['sms_code']:'--';?></td>
+                                        <td><?php echo !empty($_model['message'])?$_model['message']:'--';?></td>
                                         <td><?php echo !empty($_model['ctime'])?date('Y-m-d H:i:s',$_model['ctime']):'--';?></td>
                                         <td><?php echo !empty($_model['sendtime'])?date('Y-m-d H:i:s',$_model['sendtime']):'--';?></td>
                                     </tr>
@@ -105,7 +109,7 @@
                 $form = $this->beginWidget("CActiveForm",array(
                         'id'=>'search_form',
                         'method'=>'get',
-                        'action'=>Yii::app()->createUrl(Yii::app()->controller->id . '/index'),
+                        'action'=>Yii::app()->createUrl(Yii::app()->controller->module->id .'/'.Yii::app()->controller->id . '/index'),
                         'enableClientValidation'=>false,
                         'clientOptions'=>array(
                             'validateOnSubmit'=>false,

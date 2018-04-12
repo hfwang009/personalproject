@@ -156,9 +156,9 @@ class Recruit extends CActiveRecord
         );
     }
 
-    public function getRecurites(){
+    public function getRecurites($lang=CHIN){
         $criteria = new CDbCriteria();
-        $criteria->condition = 'lang = 1 AND enable = 1';
+        $criteria->condition = 'lang = 1 AND enable = 1 AND lang = '.$lang;
         $criteria->order = 'ctime desc';
         $recurits = $this->findAll($criteria);
         return $recurits;

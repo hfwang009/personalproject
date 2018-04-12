@@ -157,6 +157,90 @@
                                 </div>
                             </td>
                         </tr>
+
+                        <tr>
+                            <td>
+                                <div class="form-group">
+                                    <span class="col-sm-1 col-xs-3 control-label">合作伙伴:</span>
+                                    <div class="col-sm-11 col-xs-8" ng-click="js_group_footer_container()">
+                                        <?php
+                                        $values = $model->find('var="group"');
+                                        $groups = !empty($values)?unserialize($values->datavalue):[];
+                                        if(!empty($groups)){
+                                            foreach ($groups as $key=>$siteGroupFooters){
+                                                ?>
+                                                <div class="row" ng-index="<?php echo $key?>">
+                                                    <div class="col-sm-4 mod-double">
+                                                        <?php echo $form->textField($model,'datavalue[group]['.$key.'][link]',array('placeholder'=>'链接','value'=>$siteGroupFooters['link'],'class'=>'form-control'));?>
+                                                    </div>
+                                                    <div class="col-sm-2 mod-double">
+                                                        <?php echo $form->textField($model, 'datavalue[group]['.$key.'][title]', array('placeholder'=>'名称','value'=>$siteGroupFooters['title'],"class"=>"form-control"));?>
+                                                    </div>
+                                                    <span class="mod-symbol col-xs-1 col-sm-1"> </span>
+                                                    <div class="col-sm-2 mod-double">
+                                                        <select  class="form-control" name="Config[datavalue][group][<?php echo $key ?>][enable]" id="Config_datavalue_group_<?php echo $key ?>_enable">
+                                                            <option value="0" <?php echo !$siteGroupFooters['enable']?'selected="selected"':''; ?>>不推荐</option>
+                                                            <option value="1" <?php echo $siteGroupFooters['enable']?'selected="selected"':''; ?>>推荐</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-sm-1">
+                                                <span class="mod-file">
+                                                    <input type="button" value="点击上传图片" class="btn btn-primary" name="siteGroupFooters_<?php echo $key ?>_image" id="siteGroupFooters_<?php echo $key ?>_image">
+                                                    <?php echo $form->FileField($model,'group['.$key.'][image]',array('exts'=>'png|jpg|bmp|jpeg','class'=>'mod-input-file'));?>
+                                                    <?php echo $form->HiddenField($model,'datavalue[group]['.$key.'][image]',array('exts'=>'png|jpg|bmp|jpeg','class'=>'mod-input-file','value'=>$siteGroupFooters['image']));?>
+                                                </span>
+                                                    </div>
+                                                    <span class="mod-symbol col-xs-1 col-sm-1"> </span>
+                                                    <div class="col-sm-1 mod-double">
+                                                        <?php echo $form->textField($model, 'datavalue[group]['.$key.'][order]', array('placeholder'=>'排序号','value'=>$siteGroupFooters['order'],"class"=>"form-control"));?>
+                                                    </div>
+                                                    <?php
+                                                    if($key == 0){
+                                                        ?>
+                                                        <a class="icon icon-plus md-tip" ng-click="js_group_footer_add()" style="margin: 5px;" href="javascript:;" data-original-title="添加"></a>
+                                                    <?php
+                                                    }else{
+                                                        ?>
+                                                        <a class="icon icon-delete md-tip" ng-click="js_group_footer_delete()" style="margin: 5px;" href="javascript:;" data-original-title="删除"></a>
+                                                    <?php
+                                                    }
+                                                    ?>
+                                                </div>
+                                            <?php
+                                            }
+                                        }else{
+                                            ?>
+                                            <div class="row" ng-index="0">
+                                                <div class="col-sm-4 mod-double">
+                                                    <?php echo $form->textField($model,'datavalue[group][0][link]',array('placeholder'=>'链接','value'=>'','class'=>'form-control',"onblur"=>"createLink(this)"));?>
+                                                </div>
+                                                <div class="col-sm-2 mod-double">
+                                                    <?php echo $form->textField($model, 'datavalue[group][0][title]', array('placeholder'=>'名称','value'=>'',"class"=>"form-control"));?>
+                                                </div>
+                                                <span class="mod-symbol col-xs-1 col-sm-1"> </span>
+                                                <div class="col-sm-2 mod-double">
+                                                    <?php echo $form->dropDownList($model, 'datavalue[group][0][enable]', array('0'=>'不推荐','1'=>'推荐'), array('empty'=>'是否推荐',"class"=>"form-control"));?>
+                                                </div>
+                                                <div class="col-sm-1">
+                                                <span class="mod-file">
+                                                    <input type="button" value="点击上传图片" class="btn btn-primary" name="siteGroupFooters_0_image" id="siteGroupFooters_0_image">
+                                                    <?php echo $form->FileField($model,'group[0][image]',array('exts'=>'png|jpg|bmp|jpeg','class'=>'mod-input-file'));?>
+                                                    <?php echo $form->HiddenField($model,'datavalue[group][0][image]',array('exts'=>'png|jpg|bmp|jpeg','class'=>'mod-input-file'));?>
+                                                </span>
+                                                </div>
+                                                <span class="mod-symbol col-xs-1 col-sm-1"> </span>
+                                                <div class="col-sm-1 mod-double">
+                                                    <?php echo $form->textField($model, 'datavalue[group][0][order]', array('placeholder'=>'排序号','value'=>'',"class"=>"form-control"));?>
+                                                </div>
+                                                <a class="icon icon-plus md-tip" ng-click="js_group_footer_add()" style="margin: 5px;" href="javascript:;" title="添加"></a>
+                                            </div>
+                                        <?php
+                                        }
+                                        ?>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
 					</tbody>
                     <tbody>
                         <tr>
@@ -294,6 +378,13 @@
         $('body').on('click','a[ng-click="js_contactus_delete()"]',function(){
             js_contactus_delete(this);
         });
+        $('body').on('click','a[ng-click="js_group_footer_add()"]',function(){
+            js_group_footer_add();
+            return false;
+        });
+        $('body').on('click','a[ng-click="js_group_footer_delete()"]',function(){
+            js_group_footer_delete(this);
+        });
     });
     var js_footer_add = function(){
         var container = $('div[ng-click="js_footer_container()"]');
@@ -421,6 +512,49 @@
         return false;
     }
     var js_contactus_delete = function(eve){
+        $(eve).parent('div[class="row"]').remove();
+        return false;
+    }
+
+    var js_group_footer_add = function(){
+        var container = $('div[ng-click="js_group_footer_container()"]');
+        if(container.length > 0){
+            var chlid = container.children();
+            var chlidnode = chlid.length;
+            console.log(chlidnode);
+            if(chlidnode > 0){
+                var index = parseInt(chlid.eq(chlidnode-1).attr('ng-index'))+1;
+                console.log(index);
+                var node = chlid.eq(0);
+                var copynode = node.clone();
+                copynode.attr('ng-index',index);
+                copynode.find('div[class="tooltip fade top in"]').remove();
+                copynode.find('input').each(function(){
+                    var name = $(this).attr('name');
+                    var change_name = name.replace('0',index);
+                    $(this).attr('name',change_name);
+                    var id = $(this).attr('id');
+                    var change_id = id.replace('0',index);
+                    $(this).attr('id',change_id);
+                    $(this).val('');
+                });
+                copynode.find("input[type='button']").val('点击上传图片');
+                copynode.find('select').each(function(){
+                    var name = $(this).attr('name');
+                    var change_name = name.replace('0',index);
+                    $(this).attr('name',change_name);
+                    var id = $(this).attr('id');
+                    var change_id = id.replace('0',index);
+                    $(this).attr('id',change_id);
+                    $(this).val('');
+                });
+                copynode.find('a').replaceWith('<a class="icon icon-delete md-tip" ng-click="js_corners_delete()" style="margin: 5px;" href="javascript:;" title="删除"></a>');
+                chlid.eq(chlidnode-1).after(copynode);
+            }
+        }
+        return false;
+    }
+    var js_group_footer_delete = function(eve){
         $(eve).parent('div[class="row"]').remove();
         return false;
     }

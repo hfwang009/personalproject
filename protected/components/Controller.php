@@ -35,6 +35,8 @@ class Controller extends CController
     public $callus;
     public $aboutus;
 
+    public $groups;
+
     /*
      * @var 全局变量$language
      */
@@ -73,6 +75,7 @@ class Controller extends CController
         $this->news = count($news)>=5?array_slice($news,0,5):$news;
         $this->aboutus = Yii::app()->params['conf']['site']['aboutus'];
         $this->callus = Yii::app()->params['conf']['site']['siteCallus'];
+        $this->groups = Yii::app()->params['conf']['group'];
         return $this->news;
 
     }

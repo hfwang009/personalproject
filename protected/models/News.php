@@ -140,11 +140,11 @@ class News extends CActiveRecord
         return $news;
     }
 
-    public function getNews($current_pageNo,$pagesize,$order){
-        $news_model = RedisInit::getInstance()->get('carproject:news:index:'.($current_pageNo-1))?json_decode(RedisInit::getInstance()->get('carproject:news:index:'.($current_pageNo-1)),true):false;
+    public function getNews($current_pageNo,$pagesize,$order,$lang=CHIN){
+        $news_model = RedisInit::getInstance()->get('carproject:news:index:'.$lang.':'.($current_pageNo-1))?json_decode(RedisInit::getInstance()->get('carproject:news:index:'.$lang.':'.($current_pageNo-1)),true):false;
         if(!$news_model){
             $criteria = new CDbCriteria();
-            $criteria->condition = 'lang=1';
+            $criteria->condition = 'lang='.$lang;
             $criteria->order = 'ctime '.$order;
             $model = new CActiveDataProvider('News',array(
                 'criteria'=>$criteria,
@@ -162,7 +162,7 @@ class News extends CActiveRecord
             $news_model['itemCount'] = array($pager->itemCount);
             $news_model['currentPage'] = array($pager->currentPage);
             $second = CRedisUtils::getIntervalSecond();
-            RedisInit::getInstance()->set('carproject:news:index:'.($current_pageNo-1),$news_model,$second,true);
+            RedisInit::getInstance()->set('carproject:news:index:'.$lang.':'.($current_pageNo-1),$news_model,$second,true);
         }else{
             $pager = new CPagination();
             $pager->pageVar = $news_model['pager']['pageVar'];

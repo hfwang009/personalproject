@@ -195,7 +195,7 @@
             return false;
         }
         var map = new BMap.Map("container");
-        map.centerAndZoom("北京", 12);
+        map.zoom( 12);
 
         var localSearch = new BMap.LocalSearch(map);
         localSearch.enableAutoViewport(); //允许自动调节窗体大小

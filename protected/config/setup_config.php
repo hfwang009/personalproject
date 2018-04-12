@@ -27,3 +27,6 @@ DEFINE("WIN_PRODUCT_BUILD","精彩活动");
 DEFINE("WIN_MARKET","精彩活动");
 //win品牌
 DEFINE("WIN_INDEX","精彩活动");
+
+DEFINE('CHIN',1);
+DEFINE('ENG',2);
